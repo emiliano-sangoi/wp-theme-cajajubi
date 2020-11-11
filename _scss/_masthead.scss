@@ -1,0 +1,32 @@
+// Estilo para el header
+#header{
+    background-image: url( $masthead-bg-img );
+    background-size: cover;
+    height: $masthead-height;
+    position: relative;
+
+    .header-content{
+        color: white;
+        // position: absolute;
+        // top: 5%;
+        // left: 20%;
+
+    }
+
+    h1{
+        font-size: 2.5em !important;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-left: -4px;
+    }
+
+    .subtitulo{
+        font-size: 1.5em !important;
+    }
+
+    h3{
+        font-size: 1.5em !important;
+        margin-left: -4px;
+    }
+
+}

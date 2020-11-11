@@ -1,0 +1,221 @@
+/*!
+Theme Name: 	WP Theme: Congreso de Suelos 2019
+Theme URI:
+Description: 	Tema para el sitio ingformativo sobre el Congreso de Suelos 2019
+Version: 		1.0
+Author: 		Florencia Foresti (Diseño), Emiliano Sangoi (Programación)
+Author URI:
+Tags: 			notifich, bootstrap, basic theme, fich, unl
+*/
+
+
+@import "variables.scss";
+@import "mixins.scss";
+@import "global.scss";
+@import "main-nav.scss";
+@import "masthead.scss";
+@import "bootstrap-overrides.scss";
+
+
+
+//=================================================================================
+// ELEMENTOS POR ID:
+#presentacion, #contacto{
+  background-color: $gris-bg;
+}
+
+#presentacion, #insc-y-envio-resumenes, #sobre-el-congreso, #sedes, #contacto{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  h1{
+    font-size: 2.2rem;
+    font-weight: bold;
+
+  }
+}
+
+#insc-y-envio-resumenes{
+  color: $white;
+
+  hr.divider {
+    border-color: $white;
+
+
+  }
+}
+
+#sobre-el-congreso{
+  background-color: $gris-bg;
+
+  .sobre-el-congreso-item{
+    img{
+      width: 38%;
+    }
+
+    outline: none;
+    color: inherit;
+
+    & > a:link, a:visited{
+      text-decoration: inherit;
+      color: inherit;
+    }
+
+    &:hover{
+      background-color: $gray-500;
+    }
+
+  }
+}
+
+#sedes{
+  background-color: $gray-900;
+  color: $white;
+
+  #modalComoLlegar .modal-body{
+    color: $black;
+  }
+
+  .descripcion{
+    font-size: 1.2rem;
+  }
+
+  button{
+    color: $black;
+    background-color: $gris-bg;
+  }
+}
+
+#contacto{
+  color: $color-primario;
+
+  & > a:link, a:visited{
+    text-decoration: inherit;
+    color: inherit;
+  }
+
+  a{
+    color: $black;
+    font-size: 1.2rem;
+  }
+}
+
+
+#footer {
+    text-align: center;
+    color: #B0B0B0;
+}
+
+#footer img{
+    width: 13%;
+}
+
+#logos{
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  img{
+    height: 3.8rem;
+    margin-right: 1em;
+  }
+
+}
+
+#share {
+    position: fixed;
+    left: 0px;
+    top: 30%;
+}
+
+#share .jssocials-share {
+    display: block;
+    font-size: 14px;
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+#share .jssocials-share-link {
+    border-radius: 0;
+}
+
+
+// FIN ELEMENTOS POR ID.
+//=================================================================================
+
+hr.divider {
+  max-width: 4.25rem;
+  border-width: 0.2rem;
+  border-color: $color-primario;
+}
+
+hr.light {
+  border-color: #fff;
+}
+
+.centrate {
+    @include centerer;
+}
+
+.centrate-x {
+    @include centerer(true, false);
+}
+
+.centrate-y {
+    @include centerer(false, true);
+}
+
+
+.card_link{
+    color: unset;
+}
+
+.card_link:hover{
+    color: unset;
+}
+
+.card{
+    border-radius: 0px;
+}
+
+.card-img-top {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.card-body h5{
+    color: black;
+}
+
+.card-body p{
+    color: #3a3939;
+}
+
+.card-body{
+    transition: background-color .5s;
+    -moz-transition: background-color .5s;
+    -webkit-transition: background-color .5s;
+}
+
+.card-body:hover{
+    background-color: #0779BE;
+    color: white !important;
+
+}
+
+.card-img-top{
+    transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -webkit-transition: opacity .5s;
+}
+
+.btn-xl {
+  padding: 1.25rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
+}

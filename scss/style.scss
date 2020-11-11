@@ -1,0 +1,40 @@
+/*!
+Theme Name: 	WP Theme: Sitio web de la Caja de Jubilaciones
+Theme URI:
+Description: 	Tema para el Sitio web de la Caja de Jubilaciones
+Version: 		1.0
+Author: 		
+Author URI:
+Tags: 			notifich, bootstrap, basic theme
+*/
+/**
+Para todos los colores de esta lista se
+crearan automaticamentes fondos y colores de texto
+ */
+
+
+
+
+@import "variable";
+@import "mixins";
+
+@import "base";
+@import "header";
+@import "hero";
+@import "home-page";
+@import "footer";
+@import "breadcrumb";
+@import "about";
+@import "classes";
+@import "classes-details";
+@import "pricing";
+@import "blog";
+@import "blog-sidebar";
+@import "blog-details";
+@import "contact";
+@import "faq";
+@import "responsive";
+
+
+
+

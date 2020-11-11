@@ -1,0 +1,51 @@
+// Variables
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$gris-bg: #e5e5e5;
+
+$color-default: black !default;
+$color-primario: #708238 !default; //verde
+
+//masthead:
+$masthead-bg-img: 'images/bg-ums.jpg';
+$masthead-height: 600px;
+
+/**
+Para todos los colores de esta lista se
+crearan automaticamentes fondos y colores de texto
+ */
+$colors: (
+        'gray-100': $gray-100,
+        'gray-200': $gray-200,
+        'gray-300': $gray-300,
+        'gray-400': $gray-400,
+        'gray-500': $gray-500,
+        'gray-600': $gray-600,
+        'gray-700': $gray-700,
+        'gray-800': $gray-800,
+        'gray-900': $gray-900,
+        'black': $black,
+        'color-primario': $color-primario,
+        'color-default': $color-default
+);
+
+@each $name, $color in $colors{
+  .bg-#{$name} {
+    background-color: $color;
+  }
+
+  .text-color-#{$name}{
+    color: $color;
+  }
+}
