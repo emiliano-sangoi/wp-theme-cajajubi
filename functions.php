@@ -9,7 +9,9 @@
  * @autor 		Babobski
  */
 define('BOOTSTRAP_VERSION', '4.5.0');
-define('PAGINA_ORG_APORTANTES', 18);
+
+require 'parameters.php';
+
 define('DIR_IMGS', get_template_directory_uri() . '/images');
 /* ========================================================================================================================
 
