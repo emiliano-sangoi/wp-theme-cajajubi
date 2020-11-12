@@ -20,11 +20,10 @@
                                     <li><a href="delegaciones.html">Delegaciones</a></li>
                                 </ul>
                             </li>
-                            <li><a href="prestaciones.html">Prestaciones</a></li>
+                            <li><a href="<?php echo esc_url( get_page_link( PAGINA_PRESTACIONES ) ); ?>">Prestaciones</a></li>
                             <li><a href="<?php echo esc_url( get_page_link( PAGINA_ORG_APORTANTES ) ); ?>">Organismos aportantes</a></li>
-                            <li><a href="servicios.html">Servicios</a></li>
-
-                            <li><a href="contacto.html" >Contacto</a></li>
+                            <li><a href="<?php echo esc_url( get_page_link( PAGINA_SERVICIOS ) ); ?>">Servicios</a></li>
+                            <li><a href="<?php echo esc_url( get_page_link( PAGINA_CONTACTO ) ); ?>">Contacto</a></li>
                         </ul>
                     </nav>
                 </div> 

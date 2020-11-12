@@ -43,58 +43,6 @@ $post = null;
     <div class="loader"></div>
 </div>
 
-<!-- Offcanvas Menu Begin -->
-<div class="offcanvas-menu-overlay"></div>
-<div class="offcanvas-menu ">
-    <div class="offcanvas__logo">
-        <a href="./index.html"><img src="<?php echo DIR_IMGS . '/logo_derecha.png' ?>" alt=""></a>
-    </div>
-    <div id="mobile-menu-wrap"></div>
-    <div class="offcanvas__widget">
-
-
-    </div>
-    <nav class="header__menu"> 
-        <ul class="mobile-menu">  
-            <li class="CloseMobileMenu"><a onclick="CloseMobileMenu()">X</a></li>
-            <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>
-                </a></li>
-            <li><a href="#">Institucional</a>
-                <ul class="dropdown">
-                    <li><a href="quienes.html">Quienes somos</a></li>
-                    <li><a href="historia.html">Un poco de historia</a></li>
-
-                    <li><a href="politicas.html">Política de calidad</a></li>
-                    <li><a href="delegaciones.html">Delegaciones</a></li>
-
-                </ul>
-            </li>
-            <li><a href="prestaciones.html">Prestaciones</a></li>
-
-<!--get_permalink( get_page_by_path( 'contact' ) );-->
-            <li>
-                <a href="<?php echo esc_url( get_page_link( PAGINA_ORG_APORTANTES ) ); ?>">
-                    Organismos aportantes
-                </a>
-            </li>
-
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="contacto.html" >Contacto</a></li>
-        </ul>
-    </nav>
-    <div class="offcanvas__social">
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-    </div>
-</div>
-<!-- Offcanvas Menu End -->
-
-
-<!-- Header Section Begin -->
-<?php get_template_part("partials/main-nav");  ?>
-<!-- Header Section End -->
 
 <!-- Hero Section Begin -->
 <section class="">
@@ -131,7 +79,7 @@ $post = null;
                     <div class="col-lg-9 centered">
                         <div class="texto-img">		
                             <h2> ¿Cómo tramito mis beneficios?</h2>
-                            <a href="prestaciones.html"><strong><h3>- VER -</h3></strong></a>
+                            <a href="<?php echo esc_url(get_page_link(PAGINA_PRESTACIONES)); ?>"><strong><h3>- VER -</h3></strong></a>
                         </div>
                     </div>
                 </div>

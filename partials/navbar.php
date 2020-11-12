@@ -31,7 +31,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="prestaciones.html">
+                <a class="nav-link" href="<?php echo esc_url( get_page_link( PAGINA_PRESTACIONES ) ); ?>">
                     Prestaciones
                 </a>
             </li>
@@ -41,15 +41,15 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="servicios.html">
+                <a class="nav-link" href="<?php echo esc_url( get_page_link ( PAGINA_SERVICIOS ) ); ?>">
                     Servicios
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contacto.html">
+                <a class="nav-link" href="<?php echo esc_url( get_page_link( PAGINA_CONTACTO ) ); ?>">
                     Contacto
                 </a>
-            </li>          
+            </li>        
         </ul>
     </div>
 </nav>
