@@ -437,12 +437,15 @@ ol {
 /*---------------------
   Services
 -----------------------*/
-#inicio a:link {
-  color: #0670B6; }
-#inicio .pruebaMenu {
+/*#inicio{*/
+a:link {
+  color: #0670B6 !important; }
+
+.pruebaMenu {
   height: 400px;
   display: flex; }
-#inicio .texto-img {
+
+.texto-img {
   font-size: 60px;
   line-height: 80px;
   color: #ffffff;
@@ -451,6 +454,7 @@ ol {
   text-align: center;
   top: 170px; }
 
+/*}*/
 .services {
   padding-top: 80px;
   padding-bottom: 70px; }

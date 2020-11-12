@@ -9,7 +9,8 @@
  * @autor 		Babobski
  */
 define('BOOTSTRAP_VERSION', '4.5.0');
-
+define('PAGINA_ORG_APORTANTES', 18);
+define('DIR_IMGS', get_template_directory_uri() . '/images');
 /* ========================================================================================================================
 
   Add language support to theme
@@ -387,5 +388,9 @@ if (!function_exists('bootstrap_comment')) {
 
     add_filter('login_headertitle', 'my_login_logo_url_title');
     
+    
+//    function getDirImgs(){
+//        return get_template_directory_uri() . '/images';
+//    }
     
 ?>
