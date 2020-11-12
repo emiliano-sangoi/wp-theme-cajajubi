@@ -17,20 +17,14 @@ get_header();
 <!-- Offcanvas Menu End -->
 
 
-<!-- Header Section Begin -->
-<?php get_template_part("partials/main-nav");  ?>
-<!-- Header Section End -->
-
 <!-- Breadcrumb Begin -->
 <section class="breadcrumb-option set-bg" style="margin-top: 0px;" data-setbg="<?php echo DIR_IMGS . '/organismos.jpg';  ?>">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb__text">
-                    <h2>Organismos Aportantes
+                    <h2>Organismos Aportantes</h2>
                         <div class="breadcrumb__widget">
-
-                            <span>
                         </div>
                 </div>
             </div>
