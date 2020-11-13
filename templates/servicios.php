@@ -64,8 +64,7 @@ get_header();
                                     </p>						
                                     <br>
                                     <li>
-                                        <a href="certificacion.html">
-                                            Certificación negativa:
+                                        <a href="<?php echo esc_url( get_page_link( PAGINA_CERTIFICACION_NEGATIVA ) ); ?>" class="primary-btn" target="_blank">Certificación negativa</a>
                                         </a>
                                     </li>
                                     <p>
@@ -97,7 +96,7 @@ get_header();
                                     </p>
                                     <br>
                                     <li>
-                                        <a href="biblioteca.html">Biblioteca digital
+                                        <a href="<?php echo esc_url( get_page_link( PAGINA_BIBLIOTECA ) ); ?>" class="primary-btn" target="_blank">Biblioteca digital</a>
                                         </a>
                                     </li>
                                     <p>
@@ -105,8 +104,8 @@ get_header();
                                     </p>
                                     <br>
                                     <li>
-                                        <a href="interes.html">Sitios de interés
-                                        </a>
+                                         <a href="<?php echo esc_url( get_page_link( PAGINA_SITIOS_DE_INTERES) ); ?>" class="primary-btn" target="_blank">Sitios de interés</a>
+                                        
                                     </li>
                                     <p>
                                         A continuación les proporcionamos sitios afines a nuestra actividad y a los servicios que prestamos.
