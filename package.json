@@ -9,6 +9,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "jquery-nice-select": "^1.1.0",
+    "jquery-parallax.js": "^1.5.0",
     "jquery.easing": "^1.4.1",
     "jssocials": "^1.5.0",
     "owl.carousel": "^2.3.4",
