@@ -11,5 +11,34 @@ $background-2: #f2f2f2;
 $border: #ebebeb;
 $border-1: #e1e1e1;
 
-$fm-unna: 'Unna', serif;
-$fm-nunito: 'Nunito Sans', sans-serif;
+/*$fm-unna: 'Unna', serif;
+$fm-nunito: 'Nunito Sans', sans-serif;*/
+
+/*
+Definir la ruta relativa en relacion al archivo style.css que esta un directorio arriba
+*/
+$base_font_path: 'fonts/Open_Sans/';
+
+@font-face {    
+  font-family: Open_Sans_Font;
+  src: url( '#{$base_font_path}/OpenSans-Light.ttf');  
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Open_Sans_Font;  
+  src: url( '#{$base_font_path}/OpenSans-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Open_Sans_Font;  
+  src: url( '#{$base_font_path}/OpenSans-Italic.ttf');
+  font-style: italic
+}
+
+/*@font-face {
+  font-family: Open_Sans_Font;  
+  src: url( '#{$base_font_path}/OpenSans-ExtraBold.ttf');
+  font-weight: bolder;
+}*/

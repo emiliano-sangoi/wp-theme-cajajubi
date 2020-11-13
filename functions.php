@@ -293,7 +293,7 @@ if (!function_exists('bootstrap_comment')) {
         //nice select        
         //https://www.npmjs.com/package/jquery-nice-select
         wp_register_style('nice_select', $template_dir . 'node_modules/jquery-nice-select/css/nice-select.css', array(), null);
-        wp_enqueue_style('nice_select');
+        wp_enqueue_style('nice_select');                
 
         //jssocials:
         wp_register_style('jssocials_css', $template_dir . '/node_modules/jssocials/dist/jssocials.css', array('font_awesome'), null);
@@ -302,8 +302,8 @@ if (!function_exists('bootstrap_comment')) {
         wp_register_style('jssocials-css-theme-flat', $template_dir . '/node_modules/jssocials/dist/jssocials-theme-flat.css', array('font_awesome', 'jssocials_css'), null);
         wp_enqueue_style('jssocials-css-theme-flat');
                 
-        $link_gf = 'https://fonts.googleapis.com/css2?family=Montserrat+Sans:wght@400;500;700&display=swap';
-        wp_enqueue_style( 'wpb-google-fonts', $link_gf, false );
+//        $link_gf = 'https://fonts.googleapis.com/css2?family=Montserrat+Sans:wght@400;500;700&display=swap';
+//        wp_enqueue_style( 'wpb-google-fonts', $link_gf, false );
 
         //style:
         wp_register_style('custom_style', $template_dir . '/style.css', array(
@@ -315,8 +315,7 @@ if (!function_exists('bootstrap_comment')) {
             'slicknav',
             'owl_carousel',
             'jssocials_css',
-            'jssocials-css-theme-flat',
-            'wpb-google-fonts'
+            'jssocials-css-theme-flat'            
         ), null);
         wp_enqueue_style('custom_style');
 
@@ -341,6 +340,10 @@ if (!function_exists('bootstrap_comment')) {
         //jssocials:
         wp_register_script('jssocials_js', $template_dir . '/node_modules/jssocials/dist/jssocials.js', array('jquery_v3'), null, true);
         wp_enqueue_script('jssocials_js');
+        
+        //jquery.parallax.js
+//        wp_register_script('parallax_js', $template_dir . '/node_modules/jquery-parallax.js/parallax.min.js', array('jquery_v3'), null, true);
+//        wp_enqueue_script('parallax_js');
 
         //owl carousel
         //https://github.com/OwlCarousel2/OwlCarousel2
@@ -359,7 +362,13 @@ if (!function_exists('bootstrap_comment')) {
         wp_register_script('barfiller', $template_dir . '/js/jquery.barfiller.js', array('jquery_v3'), false, true);
         wp_enqueue_script('barfiller');
 
-        wp_register_script('site', $template_dir . '/js/site.js', array('jquery_v3', 'bootstrap', 'nice_select', 'owl_carousel', 'slicknav', 'barfiller'), false, true);
+        wp_register_script('site', $template_dir . '/js/site.js', array('jquery_v3',
+            'bootstrap',
+            'nice_select',
+            //'parallax_js',
+            'owl_carousel',
+            'slicknav',
+            'barfiller'), false, true);
         wp_enqueue_script('site');
     }
 
