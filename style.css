@@ -76,6 +76,9 @@ body {
   font-weight: normal;
   /*-webkit-font-smoothing: antialiased;*/ }
 
+.navbar-separator {
+  margin-top: 63px; }
+
 /*h1,
 h2,
 h3,
