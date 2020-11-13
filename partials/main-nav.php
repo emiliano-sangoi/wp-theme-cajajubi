@@ -15,7 +15,7 @@
                             <li><a href="#">Institucional</a>
                                 <ul class="dropdown">
 
-                                    <li><a href="quienes.html">Quienes somos</a></li>
+                                    <li><a href="<?php echo esc_url( get_page_link( PAGINA_QUIENES_SOMOS ) ); ?>">Quiénes somos</a></li>
                                     <li><a href="historia.html">Un poco de historia</a></li>
                                     <li><a href="politicas.html">Política de calidad</a></li>
                                     <li><a href="delegaciones.html">Delegaciones</a></li>
