@@ -47,14 +47,15 @@ $post = null;
 <!-- Hero Section Begin -->
 <section class="">
     <div class="hero__sliders owl-carousel">
-        <div class="pruebaMenu set-bg" data-setbg="<?php echo DIR_IMGS . '/hero/hero-3.png'  ?>">
+        <div class="pruebaMenu set-bg" data-setbg="<?php echo DIR_IMGS . '/hero/hero-3.png' ?>">
             <div class="container">  
                 <div class="row">
                     <div class="col-lg-9 centered">
                         <div class="texto-img">
 
-                            <h2>La caja en números</h2><a href="lacajaennumeros.html">
-                                <strong><h3>- VER -</h3></strong>
+                            <h2>La caja en números</h2>                            
+                            <a href="<?php echo esc_url(get_page_link(PAGINA_LA_CAJA_EN_NUMEROS)); ?>"><strong><h3>- VER -</h3></strong></a>
+                            <strong><h3>- VER -</h3></strong>
                             </a>
                         </div>
                     </div>
@@ -112,13 +113,16 @@ $post = null;
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="instructor__item">
-                    <div class="instructor__item__pic"> <a href="biblio_instructivos.html">
-                            <img src="<?php echo DIR_IMGS . '/instructor/banners-04.png'  ?>" alt=""></a></div>
+                    <div class="instructor__item__pic"> 
+                        <a href="<?php echo esc_url(get_page_link(PAGINA_INSTRUCTIVOS)); ?>">
+                        <!--<a href="biblio_instructivos.html">-->
+                            <img src="<?php echo DIR_IMGS . '/instructor/banners-04.png'  ?>" alt="">
+                        </a></div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="instructor__item">
-                    <div class="instructor__item__pic"> <a href="novedades.html">
+                    <div class="instructor__item__pic">  <a href="<?php echo esc_url(get_page_link(PAGINA_NOVEDADES)); ?>">
                             <img src="<?php echo DIR_IMGS . '/instructor/banners-05-05.png'  ?>" alt=""></a></div>
                 </div>
             </div>
@@ -131,12 +135,17 @@ $post = null;
 <section class="chooseus spad">
     <div class="container">
         <div class="row">
-            <span class="chooseus__pic"><a href="descarga_recibo.html">
-                    <img src="<?php echo DIR_IMGS . '/boton-07.png'  ?>" alt=""></a>
+            <span class="chooseus__pic">
+                <a href="<?php echo esc_url(get_page_link(PAGINA_DESCARGA_RECIBO)); ?>">
+                    <img src="<?php echo DIR_IMGS . '/boton-07.png' ?>" alt="">
+                </a>
             </span>
-            <a href="biblioteca.html">
-                <img src="<?php echo DIR_IMGS . '/boton-08.png'  ?>" alt="">
-            </a>                         
+            <span class="chooseus__pic">
+                <a href="<?php echo esc_url(get_page_link(PAGINA_BIBLIOTECA)); ?>">
+                    <!--<a href="biblioteca.html">-->
+                    <img src="<?php echo DIR_IMGS . '/boton-08.png' ?>" alt="">
+                </a>  
+            </span>    
         </div>
     </div>
     <div class="col-lg-6">
