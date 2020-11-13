@@ -4,12 +4,12 @@
 .header {}
 
 .header__logo {
-    padding: 25px 0 25px;
+    /*padding: 25px 0 25px;*/
 }
 
 .header__top__widget {
     text-align: right;
-    padding: 28px 0 24px;
+    /*padding: 28px 0 24px;*/
 
     ul {
         display: inline-block;
@@ -58,13 +58,14 @@
 
 .header__menu {
     display: inline-block;
+    background-color: red;
 
     ul {
 
         li {
             list-style: none;
             display: inline-block;
-            margin-right: 55px;
+            margin-right: 1em;
             position: relative;
 
             &:last-child {

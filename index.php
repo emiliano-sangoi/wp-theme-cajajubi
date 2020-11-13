@@ -38,6 +38,7 @@ $post = null;
 
 <div id="inicio">
 
+<<<<<<< HEAD
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -51,6 +52,13 @@ $post = null;
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__widget">
+=======
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
+>>>>>>> 74238bf918aa3f8f8fb575eb3c31b245eae50c94
 
 
         </div>
@@ -129,6 +137,7 @@ $post = null;
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             <div class="pruebaMenu set-bg" data-setbg="<?php echo DIR_IMGS . '/hero/hero-2.png' ?>">
                 <div class="container">  
                     <div class="row">
@@ -137,6 +146,16 @@ $post = null;
                                 <h2> ¿Cómo tramito mis beneficios?</h2>
                                 <a href="prestaciones.html"><strong><h3>- VER -</h3></strong></a>
                             </div>
+=======
+        </div>
+        <div class="pruebaMenu set-bg" data-setbg="<?php echo DIR_IMGS . '/hero/hero-2.png'  ?>">
+            <div class="container">  
+                <div class="row">
+                    <div class="col-lg-9 centered">
+                        <div class="texto-img">		
+                            <h2> ¿Cómo tramito mis beneficios?</h2>
+                            <a href="<?php echo esc_url(get_page_link(PAGINA_PRESTACIONES)); ?>"><strong><h3>- VER -</h3></strong></a>
+>>>>>>> 74238bf918aa3f8f8fb575eb3c31b245eae50c94
                         </div>
                     </div>
                 </div>

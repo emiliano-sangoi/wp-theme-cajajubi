@@ -391,8 +391,4 @@ if (!function_exists('bootstrap_comment')) {
     add_filter('login_headertitle', 'my_login_logo_url_title');
     
     
-//    function getDirImgs(){
-//        return get_template_directory_uri() . '/images';
-//    }
-    
 ?>

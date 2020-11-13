@@ -25,3 +25,6 @@
     </head>
     <body <?php body_class(); ?>>
 
+<!-- Header Section Begin -->
+<?php get_template_part("partials/navbar");  ?>
+<!-- Header Section End -->
