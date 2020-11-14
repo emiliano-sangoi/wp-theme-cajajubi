@@ -15,6 +15,7 @@ get_header();
 <?php
 //  $posts = getPostsPorSlugCat(SLUG_CAT_CONTACTO, 1);
 //  $post = isset($posts[0]) ? $posts[0] : null;
+//var_dump(wp_get_upload_dir());exit;
 $post = null;
 ?>
 

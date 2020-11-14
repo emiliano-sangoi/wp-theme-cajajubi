@@ -42,125 +42,124 @@ get_header();
                         <div class="card-heading"> 
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="section-title normal-title">
-                                        <!--<a data-toggle="collapse" data-target="#collapseOne">-->
+                                    <!--<a data-toggle="collapse" data-target="#collapseOne">-->
+                                    <br>
+                                    <p>
+                                        La Caja de jubilaciones ha implementado diversos canales de comunicación. Podés escribirnos en nuestras redes, por whatsapp o un correo electrónico.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        - Whatsapp: 342 5 128 800
                                         <br>
-                                        <p>
-                                            La Caja de jubilaciones ha implementado diversos canales de comunicación. Podés escribirnos en nuestras redes, por whatsapp o un correo electrónico.
-                                        </p>
+                                        - Línea telefónica gratuita: 0800 - 444 - 3734
                                         <br>
-                                        <p>
-                                            - Whatsapp: 342 5 128 800
-                                            <br>
-                                            - Línea telefónica gratuita: 0800 - 444 - 3734
-                                            <br>
-                                            - Correo electrónico: 
-                                            <a href="mailto:contactocaja@santafe.gov.ar">
-                                                contactocaja@santafe.gov.ar
-                                            </a>
-                                            <br>
-                                        </p>
-                                        <p>
-                                            <br>
-                                            <br>
-                                        <p>
-                                        <h7>
-                                            Oficinas de atención al público
-                                        </h7>
+                                        - Correo electrónico: 
+                                        <a href="mailto:contactocaja@santafe.gov.ar">
+                                            contactocaja@santafe.gov.ar
+                                        </a>
+                                        <br>
+                                    </p>
+                                    <p>
                                         <br>
                                         <br>
-                                        </p>
-                                        <p>
-                                            <strong>
-                                                Santa Fe
-                                            </strong>
-                                            <br>
-                                            1º Junta 2724 (S3000CDH)
-                                            <br> 
-                                            Atención al público con turno web previo: turnos.santafe.gov.ar/
-                                            <br>
-                                            Teléfonos: 0800 - 444 – 3734
-                                            <br>
-                                            <br>
-                                            <br>
-                                        </p>
-                                        <p>
-                                            <strong>
-                                                Rosario
-                                            </strong>
-                                            <br>
-                                            Brown 2262 (S2000JCB)
-                                            <br>
-                                            Atención al público con turno web previo: turnos.santafe.gov.ar/
-                                            <br>
-                                            Teléfonos: 54 + 341 - 4724561, 4724562, 4724563
-                                            <br>
-                                            Fax: Interno 109
-                                            <br>
-                                            <br>
-                                        </p>
-                                        <p>
-                                            <strong>
-                                                Venado Tuerto
-                                            </strong>
-                                            <br>
-                                            Mitre 766 (S2600IRP)
-                                            <br>
-                                            Atención al público con turno web previo: turnos.santafe.gov.ar/
-                                            <br>
-                                            Teléfono: 54 + 3462 422289
-                                            <br>
-                                            <br>
-                                        </p>
-                                        <p>
-                                            <strong>
-                                                San Justo
-                                            </strong>
-                                            <br>
-                                            Nicolás Figueredo 2637 (S3040CDM)
-                                            <br>
-                                            Teléfono/Fax: 54 + 3498 425531
-                                            <br>
-                                            <br>
-                                        </p>
-                                        <p>
-                                            <strong>
-                                                Rafaela
-                                            </strong>
-                                            <br>
-                                            Bv. Lehmann 583 (S2300ICB)
-                                            <br>
-                                            Atención al público con turno web previo: turnos.santafe.gov.ar/
-                                            <br>
-                                            Teléfonos/Fax: 54 + 3492 –423091
-                                            <br>
-                                            <br>
-                                        </p>
-                                        <p>
-                                            <strong>
-                                                Reconquista
-                                            </strong>
-                                            <br>
-                                            Rivadavia 666 (S3560GUU)
-                                            <br>
-                                            Atención al público con turno web previo: turnos.santafe.gov.ar/
-                                            <br>
-                                            <br>
-                                        </p>
-                                        <p>
-                                            <strong>
-                                                Buenos Aires
-                                            </strong>
-                                            <br>
-                                            25 de mayo 178, Entrepiso (C1002ABD)
-                                            <br>
-                                            Teléfonos: 54 + 11 43311808
-                                            <br>
-                                            Fax: 54 + 11 43311622
-                                            <br>
-                                            <br>
-                                        </p>   
-                                    </div>
+                                    <p>
+                                    <h7>
+                                        Oficinas de atención al público
+                                    </h7>
+                                    <br>
+                                    <br>
+                                    </p>
+                                    <p>
+                                        <strong>
+                                            Santa Fe
+                                        </strong>
+                                        <br>
+                                        1º Junta 2724 (S3000CDH)
+                                        <br> 
+                                        Atención al público con turno web previo: turnos.santafe.gov.ar/
+                                        <br>
+                                        Teléfonos: 0800 - 444 – 3734
+                                        <br>
+                                        <br>
+                                        <br>
+                                    </p>
+                                    <p>
+                                        <strong>
+                                            Rosario
+                                        </strong>
+                                        <br>
+                                        Brown 2262 (S2000JCB)
+                                        <br>
+                                        Atención al público con turno web previo: turnos.santafe.gov.ar/
+                                        <br>
+                                        Teléfonos: 54 + 341 - 4724561, 4724562, 4724563
+                                        <br>
+                                        Fax: Interno 109
+                                        <br>
+                                        <br>
+                                    </p>
+                                    <p>
+                                        <strong>
+                                            Venado Tuerto
+                                        </strong>
+                                        <br>
+                                        Mitre 766 (S2600IRP)
+                                        <br>
+                                        Atención al público con turno web previo: turnos.santafe.gov.ar/
+                                        <br>
+                                        Teléfono: 54 + 3462 422289
+                                        <br>
+                                        <br>
+                                    </p>
+                                    <p>
+                                        <strong>
+                                            San Justo
+                                        </strong>
+                                        <br>
+                                        Nicolás Figueredo 2637 (S3040CDM)
+                                        <br>
+                                        Teléfono/Fax: 54 + 3498 425531
+                                        <br>
+                                        <br>
+                                    </p>
+                                    <p>
+                                        <strong>
+                                            Rafaela
+                                        </strong>
+                                        <br>
+                                        Bv. Lehmann 583 (S2300ICB)
+                                        <br>
+                                        Atención al público con turno web previo: turnos.santafe.gov.ar/
+                                        <br>
+                                        Teléfonos/Fax: 54 + 3492 –423091
+                                        <br>
+                                        <br>
+                                    </p>
+                                    <p>
+                                        <strong>
+                                            Reconquista
+                                        </strong>
+                                        <br>
+                                        Rivadavia 666 (S3560GUU)
+                                        <br>
+                                        Atención al público con turno web previo: turnos.santafe.gov.ar/
+                                        <br>
+                                        <br>
+                                    </p>
+                                    <p>
+                                        <strong>
+                                            Buenos Aires
+                                        </strong>
+                                        <br>
+                                        25 de mayo 178, Entrepiso (C1002ABD)
+                                        <br>
+                                        Teléfonos: 54 + 11 43311808
+                                        <br>
+                                        Fax: 54 + 11 43311622
+                                        <br>
+                                        <br>
+                                    </p>   
+
                                 </div>
                             </div>
                         </div>

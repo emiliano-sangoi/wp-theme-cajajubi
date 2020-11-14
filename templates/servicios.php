@@ -4,127 +4,197 @@
 
 <?php
 get_header();
+
+
+//$field = get_field('link_estado_expediente', PAGINA_SERVICIOS);
+//var_dump($field);
+
+$pagina = get_post(PAGINA_SERVICIOS);
+
+//TODO
+//Reemplazar por get_field(...)
+$link_expedientes_web = 'https://www.santafe.gov.ar/expedientes-web/';
+$link_historia_laboral = 'http://www.santa-fe.gov.ar/jubypen/aportes/aportes.php';
+// REEMPLAZAR_LINK:
+//$link_cert_negativa = 'http://localhost:8087/wp-caja/certificacion.html';
+
+$link_imp_ganancias = 'https://www.santafe.gov.ar/index.php/web/content/view/full/235061';
+$link_const_cuil = 'https://www.anses.gob.ar/consulta/constancia-de-cuil';
+$link_mi_anses = 'https://www.anses.gob.ar/informacion/mi-anses';
+//$link_biblioteca_dig = 'biblioteca.html';
+//$link_sitios_interes = 'interes.html';
+
+
+//$enlaces = get_fields(PAGINA_SERVICIOS);
+//echo '<br>';
+//echo '<br>';
+//echo '<br>';
+//echo '<br>';
+//echo '<br>';
+//echo '<br>';
+//echo '<br>';
+//echo '<br>';
+//echo '<br>';
+//echo '<br>';
+//echo '<br>';
+//print_r($enlaces);exit;
+//
+//echo $pagina->post_content;
 ?>
 
+
 <!-- Page Preloder -->
-<div id="preloder">
+<!--<div id="preloder">
     <div class="loader"></div>
-</div>
+</div>-->
 
 <!-- Offcanvas Menu Begin -->
-<?php //get_template_part("partials/mobile");   ?>
+<?php //get_template_part("partials/mobile");    ?>
 <!-- Offcanvas Menu End -->
+<div class="container navbar-separator p-5" id="servicios">
+    <h1 class="font-weight-bold text-primary">
+        <?php echo $pagina->post_title; ?>
+    </h1>
+    <hr/>
 
 
-<!-- Breadcrumb Begin -->
-<section class="breadcrumb-option set-bg" style="margin-top: 0px;" data-setbg="<?php echo DIR_IMGS . '/servicios.jpg'; ?>">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb__text">
-                    <h2>Servicios</h2>
-                    <div class="breadcrumb__widget">
-                    </div>
-                </div>
-            </div>
+    <div class="enlaces mt-4">        
+        <h2 class="h4 font-weight-bold">
+            Estado de expedientes
+        </h2>
+        <div class="my-2 mb-3">
+            Podés conocer el estado de los expedientes. Incluye los tradicionales en papel, como así también se pueden localizar los expedientes electrónicos. 
         </div>
+        <div>
+            <a class="btn btn-outline-primary" href="<?php echo $link_expedientes_web; ?>" target="_blank">
+                Acceder
+            </a>
+        </div>                
     </div>
-</section>
-<!-- Breadcrumb End -->
 
-<!-- About Section Begin -->
-<div class="container">
-    <div class="row d-flex justify-content-center">
-        <div class="col-lg-10">
-            <div class="faq__accordion">
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-heading"> 
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="section-title normal-title">
-                                        <!--<a data-toggle="collapse" data-target="#collapseOne"></a>-->
-                                        <br>
-                                        <li>
-                                            <a href="https://www.santafe.gov.ar/expedientes-web/" target="_blank">Estado de expedientes:
-                                            </a>
-                                        </li>
+    <!--=========================================================================================-->
 
-                                        <p>
-                                            Podés conocer el estado de los expedientes. Incluye los tradicionales en papel, como así también se pueden localizar los expedientes electrónicos. 
-                                        </p>
-
-                                        <br>
-                                        <li>
-                                            <a href="http://www.santa-fe.gov.ar/jubypen/aportes/aportes.php" target="_blank">Historia laboral:
-                                            </a>
-                                        </li>
-
-                                        <p>
-                                            Permite consultar los aportes personales de aquellos agentes que aportaron o aportan a esta Caja de Jubilaciones y Pensiones de la Provincia de Santa Fe. Necesitás acceder con tu número de CUIL.  
-                                        </p>						
-                                        <br>
-                                        <li>
-                                            <a href="certificacion.html">
-                                                Certificación negativa:
-                                            </a>
-                                        </li>
-                                        <p>
-                                            A través de este servicio, podrás obtener la constancia que acredita si posees o no un beneficio acordado en este organismo previsional, como así también si iniciaste un trámite en nuestro Organismo.
-                                        </p>
-                                        <br>
-                                        <li>
-                                            <a href="https://www.santafe.gov.ar/index.php/web/content/view/full/235061" target="_blank">Impuesto a las Ganancias:
-                                            </a>
-                                        </li>
-                                        <p>
-                                            Aquí se encuentrarás explicación referente al impuesto a las ganancias de nuestros beneficiarios, las preguntas frecuentes y como se completa el Formulario 572 web.
-                                        </p>	
-                                        <br>
-                                        <li>
-                                            <a href="https://www.anses.gob.ar/consulta/constancia-de-cuil" target="_blank">Constancia de cuil:
-                                            </a>
-                                        </li>
-                                        <p>
-                                            Mediante este enlace podrás generar tu constancia de CUIL desde la pagina de ANSES, completando los datos requeridos.
-                                        </p>	
-                                        <br>
-                                        <li>
-                                            <a href=" https://www.anses.gob.ar/informacion/mi-anses" target="_blank">Mi Anses
-                                            </a>
-                                        </li>
-                                        <p>
-                                            Mi ANSeS es una plataforma digital que te permite realizar diferentes trámites y consultas personales sin necesidad de ir a una oficina de ANSeS. Se ingresa con Clave de la Seguridad Social, que se puede obtener totalmente en línea.
-                                        </p>
-                                        <br>
-                                        <li>
-                                            <a href="biblioteca.html">Biblioteca digital
-                                            </a>
-                                        </li>
-                                        <p>
-                                            Mediante esta sección vas a poder acceder a las normas más destacadas que rigen el funcionamiento de la Caja, también los requisitos de las prestaciones que se otorgan, las regulaciones para nuestros afiliados y Organismos aportantes y adheridos. Está dividida en tres secciones: Normas, Formularios e Instructivos.
-                                        </p>
-                                        <br>
-                                        <li>
-                                            <a href="interes.html">Sitios de interés
-                                            </a>
-                                        </li>
-                                        <p>
-                                            A continuación les proporcionamos sitios afines a nuestra actividad y a los servicios que prestamos.
-                                        </p>
-                                        <br>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="enlaces mt-5">        
+        <h2 class="h4 font-weight-bold">
+            Historia laboral
+        </h2>
+        <div class="my-2 mb-3">
+            Permite consultar los aportes personales de aquellos agentes que aportaron o aportan a esta Caja de Jubilaciones y Pensiones de la Provincia de Santa Fe. Necesitás acceder con tu número de CUIL.  
         </div>
+        <div>
+            <a class="btn btn-outline-primary" href="<?php echo $link_historia_laboral; ?>" target="_blank">
+                Acceder
+            </a>
+        </div>                
     </div>
-</div>
 
-<!-- Faq End -->
-<!-- About Section End -->
+
+    <!--=========================================================================================-->
+
+    <div class="enlaces mt-5">        
+        <h2 class="h4 font-weight-bold">
+            Certificaci&oacute;n negativa
+        </h2>
+        <div class="my-2 mb-3">
+            A través de este servicio, podrás obtener la constancia que acredita si posees o no un beneficio acordado en este organismo previsional, como así también si iniciaste un trámite en nuestro Organismo.
+        </div>
+        <div>
+            <a class="btn btn-outline-primary" href="<?php echo esc_url( get_page_link( PAGINA_CERTIFICACION_NEGATIVA ) ); ?>" target="_blank">
+                Acceder
+            </a>
+        </div>                
+    </div>
+
+
+
+    <!--=========================================================================================-->
+
+    <div class="enlaces mt-5">        
+        <h2 class="h4 font-weight-bold">
+            Impuestos a las ganancias
+        </h2>
+        <div class="my-2 mb-3">
+            Aquí se encuentrarás explicación referente al impuesto a las ganancias de nuestros beneficiarios, las preguntas frecuentes y como se completa el Formulario 572 web.
+        </div>
+        <div>
+            <a class="btn btn-outline-primary" href="<?php echo $link_imp_ganancias; ?>" target="_blank">
+                Acceder
+            </a>
+        </div>                
+    </div>  
+
+    <!--=========================================================================================-->
+
+    <div class="enlaces mt-5">        
+        <h2 class="h4 font-weight-bold">
+            Mi Anses
+        </h2>
+        <div class="my-2 mb-3">
+            Mi ANSeS es una plataforma digital que te permite realizar diferentes trámites y consultas personales sin necesidad de ir a una oficina de ANSeS. Se ingresa con Clave de la Seguridad Social, que se puede obtener totalmente en línea.
+        </div>
+        <div>
+            <a class="btn btn-outline-primary" href="<?php echo $link_mi_anses; ?>" target="_blank">
+                Acceder
+            </a>
+        </div>                
+    </div>          
+
+    <!--=========================================================================================-->
+
+    <div class="enlaces mt-5">        
+        <h2 class="h4 font-weight-bold">
+            Biblioteca digital
+        </h2>
+        <div class="my-2 mb-3">
+            Mi ANSeS es una plataforma digital que te permite realizar diferentes trámites y consultas personales sin necesidad de ir a una oficina de ANSeS. Se ingresa con Clave de la Seguridad Social, que se puede obtener totalmente en línea.
+        </div>
+        <div>
+            <a class="btn btn-outline-primary" href="<?php echo esc_url( get_page_link( PAGINA_BIBLIOTECA ) ); ?>" target="_blank">
+                Acceder
+            </a>
+        </div>                
+    </div>  
+
+    <!--=========================================================================================-->
+
+    <div class="enlaces mt-5">        
+        <h2 class="h4 font-weight-bold">
+            Sitios de interés
+        </h2>
+        <div class="my-2 mb-3">
+            A continuación les proporcionamos sitios afines a nuestra actividad y a los servicios que prestamos.
+        </div>
+        <div>
+            <a class="btn btn-outline-primary" href="<?php echo esc_url( get_page_link( PAGINA_SITIOS_DE_INTERES) ); ?>" target="_blank">
+                Acceder
+            </a>
+        </div>                
+    </div>  
+
+
+</div>  
+
+
+
+
+
+
+
+
+<?php
+//    get_template_part(
+//            'partials/servicio-item',
+//            null,
+//            array(
+//                'class' => 'lalala',
+//                'arbitrary_data' => array(
+//                    'foo' => 'baz',
+//                    'bar' => true,
+//                )
+//            )
+//    );
+?>
+
+
 
 <?php get_footer(); ?>

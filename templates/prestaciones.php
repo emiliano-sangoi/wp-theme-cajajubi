@@ -41,34 +41,32 @@ get_header();
                         <div class="card-heading"> 
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="section-title normal-title">
-                                        <!--<a data-toggle="collapse" data-target="#collapseOne">-->
-                                        <br>
-                                        <p>
-                                            La Caja de Jubilaciones cubre las contingencias de vejez, invalidez y fallecimiento.
-                                        </p>
-                                        <br>
-                                        <p>
-                                            Luego de completar esta información los usuarios podrán acceder al sistema y obtener el Recibo de Haberes. El sistema garantiza confidencialidad y privacidad de la información.
-                                        </p>
-                                        <br>
-                                        <li>
-                                            <a href="http://www.santafe.gob.ar/index.php/web/content/view/full/235057/(subtema)/102727" target="_blank">Jubilaciones
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.santafe.gob.ar/index.php/web/content/view/full/235059/(subtema)/102727" target="_blank">Retiros policiales y penitenciarios
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.santafe.gov.ar/index.php/web/content/view/full/111782/(subtema)/102727" target="_blank">Reconocimiento de servicios
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.santafe.gov.ar/index.php/web/content/view/full/235062/(subtema)/102727" target="_blank">Pensiones
-                                            </a>
-                                        </li>
-                                    </div>
+                                    <!--<a data-toggle="collapse" data-target="#collapseOne">-->
+                                    <br>
+                                    <p>
+                                        La Caja de Jubilaciones cubre las contingencias de vejez, invalidez y fallecimiento.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        Luego de completar esta información los usuarios podrán acceder al sistema y obtener el Recibo de Haberes. El sistema garantiza confidencialidad y privacidad de la información.
+                                    </p>
+                                    <br>
+                                    <li>
+                                        <a href="http://www.santafe.gob.ar/index.php/web/content/view/full/235057/(subtema)/102727" target="_blank">Jubilaciones
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.santafe.gob.ar/index.php/web/content/view/full/235059/(subtema)/102727" target="_blank">Retiros policiales y penitenciarios
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.santafe.gov.ar/index.php/web/content/view/full/111782/(subtema)/102727" target="_blank">Reconocimiento de servicios
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.santafe.gov.ar/index.php/web/content/view/full/235062/(subtema)/102727" target="_blank">Pensiones
+                                        </a>
+                                    </li>
                                 </div>
                             </div>
                         </div>
