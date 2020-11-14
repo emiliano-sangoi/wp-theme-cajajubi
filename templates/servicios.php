@@ -9,7 +9,11 @@ get_header();
 //$field = get_field('link_estado_expediente', PAGINA_SERVICIOS);
 //var_dump($field);
 
-$pagina = get_post(PAGINA_SERVICIOS);
+//$pagina = get_post(PAGINA_SERVICIOS);
+$pagina = get_page_by_path(PAGINA_SERVICIOS);
+
+//$pagina2 = get_page_by_path('prueba');
+//print_r($pagina2);exit;
 
 //TODO
 //Reemplazar por get_field(...)

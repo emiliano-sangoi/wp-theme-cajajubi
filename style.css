@@ -176,23 +176,23 @@ p {
 /*img {
   max-width: 100%;
 }*/
-input:focus,
+/*input:focus,
 select:focus,
 button:focus,
 textarea:focus {
-  outline: none; }
-
-a:hover,
+  outline: none;
+}*/
+/*a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
-  color: #ffffff; }
-
-ul,
+  color: $white-color;
+}*/
+/*ul,
 ol {
   padding: 0;
-  margin: 0; }
-
+  margin: 0;
+}*/
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -591,7 +591,25 @@ ol {
       color: #9B9EA3;
       font-weight: 400; }
 
-/*@import "footer";*/
+/*
+Footer
+*/
+footer h6 {
+  color: #343a40;
+  font-weight: bold; }
+footer .email_conctacto {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1rem; }
+footer .social-media {
+  text-align: right; }
+  footer .social-media a {
+    margin-right: .25em;
+    /*margin-bottom: 1em;*/ }
+  footer .social-media img {
+    width: 15%; }
+
 /*---------------------
   Breadcrumb
 -----------------------*/
@@ -1796,5 +1814,11 @@ ol {
 
 .w-15 {
   width: 15%; }
+
+.w-10 {
+  width: 10%; }
+
+.w-5 {
+  width: 5%; }
 
 /*# sourceMappingURL=style.css.map */
