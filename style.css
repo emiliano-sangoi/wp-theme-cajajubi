@@ -122,7 +122,7 @@ Definir la ruta relativa en relacion al archivo style.css que esta un directorio
 /*----------------------------------------*/
 html,
 body {
-  height: 100%;
+  /*height: 100%;*/
   /*font-family: 'DM Sans', sans-serif;*/
   font-family: 'Open_Sans_Font', sans-serif !important;
   font-weight: normal;
@@ -130,6 +130,25 @@ body {
 
 .navbar-separator {
   margin-top: 63px; }
+
+.altura-minima {
+  min-height: 60vh; }
+
+.centrate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.centrate-x {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0); }
+
+.centrate-y {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%); }
 
 /*h1,
 h2,
@@ -594,21 +613,28 @@ ol {
 /*
 Footer
 */
-footer h6 {
-  color: #343a40;
-  font-weight: bold; }
-footer .email_conctacto {
-  font-size: inherit;
-  color: inherit;
-  text-decoration: none;
-  font-size: 1rem; }
-footer .social-media {
-  text-align: right; }
-  footer .social-media a {
-    margin-right: .25em;
-    /*margin-bottom: 1em;*/ }
-  footer .social-media img {
-    width: 15%; }
+footer {
+  /*min-height: 25vh;*/
+  /*    .container{
+          margin-top: 10em;
+          margin-bottom: 10em;
+      }
+      */ }
+  footer h6 {
+    color: #495057;
+    font-weight: bold; }
+  footer .email_conctacto {
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+    font-size: 1rem; }
+  footer .social-media {
+    text-align: right; }
+    footer .social-media a {
+      margin-right: .25em;
+      /*margin-bottom: 1em;*/ }
+    footer .social-media img {
+      width: 15%; }
 
 /*---------------------
   Breadcrumb

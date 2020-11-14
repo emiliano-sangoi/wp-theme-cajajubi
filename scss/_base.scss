@@ -30,7 +30,7 @@
 /*----------------------------------------*/
 html,
 body {
-  height: 100%;
+  /*height: 100%;*/
   /*font-family: 'DM Sans', sans-serif;*/
   font-family: 'Open_Sans_Font', sans-serif !important;  
   font-weight: normal;
@@ -40,6 +40,23 @@ body {
 .navbar-separator{
     margin-top: $navbar-height;
 }
+
+.altura-minima{
+    min-height: 60vh;
+}
+
+.centrate {
+    @include centerer;
+}
+
+.centrate-x {
+    @include centerer(true, false);
+}
+
+.centrate-y {
+    @include centerer(false, true);
+}
+
 /*h1,
 h2,
 h3,

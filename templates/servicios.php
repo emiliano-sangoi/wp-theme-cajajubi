@@ -1,5 +1,13 @@
 <?php
 /* Template Name: Servicios */
+
+//En caso de no encontrar la pagina -> redireccionar a la home
+// La ubicacion de este codigo debe ser al principio del archivo.
+$pagina = get_page_by_path(PAGINA_SERVICIOS);
+if (!$pagina instanceof WP_Post) {
+    wp_redirect( home_url(), 301 );
+    exit;
+}
 ?>
 
 <?php
@@ -8,13 +16,6 @@ get_header();
 
 //$field = get_field('link_estado_expediente', PAGINA_SERVICIOS);
 //var_dump($field);
-
-//$pagina = get_post(PAGINA_SERVICIOS);
-$pagina = get_page_by_path(PAGINA_SERVICIOS);
-if(!$pagina instanceof WP_Post){
-    $header = 'Location: ' . get_home_url();
-    header($header);
-}
 
 //$pagina2 = get_page_by_path('prueba');
 //print_r($pagina2);exit;
@@ -59,7 +60,7 @@ $link_mi_anses = 'https://www.anses.gob.ar/informacion/mi-anses';
 <!-- Offcanvas Menu Begin -->
 <?php //get_template_part("partials/mobile");    ?>
 <!-- Offcanvas Menu End -->
-<div class="container-lg navbar-separator p-5" id="servicios">
+<div class="container-lg navbar-separator p-5 altura-minima" id="servicios">
     <h1 class="font-weight-bold text-primary">
         <?php echo $pagina->post_title; ?>
     </h1>

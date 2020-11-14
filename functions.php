@@ -10,6 +10,10 @@
  */
 define('BOOTSTRAP_VERSION', '4.5.0');
 
+//Paginas
+define('PAGINA_PRESTACIONES', 'prestaciones');
+define('PAGINA_SERVICIOS', 'servicios');
+
 require 'parameters.php';
 
 define('DIR_IMGS', get_template_directory_uri() . '/images');
@@ -76,6 +80,7 @@ add_filter('body_class', array('BsWp', 'add_slug_to_body_class'));
   e.g. require_once( 'custom-post-types/your-custom-post-type.php' );
 
   ======================================================================================================================== */
+
 
 
 function getLinkPagina($slug){

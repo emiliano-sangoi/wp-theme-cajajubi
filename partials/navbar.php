@@ -31,7 +31,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_PRESTACIONES)); ?>">
+                <a class="nav-link" href="<?php echo getLinkPagina(PAGINA_PRESTACIONES); ?>">
                     Prestaciones
                 </a>
             </li>

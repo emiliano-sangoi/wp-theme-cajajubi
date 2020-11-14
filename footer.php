@@ -4,7 +4,7 @@ wp_footer();
 
 <!-- Footer Section Begin -->
 <footer class="footer bg-gray-300 py-5">
-    <div class="container">
+    <div class="container py-4">
         <div class="row mx-0">
             <div class="col-md-2">
                 <a href="https://www.santafe.gob.ar/" target="_blank">
@@ -70,33 +70,6 @@ wp_footer();
     </div>
 </footer>
 
-<!--<footer class="footer bg-gray-400 px-5 py-4 social-media">    
-    <div class="container">
-        <h6 class="mb-2 text-center">Seguinos:</h6>
-        <div class="text-center">
-            <span class="">
-                <a href="https://www.facebook.com/cajasantafe" target="_blank">
-                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/facebook_sq.png'; ?>" alt="Facebook"/>
-                </a>
-            </span>
-            <span class="">
-                <a href="https://twitter.com/caja_sf" target="_blank">
-                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/twitter_sq.png'; ?>" alt="Twitter"/>
-                </a>
-            </span>
-            <span class="">
-                <a href="https://instagram.com/cajajubisantafe?igshid=1xdlczgob9pq5" target="_blank">
-                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/instagram_sq.png'; ?>" alt="Instagram"/>
-                </a>
-            </span>
-            <span class="">
-                <a href="https://www.youtube.com/user/GobSantaFe" target="_blank">
-                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/youtube_sq.png'; ?>" alt="Youtube"/>
-                </a>
-            </span>
-        </div>
-    </div>
-</footer>-->
 
 </body>
 </html>
