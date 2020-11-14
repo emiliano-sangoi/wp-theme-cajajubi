@@ -41,7 +41,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_SERVICIOS)); ?>">
+                <a class="nav-link" href="<?php echo getLinkPagina(PAGINA_SERVICIOS); ?>">
                     Servicios
                 </a>
             </li>

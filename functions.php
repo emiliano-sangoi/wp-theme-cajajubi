@@ -78,6 +78,13 @@ add_filter('body_class', array('BsWp', 'add_slug_to_body_class'));
   ======================================================================================================================== */
 
 
+function getLinkPagina($slug){
+    $pagina = get_page_by_path( $slug );
+    if($pagina instanceof WP_Post){
+        return  get_permalink($pagina );
+    }
+    return null;
+}
 
 
 
