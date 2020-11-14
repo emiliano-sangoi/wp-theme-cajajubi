@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" id="navbar">
     <a class="navbar-brand" href="#">        
-        <img class="img-fluid d-inline-block" src="<?php echo DIR_IMGS . '/logo_stafe.png'  ?>" alt="">
+        <img class="img-fluid d-inline-block" src="<?php echo DIR_IMGS . '/logo_stafe.png' ?>" alt="">
         <span class="d-inline-block align-middle">CAJA DE JUBILACIONES<br/> Y PENSIONES</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,37 +16,37 @@
                     Institucional
                 </a>
                 <div class="dropdown-menu pull-left" aria-labelledby="dropdownInstitucional">
-                    <a class="dropdown-item" href="quienes.html">
-                        Quienes somos
+                    <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_QUIENES_SOMOS)); ?>">
+                        ¿Quiénes somos?
                     </a>
-                    <a class="dropdown-item" href="historia.html">
+                    <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_HISTORIA)); ?>">
                         Un poco de historia
                     </a>
-                    <a class="dropdown-item" href="politicas.html">
+                    <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_POLITICA_CALIDAD)); ?>">
                         Política de calidad
                     </a>
-                    <a class="dropdown-item" href="delegaciones.html">
+                    <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_DELEGACIONES)); ?>">
                         Delegaciones
                     </a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo esc_url( get_page_link( PAGINA_PRESTACIONES ) ); ?>">
+                <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_PRESTACIONES)); ?>">
                     Prestaciones
                 </a>
             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="<?php echo esc_url( get_page_link( PAGINA_ORG_APORTANTES ) ); ?>">
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_ORG_APORTANTES)); ?>">
                     Organismos aportantes
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo esc_url( get_page_link ( PAGINA_SERVICIOS ) ); ?>">
+                <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_SERVICIOS)); ?>">
                     Servicios
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo esc_url( get_page_link( PAGINA_CONTACTO ) ); ?>">
+                <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_CONTACTO)); ?>">
                     Contacto
                 </a>
             </li>        
