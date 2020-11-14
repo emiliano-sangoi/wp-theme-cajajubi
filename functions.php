@@ -13,6 +13,12 @@ define('BOOTSTRAP_VERSION', '4.5.0');
 //Paginas
 define('PAGINA_PRESTACIONES', 'prestaciones');
 define('PAGINA_SERVICIOS', 'servicios');
+define('PAGINA_BIBLIOTECA', 'biblioteca-digital');
+define('PAGINA_CERTIFICACION_NEGATIVA', 'certificacion-negativa');
+define('PAGINA_SITIOS_DE_INTERES', 'sitios-de-interes');
+
+//var_dump(PAGINA_SITIOS_DE_INTERES);die;
+
 
 require 'parameters.php';
 

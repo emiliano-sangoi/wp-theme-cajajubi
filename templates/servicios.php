@@ -108,7 +108,7 @@ $link_mi_anses = 'https://www.anses.gob.ar/informacion/mi-anses';
             A través de este servicio, podrás obtener la constancia que acredita si posees o no un beneficio acordado en este organismo previsional, como así también si iniciaste un trámite en nuestro Organismo.
         </div>
         <div>
-            <a class="btn btn-outline-primary" href="<?php echo esc_url( get_page_link( PAGINA_CERTIFICACION_NEGATIVA ) ); ?>" target="_blank">
+            <a class="btn btn-outline-primary" href="<?php echo getLinkPagina ( PAGINA_CERTIFICACION_NEGATIVA ); ?>" target="_blank">
                 Acceder
             </a>
         </div>                
@@ -155,10 +155,10 @@ $link_mi_anses = 'https://www.anses.gob.ar/informacion/mi-anses';
             Biblioteca digital
         </h2>
         <div class="my-2 mb-3">
-            Mi ANSeS es una plataforma digital que te permite realizar diferentes trámites y consultas personales sin necesidad de ir a una oficina de ANSeS. Se ingresa con Clave de la Seguridad Social, que se puede obtener totalmente en línea.
+           Mediante esta sección vas a poder acceder a las normas más destacadas que rigen el funcionamiento de la Caja, también los requisitos de las prestaciones que se otorgan, las regulaciones para nuestros afiliados y Organismos aportantes y adheridos. Está dividida en tres secciones: Normas, Formularios e Instructivos.
         </div>
         <div>
-            <a class="btn btn-outline-primary" href="<?php echo esc_url( get_page_link( PAGINA_BIBLIOTECA ) ); ?>" target="_blank">
+            <a class="btn btn-outline-primary" href="<?php echo getLinkPagina(PAGINA_BIBLIOTECA ); ?>" target="_blank">
                 Acceder
             </a>
         </div>                
@@ -174,7 +174,7 @@ $link_mi_anses = 'https://www.anses.gob.ar/informacion/mi-anses';
             A continuación les proporcionamos sitios afines a nuestra actividad y a los servicios que prestamos.
         </div>
         <div>
-            <a class="btn btn-outline-primary" href="<?php echo esc_url( get_page_link( PAGINA_SITIOS_DE_INTERES) ); ?>" target="_blank">
+            <a class="btn btn-outline-primary" href="<?php echo getLinkPagina( PAGINA_SITIOS_DE_INTERES ); ?>" target="_blank">
                 Acceder
             </a>
         </div>                
