@@ -51,7 +51,7 @@ $link_sitios_interes = 'interes.html';
 <!-- Offcanvas Menu Begin -->
 <?php //get_template_part("partials/mobile");    ?>
 <!-- Offcanvas Menu End -->
-<div class="container navbar-separator p-5" id="servicios">
+<div class="container-lg navbar-separator p-5" id="servicios">
     <h1 class="font-weight-bold text-primary">
         <?php echo $pagina->post_title; ?>
     </h1>

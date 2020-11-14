@@ -11,8 +11,60 @@ Tags: 			notifich, bootstrap, basic theme
 Para todos los colores de esta lista se
 crearan automaticamentes fondos y colores de texto
  */
-/*$fm-unna: 'Unna', serif;
-$fm-nunito: 'Nunito Sans', sans-serif;*/
+.bg-gray-100 {
+  background-color: #f8f9fa; }
+
+.text-color-gray-100 {
+  color: #f8f9fa; }
+
+.bg-gray-200 {
+  background-color: #e9ecef; }
+
+.text-color-gray-200 {
+  color: #e9ecef; }
+
+.bg-gray-300 {
+  background-color: #dee2e6; }
+
+.text-color-gray-300 {
+  color: #dee2e6; }
+
+.bg-gray-400 {
+  background-color: #ced4da; }
+
+.text-color-gray-400 {
+  color: #ced4da; }
+
+.bg-gray-500 {
+  background-color: #adb5bd; }
+
+.text-color-gray-500 {
+  color: #adb5bd; }
+
+.bg-gray-600 {
+  background-color: #868e96; }
+
+.text-color-gray-600 {
+  color: #868e96; }
+
+.bg-gray-700 {
+  background-color: #495057; }
+
+.text-color-gray-700 {
+  color: #495057; }
+
+.bg-gray-800 {
+  background-color: #343a40; }
+
+.text-color-gray-800 {
+  color: #343a40; }
+
+.bg-gray-900 {
+  background-color: #212529; }
+
+.text-color-gray-900 {
+  color: #212529; }
+
 /*
 Definir la ruta relativa en relacion al archivo style.css que esta un directorio arriba
 */
@@ -263,6 +315,8 @@ ol {
   color: #5768AD;
   font-size: 90%;
   /*word-break: break-all;*/ }
+  #navbar .navbar-brand img {
+    width: 38%; }
 
 /*@import "hero";*/
 #carouselHome {
@@ -537,95 +591,7 @@ ol {
       color: #9B9EA3;
       font-weight: 400; }
 
-/*---------------------
-  Footer
------------------------*/
-.footer {
-  background: #263246;
-  padding-top: 70px; }
-
-.footer__about {
-  margin-bottom: 30px; }
-  .footer__about ul {
-    margin-bottom: 25px;
-    margin-top: 20px; }
-    .footer__about ul li {
-      color: #9B9EA3;
-      line-height: 37px;
-      font-size: 16px;
-      list-style: none; }
-      .footer__about ul li i {
-        font-size: 16px;
-        color: #5768AD;
-        margin-right: 5px; }
-  .footer__about .subscribe-form {
-    position: relative; }
-    .footer__about .subscribe-form input {
-      width: 100%;
-      height: 50px;
-      font-size: 14px;
-      color: #999999;
-      background: rgba(250, 250, 250, 0.1);
-      border: none;
-      border-radius: 2px;
-      padding-left: 22px; }
-    .footer__about .subscribe-form button {
-      font-size: 20px;
-      color: #ffffff;
-      display: inline-block;
-      background: #5768AD;
-      padding: 0 15px;
-      border: none;
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%; }
-
-.footer__widget {
-  margin-bottom: 30px; }
-  .footer__widget h5 {
-    font-size: 20px;
-    color: #ffffff;
-    margin-bottom: 25px; }
-  .footer__widget ul li {
-    list-style: none; }
-    .footer__widget ul li a {
-      font-size: 16px;
-      color: #9B9EA3;
-      line-height: 37px; }
-  .footer__widget .footer-address li {
-    list-style: none;
-    font-size: 16px;
-    color: #9B9EA3;
-    line-height: 37px; }
-    .footer__widget .footer-address li i {
-      margin-right: 8px; }
-
-.footer__copyright {
-  border-top: 1px solid rgba(225, 225, 225, 0.1);
-  overflow: hidden;
-  padding: 15px 0;
-  margin-top: 20px; }
-
-.footer__copyright__text p {
-  font-size: 14px;
-  color: #6e7580;
-  margin-bottom: 0; }
-.footer__copyright__text i {
-  color: #a11f1f; }
-.footer__copyright__text a {
-  color: #5768AD; }
-
-.footer__copyright__social {
-  text-align: right; }
-  .footer__copyright__social a {
-    display: inline-block;
-    font-size: 15px;
-    color: #ffffff;
-    margin-right: 25px; }
-    .footer__copyright__social a:last-child {
-      margin-right: 0; }
-
+/*@import "footer";*/
 /*---------------------
   Breadcrumb
 -----------------------*/
@@ -1825,5 +1791,10 @@ ol {
   line-height: 20px; }
 
 /*@import "responsive";*/
+.w-20 {
+  width: 20%; }
+
+.w-15 {
+  width: 15%; }
 
 /*# sourceMappingURL=style.css.map */

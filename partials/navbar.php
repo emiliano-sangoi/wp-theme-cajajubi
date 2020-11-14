@@ -1,7 +1,6 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" id="navbar">
-    <div class="container">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" id="navbar">    
     <a class="navbar-brand" href="#">        
-        <img class="img-fluid d-inline-block pr-3" src="<?php echo DIR_IMGS . '/logo_stafe.png'  ?>" alt="">
+        <img class="img-fluid pl-2 pr-3 d-none d-lg-inline-block" src="<?php echo DIR_IMGS . '/logo_stafe.png'  ?>" alt="">
         <span class="d-inline-block align-middle">CAJA DE JUBILACIONES<br/> Y PENSIONES</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +51,6 @@
                 </a>
             </li>        
         </ul>
-    </div>
     </div>
 </nav>
 
