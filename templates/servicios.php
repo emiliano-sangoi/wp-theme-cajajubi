@@ -11,6 +11,10 @@ get_header();
 
 //$pagina = get_post(PAGINA_SERVICIOS);
 $pagina = get_page_by_path(PAGINA_SERVICIOS);
+if(!$pagina instanceof WP_Post){
+    $header = 'Location: ' . get_home_url();
+    header($header);
+}
 
 //$pagina2 = get_page_by_path('prueba');
 //print_r($pagina2);exit;
@@ -20,13 +24,13 @@ $pagina = get_page_by_path(PAGINA_SERVICIOS);
 $link_expedientes_web = 'https://www.santafe.gov.ar/expedientes-web/';
 $link_historia_laboral = 'http://www.santa-fe.gov.ar/jubypen/aportes/aportes.php';
 // REEMPLAZAR_LINK:
-$link_cert_negativa = 'http://localhost:8087/wp-caja/certificacion.html';
+//$link_cert_negativa = 'http://localhost:8087/wp-caja/certificacion.html';
 
 $link_imp_ganancias = 'https://www.santafe.gov.ar/index.php/web/content/view/full/235061';
 $link_const_cuil = 'https://www.anses.gob.ar/consulta/constancia-de-cuil';
 $link_mi_anses = 'https://www.anses.gob.ar/informacion/mi-anses';
-$link_biblioteca_dig = 'biblioteca.html';
-$link_sitios_interes = 'interes.html';
+//$link_biblioteca_dig = 'biblioteca.html';
+//$link_sitios_interes = 'interes.html';
 
 
 //$enlaces = get_fields(PAGINA_SERVICIOS);
@@ -103,7 +107,7 @@ $link_sitios_interes = 'interes.html';
             A través de este servicio, podrás obtener la constancia que acredita si posees o no un beneficio acordado en este organismo previsional, como así también si iniciaste un trámite en nuestro Organismo.
         </div>
         <div>
-            <a class="btn btn-outline-primary" href="<?php echo $link_cert_negativa; ?>" target="_blank">
+            <a class="btn btn-outline-primary" href="<?php echo esc_url( get_page_link( PAGINA_CERTIFICACION_NEGATIVA ) ); ?>" target="_blank">
                 Acceder
             </a>
         </div>                
@@ -153,7 +157,7 @@ $link_sitios_interes = 'interes.html';
             Mi ANSeS es una plataforma digital que te permite realizar diferentes trámites y consultas personales sin necesidad de ir a una oficina de ANSeS. Se ingresa con Clave de la Seguridad Social, que se puede obtener totalmente en línea.
         </div>
         <div>
-            <a class="btn btn-outline-primary" href="<?php echo $link_biblioteca_dig; ?>" target="_blank">
+            <a class="btn btn-outline-primary" href="<?php echo esc_url( get_page_link( PAGINA_BIBLIOTECA ) ); ?>" target="_blank">
                 Acceder
             </a>
         </div>                
@@ -169,7 +173,7 @@ $link_sitios_interes = 'interes.html';
             A continuación les proporcionamos sitios afines a nuestra actividad y a los servicios que prestamos.
         </div>
         <div>
-            <a class="btn btn-outline-primary" href="<?php echo $link_sitios_interes; ?>" target="_blank">
+            <a class="btn btn-outline-primary" href="<?php echo esc_url( get_page_link( PAGINA_SITIOS_DE_INTERES) ); ?>" target="_blank">
                 Acceder
             </a>
         </div>                

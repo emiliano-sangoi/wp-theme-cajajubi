@@ -11,14 +11,6 @@ get_header();
     <div class="loader"></div>
 </div>
 
-<!-- Offcanvas Menu Begin -->
-<?php //get_template_part("partials/mobile");  ?>
-<!-- Offcanvas Menu End -->
-
-<!-- Header Section Begin -->
-<?php get_template_part("partials/main-nav"); ?>
-<!-- Header Section End -->
-
 <!-- Breadcrumb Begin -->
 <section class="breadcrumb-option set-bg" style="margin-top: 0px;" data-setbg="<?php echo DIR_IMGS . '/quienes2.jpg';  ?>">
     <div class="container">
@@ -34,6 +26,7 @@ get_header();
         </div>
     </div>
 </section>
+<!-- Breadcrumb End -->
 
 <!-- Classes Section Begin -->
 <div class="container">
@@ -41,7 +34,6 @@ get_header();
         <div class="col-lg-10">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-title normal-title">
                         <br>
                         <br><br>
                         <p>
@@ -104,12 +96,11 @@ get_header();
                             Dra. Luciana Sbresso
                         </p>
                         <br>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Breadcrumb End -->
+<!-- Classes Section End -->
 
 <?php get_footer(); ?>
