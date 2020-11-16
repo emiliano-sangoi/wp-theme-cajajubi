@@ -1,207 +1,192 @@
 <?php
 /* Template Name: Contacto */
-?>
-
-<?php
+//En caso de no encontrar la pagina -> redireccionar a la home
+// La ubicacion de este codigo debe ser al principio del archivo.
+$pagina = get_page_by_path(PAGINA_CONTACTO);
+if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
+    wp_redirect(home_url(), 301);
+    exit;
+}
 get_header();
 ?>
 
 <!-- Page Preloder -->
-<div id="preloder">
+<!--<div id="preloder">
     <div class="loader"></div>
-</div>
+</div>-->
 
-<!-- Offcanvas Menu Begin -->
-<?php //get_template_part("partials/mobile");   ?>
-<!-- Offcanvas Menu End -->
+<div class="container-lg navbar-separator px-5 pt-4 pb-5 altura-minima" id="contacto">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="<?php echo get_home_url(); ?>">
+                    Inicio
+                </a>
+            </li>    
+            <li class="breadcrumb-item active" aria-current="page">
+                <?php echo $pagina->post_title; ?>
+            </li>
+        </ol>
+    </nav>
 
 
-<!-- Breadcrumb Begin -->
-<section class="breadcrumb-option set-bg" style="margin-top: 0px;" data-setbg="<?php echo DIR_IMGS . '/contacto.jpg'; ?>">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb__text">
-                    <h2>Contacto</h2>
-                    <div class="breadcrumb__widget">
+    <h1 class="font-weight-bold text-primary">
+        <?php echo $pagina->post_title; ?>
+    </h1>
+    <hr/>
+
+    <div>
+        <?php if (empty($pagina->post_content)): ?>
+            <p class="text-muted">
+                No se ha cargado ningun contenido en esta secci&oacute;n.
+            </p>
+            <?php
+        else:
+            echo nl2br($pagina->post_content);
+            ?>
+        <?php endif; ?>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-2">
+            <div class="bg-light p-3 text-center border border-secondary medio-contacto">
+                <h6 class="mb-2">
+                    <i class="fa fa-whatsapp"></i>
+                    Whatsapp
+                </h6>
+                <div class="">
+                    342 5 128 800
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="bg-light p-3 text-center border border-secondary medio-contacto">
+                <h6 class="mb-2" title="Línea telefónica gratuita">
+                    <i class="fa fa-phone"></i>
+                    Tel&eacute;fono
+                </h6>
+                <div class="">
+                    0800 - 444 - 3734
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="bg-light p-3 text-center border border-secondary medio-contacto">
+                <h6 class="mb-2">
+                    <i class="fa fa-envelope"></i>
+                    Correo Electrónico
+                </h6>
+                <div class="">
+                    <a class="email-conctacto" href="mailto:contactocaja@santafe.gov.ar" target="_blank">
+                        contactocaja@santafe.gov.ar
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="bg-light p-3 text-center border border-secondary medio-contacto">
+                <h6 class="mb-2">
+                    <i class="fa fa-users"></i>
+                    Redes sociales
+                </h6>
+                <div class="">
+                    <div class="social-media">
+                        <span class="">
+                            <a href="https://www.facebook.com/cajasantafe" target="_blank">
+                                <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/facebook_sq.png'; ?>" alt="Facebook"/>
+                            </a>
+                        </span>
+                        <span class="">
+                            <a href="https://twitter.com/caja_sf" target="_blank">
+                                <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/twitter_sq.png'; ?>" alt="Twitter"/>
+                            </a>
+                        </span>
+                        <span class="">
+                            <a href="https://instagram.com/cajajubisantafe?igshid=1xdlczgob9pq5" target="_blank">
+                                <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/instagram_sq.png'; ?>" alt="Instagram"/>
+                            </a>
+                        </span>
+                        <span class="">
+                            <a href="https://www.youtube.com/user/GobSantaFe" target="_blank">
+                                <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/youtube_sq.png'; ?>" alt="Youtube"/>
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- Breadcrumb End -->
 
-<!-- About Section Begin -->
-<div class="container">
-    <div class="row d-flex justify-content-center">
-        <div class="col-lg-10">
-            <div class="faq__accordion">
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-heading"> 
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <!--<a data-toggle="collapse" data-target="#collapseOne">-->
-                                    <br>
-                                    <p>
-                                        La Caja de jubilaciones ha implementado diversos canales de comunicación. Podés escribirnos en nuestras redes, por whatsapp o un correo electrónico.
-                                    </p>
-                                    <br>
-                                    <p>
-                                        - Whatsapp: 342 5 128 800
-                                        <br>
-                                        - Línea telefónica gratuita: 0800 - 444 - 3734
-                                        <br>
-                                        - Correo electrónico: 
-                                        <a href="mailto:contactocaja@santafe.gov.ar">
-                                            contactocaja@santafe.gov.ar
-                                        </a>
-                                        <br>
-                                    </p>
-                                    <p>
-                                        <br>
-                                        <br>
-                                    <p>
-                                    <h7>
-                                        Oficinas de atención al público
-                                    </h7>
-                                    <br>
-                                    <br>
-                                    </p>
-                                    <p>
-                                        <strong>
-                                            Santa Fe
-                                        </strong>
-                                        <br>
-                                        1º Junta 2724 (S3000CDH)
-                                        <br> 
-                                        Atención al público con turno web previo: turnos.santafe.gov.ar/
-                                        <br>
-                                        Teléfonos: 0800 - 444 – 3734
-                                        <br>
-                                        <br>
-                                        <br>
-                                    </p>
-                                    <p>
-                                        <strong>
-                                            Rosario
-                                        </strong>
-                                        <br>
-                                        Brown 2262 (S2000JCB)
-                                        <br>
-                                        Atención al público con turno web previo: turnos.santafe.gov.ar/
-                                        <br>
-                                        Teléfonos: 54 + 341 - 4724561, 4724562, 4724563
-                                        <br>
-                                        Fax: Interno 109
-                                        <br>
-                                        <br>
-                                    </p>
-                                    <p>
-                                        <strong>
-                                            Venado Tuerto
-                                        </strong>
-                                        <br>
-                                        Mitre 766 (S2600IRP)
-                                        <br>
-                                        Atención al público con turno web previo: turnos.santafe.gov.ar/
-                                        <br>
-                                        Teléfono: 54 + 3462 422289
-                                        <br>
-                                        <br>
-                                    </p>
-                                    <p>
-                                        <strong>
-                                            San Justo
-                                        </strong>
-                                        <br>
-                                        Nicolás Figueredo 2637 (S3040CDM)
-                                        <br>
-                                        Teléfono/Fax: 54 + 3498 425531
-                                        <br>
-                                        <br>
-                                    </p>
-                                    <p>
-                                        <strong>
-                                            Rafaela
-                                        </strong>
-                                        <br>
-                                        Bv. Lehmann 583 (S2300ICB)
-                                        <br>
-                                        Atención al público con turno web previo: turnos.santafe.gov.ar/
-                                        <br>
-                                        Teléfonos/Fax: 54 + 3492 –423091
-                                        <br>
-                                        <br>
-                                    </p>
-                                    <p>
-                                        <strong>
-                                            Reconquista
-                                        </strong>
-                                        <br>
-                                        Rivadavia 666 (S3560GUU)
-                                        <br>
-                                        Atención al público con turno web previo: turnos.santafe.gov.ar/
-                                        <br>
-                                        <br>
-                                    </p>
-                                    <p>
-                                        <strong>
-                                            Buenos Aires
-                                        </strong>
-                                        <br>
-                                        25 de mayo 178, Entrepiso (C1002ABD)
-                                        <br>
-                                        Teléfonos: 54 + 11 43311808
-                                        <br>
-                                        Fax: 54 + 11 43311622
-                                        <br>
-                                        <br>
-                                    </p>   
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="mt-4 bg-light px-5 pb-5 pt-4 border border-secondary">
+        <form action="form-process.php" method="post">
+            <h3 class="text-center font-weight-bold">
+                Env&iacute;anos tu consulta
+            </h3>
+            <hr class="w-50 mx-auto"/>
+            <div class="form-row mt-4">
+                <div class="col-6">
+                    <label for="name" class="font-weight-bold">
+                        Nombre y apellido
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre y apellido*" required>                
+                </div>
+                <div class="col-6">
+                    <label for="email" class="font-weight-bold">
+                        Correo electr&oacute;nico
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu dirección de correo con nadie.</small>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-            
-<!-- Contact Section End -->
-<hr>
-<!-- Leave Comment Begin -->
-<div class="leave-comment comment-form spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="leave__comment__text">
-                    <h2>Escribinos</h2>
-                    <form action="form-process.php" method="post">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <input type="text" id="name" name="name" placeholder="Nombre y apellido*" required>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <input type="email" id="email" name="email" placeholder="Email*" required>
-                            </div>
-                            <div class="col-lg-12 text-center">
-                                <textarea placeholder="Mensaje" id="message" name="message" required></textarea>
-                                <button type="submit" class="btn-primary" id="form-submit">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
+            <div class="form-row">
+                <div class="col-12">
+                    <label for="message" class="font-weight-bold">
+                        Consulta
+                        <span class="text-danger">*</span>
+                    </label>
+                    <textarea class='form-control' rows='10' placeholder="Ingrese su consulta" id="message" name="message" required></textarea>                    
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- Leave Comment End -->
+            <div class="mt-4">
+                <button type="submit" class="btn btn-lg btn-outline-primary" id="form-submit">Enviar</button>
+            </div>
 
-<!-- Faq End -->
-<!-- About Section End -->
+        </form>
+    </div>
+
+
+
+    <h2 class="h3 font-weight-bold mt-5">
+        Oficinas de atención al público
+    </h2>
+
+    <section class="py-3">
+
+        <?php
+        $contactos = getInfoContacto();
+        foreach ($contactos as $contacto) :
+            $titulo = $contacto['titulo'];
+            $direccion = $contacto['direccion'];
+            $telefono = $contacto['telefono'];
+            $fax = $contacto['fax'];
+            $mostrar_turno_web = $contacto['mostrar_turno_web'];
+            $whatsapp = $contacto['whatsapp'];
+            ?>
+            <div class="mb-3">
+                <?php
+                include(locate_template('partials/card-contacto.php'));
+                ?>
+            </div>
+        <?php endforeach; ?>
+
+
+    </section>
+
+</div>
+
+
 
 <?php get_footer(); ?>
 

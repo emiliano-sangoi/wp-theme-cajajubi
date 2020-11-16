@@ -22,6 +22,7 @@ define('PAGINA_HISTORIA', 'un-poco-de-historia');
 define('PAGINA_DELEGACIONES', 'delegaciones');
 define('PAGINA_NOVEDADES', 'novedades');
 define('PAGINA_POLITICA_CALIDAD', 'politica-de-calidad');
+define('PAGINA_CONTACTO', 'contacto');
 
 //var_dump(PAGINA_SITIOS_DE_INTERES);die;
 
@@ -424,5 +425,31 @@ if (!function_exists('bootstrap_comment')) {
 //    add_filter('login_headertitle', 'my_login_logo_url_title');
     
     remove_filter ('the_content', 'wpautop');
+    
+    
+    function getInfoContacto(){
+        $resultado = array();
+        
+        $f = function($titulo, $dir, $tel, $fax, $mostrar_turno_web = false, $whatsapp = null ){
+            return array(
+                'titulo' => $titulo,
+                'direccion' => $dir,
+                'telefono' => $tel,
+                'fax' => $fax,
+                'mostrar_turno_web' => $mostrar_turno_web,
+                'whatsapp' => $whatsapp,
+            );
+        };
+        
+        $resultado[] = $f('Santa Fe', '1º Junta 2724 (S3000CDH)', '0800 - 444 - 3734', null, true, '342 5 128 800');
+        $resultado[] = $f('Rosario', 'Brown 2262 (S2000JCB)','54 + 341 - 4724561, 4724562, 4724563','Interno 109', true, false);
+        $resultado[] = $f('Venado Tuerto', 'Mitre 766 (S2600IRP)','54 + 3462 422289',null, true, false);       
+        $resultado[] = $f('San Justo', 'Nicolás Figueredo 2637 (S3040CDM)','54 + 3498 425531',null, true, false);
+        $resultado[] = $f('Rafaela', 'Bv. Lehmann 583 (S2300ICB)','Teléfonos/Fax: 54 + 3492 - 423091',null, true, false);
+        $resultado[] = $f('Reconquista', 'Rivadavia 666 (S3560GUU)',null, null, true, false);
+        $resultado[] = $f('Buenos Aires', '25 de mayo 178, Entrepiso (C1002ABD)', '54 + 11 43311808','54 + 11 43311622', true, false);
+        
+        return $resultado;
+    }
     
 ?>

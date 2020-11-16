@@ -1,7 +1,30 @@
 /*---------------------
   Contact
 -----------------------*/
-.contact {
+
+#contacto{
+
+    .medio-contacto{
+        min-height: 5em !important                                     ;
+    }
+
+    .social-media{
+        text-align: center;
+        a{
+            margin-right: .20em;            
+        }
+        img{
+            width: 11%;
+        }
+    }
+
+
+
+
+
+}
+
+/*.contact {
   padding-bottom: 80px;
 }
 
@@ -26,9 +49,9 @@
   }
 }
 
-/*---------------------
+---------------------
   Map
------------------------*/
+-----------------------
 .map {
   height: 500px;
   position: relative;
@@ -95,9 +118,9 @@
   line-height: 26px;
 }
 
-/*---------------------
+---------------------
   Contact Form
------------------------*/
+-----------------------
 .comment-form {
   background: $white-color;
   padding-bottom: 100px;
@@ -112,4 +135,4 @@
       margin-bottom: 34px;
     }
   }
-}
+}*/

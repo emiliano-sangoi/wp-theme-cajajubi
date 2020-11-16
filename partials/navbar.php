@@ -47,7 +47,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-contacto"" href="<?php echo esc_url(get_page_link(PAGINA_CONTACTO)); ?>">
+                <a class="nav-link nav-link-contacto"" href="<?php echo getLinkPagina(PAGINA_CONTACTO); ?>">
                     Contacto
                 </a>
             </li>        
