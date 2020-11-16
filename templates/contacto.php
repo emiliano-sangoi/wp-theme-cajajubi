@@ -204,3 +204,8 @@ get_header();
 <!-- About Section End -->
 
 <?php get_footer(); ?>
+
+<script>
+    $('a.nav-link').removeClass('active');
+    $('.nav-link-contacto').addClass('active');
+</script>

@@ -66,3 +66,9 @@ get_header();
 
 
 <?php get_footer(); ?>
+
+
+<script>
+    $('a.nav-link').removeClass('active');
+    $('.nav-link-prestaciones').addClass('active');
+</script>
