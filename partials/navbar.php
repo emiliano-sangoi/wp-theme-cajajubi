@@ -19,7 +19,7 @@
                     <a class="nav-link" href="<?php echo getLinkPagina(PAGINA_QUIENES_SOMOS); ?>">
                         ¿Quiénes somos?
                     </a>
-                    <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_HISTORIA)); ?>">
+                    <a class="nav-link" href="<?php echo getLinkPagina(PAGINA_HISTORIA); ?>">
                         Un poco de historia
                     </a>
                     <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_POLITICA_CALIDAD)); ?>">

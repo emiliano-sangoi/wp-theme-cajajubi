@@ -16,7 +16,7 @@ get_header();
     <div class="loader"></div>
 </div>-->
 
-<div class="container-lg navbar-separator py-4 px-5 altura-minima" id="prestaciones">
+<div class="container-lg navbar-separator py-4 px-5 altura-minima" id="quienes-somos">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
@@ -56,7 +56,7 @@ get_header();
                                 <img class='img-fluid' src="https://via.placeholder.com/100"/>
                             </div>
                             <div class="col-9 px-3">
-                                <h3 class="h4 font-weight-bold">
+                                <h3 class="h4">
                                     Dr. Humberto Giobergia
                                 </h3>
                                 <p>

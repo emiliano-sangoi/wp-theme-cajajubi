@@ -18,6 +18,7 @@ define('PAGINA_CERTIFICACION_NEGATIVA', 'certificacion-negativa');
 define('PAGINA_SITIOS_DE_INTERES', 'sitios-de-interes');
 define('PAGINA_ORG_APORTANTES', 'organismos-aportantes');
 define('PAGINA_QUIENES_SOMOS', 'quienes-somos');
+define('PAGINA_HISTORIA', 'un-poco-de-historia');
 
 //var_dump(PAGINA_SITIOS_DE_INTERES);die;
 
@@ -199,34 +200,34 @@ if (!function_exists('custom_logo_guttenberg')) {
   ======================================================================================================================== */
 
 // Add custom css
-if (!function_exists('my_custom_login')) {
-
-    function my_custom_login() {
-        echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/css/custom-login-style.css" />';
-    }
-
-}
-add_action('login_head', 'my_custom_login');
+//if (!function_exists('my_custom_login')) {
+//
+//    function my_custom_login() {
+//        echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/css/custom-login-style.css" />';
+//    }
+//
+//}
+//add_action('login_head', 'my_custom_login');
 
 // Link the logo to the home of our website
-if (!function_exists('my_login_logo_url')) {
-
-    function my_login_logo_url() {
-        return get_bloginfo('url');
-    }
-
-}
-add_filter('login_headerurl', 'my_login_logo_url');
+//if (!function_exists('my_login_logo_url')) {
+//
+//    function my_login_logo_url() {
+//        return get_bloginfo('url');
+//    }
+//
+//}
+//add_filter('login_headerurl', 'my_login_logo_url');
 
 // Change the title text
-if (!function_exists('my_login_logo_url_title')) {
-
-    function my_login_logo_url_title() {
-        return get_bloginfo('name');
-    }
-
-}
-add_filter('login_headertext', 'my_login_logo_url_title');
+//if (!function_exists('my_login_logo_url_title')) {
+//
+//    function my_login_logo_url_title() {
+//        return get_bloginfo('name');
+//    }
+//
+//}
+//add_filter('login_headertext', 'my_login_logo_url_title');
 
 
 /* ========================================================================================================================
@@ -399,25 +400,26 @@ if (!function_exists('bootstrap_comment')) {
       ======================================================================================================================== */
 
 // Add custom css
-    function my_custom_login() {
-        echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/css/custom-login-style.css" />';
-    }
-
-    add_action('login_head', 'my_custom_login');
+//    function my_custom_login() {
+//        echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/css/custom-login-style.css" />';
+//    }
+//
+//    add_action('login_head', 'my_custom_login');
 
 // Link the logo to the home of our website
-    function my_login_logo_url() {
-        return get_bloginfo('url');
-    }
-
-    add_filter('login_headerurl', 'my_login_logo_url');
+//    function my_login_logo_url() {
+//        return get_bloginfo('url');
+//    }
+//
+//    add_filter('login_headerurl', 'my_login_logo_url');
 
 // Change the title text
-    function my_login_logo_url_title() {
-        return 'Sitio web de la Caja de Jubilaciones';
-    }
-
-    add_filter('login_headertitle', 'my_login_logo_url_title');
+//    function my_login_logo_url_title() {
+//        return 'Sitio web de la Caja de Jubilaciones';
+//    }
+//
+//    add_filter('login_headertitle', 'my_login_logo_url_title');
     
+    remove_filter ('the_content', 'wpautop');
     
 ?>
