@@ -19,6 +19,7 @@ define('PAGINA_SITIOS_DE_INTERES', 'sitios-de-interes');
 define('PAGINA_ORG_APORTANTES', 'organismos-aportantes');
 define('PAGINA_QUIENES_SOMOS', 'quienes-somos');
 define('PAGINA_HISTORIA', 'un-poco-de-historia');
+define('PAGINA_NOVEDADES', 'novedades');
 
 //var_dump(PAGINA_SITIOS_DE_INTERES);die;
 
