@@ -16,10 +16,14 @@ get_header();
     <div class="loader"></div>
 </div>-->
 
-<div class="container-lg navbar-separator py-4 px-5 altura-minima" id="quienes-somos">
+<div class="container-lg navbar-separator px-5 pt-4 pb-5 altura-minima" id="quienes-somos">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
+            <li class="breadcrumb-item">
+                <a href="<?php echo get_home_url(); ?>">
+                    Inicio
+                </a>
+            </li>    
             <li class="breadcrumb-item active" aria-current="page">
                 <?php echo $pagina->post_title; ?>
             </li>

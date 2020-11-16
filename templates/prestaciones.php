@@ -38,7 +38,7 @@ get_header();
             No se ha cargado ningun contenido en esta secci&oacute;n.
         </p>
         <?php else: 
-            echo $pagina->post_content; 
+            echo nl2br($pagina->post_content);
         ?>
         <?php endif; ?>
     </div>

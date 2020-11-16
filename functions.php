@@ -21,6 +21,7 @@ define('PAGINA_QUIENES_SOMOS', 'quienes-somos');
 define('PAGINA_HISTORIA', 'un-poco-de-historia');
 define('PAGINA_DELEGACIONES', 'delegaciones');
 define('PAGINA_NOVEDADES', 'novedades');
+define('PAGINA_POLITICA_CALIDAD', 'politica-de-calidad');
 
 //var_dump(PAGINA_SITIOS_DE_INTERES);die;
 
