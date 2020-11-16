@@ -25,7 +25,7 @@
                     <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_POLITICA_CALIDAD)); ?>">
                         Política de calidad
                     </a>
-                    <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_DELEGACIONES)); ?>">
+                    <a class="nav-link" href="<?php echo getLinkPagina(PAGINA_DELEGACIONES); ?>">
                         Delegaciones
                     </a>
                 </div>

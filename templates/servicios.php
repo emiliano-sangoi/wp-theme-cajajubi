@@ -44,7 +44,17 @@ $link_mi_anses = 'https://www.anses.gob.ar/informacion/mi-anses';
 <!-- Offcanvas Menu Begin -->
 <?php //get_template_part("partials/mobile");    ?>
 <!-- Offcanvas Menu End -->
-<div class="container-lg navbar-separator p-5 altura-minima" id="servicios">
+<div class="container-lg navbar-separator px-5 pt-4 pb-5 altura-minima" id="servicios">
+    
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
+            <li class="breadcrumb-item active" aria-current="page">
+                <?php echo $pagina->post_title; ?>
+            </li>
+        </ol>
+    </nav>
+    
     <h1 class="font-weight-bold text-primary">
         <?php echo $pagina->post_title; ?>
     </h1>

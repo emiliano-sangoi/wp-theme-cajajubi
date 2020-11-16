@@ -23,13 +23,23 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
 
 
 <!-- Page Preloder -->
-<div id="preloder">
+<!--<div id="preloder">
     <div class="loader"></div>
-</div>
+</div>-->
 
-<?php //get_template_part("partials/mobile");    ?>
+
 <!-- Offcanvas Menu End -->
-<div class="container-lg navbar-separator p-5 altura-minima" id="servicios">
+<div class="container-lg navbar-separator px-5 pt-4 pb-5 altura-minima" id="servicios">
+    
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
+            <li class="breadcrumb-item active" aria-current="page">
+                <?php echo $pagina->post_title; ?>
+            </li>
+        </ol>
+    </nav>
+    
     <h1 class="font-weight-bold text-primary">
         <?php echo $pagina->post_title; ?>
     </h1>
@@ -40,7 +50,7 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
             No se ha cargado ningun contenido en esta secci&oacute;n.
         </p>
         <?php else: 
-            echo $pagina->post_content; 
+            echo nl2br($pagina->post_content); 
         ?>
         <?php endif; ?>
     </div>
