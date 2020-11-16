@@ -8,9 +8,6 @@ if (!$pagina instanceof WP_Post) {
     wp_redirect( home_url(), 301 );
     exit;
 }
-?>
-
-<?php
 get_header();
 
 
@@ -35,20 +32,7 @@ $link_mi_anses = 'https://www.anses.gob.ar/informacion/mi-anses';
 
 
 //$enlaces = get_fields(PAGINA_SERVICIOS);
-//echo '<br>';
-//echo '<br>';
-//echo '<br>';
-//echo '<br>';
-//echo '<br>';
-//echo '<br>';
-//echo '<br>';
-//echo '<br>';
-//echo '<br>';
-//echo '<br>';
-//echo '<br>';
-//print_r($enlaces);exit;
-//
-//echo $pagina->post_content;
+
 ?>
 
 
@@ -207,3 +191,8 @@ $link_mi_anses = 'https://www.anses.gob.ar/informacion/mi-anses';
 
 
 <?php get_footer(); ?>
+
+<script>
+    $('a.nav-link').removeClass('active');
+    $('.nav-link-servicios').addClass('active');
+</script>

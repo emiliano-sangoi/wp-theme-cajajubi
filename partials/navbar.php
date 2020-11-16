@@ -36,12 +36,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_ORG_APORTANTES)); ?>">
+                <a class="nav-link nav-link-org-aportantes" 
+                   href="<?php echo getLinkPagina(PAGINA_ORG_APORTANTES); ?>">
                     Organismos aportantes
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo getLinkPagina(PAGINA_SERVICIOS); ?>">
+                <a class="nav-link nav-link-servicios" href="<?php echo getLinkPagina(PAGINA_SERVICIOS); ?>">
                     Servicios
                 </a>
             </li>

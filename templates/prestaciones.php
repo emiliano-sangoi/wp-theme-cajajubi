@@ -8,9 +8,7 @@ if (!$pagina instanceof WP_Post) {
     wp_redirect( home_url(), 301 );
     exit;
 }
-?>
 
-<?php
 get_header();
 ?>
 
@@ -18,26 +16,6 @@ get_header();
 <div id="preloder">
     <div class="loader"></div>
 </div>
-
-<!-- Offcanvas Menu Begin -->
-<?php //get_template_part("partials/mobile");    ?>
-<!-- Offcanvas Menu End -->
-
-<!-- Breadcrumb Begin -->
-<!--<section class="breadcrumb-option set-bg" style="margin-top: 0px;" data-setbg="<?php //echo DIR_IMGS . '/prestaciones.jpg';  ?>">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb__text">
-                    <h2>Prestaciones</h2>
-                    <div class="breadcrumb__widget">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>-->
-<!-- Breadcrumb End -->
 
 <div class="container-lg navbar-separator p-5 altura-minima" id="prestaciones">
     <h1 class="font-weight-bold text-primary">
