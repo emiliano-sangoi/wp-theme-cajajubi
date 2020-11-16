@@ -1,106 +1,286 @@
 <?php
 /* Template Name: Quienes somos */
-?>
 
-<?php
+//En caso de no encontrar la pagina -> redireccionar a la home
+// La ubicacion de este codigo debe ser al principio del archivo.
+$pagina = get_page_by_path(PAGINA_QUIENES_SOMOS);
+if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
+    wp_redirect(home_url(), 301);
+    exit;
+}
 get_header();
 ?>
 
 <!-- Page Preloder -->
-<div id="preloder">
+<!--<div id="preloder">
     <div class="loader"></div>
-</div>
+</div>-->
 
-<!-- Breadcrumb Begin -->
-<section class="breadcrumb-option set-bg" style="margin-top: 0px;" data-setbg="<?php echo DIR_IMGS . '/quienes2.jpg';  ?>">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb__text">
-                    <h2>Quiénes somos</h2>
-                    <div class="breadcrumb__widget">
-                        <!--<span>-->
+<div class="container-lg navbar-separator py-4 px-5 altura-minima" id="prestaciones">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
+            <li class="breadcrumb-item active" aria-current="page">
+                <?php echo $pagina->post_title; ?>
+            </li>
+        </ol>
+    </nav>
+
+    <h1 class="font-weight-bold text-primary">
+        <?php echo $pagina->post_title; ?>
+    </h1>
+    <hr/>
+    <div>
+        <?php if (empty($pagina->post_content)): ?>
+            <p class="text-muted">
+                No se ha cargado ningun contenido en esta secci&oacute;n.
+            </p>
+            <?php
+        else:
+            echo $pagina->post_content;
+            ?>
+        <?php endif; ?>
+    </div>
+
+    <h2 class="h3 font-weight-bold mt-5">Autoridades</h2>
+    <section class="py-3">
+
+        <div class="row mb-4">
+
+            <!--Director:-->
+            <div class='col-6'>
+                <div class='card'>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                            </div>
+                            <div class="col-9 px-3">
+                                <h3 class="h4 font-weight-bold">
+                                    Dr. Humberto Giobergia
+                                </h3>
+                                <p>
+                                    Director Provincial Caja de Jubilaciones y Pensiones
+                                </p>    
+                                <div>
+                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                        Curriculum Vitae
+                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />-->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class='col-6'>
+                <!--Director:-->
+                <div class='card'>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                            </div>
+                            <div class="col-9 px-3">
+                                <h3 class="h4">
+                                    Alberto W. Sanchez
+                                </h3>
+                                <p>
+                                    Sub-Director Provincial Caja de Jubilaciones y Pensiones
+                                </p>    
+                                <div>
+                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                        Curriculum Vitae
+                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'       ?>" />-->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Breadcrumb End -->
 
-<!-- Classes Section Begin -->
-<div class="container">
-    <div class="row d-flex justify-content-center">
-        <div class="col-lg-10">
-            <div class="row">
-                <div class="col-lg-12">
-                        <br>
-                        <br><br>
-                        <p>
-                            La Caja de Jubilaciones y Pensiones de la Provincia de Santa Fe, como Organismo Autárquico, es la encargada de administrar el régimen de jubilaciones y pensiones provincial.
-                        </p>
-                        <br>
-                        <p>
-                            Este régimen previsional, que brinda protección a la vejez, invalidez y muerte, está basado en un sistema público, de reparto, y solidario.
-                        </p>
-                        <br><br>
-                        <p>
-                            <strong>AUTORIDADES</strong>
-                        </p>
-                        <br>
-                        <p>
-                            <strong>Director Provincial Caja de Jubilaciones y Pensiones</strong>
-                        </p>
-                        <p>
-                            Dr. Humberto Giobergia
-                        </p>
-                        <br>
-                        <p>
-                            <strong>Sub-Director Provincial Caja de Jubilaciones y Pensiones</strong>
-                        </p>
-                        <p>
-                            Alberto W. Sanchez
-                        </p>
-                        <br>
-                        <p>
-                            <strong>Secretaria General</strong>
-                        </p>
-                        <p>
-                            Dra. Florencia Lacava
-                        </p>
-                        <br>
-                        <p>
-                            <strong>Directora Previsional</strong>
-                        </p>
-                        <p>
-                            CPN Silvia Galán
-                        </p>
-                        <br>
-                        <p>
-                            <strong>Contador General</strong>
-                        </p>
-                        <p>
-                            CPN Julio Rugna
-                        </p>
-                        <br>
-                        <p>
-                            <strong>Director General de Asuntos Jurídicos</strong>
-                        </p>
-                        <p>
-                            Dr. Esteban Mántaras</p>
-                        <br>
-                        <p>
-                            <strong>Sub Dirección de Auditoría Interna</strong>
-                        </p>
-                        <p>
-                            Dra. Luciana Sbresso
-                        </p>
-                        <br>
+
+        <div class="row mb-4">
+
+            <!--Director:-->
+            <div class='col-6'>
+                <div class='card'>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                            </div>
+                            <div class="col-9 px-3">
+                                <h3 class="h4">
+                                    Dra. Florencia Lacava
+                                </h3>
+                                <p>
+                                    Secretaria General
+                                </p>    
+                                <div>
+                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                        Curriculum Vitae
+                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />-->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class='col-6'>
+                <!--Director:-->
+                <div class='card'>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                            </div>
+                            <div class="col-9 px-3">
+                                <h3 class="h4">
+                                    CPN Silvia Galán
+                                </h3>
+                                <p>
+                                    Directora Previsional
+                                </p>    
+                                <div>
+                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                        Curriculum Vitae
+                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'       ?>" />-->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+
+        <div class="row mb-4">
+
+            <!--Director:-->
+            <div class='col-6'>
+                <div class='card'>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                            </div>
+                            <div class="col-9 px-3">
+                                <h3 class="h4">
+                                    CPN Julio Rugna
+                                </h3>
+                                <p>
+                                    Contador General
+                                </p>    
+                                <div>
+                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                        Curriculum Vitae
+                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />-->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class='col-6'>
+                <!--Director:-->
+                <div class='card'>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                            </div>
+                            <div class="col-9 px-3">
+                                <h3 class="h4">
+                                    Dr. Esteban Mántaras
+                                </h3>
+                                <p>
+                                    Director General de Asuntos Jurídicos
+                                </p>    
+                                <div>
+                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                        Curriculum Vitae
+                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'       ?>" />-->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+
+            <!--Director:-->
+            <div class='col-6'>
+                <div class='card'>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                            </div>
+                            <div class="col-9 px-3">
+                                <h3 class="h4">
+                                    Dra. Luciana Sbresso
+                                </h3>
+                                <p>
+                                    Sub Dirección de Auditoría Interna
+                                </p>    
+                                <div>
+                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                        Curriculum Vitae
+                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />-->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--            <div class='col-6'>
+                            Director:
+                            <div class='card'>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                                        </div>
+                                        <div class="col-9 px-3">
+                                            <h3 class="h4">
+                                                Dr. Esteban Mántaras
+                                            </h3>
+                                            <p>
+                                                Director General de Asuntos Jurídicos
+                                            </p>    
+                                            <div>
+                                                <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                                    Curriculum Vitae                                        
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+        </div>
+
+
+    </section>
 </div>
-<!-- Classes Section End -->
+
 
 <?php get_footer(); ?>

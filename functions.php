@@ -17,6 +17,7 @@ define('PAGINA_BIBLIOTECA', 'biblioteca-digital');
 define('PAGINA_CERTIFICACION_NEGATIVA', 'certificacion-negativa');
 define('PAGINA_SITIOS_DE_INTERES', 'sitios-de-interes');
 define('PAGINA_ORG_APORTANTES', 'organismos-aportantes');
+define('PAGINA_QUIENES_SOMOS', 'quienes-somos');
 
 //var_dump(PAGINA_SITIOS_DE_INTERES);die;
 

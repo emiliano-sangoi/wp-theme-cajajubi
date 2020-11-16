@@ -16,7 +16,7 @@
                     Institucional
                 </a>
                 <div class="dropdown-menu pull-left" aria-labelledby="dropdownInstitucional">
-                    <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_QUIENES_SOMOS)); ?>">
+                    <a class="nav-link" href="<?php echo getLinkPagina(PAGINA_QUIENES_SOMOS); ?>">
                         ¿Quiénes somos?
                     </a>
                     <a class="nav-link" href="<?php echo esc_url(get_page_link(PAGINA_HISTORIA)); ?>">
