@@ -4,7 +4,7 @@
 //En caso de no encontrar la pagina -> redireccionar a la home
 // La ubicacion de este codigo debe ser al principio del archivo.
 $pagina = get_page_by_path(PAGINA_BIBLIOTECA);
-if (!$pagina instanceof WP_Post) {
+if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
     wp_redirect( home_url(), 301 );
     exit;
 }

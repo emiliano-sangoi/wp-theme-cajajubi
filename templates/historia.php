@@ -11,7 +11,7 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 get_header();
 ?>
 
-<div class="container-lg navbar-separator px-5 pt-4 pb-5 altura-minima" id="prestaciones">
+<div class="container-lg navbar-separator px-5 pt-4 pb-5 altura-minima" id="un-poco-de-historia">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    

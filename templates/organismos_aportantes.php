@@ -4,7 +4,7 @@
 //En caso de no encontrar la pagina -> redireccionar a la home
 // La ubicacion de este codigo debe ser al principio del archivo.
 $pagina = get_page_by_path(PAGINA_ORG_APORTANTES);
-if (!$pagina instanceof WP_Post) {
+if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
     wp_redirect( home_url(), 301 );
     exit;
 }
@@ -29,7 +29,7 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
 
 
 <!-- Offcanvas Menu End -->
-<div class="container-lg navbar-separator px-5 pb-5 altura-minima" id="servicios">
+<div class="container-lg navbar-separator px-5 pt-4 pb-5 altura-minima" id="servicios">
     
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
