@@ -17,6 +17,9 @@ get_header();
 //  $post = isset($posts[0]) ? $posts[0] : null;
 //var_dump(wp_get_upload_dir());exit;
 $post = null;
+$link_calendario_pago = 'http://www.santafe.gov.ar/index.php/web/content/view/full/128047';
+$link_solicitud_turno = 'http://turnos.santafe.gov.ar/turnos/web/frontend.php';
+        
 ?>
 
 <?php if ($post instanceof WP_Post && $post->post_status == 'publish'): ?>
@@ -50,27 +53,26 @@ $post = null;
 ?>
 
 
-
 <section class="bg-light py-5">
     <div class="container">
         <div class="row">
             <div class="col-3">
-                <a href="http://www.santafe.gov.ar/index.php/web/content/view/full/128047" target="_blank">
+                <a href="<?php echo $link_calendario_pago; ?>" target="_blank">
                     <img class="img-fluid" src="<?php echo DIR_IMGS . '/instructor/banners-02.png'; ?>" alt="">
                 </a>
             </div>
             <div class="col-3">
-                <a href="http://www.santafe.gov.ar/index.php/web/content/view/full/128047" target="_blank">
+                <a href="<?php echo $link_solicitud_turno; ?>" target="_blank">
                     <img class="img-fluid" src="<?php echo DIR_IMGS . '/instructor/banners-03.png'; ?>" alt="">
                 </a>
             </div>
             <div class="col-3">
-                <a href="http://www.santafe.gov.ar/index.php/web/content/view/full/128047" target="_blank">
+                <a href="<?php echo getLinkPagina ( PAGINA_INSTRUCTIVOS ); ?>" target="_blank">
                     <img class="img-fluid" src="<?php echo DIR_IMGS . '/instructor/banners-04.png'; ?>" alt="">
                 </a>
             </div>
             <div class="col-3">
-                <a href="http://www.santafe.gov.ar/index.php/web/content/view/full/128047" target="_blank">
+                <a href="<?php echo getLinkPagina ( PAGINA_NOVEDADES ); ?>" target="_blank">
                     <img class="img-fluid" src="<?php echo DIR_IMGS . '/instructor/banners-05-05.png'; ?>" alt="">
                 </a>
             </div>
