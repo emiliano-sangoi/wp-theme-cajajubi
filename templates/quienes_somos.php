@@ -66,12 +66,12 @@ get_header();
                                 <p>
                                     Director Provincial Caja de Jubilaciones y Pensiones
                                 </p>    
-                                <div>
+<!--                                <div>
                                     <a class="btn btn-sm btn-outline-secondary" href='#'>
                                         Curriculum Vitae
-                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />-->
+                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />
                                     </a>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -94,12 +94,12 @@ get_header();
                                 <p>
                                     Sub-Director Provincial Caja de Jubilaciones y Pensiones
                                 </p>    
-                                <div>
+<!--                                <div>
                                     <a class="btn btn-sm btn-outline-secondary" href='#'>
                                         Curriculum Vitae
-                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'       ?>" />-->
+                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'       ?>" />
                                     </a>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -125,12 +125,12 @@ get_header();
                                 <p>
                                     Secretaria General
                                 </p>    
-                                <div>
+<!--                                <div>
                                     <a class="btn btn-sm btn-outline-secondary" href='#'>
                                         Curriculum Vitae
-                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />-->
+                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />
                                     </a>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -153,12 +153,12 @@ get_header();
                                 <p>
                                     Directora Previsional
                                 </p>    
-                                <div>
+<!--                                <div>
                                     <a class="btn btn-sm btn-outline-secondary" href='#'>
                                         Curriculum Vitae
-                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'       ?>" />-->
+                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'       ?>" />
                                     </a>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -184,12 +184,12 @@ get_header();
                                 <p>
                                     Contador General
                                 </p>    
-                                <div>
+<!--                                <div>
                                     <a class="btn btn-sm btn-outline-secondary" href='#'>
                                         Curriculum Vitae
-                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />-->
+                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />
                                     </a>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -212,12 +212,12 @@ get_header();
                                 <p>
                                     Director General de Asuntos Jurídicos
                                 </p>    
-                                <div>
+<!--                                <div>
                                     <a class="btn btn-sm btn-outline-secondary" href='#'>
                                         Curriculum Vitae
-                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'       ?>" />-->
+                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'       ?>" />
                                     </a>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -242,12 +242,12 @@ get_header();
                                 <p>
                                     Sub Dirección de Auditoría Interna
                                 </p>    
-                                <div>
+<!--                                <div>
                                     <a class="btn btn-sm btn-outline-secondary" href='#'>
                                         Curriculum Vitae
-                                        <!--<img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />-->
+                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />
                                     </a>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>

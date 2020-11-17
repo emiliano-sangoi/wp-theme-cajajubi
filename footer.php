@@ -20,15 +20,6 @@ wp_footer();
                     342 5 128 800
                 </div>
             </div>
-            <div class="col-md-2 text-center">
-                <h6 class="mb-2" title="Línea telefónica gratuita">
-                    <i class="fa fa-phone"></i>
-                    Tel&eacute;fono
-                </h6>
-                <div class="">
-                    0800 - 444 - 3734
-                </div>
-            </div>
             <div class="col-md-3 text-center">
                 <h6 class="mb-2">
                     <i class="fa fa-envelope"></i>
@@ -38,6 +29,15 @@ wp_footer();
                     <a class="email-conctacto" href="mailto:contactocaja@santafe.gov.ar" target="_blank">
                         contactocaja@santafe.gov.ar
                     </a>
+                </div>
+            </div>
+            <div class="col-md-2 text-center">
+                <h6 class="mb-2" title="Línea telefónica gratuita">
+                    <i class="fa fa-phone"></i>
+                    Tel&eacute;fono
+                </h6>
+                <div class="">
+                    0800 - 444 - 3734
                 </div>
             </div>
             <div class="col-md-3">

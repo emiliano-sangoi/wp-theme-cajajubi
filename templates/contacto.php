@@ -59,17 +59,6 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="col-3">
-            <div class="bg-light p-3 text-center border border-secondary medio-contacto">
-                <h6 class="mb-2" title="Línea telefónica gratuita">
-                    <i class="fa fa-phone"></i>
-                    Tel&eacute;fono
-                </h6>
-                <div class="">
-                    0800 - 444 - 3734
-                </div>
-            </div>
-        </div>
         <div class="col-4">
             <div class="bg-light p-3 text-center border border-secondary medio-contacto">
                 <h6 class="mb-2">
@@ -80,6 +69,17 @@ get_header();
                     <a class="email-conctacto" href="mailto:contactocaja@santafe.gov.ar" target="_blank">
                         contactocaja@santafe.gov.ar
                     </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="bg-light p-3 text-center border border-secondary medio-contacto">
+                <h6 class="mb-2" title="Línea telefónica gratuita">
+                    <i class="fa fa-phone"></i>
+                    Tel&eacute;fono
+                </h6>
+                <div class="">
+                    0800 - 444 - 3734
                 </div>
             </div>
         </div>

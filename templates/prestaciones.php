@@ -57,13 +57,15 @@ get_header();
                 Retiros policiales y penitenciarios
             </a>
 
+            <a class="btn btn-lg btn-outline-primary" href="https://www.santafe.gov.ar/index.php/web/content/view/full/235062/(subtema)/102727" target="_blank">
+                Pensiones
+            </a>
+            
             <a class="btn btn-lg btn-outline-primary" href="https://www.santafe.gov.ar/index.php/web/content/view/full/111782/(subtema)/102727" target="_blank">
                 Reconocimiento de servicios
             </a>
 
-            <a class="btn btn-lg btn-outline-primary" href="https://www.santafe.gov.ar/index.php/web/content/view/full/235062/(subtema)/102727" target="_blank">
-                Pensiones
-            </a>
+            
 
         </div>
 
