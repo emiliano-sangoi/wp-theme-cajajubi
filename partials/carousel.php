@@ -16,7 +16,7 @@ $src_img3 = DIR_IMGS . '/carousel/slide3.png';
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img class="d-block w-100" src="<?php echo $src_img1; ?>" alt="Primer slide">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block centrate-y">
                 <h2 class="font-weight-bold">
                     La Caja en números
                 </h2>
@@ -29,7 +29,7 @@ $src_img3 = DIR_IMGS . '/carousel/slide3.png';
         </div>        
         <div class="carousel-item">
             <img class="d-block w-100" src="<?php echo $src_img2; ?>" alt="Segundo slide">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block centrate-y">
                 <h2 class="font-weight-bold">
                     Medidas prevención Covid-19
                 </h2>
@@ -42,7 +42,7 @@ $src_img3 = DIR_IMGS . '/carousel/slide3.png';
         </div>
         <div class="carousel-item">
             <img class="d-block w-100" src="<?php echo $src_img3; ?>" alt="Tercer slide">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block centrate-y">
                 <h2 class="font-weight-bold">
                     ¿Cómo tramito mis beneficios?
                 </h2>

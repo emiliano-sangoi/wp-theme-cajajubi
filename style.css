@@ -361,6 +361,9 @@ ol {
               
           }
       }*/ }
+  #carouselHome .carousel-caption {
+    /*           padding-top: 0;
+               padding-bottom: 0;*/ }
 
 /*---------------------
   Services
