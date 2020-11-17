@@ -23,6 +23,12 @@ define('PAGINA_DELEGACIONES', 'delegaciones');
 define('PAGINA_NOVEDADES', 'novedades');
 define('PAGINA_POLITICA_CALIDAD', 'politica-de-calidad');
 define('PAGINA_CONTACTO', 'contacto');
+define('PAGINA_BIBLIOTECA_FORMULARIOS', 'formularios');
+define('PAGINA_BIBLIOTECA_NORMATIVAS', 'normativas');
+define('PAGINA_BIBLIOTECA_INSTRUCTIVOS', 'instructivos');
+define('PAGINA_LA_CAJA_EN_NUMEROS', 'la-caja-en-numeros');
+define('PAGINA_DESCARGA_RECIBO', 'descarga-tu-recibo');
+
 
 //var_dump(PAGINA_SITIOS_DE_INTERES);die;
 

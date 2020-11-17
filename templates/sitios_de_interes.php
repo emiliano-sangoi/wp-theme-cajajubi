@@ -8,40 +8,25 @@ if (!$pagina instanceof WP_Post) {
     wp_redirect( home_url(), 301 );
     exit;
 }
-?>
 
-<?php
 get_header();
 ?>
 
 <!-- Page Preloder -->
-<div id="preloder">
+<!--<div id="preloder">
     <div class="loader"></div>
-</div>
-
-<!-- Offcanvas Menu Begin -->
-<?php //get_template_part("partials/mobile");   ?>
-<!-- Offcanvas Menu End -->
-
-   <!-- Breadcrumb Begin -->
-<!--   <section class="breadcrumb-option set-bg" style="margin-top: 0px;" data-setbg="<?php //echo DIR_IMGS . '/servicios.jpg'; ?>">
-       <div class="container">
-           <div class="row">
-               <div class="col-lg-12">
-                   <div class="breadcrumb__text"><h2>Sitios de interés</h2>
-                       <div class="breadcrumb__widget">
-
-                           <span>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>-->
-   <!-- Breadcrumb End -->
+</div>-->
 
   
 <div class="container-lg navbar-separator p-5 altura-minima" id="sitios-de-interes">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
+            <li class="breadcrumb-item active" aria-current="page">
+                <?php echo $pagina->post_title; ?>
+            </li>
+        </ol>
+    </nav>
     <h1 class="font-weight-bold text-primary">
       <?php echo $pagina->post_title; ?>
     </h1>

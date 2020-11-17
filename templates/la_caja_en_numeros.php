@@ -1,62 +1,48 @@
 <?php
 /* Template Name: La caja en numeros */
-?>
 
-<?php
+//En caso de no encontrar la pagina -> redireccionar a la home
+// La ubicacion de este codigo debe ser al principio del archivo.
+$pagina = get_page_by_path(PAGINA_LA_CAJA_EN_NUMEROS);
+if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
+    wp_redirect( home_url(), 301 );
+    exit;
+}
+
 get_header();
 ?>
 
 <!-- Page Preloder -->
-<div id="preloder">
+<!--<div id="preloder">
     <div class="loader"></div>
-</div>
+</div>-->
 
-<!-- Offcanvas Menu Begin -->
-<?php //get_template_part("partials/mobile");   ?>
-<!-- Offcanvas Menu End -->
+<div class="container-lg navbar-separator p-5 altura-minima" id="la-caja-en-numeros">
 
-
-<!-- Breadcrumb Begin -->
-<section class="breadcrumb-option set-bg" style="margin-top: 0px;" data-setbg="<?php echo DIR_IMGS . '/prestaciones.jpg'; ?>">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb__text">
-                    <h2>La caja en números</h2>
-                    <div class="breadcrumb__widget">
-                    </div>
-                </div>
-            </div>
-        </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
+            <li class="breadcrumb-item active" aria-current="page">
+                <?php echo $pagina->post_title; ?>
+            </li>
+        </ol>
+    </nav>
+    <h1 class="font-weight-bold text-primary">
+        <?php echo $pagina->post_title; ?>
+    </h1>
+    <hr/>
+    <div>
+        <?php if (empty($pagina->post_content)): ?>
+            <p class="text-muted">
+                No se ha cargado ningun contenido en esta secci&oacute;n.
+            </p>
+        <?php
+        else:
+            echo $pagina->post_content;
+            ?>
+<?php endif; ?>
     </div>
-</section>
-<!-- Breadcrumb End -->
 
-<!-- About Section Begin -->
-<div class="container">
-    <div class="row d-flex justify-content-center">
-        <div class="card">
-            <div class="card-heading">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title normal-title" align="center">
-                            <!--<a data-toggle="collapse" data-target="#collapseOne">-->
-                                <br> 
-                                <br>
-                                <br>
-                                <h2> PÁGINA EN CONSTRUCCIÓN</h2><br>
-                                <p>&nbsp;</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-                      
-
-<!-- Faq End -->
-<!-- About Section End -->
-
 
 <?php get_footer(); ?>

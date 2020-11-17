@@ -8,39 +8,24 @@ if (!$pagina instanceof WP_Post) {
     wp_redirect( home_url(), 301 );
     exit;
 }
-?>
-
-<?php
 get_header();
 ?>
 
 <!-- Page Preloder -->
-<div id="preloder">
+<!--<div id="preloder">
     <div class="loader"></div>
-</div>
-
-<!-- Offcanvas Menu Begin -->
-<?php //get_template_part("partials/mobile");   ?>
-<!-- Offcanvas Menu End -->
-
- <!--Breadcrumb Begin--> 
-<!--<section class="breadcrumb-option set-bg" style="margin-top: 0px;" data-setbg="<?php //echo DIR_IMGS . '/biblioteca.jpg'; ?>">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb__text">
-                    <h2>Biblioteca</h2>
-                    <div class="breadcrumb__widget">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>-->
- <!--Breadcrumb End--> 
+</div>-->
 
                           
 <div class="container-lg navbar-separator p-5 altura-minima" id="biblioteca">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
+            <li class="breadcrumb-item active" aria-current="page">
+                <?php echo $pagina->post_title; ?>
+            </li>
+        </ol>
+    </nav>
     <h1 class="font-weight-bold text-primary">
         <?php echo $pagina->post_title; ?>
     </h1>
@@ -57,15 +42,15 @@ get_header();
     </div>
     <div class="mt-lg-5 mt-sm-3 text-center btn-group d-flex" role="group">
 
-        <a class="btn btn-lg btn-outline-primary "href="<?php echo esc_url( get_page_link( PAGINA_BIBLIOTECA_NORMATIVAS ) ); ?>" target="_blank">
+        <a class="btn btn-lg btn-outline-primary "href="<?php echo getLinkPagina( PAGINA_BIBLIOTECA_NORMATIVAS ) ; ?>" target="_blank">
             NORMATIVAS
         </a>
 
-        <a class="btn btn-lg btn-outline-primary " href="<?php echo esc_url( get_page_link( PAGINA_BIBLIOTECA_FORMULARIOS ) ); ?>"target="_blank">
+        <a class="btn btn-lg btn-outline-primary " href="<?php echo getLinkPagina ( PAGINA_BIBLIOTECA_FORMULARIOS ) ; ?>"target="_blank">
             FORMULARIOS
         </a>
 
-        <a class="btn btn-lg btn-outline-primary" href="<?php echo esc_url( get_page_link( PAGINA_BIBLIOTECA_INSTRUCTIVOS ) ); ?>" target="_blank">
+        <a class="btn btn-lg btn-outline-primary" href="<?php echo getLinkPagina ( PAGINA_BIBLIOTECA_INSTRUCTIVOS ) ; ?>" target="_blank">
             INSTRUCTIVOS
         </a>
       
