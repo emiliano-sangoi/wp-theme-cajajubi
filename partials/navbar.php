@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" id="navbar">    
-    <a class="navbar-brand" href="#">        
+    <a class="navbar-brand" href="<?php echo home_url(); ?>">        
         <img class="img-fluid pl-2 pr-3 d-none d-lg-inline-block" src="<?php echo DIR_IMGS . '/logo_stafe.png'  ?>" alt="">
         <span class="d-inline-block align-middle">CAJA DE JUBILACIONES<br/> Y PENSIONES</span>
     </a>
@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse " id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="<?php echo home_url(); ?>">Inicio <span class="sr-only">(current)</span></a>
             </li>            
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownInstitucional" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

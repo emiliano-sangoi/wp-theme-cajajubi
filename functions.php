@@ -28,6 +28,7 @@ define('PAGINA_BIBLIOTECA_NORMATIVAS', 'normativas');
 define('PAGINA_BIBLIOTECA_INSTRUCTIVOS', 'instructivos');
 define('PAGINA_LA_CAJA_EN_NUMEROS', 'la-caja-en-numeros');
 define('PAGINA_DESCARGA_RECIBO', 'descarga-tu-recibo');
+define('PAGINA_INSTRUCTIVOS', 'instructivos');
 
 
 //var_dump(PAGINA_SITIOS_DE_INTERES);die;
