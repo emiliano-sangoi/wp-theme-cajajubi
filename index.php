@@ -85,12 +85,12 @@ $link_solicitud_turno = 'http://turnos.santafe.gov.ar/turnos/web/frontend.php';
     <div class="container">
         <div class="row">
             <div class="col-6 px-0">
-                <a href="descarga_recibo.html">
+                <a href="<?php echo  getLinkPagina ( PAGINA_DESCARGA_RECIBO ); ?>" target="_blank">
                     <img class="img-fluid" src="<?php echo DIR_IMGS . '/boton-07.png' ?>" alt="">
                 </a>                    
             </div>
             <div class="col-6 px-0">
-                <a href="biblioteca.html">
+                <a href="<?php echo  getLinkPagina ( PAGINA_BIBLIOTECA ); ?>" target="_blank">
                     <img class="img-fluid" src="<?php echo DIR_IMGS . '/boton-08.png' ?>" alt="">
                 </a>  
             </div>            
