@@ -30,12 +30,6 @@ define('PAGINA_LA_CAJA_EN_NUMEROS', 'la-caja-en-numeros');
 define('PAGINA_DESCARGA_RECIBO', 'descarga-tu-recibo');
 define('PAGINA_INSTRUCTIVOS', 'instructivos');
 
-
-//var_dump(PAGINA_SITIOS_DE_INTERES);die;
-
-
-require 'parameters.php';
-
 define('DIR_IMGS', get_template_directory_uri() . '/images');
 /* ========================================================================================================================
 
