@@ -35,81 +35,66 @@ $post = null;
 <?php
 // liberar memoria
 //unset($posts, $post);
-
 ?>
 
-<div>
-
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
 
 
-    <?php
-        get_template_part('partials/carousel');
-    ?>
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader"></div>
+</div>
 
 
+<?php
+    get_template_part('partials/carousel');
+?>
+
+
+
+<section class="bg-light py-5">
     <div class="container">
-
-        <!-- Team Section Begin -->
-        <section class="instructor spad">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="instructor__item">
-                            <div class="instructor__item__pic"> 
-                                <a href="http://www.santafe.gov.ar/index.php/web/content/view/full/128047" target="_blank">
-                                    <img src="<?php echo DIR_IMGS . '/instructor/banners-02.png' ?>" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="instructor__item">
-                            <div class="instructor__item__pic"> 
-                                <a href="http://turnos.santafe.gov.ar/turnos/web/frontend.php" target="_blank">
-                                    <img src="<?php echo DIR_IMGS . '/instructor/banners-03.png' ?>" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="instructor__item">
-                            <div class="instructor__item__pic"> <a href="biblio_instructivos.html">
-                                    <img src="<?php echo DIR_IMGS . '/instructor/banners-04.png' ?>" alt=""></a></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="instructor__item">
-                            <div class="instructor__item__pic"> <a href="novedades.html">
-                                    <img src="<?php echo DIR_IMGS . '/instructor/banners-05-05.png' ?>" alt=""></a></div>
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-3">
+                <a href="http://www.santafe.gov.ar/index.php/web/content/view/full/128047" target="_blank">
+                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/instructor/banners-02.png'; ?>" alt="">
+                </a>
             </div>
-        </section>
-        <!-- Team Section End -->
-
-        <!-- Chooseus Section Begin -->
-        <section class="chooseus spad">
-            <div class="container">
-                <div class="row">
-                    <span class="chooseus__pic"><a href="descarga_recibo.html">
-                            <img src="<?php echo DIR_IMGS . '/boton-07.png' ?>" alt=""></a>
-                    </span>
-                    <a href="biblioteca.html">
-                        <img src="<?php echo DIR_IMGS . '/boton-08.png' ?>" alt="">
-                    </a>                         
-                </div>
+            <div class="col-3">
+                <a href="http://www.santafe.gov.ar/index.php/web/content/view/full/128047" target="_blank">
+                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/instructor/banners-03.png'; ?>" alt="">
+                </a>
             </div>
-            <div class="col-lg-6">
-                <div class="chooseus__pic"></div>
+            <div class="col-3">
+                <a href="http://www.santafe.gov.ar/index.php/web/content/view/full/128047" target="_blank">
+                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/instructor/banners-04.png'; ?>" alt="">
+                </a>
             </div>
-        </section>
-        <!-- Chooseus Section End -->
-
+            <div class="col-3">
+                <a href="http://www.santafe.gov.ar/index.php/web/content/view/full/128047" target="_blank">
+                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/instructor/banners-05-05.png'; ?>" alt="">
+                </a>
+            </div>
+        </div>
     </div>
+</section>
 
-    <?php get_footer(); ?>
+
+<div class="bg-gray-4 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 px-0">
+                <a href="descarga_recibo.html">
+                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/boton-07.png' ?>" alt="">
+                </a>                    
+            </div>
+            <div class="col-6 px-0">
+                <a href="biblioteca.html">
+                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/boton-08.png' ?>" alt="">
+                </a>  
+            </div>            
+        </div>
+    </div>
+</div>
+
+
+<?php get_footer(); ?>
