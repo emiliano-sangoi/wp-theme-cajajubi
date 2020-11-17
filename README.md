@@ -1,5 +1,10 @@
-Bootstrap 4 on Wordpress
-===========
-Bootstrap 4 on WordPress is a blank bootstrap 4 ready WordPress theme.
+# maqueta_caja_jubilaciones
+--------------------------------------------------------------
+# Descripción
+Tema Wordpress para el sitio web de la Caja de Jubilaciones
 
-For the full documentation visit the [Bootstrap 4 on WordPress](http://bootstrap4onwordpress.babobski.nl/) website.
+# Requerimientos
+El tema fue desarrollado y probado con los siguientes requerimientos:
+  - PHP 5.6.40
+  - Apache/2.4.10
+  - Sistema operativo: Debian 8 x86_64 GNU/Linux
