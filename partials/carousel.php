@@ -1,9 +1,9 @@
 <?php
-$src_img1 = DIR_IMGS . '/hero/hero-1.png';
+$src_img1 = DIR_IMGS . '/carousel/slide1.png';
 //$src_img1 = DIR_IMGS . '/carousel/img-caja-en-nros2.png';
 //$src_img2 = DIR_IMGS . '/carousel/img-prev-covid.png';
-$src_img2 = DIR_IMGS . '/hero/hero-4.png';
-$src_img3 = DIR_IMGS . '/hero/hero-2.png';
+$src_img2 = DIR_IMGS . '/carousel/slide2.png';
+$src_img3 = DIR_IMGS . '/carousel/slide3.png';
 ?>
 <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $src_img1; ?>"></div>
 
