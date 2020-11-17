@@ -5,7 +5,6 @@ $src_img1 = DIR_IMGS . '/carousel/slide1.png';
 $src_img2 = DIR_IMGS . '/carousel/slide2.png';
 $src_img3 = DIR_IMGS . '/carousel/slide3.png';
 ?>
-<div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $src_img1; ?>"></div>
 
 <div id="carouselHome" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
