@@ -10,10 +10,10 @@
 [Table of contents]
 
 1.  Template default CSS
-	1.1	Variables
-	1.2	Mixins
-	1.3	Flexbox
-	1.4	Reset
+        1.1	Variables
+        1.2	Mixins
+        1.3	Flexbox
+        1.4	Reset
 2.  Helper Css
 3.  Header Section
 4.  Hero Section
@@ -30,11 +30,11 @@
 /*----------------------------------------*/
 html,
 body {
-  /*height: 100%;*/
-  /*font-family: 'DM Sans', sans-serif;*/
-  font-family: 'Open_Sans_Font', sans-serif !important;  
-  font-weight: normal;
-  /*-webkit-font-smoothing: antialiased;*/
+    /*height: 100%;*/
+    /*font-family: 'DM Sans', sans-serif;*/
+    font-family: 'Open_Sans_Font', sans-serif !important;  
+    font-weight: normal;
+    /*-webkit-font-smoothing: antialiased;*/
 }
 
 .navbar-separator{
@@ -55,6 +55,11 @@ body {
 
 .centrate-y {
     @include centerer(false, true);
+}
+
+.parallax-window {
+    min-height: 350px;
+    background: transparent;
 }
 
 /*h1,
@@ -94,12 +99,12 @@ h6 {
 }*/
 
 p {
-  /*font-size: 16px;*/
-  /*font-family: 'DM Sans', sans-serif;*/
-  /*color: #6E7580;*/
-  /*font-weight: 400;*/
-  /*line-height: 26px;*/
-  /*margin: 0 0 15px 0;*/
+    /*font-size: 16px;*/
+    /*font-family: 'DM Sans', sans-serif;*/
+    /*color: #6E7580;*/
+    /*font-weight: 400;*/
+    /*line-height: 26px;*/
+    /*margin: 0 0 15px 0;*/
 }
 
 /*img {
@@ -207,67 +212,67 @@ ol {
 
 /* Preloder */
 #preloder {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 999999;
-  background: #000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    background: #000;
 }
 
 .loader {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -13px;
-  margin-left: -13px;
-  border-radius: 60px;
-  animation: loader 0.8s linear infinite;
-  -webkit-animation: loader 0.8s linear infinite;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    border-radius: 60px;
+    animation: loader 0.8s linear infinite;
+    -webkit-animation: loader 0.8s linear infinite;
 }
 
 @keyframes loader {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    border: 4px solid #f44336;
-    border-left-color: transparent;
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
 
-  50% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-    border: 4px solid #673ab7;
-    border-left-color: transparent;
-  }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        border: 4px solid #673ab7;
+        border-left-color: transparent;
+    }
 
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-    border: 4px solid #f44336;
-    border-left-color: transparent;
-  }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
 }
 
 @-webkit-keyframes loader {
-  0% {
-    -webkit-transform: rotate(0deg);
-    border: 4px solid #f44336;
-    border-left-color: transparent;
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
 
-  50% {
-    -webkit-transform: rotate(180deg);
-    border: 4px solid #673ab7;
-    border-left-color: transparent;
-  }
+    50% {
+        -webkit-transform: rotate(180deg);
+        border: 4px solid #673ab7;
+        border-left-color: transparent;
+    }
 
-  100% {
-    -webkit-transform: rotate(360deg);
-    border: 4px solid #f44336;
-    border-left-color: transparent;
-  }
+    100% {
+        -webkit-transform: rotate(360deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
 }

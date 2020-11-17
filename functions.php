@@ -368,8 +368,8 @@ if (!function_exists('bootstrap_comment')) {
         wp_enqueue_script('jssocials_js');
         
         //jquery.parallax.js
-//        wp_register_script('parallax_js', $template_dir . '/node_modules/jquery-parallax.js/parallax.min.js', array('jquery_v3'), null, true);
-//        wp_enqueue_script('parallax_js');
+        wp_register_script('parallax_js', $template_dir . '/node_modules/jquery-parallax.js/parallax.min.js', array('jquery_v3'), null, true);
+        wp_enqueue_script('parallax_js');
 
         //owl carousel
         //https://github.com/OwlCarousel2/OwlCarousel2
