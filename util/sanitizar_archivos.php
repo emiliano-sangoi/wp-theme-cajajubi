@@ -1,20 +1,57 @@
 <?php
 
+$base = '/home/esangoi/vagrant/www/wp-caja/wp-content/themes/sitio_lacaja/';
 
-$dir = '/home/eliana/vagrant/www/wp-caja/wp-content/themes/sitio_lacaja/biblio_normativas/';
-$dir_copia = '/home/eliana/vagrant/www/wp-caja/wp-content/themes/sitio_lacaja/biblio_normativas/NORMATIVAS/';
-$archivos = scandir($dir);
+/**
+ * Permite listar el nombre de los archivos sin copiarlos.
+ */
+$dry_run = false;
 
-// poner aca los archivos a omitir:
-$archivos_a_omitir = array(".","..","NORMATIVAS");
+//Renombrado de normativas:
+$dir_normativas = $base . 'biblio_normativas/';
+sanitizarYCopiar($dir_normativas, $dir_normativas . '/NORMATIVAS/', 'NORM_', $dry_run);
 
-foreach($archivos as $archivo){
-	if (in_array($archivo, $archivos_a_omitir)){
-		continue;
-	}
+//Renombrado de normativas:
+$dir_forms = $base . 'biblio_formularios/';
+sanitizarYCopiar($dir_forms, $dir_forms . '/FORMULARIOS/', 'FORM_', $dry_run);
 
-	$archivo_nuevo = str_replace(array(' '), array('_'), $archivo);	
-        $archivo_nuevo = 'NORM_' . $archivo_nuevo;
-//        echo $archivo . "\n" ;
-	copy($dir . $archivo, $dir_copia . $archivo_nuevo);
+//Renombrado de instructivos:
+$dir_instructivos = $base . 'biblio_instructivos/';
+sanitizarYCopiar($dir_instructivos, $dir_instructivos . '/INSTRUCTIVOS/', 'INST_', $dry_run);
+
+function sanitizarYCopiar($origen = '', $destino = '', $prefijo = '', $dry_run = false) {
+    
+    if(!file_exists($origen)){
+        echo "No existe el directorio: $origen \n";
+        return;
+    }
+    
+    if(!file_exists($destino)){
+        echo "No existe el directorio: $destino \n";
+        return;
+    }
+    
+//    $excluir = array(
+//        'INSTRUCTIVOS',
+//        'FORMULARIOS',
+//        'NORMATIVAS',
+//        '.',
+//        '..'
+//    );
+    
+    $archivos = scandir($origen);
+
+    foreach ($archivos as $archivo) {
+        if (is_dir($origen . $archivo)) {
+            continue;
+        }
+
+        $archivo_nuevo = str_replace(array(' '), array('_'), $archivo);
+        $archivo_nuevo = $prefijo . $archivo_nuevo;
+        if ($dry_run) {
+            echo $archivo_nuevo . "\n";
+        } else {
+            copy($origen . $archivo, $destino . $archivo_nuevo);
+        }
+    }
 }

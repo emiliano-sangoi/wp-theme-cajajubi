@@ -453,4 +453,47 @@ if (!function_exists('bootstrap_comment')) {
         return $resultado;
     }
     
+    function getArchivosBiblioteca(){
+        $biblioteca = array(
+            'inst' => array(),
+            'form' => array(),
+            'norm' => array(),
+        );
+        
+        $upload_info = wp_upload_dir();
+        
+        if(!isset($upload_info['path'])){
+            return false;
+        }
+        
+        $upload_dir = $upload_info['path'];
+        
+        $archivos = scandir($upload_dir);
+        foreach ($archivos as $archivo){
+            if(is_dir($upload_dir . DIRECTORY_SEPARATOR . $archivo)){
+                continue;
+            }
+            
+            $o = new stdClass();
+            
+            if( strpos($archivo, 'FORM_', 0) !== false ){
+                $o->fname = $archivo;
+                $o->titulo = substr($archivo, 5);
+                $biblioteca['form'][] = $o;                
+            }else if( strpos($archivo, 'NORM_', 0) !== false ){
+                $o->fname = $archivo;
+                $o->titulo = substr($archivo, 5);
+                $biblioteca['norm'][] = $o;
+            } else if( strpos($archivo, 'INST_', 0) !== false ){
+                $o->fname = $archivo;
+                $o->titulo = str_replace('_', ' ', substr($archivo, 5));
+                $biblioteca['inst'][] = $o;
+            }
+        }
+        
+        $biblioteca['url'] = $upload_info['url'] . DIRECTORY_SEPARATOR;
+
+        return $biblioteca;
+    }
+    
 ?>
