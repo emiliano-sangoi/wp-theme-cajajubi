@@ -11,7 +11,7 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 get_header();
 
 
-$args = array('category' => CATEGORIA_NOVEDADES, 'posts_per_page' => -1);
+$args = array('category' => get_cat_ID(CATEGORIA_NOVEDADES), 'posts_per_page' => -1);
 $posts = get_posts($args);
 
 //print_r($posts);
@@ -51,6 +51,9 @@ $posts = get_posts($args);
         <div class='card-columns mb-4'>
             <?php foreach ($posts as $post): ?>                
                 <div class="card">
+                    <?php                    
+                        echo get_the_post_thumbnail($post, 'medium', array('class' => 'card-img-top'));                    
+                    ?>
                     <div class="card-body p-4">
                         <h5 class="card-title mb-3 font-weight-bold">
                             <?php echo $post->post_title; ?>
@@ -77,9 +80,7 @@ $posts = get_posts($args);
 
             <?php endforeach; ?>
         </div>
-
     </div>
-
 </div>
 
 <?php get_footer(); ?>
