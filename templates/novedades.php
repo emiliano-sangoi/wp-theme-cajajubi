@@ -48,65 +48,35 @@ $posts = get_posts($args);
     </div>
 
     <div class="mt-4">
-<!--<div class='card-columns mb-4'>-->
-        <?php
-        $i = $c = 0;    
-        $n = count($posts);        
-        $novedades_por_fila = 3;
-        $c = $novedades_por_fila - 1;   
-        
-        foreach ($posts as $post):
-            //$abrir_row = $i % $novedades_por_fila === 0;
-          //  $cerrar_row = $i === $n || $i%$novedades_por_fila === 0 ;            
-        ?>
-
-            <?php if ($i % $novedades_por_fila === 0) : ?>
-                <div class='card-deck mb-4'>
-                <?php endif; ?>
-                
-                    <div class="card">
-                        <div class="card-body p-4">
-                            <h5 class="card-title mb-3 h4">
-                                <?php echo $post->post_title; ?>
-                            </h5>
-                            <h6 class="card-subtitle mb-3 text-muted">
-                                <?php
-                                echo get_the_date('d/M/Y H:i', $post);
-                                ?>
-                            </h6>
-                            <p class="card-text">
-                                <?php
-                                if (strlen($post->post_content) >= POST_CONTENT_MAX_LENGTH) {
-                                    echo substr($post->post_content, 0, POST_CONTENT_MAX_LENGTH) . '...';
-                                } else {
-                                    echo nl2br($post->post_content);
-                                }
-                                ?>
-                            </p>
-                            <a href="#"  class="card-link btn btn-outline-primary">
-                                Ver m&aacute;s
-                            </a>                    
-                        </div>
+        <div class='card-columns mb-4'>
+            <?php foreach ($posts as $post): ?>                
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-3 font-weight-bold">
+                            <?php echo $post->post_title; ?>
+                        </h5>
+                        <h6 class="card-subtitle mb-3 text-muted">
+                            <?php
+                            echo get_the_date('d/M/Y H:i', $post) . ' Hs.';
+                            ?>
+                        </h6>
+                        <p class="card-text">
+                            <?php
+                            if (strlen($post->post_content) >= POST_CONTENT_MAX_LENGTH) {
+                                echo substr($post->post_content, 0, POST_CONTENT_MAX_LENGTH) . '...';
+                            } else {
+                                echo nl2br($post->post_content);
+                            }
+                            ?>
+                        </p>
+                        <a href="<?php echo get_permalink($post) ?>"  class="card-link btn btn-outline-primary">
+                            Ver m&aacute;s
+                        </a>                    
                     </div>
-                
+                </div>                
 
-
-                    <?php if ($c === 0 || $i === $n - 1):
-                        $c = $novedades_por_fila - 1;
-                       ?>
-                </div>
-                <!--Cierre de <div class="row">-->
-                <?php else: 
-                    $c--;
-                ?>
-            <?php
-                endif;
-                
-                $i++;
-            ?>
-
-        <?php endforeach; ?>
-    <!--</div>-->
+            <?php endforeach; ?>
+        </div>
 
     </div>
 

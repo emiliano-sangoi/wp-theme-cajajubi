@@ -1,40 +1,53 @@
 <?php
-/**
- * The Template for displaying all single posts
- *
- * Please see /external/bootstrap-utilities.php for info on BsWp::get_template_parts()
- *
- * @package 	WordPress
- * @subpackage 	Bootstrap 4.5.2
- * @autor 		Babobski
- */
+$pagina = get_page_by_path(PAGINA_NOVEDADES);
+if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
+    wp_redirect(home_url(), 301);
+    exit;
+}
+
+get_header();
 ?>
-<?php BsWp::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<div class="container-lg navbar-separator p-5 altura-minima" id="novedades">
 
-	<div class="content">
-		<h2>
-			<?php the_title(); ?>
-		</h2>
-		<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate>
-			<?php the_date(); ?> <?php the_time(); ?>
-		</time>
-		<?php comments_popup_link(__('Leave a Comment', 'wp_babobski'), __('1 Comment', 'wp_babobski'), __('% Comments', 'wp_babobski')); ?>
-		<?php the_content(); ?>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
+            <li class="breadcrumb-item active" aria-current="page">
+                <?php echo $pagina->post_title; ?>
+            </li>
+        </ol>
+    </nav>
 
-		<?php if ( get_the_author_meta( 'description' ) ) : ?>
-			<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-			<h3>
-				<?php echo __('About', 'wp_babobski'); ?> <?php echo get_the_author() ; ?>
-			</h3>
-			<?php the_author_meta( 'description' ); ?>
-		<?php endif; ?>
+    <div>
+        <?php if (have_posts()) while (have_posts()) : the_post(); ?>
 
-		<?php comments_template( '', true ); ?>
+                <div class="content">
+                    <h1 class="font-weight-bold text-primary">
+                        <?php the_title(); ?>
+                    </h1>
+                    <hr/>
+                    <div class="text-muted">
+                        <time class="d-block" datetime="<?php the_time('Y-m-d'); ?>" pubdate>
+                            <?php the_date(); ?> <?php the_time(); ?>
+                        </time>
+                    </div>
+                    <div class="mt-4">
 
-	</div>
+                        <?php the_content(); ?>                       
 
-<?php endwhile; ?>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a class="btn btn-outline-secondary" href="<?php echo getLinkPagina(PAGINA_NOVEDADES); ?>">
+                            <i class="fa fa-arrow-left"></i>&nbsp;Volver
+                        </a>
+                    </div>
+                </div>
 
-<?php BsWp::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+            <?php endwhile; ?>
+    </div>
+</div>
+
+
+<?php get_footer(); ?>
