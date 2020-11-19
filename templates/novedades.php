@@ -10,9 +10,13 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 }
 get_header();
 
+$posts = null;
+$id_cat = get_cat_ID(CATEGORIA_NOVEDADES);
+if($id_cat){
+    $args = array('category' => $id_cat, 'posts_per_page' => -1);
+    $posts = get_posts($args);
+}
 
-$args = array('category' => get_cat_ID(CATEGORIA_NOVEDADES), 'posts_per_page' => -1);
-$posts = get_posts($args);
 
 //print_r($posts);
 //exit;
@@ -39,17 +43,18 @@ $posts = get_posts($args);
     </h1>
     <hr/>
     <div>
-        <?php if (empty($pagina->post_content)): ?>
-            <p class="text-muted">
-                No se ha cargado ningun contenido en esta secci&oacute;n.
-            </p>
-        <?php else: echo $pagina->post_content; ?>
-        <?php endif; ?>
+        <?php 
+            if (!empty($pagina->post_content)):
+                echo $pagina->post_content;
+            endif;
+        ?>        
     </div>
 
     <div class="mt-4">
+    <?php if (isset($posts[0])): ?>    
         <div class='card-columns mb-4'>
-            <?php foreach ($posts as $post): ?>                
+            <?php foreach ($posts as $post): ?> 
+                <?php if ($post->post_status !== 'publish'): continue; endif; ?>   
                 <div class="card">
                     <?php                    
                         echo get_the_post_thumbnail($post, 'medium', array('class' => 'card-img-top'));                    
@@ -80,7 +85,12 @@ $posts = get_posts($args);
 
             <?php endforeach; ?>
         </div>
+    <?php else: ?>
+    <div class="alert alert-info">
+        No existen novedades para mostrar.
     </div>
+    <?php endif; ?>
+</div>
 </div>
 
 <?php get_footer(); ?>
