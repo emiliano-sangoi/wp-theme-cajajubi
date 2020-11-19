@@ -30,6 +30,10 @@ define('PAGINA_LA_CAJA_EN_NUMEROS', 'la-caja-en-numeros');
 define('PAGINA_DESCARGA_RECIBO', 'descarga-tu-recibo');
 define('PAGINA_INSTRUCTIVOS', 'instructivos');
 
+define('CATEGORIA_NOVEDADES', 'novedades');
+
+define('POST_CONTENT_MAX_LENGTH', 250);
+
 define('DIR_IMGS', get_template_directory_uri() . '/images');
 /* ========================================================================================================================
 
@@ -474,19 +478,19 @@ if (!function_exists('bootstrap_comment')) {
                 continue;
             }
             
-            $o = new stdClass();
+            $o = new stdClass();            
             
             if( strpos($archivo, 'FORM_', 0) !== false ){
-                $o->fname = $archivo;
-                $o->titulo = substr($archivo, 5);
+                $o->fname = $archivo;  
+                $o->titulo = str_replace(array('_', '.pdf'), ' ', substr($archivo, 5));
                 $biblioteca['form'][] = $o;                
             }else if( strpos($archivo, 'NORM_', 0) !== false ){
-                $o->fname = $archivo;
-                $o->titulo = substr($archivo, 5);
+                $o->fname = $archivo;       
+                $o->titulo = str_replace(array('_', '.pdf'), ' ', substr($archivo, 5));
                 $biblioteca['norm'][] = $o;
             } else if( strpos($archivo, 'INST_', 0) !== false ){
-                $o->fname = $archivo;
-                $o->titulo = str_replace('_', ' ', substr($archivo, 5));
+                $o->fname = $archivo;     
+                $o->titulo = str_replace(array('_', '.pdf'), ' ', substr($archivo, 5));
                 $biblioteca['inst'][] = $o;
             }
         }
