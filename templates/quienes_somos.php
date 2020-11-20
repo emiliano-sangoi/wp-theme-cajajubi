@@ -55,10 +55,20 @@ if ($cat_id) {
         <?php echo $pagina->post_title; ?>
     </h1>
     <hr/>
-
+    
+    <div>
+        <?php
+        if (!empty($pagina->post_content)):
+            echo $pagina->post_content;
+        endif;
+        ?>
+        
+    </div>
+    
     <h2 class="h3 font-weight-bold mt-5">
         Autoridades
     </h2>
+    
     <section class="py-3">
 
         <div class="row mb-lg-5 mb-3">

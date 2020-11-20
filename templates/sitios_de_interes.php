@@ -32,15 +32,11 @@ get_header();
     </h1>
     <hr/>
     <div>
-        <?php if (empty($pagina->post_content)): ?>
-            <p class="text-muted">
-                <!--No se ha cargado ningun contenido en esta secci&oacute;n.-->
-            </p>
-            <?php
-        else:
-            echo $pagina->post_content;
-            ?>
-        <?php endif; ?>
+        <?php 
+            if (!empty($pagina->post_content)):
+                echo $pagina->post_content;
+            endif;
+        ?> 
     </div>
 
     <!--    <div>
