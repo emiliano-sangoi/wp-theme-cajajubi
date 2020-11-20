@@ -8,6 +8,7 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
     exit;
 }
 get_header();
+
 ?>
 
 <!-- Page Preloder -->
@@ -34,18 +35,6 @@ get_header();
         <?php echo $pagina->post_title; ?>
     </h1>
     <hr/>
-
-    <div>
-        <?php if (empty($pagina->post_content)): ?>
-            <p class="text-muted">
-                No se ha cargado ningun contenido en esta secci&oacute;n.
-            </p>
-            <?php
-        else:
-            echo nl2br($pagina->post_content);
-            ?>
-        <?php endif; ?>
-    </div>
 
     <div class="row mt-3">
         <div class="col-2">
@@ -117,44 +106,64 @@ get_header();
         </div>
     </div>
 
-    <div class="mt-4 bg-light px-5 pb-5 pt-4 border border-secondary">
-        <form action="form-process.php" method="post">
-            <h3 class="text-center font-weight-bold">
-                Env&iacute;anos tu consulta
-            </h3>
-            <hr class="w-50 mx-auto"/>
-            <div class="form-row mt-4">
-                <div class="col-6">
-                    <label for="name" class="font-weight-bold">
-                        Nombre y apellido
-                        <span class="text-danger">*</span>
-                    </label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre y apellido*" required>                
-                </div>
-                <div class="col-6">
-                    <label for="email" class="font-weight-bold">
-                        Correo electr&oacute;nico
-                        <span class="text-danger">*</span>
-                    </label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu dirección de correo con nadie.</small>
-                </div>
+    <div>
+        <?php if (empty($pagina->post_content)): ?>
+            <p class="text-muted">
+                No se ha cargado ning&uacute;n contenido en esta secci&oacute;n.
+            </p>
+            <?php
+        else:
+            ?>
+            <div class="mt-4 bg-light px-5 pb-5 pt-4 border border-secondary">
+                <h3 class="text-center font-weight-bold">
+                    Env&iacute;anos tu consulta
+                </h3>
+                <hr class="w-50 mx-auto"/>
+                <?php
+                echo do_shortcode($pagina->post_content);
+                ?>
             </div>
-            <div class="form-row">
-                <div class="col-12">
-                    <label for="message" class="font-weight-bold">
-                        Consulta
-                        <span class="text-danger">*</span>
-                    </label>
-                    <textarea class='form-control' rows='10' placeholder="Ingrese su consulta" id="message" name="message" required></textarea>                    
-                </div>
-            </div>
-            <div class="mt-4">
-                <button type="submit" class="btn btn-lg btn-outline-primary" id="form-submit">Enviar</button>
-            </div>
-
-        </form>
+        <?php endif; ?>
     </div>
+
+    <!--    <div class="mt-4 bg-light px-5 pb-5 pt-4 border border-secondary">
+            <form action="form-process.php" method="post">
+                <h3 class="text-center font-weight-bold">
+                    Env&iacute;anos tu consulta
+                </h3>
+                <hr class="w-50 mx-auto"/>
+                <div class="form-row mt-4">
+                    <div class="col-6">
+                        <label for="name" class="font-weight-bold">
+                            Nombre y apellido
+                            <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre y apellido*" required>                
+                    </div>
+                    <div class="col-6">
+                        <label for="email" class="font-weight-bold">
+                            Correo electr&oacute;nico
+                            <span class="text-danger">*</span>
+                        </label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu dirección de correo con nadie.</small>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-12">
+                        <label for="message" class="font-weight-bold">
+                            Consulta
+                            <span class="text-danger">*</span>
+                        </label>
+                        <textarea class='form-control' rows='10' placeholder="Ingrese su consulta" id="message" name="message" required></textarea>                    
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-lg btn-outline-primary" id="form-submit">Enviar</button>
+                </div>
+    
+            </form>
+        </div>-->
 
 
 
