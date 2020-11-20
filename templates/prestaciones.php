@@ -23,7 +23,7 @@ get_header();
 
     <div class="container-lg px-5 pt-4">
         
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb" class="bg-light">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
                 <li class="breadcrumb-item active" aria-current="page">
