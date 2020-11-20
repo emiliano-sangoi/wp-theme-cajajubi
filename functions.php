@@ -31,6 +31,11 @@ define('PAGINA_DESCARGA_RECIBO', 'descarga-tu-recibo');
 define('PAGINA_INSTRUCTIVOS', 'instructivos');
 
 define('CATEGORIA_NOVEDADES', 'novedades');
+define('CATEGORIA_SERVICIOS', 'servicios');
+define('CATEGORIA_AUTORIDADES', 'autoridades');
+define('CATEGORIA_DIRECTOR', 'director');
+define('CATEGORIA_SUBDIRECTOR', 'subdirector');
+define('CATEGORIA_OTROS', 'otros');
 
 define('POST_CONTENT_MAX_LENGTH', 250);
 
@@ -499,5 +504,5 @@ if (!function_exists('bootstrap_comment')) {
 
         return $biblioteca;
     }
-    
+       
 ?>

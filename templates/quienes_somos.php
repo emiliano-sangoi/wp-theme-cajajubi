@@ -1,7 +1,7 @@
 <?php
 /* Template Name: Quienes somos */
 
-//En caso de no encontrar la pagina -> redireccionar a la home
+// En caso de no encontrar la pagina -> redireccionar a la home
 // La ubicacion de este codigo debe ser al principio del archivo.
 $pagina = get_page_by_path(PAGINA_QUIENES_SOMOS);
 if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
@@ -9,6 +9,21 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
     exit;
 }
 get_header();
+
+$args_director = array('category' => get_cat_ID(CATEGORIA_DIRECTOR), 'posts_per_page' => -1);
+$post_director = get_posts($args_director);
+
+$args_subdirector = array('category' => get_cat_ID(CATEGORIA_SUBDIRECTOR), 'posts_per_page' => -1);
+$post_subdirector = get_posts($args_subdirector);
+
+$args_otros = array('category' => get_cat_ID(CATEGORIA_OTROS), 'posts_per_page' => -1);
+$posts_otros = get_posts($args_otros);
+
+//print_r('<br><br><br><br><br><br>');
+//print_r($post_director);
+//print_r($post_subdirector);
+//print_r($posts_otros);
+//exit;
 ?>
 
 <!-- Page Preloder -->
@@ -19,11 +34,7 @@ get_header();
 <div class="container-lg navbar-separator px-5 pt-4 pb-5 altura-minima" id="quienes-somos">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="<?php echo get_home_url(); ?>">
-                    Inicio
-                </a>
-            </li>    
+            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
             <li class="breadcrumb-item active" aria-current="page">
                 <?php echo $pagina->post_title; ?>
             </li>
@@ -34,42 +45,33 @@ get_header();
         <?php echo $pagina->post_title; ?>
     </h1>
     <hr/>
-    <div>
-        <?php if (empty($pagina->post_content)): ?>
-            <p class="text-muted">
-                No se ha cargado ningun contenido en esta secci&oacute;n.
-            </p>
-            <?php
-        else:
-            echo nl2br($pagina->post_content);
-            ?>
-        <?php endif; ?>
-    </div>
 
     <h2 class="h3 font-weight-bold mt-5">Autoridades</h2>
     <section class="py-3">
 
         <div class="row mb-4">
 
-            <!--Director:-->
+            <!--Director:--> 
             <div class='col-6'>
                 <div class='card'>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-3">
-                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                                <?php                    
+                                    echo get_the_post_thumbnail($post_director[0], 'medium', array('class' => 'img-fluid'));                    
+                                ?>
                             </div>
                             <div class="col-9 px-3">
                                 <h3 class="h4">
-                                    Dr. Humberto Giobergia
+                                    <?php echo $post_director[0]->post_title; ?>
                                 </h3>
                                 <p>
-                                    Director Provincial Caja de Jubilaciones y Pensiones
+                                    <?php echo $post_director[0]->post_content; ?>
                                 </p>    
-<!--                                <div>
+                                <!-- <div>
                                     <a class="btn btn-sm btn-outline-secondary" href='#'>
                                         Curriculum Vitae
-                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />
+                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'            ?>" />
                                     </a>
                                 </div>-->
                             </div>
@@ -78,26 +80,27 @@ get_header();
                 </div>
             </div>
 
-
             <div class='col-6'>
-                <!--Director:-->
+                <!--SubDirector:-->
                 <div class='card'>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-3">
-                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                                <?php                    
+                                    echo get_the_post_thumbnail($post_subdirector[0], 'medium', array('class' => 'img-fluid'));                    
+                                ?>
                             </div>
                             <div class="col-9 px-3">
                                 <h3 class="h4">
-                                    Alberto W. Sanchez
+                                    <?php echo $post_subdirector[0]->post_title; ?>
                                 </h3>
                                 <p>
-                                    Sub-Director Provincial Caja de Jubilaciones y Pensiones
+                                    <?php echo $post_subdirector[0]->post_content; ?>
                                 </p>    
-<!--                                <div>
+                                <!-- <div>
                                     <a class="btn btn-sm btn-outline-secondary" href='#'>
                                         Curriculum Vitae
-                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'       ?>" />
+                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'           ?>" />
                                     </a>
                                 </div>-->
                             </div>
@@ -106,11 +109,47 @@ get_header();
                 </div>
             </div>
         </div>
-
-
+        
+        <?php foreach ($posts_otros as $post): ?> 
+        <?php if ($post->post_status !== 'publish'): continue; endif; ?>   
+        
         <div class="row mb-4">
 
-            <!--Director:-->
+            <div class='col-6'>
+                <div class='card'>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <?php                    
+                                    echo get_the_post_thumbnail($post, 'medium', array('class' => 'img-fluid'));                    
+                                ?>
+                            </div>
+                            <div class="col-9 px-3">
+                                <h3 class="h4">
+                                    <?php echo $post->post_title; ?>
+                                </h3>
+                                <p>
+                                    <?php echo $post->post_content; ?>
+                                </p>    
+                                <!-- <div>
+                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                        Curriculum Vitae
+                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'            ?>" />
+                                    </a>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <?php endforeach; ?>
+
+
+<!--        <div class="row mb-4">
+
+            Director:
             <div class='col-6'>
                 <div class='card'>
                     <div class="card-body">
@@ -125,12 +164,12 @@ get_header();
                                 <p>
                                     Secretaria General
                                 </p>    
-<!--                                <div>
-                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                        Curriculum Vitae
-                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />
-                                    </a>
-                                </div>-->
+                                                                <div>
+                                                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                                                        Curriculum Vitae
+                                                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'            ?>" />
+                                                                    </a>
+                                                                </div>
                             </div>
                         </div>
                     </div>
@@ -139,7 +178,7 @@ get_header();
 
 
             <div class='col-6'>
-                <!--Director:-->
+                Director:
                 <div class='card'>
                     <div class="card-body">
                         <div class="row">
@@ -153,23 +192,23 @@ get_header();
                                 <p>
                                     Directora Previsional
                                 </p>    
-<!--                                <div>
-                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                        Curriculum Vitae
-                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'       ?>" />
-                                    </a>
-                                </div>-->
+                                                                <div>
+                                                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                                                        Curriculum Vitae
+                                                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'           ?>" />
+                                                                    </a>
+                                                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
 
-        <div class="row mb-4">
+<!--        <div class="row mb-4">
 
-            <!--Director:-->
+            Director:
             <div class='col-6'>
                 <div class='card'>
                     <div class="card-body">
@@ -184,12 +223,12 @@ get_header();
                                 <p>
                                     Contador General
                                 </p>    
-<!--                                <div>
-                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                        Curriculum Vitae
-                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />
-                                    </a>
-                                </div>-->
+                                                                <div>
+                                                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                                                        Curriculum Vitae
+                                                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'            ?>" />
+                                                                    </a>
+                                                                </div>
                             </div>
                         </div>
                     </div>
@@ -198,7 +237,7 @@ get_header();
 
 
             <div class='col-6'>
-                <!--Director:-->
+                Director:
                 <div class='card'>
                     <div class="card-body">
                         <div class="row">
@@ -212,22 +251,22 @@ get_header();
                                 <p>
                                     Director General de Asuntos Jurídicos
                                 </p>    
-<!--                                <div>
-                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                        Curriculum Vitae
-                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'       ?>" />
-                                    </a>
-                                </div>-->
+                                                                <div>
+                                                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                                                        Curriculum Vitae
+                                                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'           ?>" />
+                                                                    </a>
+                                                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
-        <div class="row mb-4">
+<!--        <div class="row mb-4">
 
-            <!--Director:-->
+            Director:
             <div class='col-6'>
                 <div class='card'>
                     <div class="card-body">
@@ -242,45 +281,19 @@ get_header();
                                 <p>
                                     Sub Dirección de Auditoría Interna
                                 </p>    
-<!--                                <div>
-                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                        Curriculum Vitae
-                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'        ?>" />
-                                    </a>
-                                </div>-->
+                                                                <div>
+                                                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                                                        Curriculum Vitae
+                                                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'            ?>" />
+                                                                    </a>
+                                                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-            <!--            <div class='col-6'>
-                            Director:
-                            <div class='card'>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <img class='img-fluid' src="https://via.placeholder.com/100"/>
-                                        </div>
-                                        <div class="col-9 px-3">
-                                            <h3 class="h4">
-                                                Dr. Esteban Mántaras
-                                            </h3>
-                                            <p>
-                                                Director General de Asuntos Jurídicos
-                                            </p>    
-                                            <div>
-                                                <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                                    Curriculum Vitae                                        
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
-        </div>
+        </div>-->
 
 
     </section>
