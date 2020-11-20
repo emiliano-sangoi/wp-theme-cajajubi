@@ -10,21 +10,30 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 }
 get_header();
 
+$post_director = $post_subdirector = $posts_otros = array();
 
-$args_director = array('category' => get_cat_ID(CATEGORIA_DIRECTOR), 'posts_per_page' => 1);
-$post_director = get_posts($args_director);
+$cat_id = get_cat_ID(CATEGORIA_DIRECTOR);
+if ($cat_id) {
+    $args_director = array('category' => $cat_id, 'posts_per_page' => 1);
+    $post_director = get_posts($args_director);
+}
 
-$args_subdirector = array('category' => get_cat_ID(CATEGORIA_SUBDIRECTOR), 'posts_per_page' => 1);
-$post_subdirector = get_posts($args_subdirector);
+$cat_id = get_cat_ID(CATEGORIA_SUBDIRECTOR);
+if ($cat_id) {
+    $args_subdirector = array('category' => $cat_id, 'posts_per_page' => 1);
+    $post_subdirector = get_posts($args_subdirector);
+}
 
-$args_otros = array('category' => get_cat_ID(CATEGORIA_OTROS), 'posts_per_page' => -1);
-$posts_otros = get_posts($args_otros);
-
-print_r('<br><br><br><br><br><br>');
-print_r($post_director);
+$cat_id = get_cat_ID(CATEGORIA_OTROS);
+if ($cat_id) {
+    $args_otros = array('category' => $cat_id, 'posts_per_page' => -1);
+    $posts_otros = get_posts($args_otros);
+}
+//print_r('<br><br><br><br><br><br>');
+//print_r($post_director);
 //print_r($post_subdirector);
 //print_r($posts_otros);
-exit;
+//exit;
 ?>
 
 <!-- Page Preloder -->
@@ -47,254 +56,223 @@ exit;
     </h1>
     <hr/>
 
-    <h2 class="h3 font-weight-bold mt-5">Autoridades</h2>
+    <h2 class="h3 font-weight-bold mt-5">
+        Autoridades
+    </h2>
     <section class="py-3">
 
-        <div class="row mb-4">
+        <div class="row mb-lg-5 mb-3">
 
             <!--Director:--> 
-            <div class='col-6'>
-                <div class='card'>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3">
-                                <?php                    
-                                    echo get_the_post_thumbnail($post_director[0], 'medium', array('class' => 'img-fluid'));                    
-                                ?>
-                            </div>
-                            <div class="col-9 px-3">
-                                <h3 class="h4">
-                                    <?php echo $post_director[0]->post_title; ?>
-                                </h3>
-                                <p>
-                                    <?php echo $post_director[0]->post_content; ?>
-                                </p>    
-                                <!-- <div>
-                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                        Curriculum Vitae
-                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'            ?>" />
-                                    </a>
-                                </div>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class='offset-lg-2 col-4'>
+                <?php
+                if (isset($post_director[0])) {
+                    $post = $post_director[0];
+                    $img = get_the_post_thumbnail($post, 'medium', array('class' => 'img-fluid w-100 rounded-circle'));
+                    $titulo = $post->post_title;
+                    $contenido = $post->post_content;
+                    include locate_template('partials/autoridad-sup.php');
+                }
+                ?>  
             </div>
 
-            <div class='col-6'>
+            <div class='col-4'>
                 <!--SubDirector:-->
-                <div class='card'>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3">
-                                <?php                    
-                                    echo get_the_post_thumbnail($post_subdirector[0], 'medium', array('class' => 'img-fluid'));                    
-                                ?>
-                            </div>
-                            <div class="col-9 px-3">
-                                <h3 class="h4">
-                                    <?php echo $post_subdirector[0]->post_title; ?>
-                                </h3>
-                                <p>
-                                    <?php echo $post_subdirector[0]->post_content; ?>
-                                </p>    
-                                <!-- <div>
-                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                        Curriculum Vitae
-                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'           ?>" />
-                                    </a>
-                                </div>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                if (isset($post_subdirector[0])) {
+                    $post = $post_subdirector[0];
+                    if ($post->post_status === 'publish') {
+                        $img = get_the_post_thumbnail($post, 'medium', array('class' => 'img-fluid w-100 rounded-circle'));
+                        $titulo = $post->post_title;
+                        $contenido = $post->post_content;
+                        include locate_template('partials/autoridad-sup.php');
+                    }
+                }
+                ?>  
             </div>
         </div>
-        
-        <?php foreach ($posts_otros as $post): ?> 
-        <?php if ($post->post_status !== 'publish'): continue; endif; ?>   
-        
-        <div class="row mb-4">
+        <div class="px-lg-5">
+        <?php
+        $i = 0;
+        $n = count($posts_otros);
 
-            <div class='col-6'>
-                <div class='card'>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3">
-                                <?php                    
-                                    echo get_the_post_thumbnail($post, 'medium', array('class' => 'img-fluid'));                    
-                                ?>
-                            </div>
-                            <div class="col-9 px-3">
-                                <h3 class="h4">
-                                    <?php echo $post->post_title; ?>
-                                </h3>
-                                <p>
-                                    <?php echo $post->post_content; ?>
-                                </p>    
-                                <!-- <div>
-                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                        Curriculum Vitae
-                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'            ?>" />
-                                    </a>
-                                </div>-->
-                            </div>
-                        </div>
-                    </div>
+        foreach ($posts_otros as $post):
+            if ($post->post_status !== 'publish') {
+                continue;
+            }
+            ?>   
+
+            <?php if ($i % 2 === 0) : ?>
+                <div class='row mb-lg-5 mb-3'>
+                <?php endif; ?>            
+
+                <div class='col-6'>
+                <?php
+                if ($post->post_status === 'publish') {
+                    $img = get_the_post_thumbnail($post, 'medium', array('class' => 'img-fluid w-100 rounded-circle'));
+                    $titulo = $post->post_title;
+                    $contenido = $post->post_content;
+                    include locate_template('partials/autoridad.php');
+                }
+                ?>                                        
                 </div>
-            </div>
-            
-        </div>
+
+                <?php if ($i % 2 !== 0 || $i === $n - 1): ?>
+                </div>
+            <?php endif;
+            $i++; ?>
+
+
         <?php endforeach; ?>
+        </div>
 
-
-<!--        <div class="row mb-4">
-
-            Director:
-            <div class='col-6'>
-                <div class='card'>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
-                            </div>
-                            <div class="col-9 px-3">
-                                <h3 class="h4">
-                                    Dra. Florencia Lacava
-                                </h3>
-                                <p>
-                                    Secretaria General
-                                </p>    
-                                                                <div>
-                                                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                                                        Curriculum Vitae
-                                                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'            ?>" />
-                                                                    </a>
-                                                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class='col-6'>
-                Director:
-                <div class='card'>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
-                            </div>
-                            <div class="col-9 px-3">
-                                <h3 class="h4">
-                                    CPN Silvia Galán
-                                </h3>
-                                <p>
-                                    Directora Previsional
-                                </p>    
-                                                                <div>
-                                                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                                                        Curriculum Vitae
-                                                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'           ?>" />
-                                                                    </a>
-                                                                </div>
+        <!--        <div class="row mb-4">
+        
+                    Director:
+                    <div class='col-6'>
+                        <div class='card'>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                                    </div>
+                                    <div class="col-9 px-3">
+                                        <h3 class="h4">
+                                            Dra. Florencia Lacava
+                                        </h3>
+                                        <p>
+                                            Secretaria General
+                                        </p>    
+                                                                        <div>
+                                                                            <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                                                                Curriculum Vitae
+                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                     ?>" />
+                                                                            </a>
+                                                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>-->
-
-
-<!--        <div class="row mb-4">
-
-            Director:
-            <div class='col-6'>
-                <div class='card'>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
-                            </div>
-                            <div class="col-9 px-3">
-                                <h3 class="h4">
-                                    CPN Julio Rugna
-                                </h3>
-                                <p>
-                                    Contador General
-                                </p>    
-                                                                <div>
-                                                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                                                        Curriculum Vitae
-                                                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'            ?>" />
-                                                                    </a>
-                                                                </div>
+        
+        
+                    <div class='col-6'>
+                        Director:
+                        <div class='card'>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                                    </div>
+                                    <div class="col-9 px-3">
+                                        <h3 class="h4">
+                                            CPN Silvia Galán
+                                        </h3>
+                                        <p>
+                                            Directora Previsional
+                                        </p>    
+                                                                        <div>
+                                                                            <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                                                                Curriculum Vitae
+                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                    ?>" />
+                                                                            </a>
+                                                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>-->
 
 
-            <div class='col-6'>
-                Director:
-                <div class='card'>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
-                            </div>
-                            <div class="col-9 px-3">
-                                <h3 class="h4">
-                                    Dr. Esteban Mántaras
-                                </h3>
-                                <p>
-                                    Director General de Asuntos Jurídicos
-                                </p>    
-                                                                <div>
-                                                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                                                        Curriculum Vitae
-                                                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'           ?>" />
-                                                                    </a>
-                                                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-
-<!--        <div class="row mb-4">
-
-            Director:
-            <div class='col-6'>
-                <div class='card'>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class='img-fluid' src="https://via.placeholder.com/100"/>
-                            </div>
-                            <div class="col-9 px-3">
-                                <h3 class="h4">
-                                    Dra. Luciana Sbresso
-                                </h3>
-                                <p>
-                                    Sub Dirección de Auditoría Interna
-                                </p>    
-                                                                <div>
-                                                                    <a class="btn btn-sm btn-outline-secondary" href='#'>
-                                                                        Curriculum Vitae
-                                                                        <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'            ?>" />
-                                                                    </a>
-                                                                </div>
+        <!--        <div class="row mb-4">
+        
+                    Director:
+                    <div class='col-6'>
+                        <div class='card'>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                                    </div>
+                                    <div class="col-9 px-3">
+                                        <h3 class="h4">
+                                            CPN Julio Rugna
+                                        </h3>
+                                        <p>
+                                            Contador General
+                                        </p>    
+                                                                        <div>
+                                                                            <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                                                                Curriculum Vitae
+                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                     ?>" />
+                                                                            </a>
+                                                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+        
+        
+                    <div class='col-6'>
+                        Director:
+                        <div class='card'>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                                    </div>
+                                    <div class="col-9 px-3">
+                                        <h3 class="h4">
+                                            Dr. Esteban Mántaras
+                                        </h3>
+                                        <p>
+                                            Director General de Asuntos Jurídicos
+                                        </p>    
+                                                                        <div>
+                                                                            <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                                                                Curriculum Vitae
+                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                    ?>" />
+                                                                            </a>
+                                                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
 
-        </div>-->
+        <!--        <div class="row mb-4">
+        
+                    Director:
+                    <div class='col-6'>
+                        <div class='card'>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img class='img-fluid' src="https://via.placeholder.com/100"/>
+                                    </div>
+                                    <div class="col-9 px-3">
+                                        <h3 class="h4">
+                                            Dra. Luciana Sbresso
+                                        </h3>
+                                        <p>
+                                            Sub Dirección de Auditoría Interna
+                                        </p>    
+                                                                        <div>
+                                                                            <a class="btn btn-sm btn-outline-secondary" href='#'>
+                                                                                Curriculum Vitae
+                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                     ?>" />
+                                                                            </a>
+                                                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>-->
 
 
     </section>
