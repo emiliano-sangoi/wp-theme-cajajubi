@@ -7971,6 +7971,19 @@ body {
   min-height: 350px;
   background: transparent; }
 
+#quienes-somos .mision {
+  border-color: #B10F2E !important; }
+  #quienes-somos .mision h3 {
+    color: #B10F2E; }
+#quienes-somos .vision {
+  border-color: #1C5D99 !important; }
+  #quienes-somos .vision h3 {
+    color: #1C5D99; }
+#quienes-somos .valores {
+  border-color: #FEEA00 !important; }
+  #quienes-somos .valores h3 {
+    color: #FEEA00; }
+
 /*h1,
 h2,
 h3,
