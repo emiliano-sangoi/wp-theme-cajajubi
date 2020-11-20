@@ -10,7 +10,7 @@ Tags: 		caja jubilaciones, bootstrap, santa fe
 /**
 Para todos los colores de esta lista se
 crearan automaticamentes fondos y colores de texto
- */
+*/
 /*Paleta de colores:*/
 /*-------------------------------------------------------*/
 /* Buscar colores en: https://coolors.co/ */
@@ -7891,14 +7891,13 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 /**
-    IMPORTANTE: Para que funciones de esta forma se tuvo que modificar
-    el archivo _root.scss por un bug del compilador.
-    
-    El problema surge por un bug del compilador al parecer.
-    Ver: 
-        - https://stackoverflow.com/questions/47745915/error-compiling-bootstrap-scss-issue-with-root-scss/47796680
+IMPORTANTE: Para que funciones de esta forma se tuvo que modificar
+el archivo _root.scss por un bug del compilador.
 
-    Se creo una copia del archivo modificado en: scss/_root.scss
+El problema surge por un bug del compilador al parecer:    
+    - https://stackoverflow.com/questions/47745915/error-compiling-bootstrap-scss-issue-with-root-scss/47796680
+*/
+/*
     En caso de descargar nuevamente las dependencias y compilar el sass puede ser necesario
     modificar el archivo _root.scss dentro de la carpeta node_modules/bootstrap/scss/
 */
@@ -7908,270 +7907,6 @@ a.text-dark:hover, a.text-dark:focus {
   La clase padre debe tener posicionamiento relativo.
   https://css-tricks.com/snippets/sass/centering-mixin/
 */
-/******************************************************************
-  Template Name: Zogin
-  Description:  Phozogy Yoga HTML Template
-  Author: Colorlib
-  Author URI: https://colorlib.com
-  Version: 1.0
-  Created: Colorlib
-******************************************************************/
-/*------------------------------------------------------------------
-[Table of contents]
-
-1.  Template default CSS
-        1.1	Variables
-        1.2	Mixins
-        1.3	Flexbox
-        1.4	Reset
-2.  Helper Css
-3.  Header Section
-4.  Hero Section
-5.  Service Section
-6.  Class Section
-7.  Appointment Section
-8.  Testimonial Product Section
-9.  Contact
-10.  Footer Style
--------------------------------------------------------------------*/
-/*----------------------------------------*/
-/* Template default CSS
-/*----------------------------------------*/
-html,
-body {
-  /*height: 100%;*/
-  /*font-family: 'DM Sans', sans-serif;*/
-  font-family: 'Open_Sans_Font', sans-serif !important;
-  font-weight: normal;
-  /*-webkit-font-smoothing: antialiased;*/ }
-
-.navbar-separator {
-  margin-top: 63px; }
-
-.altura-minima {
-  min-height: 60vh; }
-
-.centrate {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-.centrate-x {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0); }
-
-.centrate-y {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%); }
-
-.parallax-window {
-  min-height: 350px;
-  background: transparent; }
-
-#quienes-somos .mision {
-  border-color: #B10F2E !important; }
-  #quienes-somos .mision h3 {
-    color: #B10F2E; }
-#quienes-somos .vision {
-  border-color: #1C5D99 !important; }
-  #quienes-somos .vision h3 {
-    color: #1C5D99; }
-#quienes-somos .valores {
-  border-color: #FEEA00 !important; }
-  #quienes-somos .valores h3 {
-    color: #FEEA00; }
-
-/*h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  color: #111111;
-  font-weight: 400;
-  font-family: 'DM Sans', sans-serif;
-}*/
-/*h1 {
-  font-size: 70px;
-}
-
-h2 {
-  font-size: 36px;
-}
-
-h3 {
-  font-size: 30px;
-}
-
-h4 {
-  font-size: 24px;
-}
-
-h5 {
-  font-size: 18px;
-}
-
-h6 {
-  font-size: 16px;
-}*/
-p {
-  /*font-size: 16px;*/
-  /*font-family: 'DM Sans', sans-serif;*/
-  /*color: #6E7580;*/
-  /*font-weight: 400;*/
-  /*line-height: 26px;*/
-  /*margin: 0 0 15px 0;*/ }
-
-/*img {
-  max-width: 100%;
-}*/
-/*input:focus,
-select:focus,
-button:focus,
-textarea:focus {
-  outline: none;
-}*/
-/*a:hover,
-a:focus {
-  text-decoration: none;
-  outline: none;
-  color: $white-color;
-}*/
-/*ul,
-ol {
-  padding: 0;
-  margin: 0;
-}*/
-/*---------------------
-  Helper CSS
------------------------*/
-/*.section-title {
-  margin-bottom: 45px;
-  text-align: center;
-
-  &.normal-title {
-    margin-bottom: 50px;
-
-    h2 {
-      margin-bottom: 20px;
-      margin-top: 0;
-    }
-
-    p {
-      margin-bottom: 0;
-      color: #9B9EA3;
-    }
-  }
-
-  h2 {
-    font-size: 44px;
-    color: $heading-color;
-    margin-top: 34px;
-    margin-bottom: 5px;
-  }
-}*/
-/*.set-bg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-}
-
-.spad {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}*/
-/*.text-white h1,
-.text-white h2,
-.text-white h3,
-.text-white h4,
-.text-white h5,
-.text-white h6,
-.text-white p,
-.text-white span,
-.text-white li,
-.text-white a {
-  color: #fff;
-}*/
-/* buttons */
-/*.primary-btn {
-  display: inline-block;
-  font-size: 14px;
-  padding: 16px 36px 14px;
-  color: $white-color;
-  text-transform: uppercase;
-  font-weight: 700;
-  background: $primary-color;
-  border-radius: 2px;
-  letter-spacing: 2px;
-}*/
-/*.site-btn {
-  font-size: 14px;
-  color: $white-color;
-  font-weight: 700;
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 14px 50px;
-  background: $primary-color;
-  border: none;
-  letter-spacing: 2px;
-  border-radius: 2px;
-}*/
-/* Preloder */
-#preloder {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 999999;
-  background: #000; }
-
-.loader {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -13px;
-  margin-left: -13px;
-  border-radius: 60px;
-  animation: loader 0.8s linear infinite;
-  -webkit-animation: loader 0.8s linear infinite; }
-
-@keyframes loader {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    border: 4px solid #f44336;
-    border-left-color: transparent; }
-  50% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-    border: 4px solid #673ab7;
-    border-left-color: transparent; }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-    border: 4px solid #f44336;
-    border-left-color: transparent; } }
-@-webkit-keyframes loader {
-  0% {
-    -webkit-transform: rotate(0deg);
-    border: 4px solid #f44336;
-    border-left-color: transparent; }
-  50% {
-    -webkit-transform: rotate(180deg);
-    border: 4px solid #673ab7;
-    border-left-color: transparent; }
-  100% {
-    -webkit-transform: rotate(360deg);
-    border: 4px solid #f44336;
-    border-left-color: transparent; } }
-/*@import "header";*/
 #navbar {
   /*box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);*/ }
   #navbar .navbar-brand {
@@ -8182,7 +7917,6 @@ ol {
     #navbar .navbar-brand img {
       width: 38%; }
 
-/*@import "hero";*/
 #carouselHome {
   margin-top: 63px;
   /*    .carousel-item{
@@ -8201,7 +7935,6 @@ ol {
     /*           padding-top: 0;
                padding-bottom: 0;*/ }
 
-/*@import "home-page";*/
 /*
 Footer
 */
@@ -8276,13 +8009,6 @@ footer {
         font-weight: 400;
     }
 }*/
-/*@import "about";*/
-/*@import "classes";*/
-/*@import "classes-details";*/
-/*@import "pricing";*/
-/*@import "blog";*/
-/*@import "blog-sidebar";*/
-/*@import "blog-details";*/
 /*---------------------
   Contact
 -----------------------*/
@@ -8295,120 +8021,53 @@ footer {
   #contacto .social-media img {
     width: 11%; }
 
-/*.contact {
-  padding-bottom: 80px;
-}
+html,
+body {
+  /*height: 100%;*/
+  /*font-family: 'DM Sans', sans-serif;*/
+  font-family: 'Open_Sans_Font', sans-serif !important;
+  font-weight: normal;
+  /*-webkit-font-smoothing: antialiased;*/ }
 
-.contact__widget__item {
-  text-align: center;
-  margin-bottom: 30px;
+.navbar-separator {
+  margin-top: 63px; }
 
-  span {
-    font-size: 36px;
-    color: $primary-color;
-  }
+.altura-minima {
+  min-height: 60vh; }
 
-  h4 {
-    color: $heading-color;
-    margin-top: 16px;
-    margin-bottom: 5px;
-  }
+.centrate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
-  p {
-    color: #9B9EA3;
-    margin-bottom: 0;
-  }
-}
-
----------------------
-  Map
------------------------
-.map {
-  height: 500px;
-  position: relative;
-
-  iframe {
-    width: 100%;
-  }
-}
-
-.map .map-inside {
+.centrate-x {
   position: absolute;
   left: 50%;
-  top: 160px;
-  -webkit-transform: translateX(-175px);
-  -ms-transform: translateX(-175px);
-  transform: translateX(-175px);
-}
+  transform: translate(-50%, 0); }
 
-.map .map-inside i {
-  font-size: 48px;
-  color: $primary-color;
+.centrate-y {
   position: absolute;
-  bottom: -75px;
-  left: 50%;
-  -webkit-transform: translateX(-18px);
-  -ms-transform: translateX(-18px);
-  transform: translateX(-18px);
-}
+  top: 50%;
+  transform: translate(0, -50%); }
 
-.map .map-inside .inside-widget {
-  width: 350px;
-  background: #ffffff;
-  text-align: center;
-  padding: 23px 0;
-  position: relative;
-  z-index: 1;
-  -webkit-box-shadow: 0 0 20px 5px rgba(12, 7, 26, 0.15);
-  box-shadow: 0 0 20px 5px rgba(12, 7, 26, 0.15);
-}
+.parallax-window {
+  min-height: 350px;
+  background: transparent; }
 
-.map .map-inside .inside-widget:after {
-  position: absolute;
-  left: 50%;
-  bottom: -38px;
-  -webkit-transform: translateX(-6px);
-  -ms-transform: translateX(-6px);
-  transform: translateX(-9px);
-  border: 18px solid transparent;
-  border-top: 36px solid #ffffff;
-  content: "";
-  z-index: -1;
-}
+#quienes-somos .mision {
+  border-color: #B10F2E !important; }
+  #quienes-somos .mision h3 {
+    color: #B10F2E; }
+#quienes-somos .vision {
+  border-color: #1C5D99 !important; }
+  #quienes-somos .vision h3 {
+    color: #1C5D99; }
+#quienes-somos .valores {
+  border-color: #FEEA00 !important; }
+  #quienes-somos .valores h3 {
+    color: #FEEA00; }
 
-.map .map-inside .inside-widget h5 {
-  font-size: 20px;
-  color: $heading-color;
-  margin-bottom: 4px;
-}
-
-.map .map-inside .inside-widget ul li {
-  list-style: none;
-  font-size: 16px;
-  color: #9B9EA3;
-  line-height: 26px;
-}
-
----------------------
-  Contact Form
------------------------
-.comment-form {
-  background: $white-color;
-  padding-bottom: 100px;
-
-  form {
-
-    input {
-      margin-bottom: 30px;
-    }
-
-    textarea {
-      margin-bottom: 34px;
-    }
-  }
-}*/
-/*@import "faq";*/
-/*@import "responsive";*/
 .w-20 {
   width: 20%; }
 
