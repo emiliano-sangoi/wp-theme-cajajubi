@@ -10,7 +10,7 @@ Tags: 		caja jubilaciones, bootstrap, santa fe
 /**
 Para todos los colores de esta lista se
 crearan automaticamentes fondos y colores de texto
- */
+*/
 
 
 
@@ -20,40 +20,111 @@ crearan automaticamentes fondos y colores de texto
 // Customizar los estilos de bootstrap
 // Incluir el sass:
 @import "../node_modules/bootstrap/scss/bootstrap";
-/**
+    /**
     IMPORTANTE: Para que funciones de esta forma se tuvo que modificar
     el archivo _root.scss por un bug del compilador.
     
-    El problema surge por un bug del compilador al parecer.
-    Ver: 
+    El problema surge por un bug del compilador al parecer:    
         - https://stackoverflow.com/questions/47745915/error-compiling-bootstrap-scss-issue-with-root-scss/47796680
+    */
+    //    Los cambios son:
+    //:root {
+    //   Custom variable values only support SassScript inside `#{}`.
+    //  @each $color, $value in $colors {
+    //   //--#{$color}: #{$value};
+    //   --color-#{$color}: #{$value};
+    //  }
 
-    Se creo una copia del archivo modificado en: scss/_root.scss
-    En caso de descargar nuevamente las dependencias y compilar el sass puede ser necesario
-    modificar el archivo _root.scss dentro de la carpeta node_modules/bootstrap/scss/
-*/
+    //  @each $color, $value in $theme-colors {
+    //   //--#{$color}: #{$value};
+    //   --color-#{$color}: #{$value};
+    //  }
+
+    //  @each $bp, $value in $grid-breakpoints {
+    //   --breakpoint-#{$bp}: #{$value};
+    //  }
+
+    // Use `inspect` for lists so that quoted items keep the quotes.
+    // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
+    // --font-family-sans-serif: #{inspect($font-family-sans-serif)};
+    // --font-family-monospace: #{inspect($font-family-monospace)};
+    //}
+
+    /*
+        En caso de descargar nuevamente las dependencias y compilar el sass puede ser necesario
+        modificar el archivo _root.scss dentro de la carpeta node_modules/bootstrap/scss/
+    */
 
 
 @import "mixins";
-
-@import "base";
-/*@import "header";*/
 @import "navbar";
-/*@import "hero";*/
 @import "carousel";
-/*@import "home-page";*/
 @import "footer";
 @import "breadcrumb";
-/*@import "about";*/
-/*@import "classes";*/
-/*@import "classes-details";*/
-/*@import "pricing";*/
-/*@import "blog";*/
-/*@import "blog-sidebar";*/
-/*@import "blog-details";*/
-@import "contact";
-/*@import "faq";*/
-/*@import "responsive";*/
+@import "contacto";
+
+html,
+body {
+    /*height: 100%;*/
+    /*font-family: 'DM Sans', sans-serif;*/
+    font-family: 'Open_Sans_Font', sans-serif !important;  
+    font-weight: normal;
+    /*-webkit-font-smoothing: antialiased;*/
+}
+
+.navbar-separator{
+    margin-top: $navbar-height;
+}
+
+.altura-minima{
+    min-height: 60vh;
+}
+
+.centrate {
+    @include centerer;
+}
+
+.centrate-x {
+    @include centerer(true, false);
+}
+
+.centrate-y {
+    @include centerer(false, true);
+}
+
+.parallax-window {
+    min-height: 350px;
+    background: transparent;
+}
+
+#quienes-somos{
+    .mision{
+        
+        border-color: $upsdell-red !important;
+        
+        h3{
+            color: $upsdell-red;
+        }
+        
+    }
+    
+    .vision{
+        border-color: $lapis-lazuli !important;
+        
+         h3{
+        color: $lapis-lazuli;
+    }
+    }
+    
+    .valores{
+        
+        border-color: $middle-yellow !important;
+        
+         h3{
+             color: $middle-yellow;
+        }
+    }
+}
 
 
 .w-20{ width: 20%; }
