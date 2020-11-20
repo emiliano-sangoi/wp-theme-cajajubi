@@ -10,6 +10,8 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 }
 
 get_header();
+
+$laCajaEnNumeros = getArchivosLaCajaEnNumeros();
 ?>
 
 <!-- Page Preloder -->
@@ -36,13 +38,41 @@ get_header();
             <p class="text-muted">
                 No se ha cargado ningun contenido en esta secci&oacute;n.
             </p>
-        <?php
+            <?php
         else:
             echo $pagina->post_content;
             ?>
-<?php endif; ?>
+        <?php endif; ?>
     </div>
 
+    <div>
+        <div class="card-header" id="reportesAnteriores">
+            <h4 class="mb-0">
+                Reportes anteriores
+            </h4>
+        </div>
+
+        <div>
+            <div class="card-body">
+                <?php
+                $i = 0;
+                foreach ($laCajaEnNumeros['meses'] as $finfo):
+                    ?>
+                    <p>
+                        <a href="<?php echo $laCajaEnNumeros['url'] . $finfo->fname; ?>" target="_blank">
+                            <?php
+                            echo $finfo->titulo;
+                            $i++;
+                            ?>
+                        </a>
+                    </p>
+                <?php endforeach; ?>
+                <?php if ($i === 0): ?>
+                    <p class="text-muted">No hay ning&uacute;n reporte cargado.</p>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
 </div>
 
 <?php get_footer(); ?>

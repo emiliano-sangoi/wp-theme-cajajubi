@@ -504,5 +504,38 @@ if (!function_exists('bootstrap_comment')) {
 
         return $biblioteca;
     }
-       
+
+    function getArchivosLaCajaEnNumeros(){
+        $laCajaEnNumeros = array(
+            'meses' => array(),
+        );
+        
+        $upload_info = wp_upload_dir();
+        
+        if(!isset($upload_info['path'])){
+            return false;
+        }
+        
+        $upload_dir = $upload_info['path'];
+        
+        $archivos = scandir($upload_dir);
+        foreach ($archivos as $archivo){
+            if(is_dir($upload_dir . DIRECTORY_SEPARATOR . $archivo)){
+                continue;
+            }
+            
+            $o = new stdClass();            
+            
+            if( strpos($archivo, 'NUMEROS_', 0) !== false ){
+                $o->fname = $archivo;  
+                $o->titulo = str_replace(array('_', '.pdf'), ' ', substr($archivo, 8));
+                $laCajaEnNumeros['meses'][] = $o;                
+            }
+        }
+        
+        $laCajaEnNumeros['url'] = $upload_info['url'] . DIRECTORY_SEPARATOR;
+
+        return $laCajaEnNumeros;
+    }
+
 ?>
