@@ -10,20 +10,21 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 }
 get_header();
 
-$args_director = array('category' => get_cat_ID(CATEGORIA_DIRECTOR), 'posts_per_page' => -1);
+
+$args_director = array('category' => get_cat_ID(CATEGORIA_DIRECTOR), 'posts_per_page' => 1);
 $post_director = get_posts($args_director);
 
-$args_subdirector = array('category' => get_cat_ID(CATEGORIA_SUBDIRECTOR), 'posts_per_page' => -1);
+$args_subdirector = array('category' => get_cat_ID(CATEGORIA_SUBDIRECTOR), 'posts_per_page' => 1);
 $post_subdirector = get_posts($args_subdirector);
 
 $args_otros = array('category' => get_cat_ID(CATEGORIA_OTROS), 'posts_per_page' => -1);
 $posts_otros = get_posts($args_otros);
 
-//print_r('<br><br><br><br><br><br>');
-//print_r($post_director);
+print_r('<br><br><br><br><br><br>');
+print_r($post_director);
 //print_r($post_subdirector);
 //print_r($posts_otros);
-//exit;
+exit;
 ?>
 
 <!-- Page Preloder -->
