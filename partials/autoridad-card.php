@@ -1,15 +1,17 @@
 <div class=''>
-    <div class="p-3">
-            <div class="text-center px-lg-5">
+    <div class="">
+        <div class="row">
+            <div class="col-3 pr-0">
                 <?php
                 echo $img;
                 ?>
             </div>
-            <div class="p-lg-3 p-2 text-center">
+            <div class="col-9 pl-2 pr-2 pr-lg-3">
+                <div class="centrate-y px-lg-3">
                 <h3 class="h4">
                     <?php echo $titulo; ?>
                 </h3>
-                <p class="text-muted">
+                <p class="">
                     <?php echo $contenido; ?>
                 </p>    
                 <!-- <div>
@@ -19,5 +21,7 @@
                     </a>
                 </div>-->
             </div>
+            </div>
         </div>
+    </div>
 </div>

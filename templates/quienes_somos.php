@@ -68,10 +68,7 @@ if ($cat_id) {
                 <?php
                 if (isset($post_director[0])) {
                     $post = $post_director[0];
-                    $img = get_the_post_thumbnail($post, 'medium', array('class' => 'img-fluid w-100 rounded-circle'));
-                    $titulo = $post->post_title;
-                    $contenido = $post->post_content;
-                    include locate_template('partials/autoridad-sup.php');
+                    include locate_template('partials/autoridad.php');
                 }
                 ?>  
             </div>
@@ -82,48 +79,36 @@ if ($cat_id) {
                 if (isset($post_subdirector[0])) {
                     $post = $post_subdirector[0];
                     if ($post->post_status === 'publish') {
-                        $img = get_the_post_thumbnail($post, 'medium', array('class' => 'img-fluid w-100 rounded-circle'));
-                        $titulo = $post->post_title;
-                        $contenido = $post->post_content;
-                        include locate_template('partials/autoridad-sup.php');
+                        include locate_template('partials/autoridad.php');
                     }
                 }
                 ?>  
             </div>
         </div>
         <div class="px-lg-5">
-        <?php
-        $i = 0;
-        $n = count($posts_otros);
+            <?php
+            $i = 0;
+            $items_por_fila = 3;
+            $n = count($posts_otros);
+            ?>
 
-        foreach ($posts_otros as $post):
-            if ($post->post_status !== 'publish') {
-                continue;
-            }
-            ?>   
-
-            <?php if ($i % 2 === 0) : ?>
+            <?php for ($j = 0; $j < $n; $j += $items_por_fila): ?>
                 <div class='row mb-lg-5 mb-3'>
-                <?php endif; ?>            
-
-                <div class='col-6'>
-                <?php
-                if ($post->post_status === 'publish') {
-                    $img = get_the_post_thumbnail($post, 'medium', array('class' => 'img-fluid w-100 rounded-circle'));
-                    $titulo = $post->post_title;
-                    $contenido = $post->post_content;
-                    include locate_template('partials/autoridad.php');
-                }
-                ?>                                        
+                    <?php for ($k = 0; $k < $items_por_fila && $post = array_pop($posts_otros) ; $k++): ?>                        
+                        <?php
+                        
+                        if ($post->post_status !== 'publish'):
+                            continue;
+                        endif;
+                        ?>
+                        <div class='col-4'>
+                            <?php
+                            include locate_template('partials/autoridad.php');
+                            ?>                                        
+                        </div>
+                    <?php endfor; ?>
                 </div>
-
-                <?php if ($i % 2 !== 0 || $i === $n - 1): ?>
-                </div>
-            <?php endif;
-            $i++; ?>
-
-
-        <?php endforeach; ?>
+            <?php endfor; ?>
         </div>
 
         <!--        <div class="row mb-4">
@@ -146,7 +131,7 @@ if ($cat_id) {
                                                                         <div>
                                                                             <a class="btn btn-sm btn-outline-secondary" href='#'>
                                                                                 Curriculum Vitae
-                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                     ?>" />
+                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                            ?>" />
                                                                             </a>
                                                                         </div>
                                     </div>
@@ -174,7 +159,7 @@ if ($cat_id) {
                                                                         <div>
                                                                             <a class="btn btn-sm btn-outline-secondary" href='#'>
                                                                                 Curriculum Vitae
-                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                    ?>" />
+                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                           ?>" />
                                                                             </a>
                                                                         </div>
                                     </div>
@@ -205,7 +190,7 @@ if ($cat_id) {
                                                                         <div>
                                                                             <a class="btn btn-sm btn-outline-secondary" href='#'>
                                                                                 Curriculum Vitae
-                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                     ?>" />
+                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                            ?>" />
                                                                             </a>
                                                                         </div>
                                     </div>
@@ -233,7 +218,7 @@ if ($cat_id) {
                                                                         <div>
                                                                             <a class="btn btn-sm btn-outline-secondary" href='#'>
                                                                                 Curriculum Vitae
-                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                    ?>" />
+                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                           ?>" />
                                                                             </a>
                                                                         </div>
                                     </div>
@@ -263,7 +248,7 @@ if ($cat_id) {
                                                                         <div>
                                                                             <a class="btn btn-sm btn-outline-secondary" href='#'>
                                                                                 Curriculum Vitae
-                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                     ?>" />
+                                                                                <img class="img-fluid w-20" src="<?php //echo DIR_IMGS . '/social-media/linkedin.png'                            ?>" />
                                                                             </a>
                                                                         </div>
                                     </div>
