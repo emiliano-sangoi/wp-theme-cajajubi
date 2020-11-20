@@ -3,7 +3,7 @@ wp_footer();
 ?>
 
 <!-- Footer Section Begin -->
-<footer class="footer bg-gray-300 py-5">
+<footer class="footer bg-light py-5">
     <div class="container py-4">
         <div class="row mx-0">
             <div class="col-md-2">

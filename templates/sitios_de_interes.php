@@ -5,7 +5,7 @@
 // La ubicacion de este codigo debe ser al principio del archivo.
 $pagina = get_page_by_path(PAGINA_SITIOS_DE_INTERES);
 if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
-    wp_redirect( home_url(), 301 );
+    wp_redirect(home_url(), 301);
     exit;
 }
 
@@ -17,8 +17,9 @@ get_header();
     <div class="loader"></div>
 </div>-->
 
-  
-<div class="container-lg navbar-separator p-5 altura-minima" id="sitios-de-interes">
+
+
+<div class="container-lg navbar-separator px-5 pt-4 pb-5 altura-minima" id="sitios-de-interes">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
@@ -28,103 +29,178 @@ get_header();
         </ol>
     </nav>
     <h1 class="font-weight-bold text-primary">
-      <?php echo $pagina->post_title; ?>
+        <?php echo $pagina->post_title; ?>
     </h1>
     <hr/>
     <div>
-        <?php if(empty($pagina->post_content)): ?>
-        <p class="text-muted">
-            <!--No se ha cargado ningun contenido en esta secci&oacute;n.-->
-        </p>
-        <?php else: 
-            echo $pagina->post_content; 
-        ?>
+        <?php if (empty($pagina->post_content)): ?>
+            <p class="text-muted">
+                <!--No se ha cargado ningun contenido en esta secci&oacute;n.-->
+            </p>
+            <?php
+        else:
+            echo $pagina->post_content;
+            ?>
         <?php endif; ?>
     </div>
-    
+
+    <!--    <div>
+            <table class="table">
+                <table class="table table-striped">
+                    <thead>
+                        
+                    </thead>
+                    
+                </table>
+                
+            </table>
+        </div>-->
+
+    <div>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="tab-varios" data-toggle="tab" href="#varios" role="tab" aria-controls="varios" aria-selected="true">Varios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab-cajas-muni" data-toggle="tab" href="#cajas-muni" role="tab" aria-controls="cajas-muni" aria-selected="false">
+                    Cajas municipales
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab-cajas-prof" data-toggle="tab" href="#cajas-prof" role="tab" aria-controls="cajas-prof" aria-selected="false">
+                    Cajas profesionales
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="varios" role="tabpanel" aria-labelledby="tab-varios">
+                <div class="p-lg-5 p-3">
+                    <?php
+                    $titulo = 'Gobierno de la Provincia de Santa Fe';
+                    $enlace = 'https://www.santafe.gov.ar';
+                    include locate_template('partials/enlace-interes.php');
+
+                    $titulo = 'I.A.P.O.S. (Instituto Autárquico Provincial de Obra Social)';
+                    $enlace = 'http://www.iapossantafe.gob.ar';
+                    include locate_template('partials/enlace-interes.php');
+
+                    $titulo = 'Caja de Previsión Social de los Agentes Civiles del Estado (Seguro Mutual)';
+                    $enlace = 'http://www.cajadeprevisionsf.org.ar';
+                    include locate_template('partials/enlace-interes.php');
+
+                    $titulo = 'Caja de Pensiones Sociales - Ley 5110';
+                    $enlace = 'https://www.santafe.gob.ar/index.php/web/content/view/full/234992';
+                    include locate_template('partials/enlace-interes.php');
+
+                    $titulo = 'ANSeS';
+                    $enlace = 'https://www.anses.gob.ar';
+                    include locate_template('partials/enlace-interes.php');
+
+                    $titulo = 'AFIP';
+                    $enlace = 'https://www.afip.gob.ar/sitio/externos/default.asp';
+                    include locate_template('partials/enlace-interes.php');
+
+                    $titulo = 'Consejo Federal de Previsión Social';
+                    $enlace = 'http://www.cofepres.org.ar';
+                    include locate_template('partials/enlace-interes.php');
+                    
+                ?>
+                </div>
+
+            </div>
+            <div class="tab-pane" id="cajas-muni" role="tabpanel" aria-labelledby="tab-cajas-muni">
+                lololo
+            </div>
+            <div class="tab-pane" id="cajas-prof" role="tabpanel" aria-labelledby="tab-cajas-prof">
+                lelele
+            </div>            
+        </div>
+
+    </div>
+
+
     <!--============================================================================================================================= -->
-    
-        <div class="enlaces mt-4"> 
+
+    <!--    <div class="enlaces mt-4"> 
             <div class="my-2 mb-3">
                 <a class="btn btn-outline-primary" href="https://www.santafe.gov.ar" target="_blank">
                     Acceder
                 </a>
                 Gobierno de la Provincia de Santa Fe
             </div>
+    
+        </div>-->
+    <!--=========================================================================================-->
 
-        </div>
-        <!--=========================================================================================-->
-
-        <div class="enlaces mt-4"> 
+    <!--    <div class="enlaces mt-4"> 
             <div class="my-2 mb-3">
                 <a class="btn btn-outline-primary" href="http://www.iapossantafe.gob.ar" target="_blank">
                     Acceder
                 </a>
                 I.A.P.O.S.
             </div>
+    
+        </div>-->
+    <!--=========================================================================================-->
 
-        </div>
-        <!--=========================================================================================-->
-
-        <div class="enlaces mt-4"> 
+    <!--    <div class="enlaces mt-4"> 
             <div class="my-2 mb-3">
                 <a class="btn btn-outline-primary" href="http://www.cajadeprevisionsf.org.ar" target="_blank">
                     Acceder
                 </a>
                 Caja de Previsión Social de los Agentes Civiles del Estado (Seguro Mutual)
             </div>
+    
+        </div>-->
+    <!--=========================================================================================-->
 
-        </div>
-        <!--=========================================================================================-->
-        
-        <div class="enlaces mt-4"> 
+    <!--    <div class="enlaces mt-4"> 
             <div class="my-2 mb-3">
                 <a class="btn btn-outline-primary" href="https://www.santafe.gob.ar/index.php/web/content/view/full/234992" target="_blank">
                     Acceder
                 </a>
                 Caja de Pensiones Sociales - Ley 5110
             </div>
+        </div>-->
+    <!--=========================================================================================-->
 
-        </div>
-        <!--=========================================================================================-->
-
-        <div class="enlaces mt-4"> 
+    <!--    <div class="enlaces mt-4"> 
             <div class="my-2 mb-3">
                 <a class="btn btn-outline-primary" href="https://www.anses.gob.ar" target="_blank">
                     Acceder
                 </a>
                 ANSeS
             </div>
+    
+        </div>-->
+    <!--=========================================================================================-->
 
-        </div>
-        <!--=========================================================================================-->
-
-        <div class="enlaces mt-4"> 
+    <!--    <div class="enlaces mt-4"> 
             <div class="my-2 mb-3">
                 <a class="btn btn-outline-primary" href="https://www.afip.gob.ar/sitio/externos/default.asp" target="_blank">
                     Acceder
                 </a>
                 AFIP
             </div>
+    
+        </div>               -->
+    <!--=========================================================================================--> 
 
-        </div>               
-        <!--=========================================================================================--> 
-        
-        <div class="enlaces mt-4"> 
+    <!--    <div class="enlaces mt-4"> 
             <div class="my-2 mb-3">
                 <a class="btn btn-outline-primary" href="http://www.cofepres.org.ar" target="_blank">
-                  Acceder  
+                    Acceder  
                 </a>
                 Consejo Federal de Previsión Social
             </div>
-
-        </div>               
-        <!--=========================================================================================--> 
+        </div>               -->
+    <!--=========================================================================================--> 
 
     <!--</div>-->
-    
+
     <!--============================================================================================================================= -->
-    
+
     <div class="enlaces mt-4">        
         <h4 class="h4 font-weight-bold">
             CAJAS MUNICIPALES
@@ -163,7 +239,7 @@ get_header();
 
         </div>
         <!--=========================================================================================-->
-        
+
         <div class="enlaces mt-4"> 
             <div class="my-2 mb-3">
                 <a class="btn btn-outline-primary" href="http://cajaesperanza.gob.ar" target="_blank">
@@ -198,7 +274,7 @@ get_header();
         <!--=========================================================================================--> 
 
     </div>
-    
+
     <!--============================================================================================================================= -->
     <div class="enlaces mt-4">        
         <h4 class="h4 font-weight-bold">
@@ -279,7 +355,7 @@ get_header();
                 </a>
                 Caja Notarial de Acción Social del Colegio de Escribanos de la Provincia de Santa Fe
             </div>
-            
+
         </div>
         <!--=========================================================================================-->
 
@@ -295,11 +371,11 @@ get_header();
         <!--=========================================================================================-->
 
     </div>
-    
+
 </div>
 
-          
+
 <!-- Faq End -->
 <!-- About Section End -->
-    
+
 <?php get_footer(); ?>

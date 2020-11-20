@@ -16,6 +16,24 @@ crearan automaticamentes fondos y colores de texto
 
 
 @import "variable";
+
+// Customizar los estilos de bootstrap
+// Incluir el sass:
+@import "../node_modules/bootstrap/scss/bootstrap";
+/**
+    IMPORTANTE: Para que funciones de esta forma se tuvo que modificar
+    el archivo _root.scss por un bug del compilador.
+    
+    El problema surge por un bug del compilador al parecer.
+    Ver: 
+        - https://stackoverflow.com/questions/47745915/error-compiling-bootstrap-scss-issue-with-root-scss/47796680
+
+    Se creo una copia del archivo modificado en: scss/_root.scss
+    En caso de descargar nuevamente las dependencias y compilar el sass puede ser necesario
+    modificar el archivo _root.scss dentro de la carpeta node_modules/bootstrap/scss/
+*/
+
+
 @import "mixins";
 
 @import "base";
@@ -23,18 +41,18 @@ crearan automaticamentes fondos y colores de texto
 @import "navbar";
 /*@import "hero";*/
 @import "carousel";
-@import "home-page";
+/*@import "home-page";*/
 @import "footer";
 @import "breadcrumb";
-@import "about";
-@import "classes";
-@import "classes-details";
-@import "pricing";
-@import "blog";
+/*@import "about";*/
+/*@import "classes";*/
+/*@import "classes-details";*/
+/*@import "pricing";*/
+/*@import "blog";*/
 /*@import "blog-sidebar";*/
 /*@import "blog-details";*/
 @import "contact";
-@import "faq";
+/*@import "faq";*/
 /*@import "responsive";*/
 
 
