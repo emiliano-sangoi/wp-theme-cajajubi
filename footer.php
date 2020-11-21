@@ -6,12 +6,12 @@ wp_footer();
 <footer class="footer bg-light py-5">
     <div class="container py-4">
         <div class="row mx-0">
-            <div class="col-md-2">
+            <div class="col-md-2 text-center">
                 <a href="https://www.santafe.gob.ar/" target="_blank">
-                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/logo_stafe.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
+                    <img class="img-fluid w-75" src="<?php echo DIR_IMGS . '/logo_stafe2.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
                 </a>
             </div>
-            <div class="col-md-2 text-center">
+            <div class="col-md-2 text-center mt-5 mt-lg-3">
                 <h6 class="mb-2">
                     <i class="fa fa-whatsapp"></i>
                     Whatsapp
@@ -20,7 +20,7 @@ wp_footer();
                     342 5 128 800
                 </div>
             </div>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 text-center mt-3">
                 <h6 class="mb-2">
                     <i class="fa fa-envelope"></i>
                     Correo Electrónico
@@ -31,7 +31,7 @@ wp_footer();
                     </a>
                 </div>
             </div>
-            <div class="col-md-2 text-center">
+            <div class="col-md-2 text-center mt-3">
                 <h6 class="mb-2" title="Línea telefónica gratuita">
                     <i class="fa fa-phone"></i>
                     Tel&eacute;fono
@@ -40,9 +40,9 @@ wp_footer();
                     0800 - 444 - 3734
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 mt-3">
                 <!--<h6 class="mb-2">Seguinos:</h6>-->
-                <div class="social-media">
+                <div class="social-media text-center">
                     <span class="">
                         <a href="https://www.facebook.com/cajasantafe" target="_blank">
                             <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/facebook_sq.png'; ?>" alt="Facebook"/>

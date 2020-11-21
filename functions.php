@@ -407,33 +407,6 @@ if (!function_exists('bootstrap_comment')) {
         wp_enqueue_script('site');
     }
 
-    /* ========================================================================================================================
-
-      Custom login
-
-      ======================================================================================================================== */
-
-// Add custom css
-//    function my_custom_login() {
-//        echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/css/custom-login-style.css" />';
-//    }
-//
-//    add_action('login_head', 'my_custom_login');
-
-// Link the logo to the home of our website
-//    function my_login_logo_url() {
-//        return get_bloginfo('url');
-//    }
-//
-//    add_filter('login_headerurl', 'my_login_logo_url');
-
-// Change the title text
-//    function my_login_logo_url_title() {
-//        return 'Sitio web de la Caja de Jubilaciones';
-//    }
-//
-//    add_filter('login_headertitle', 'my_login_logo_url_title');
-    
     remove_filter ('the_content', 'wpautop');
     
     
