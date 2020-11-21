@@ -53,27 +53,27 @@ $link_solicitud_turno = 'http://turnos.santafe.gov.ar/turnos/web/frontend.php';
 ?>
 
 
-<section class="bg-light py-5">
+<section class="bg-light py-3 py-lg-5">
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-12 col-lg-3 ">
                 <a href="<?php echo $link_calendario_pago; ?>" target="_blank">
-                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/instructor/banners-02.png'; ?>" alt="">
+                    <img class="img-fluid w-100" src="<?php echo DIR_IMGS . '/instructor/banners-02.png'; ?>" alt="">
                 </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-lg-3">
                 <a href="<?php echo $link_solicitud_turno; ?>" target="_blank">
-                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/instructor/banners-03.png'; ?>" alt="">
+                    <img class="img-fluid w-100" src="<?php echo DIR_IMGS . '/instructor/banners-03.png'; ?>" alt="">
                 </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-lg-3">
                 <a href="<?php echo getLinkPagina ( PAGINA_INSTRUCTIVOS ); ?>" target="_blank">
-                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/instructor/banners-04.png'; ?>" alt="">
+                    <img class="img-fluid w-100" src="<?php echo DIR_IMGS . '/instructor/banners-04.png'; ?>" alt="">
                 </a>
             </div>
-            <div class="col-3">
+            <div class="col-12 col-lg-3">
                 <a href="<?php echo getLinkPagina ( PAGINA_NOVEDADES ); ?>" target="_blank">
-                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/instructor/banners-05-05.png'; ?>" alt="">
+                    <img class="img-fluid w-100" src="<?php echo DIR_IMGS . '/instructor/banners-05-05.png'; ?>" alt="">
                 </a>
             </div>
         </div>
@@ -81,15 +81,15 @@ $link_solicitud_turno = 'http://turnos.santafe.gov.ar/turnos/web/frontend.php';
 </section>
 
 
-<div class="bg-gray-4 py-5">
+<div class="bg-gray-4 py-3 py-lg-5">
     <div class="container">
         <div class="row">
-            <div class="col-6 px-0">
+            <div class="col-12 col-lg-6 px-0">
                 <a href="<?php echo  getLinkPagina ( PAGINA_DESCARGA_RECIBO ); ?>" target="_blank">
                     <img class="img-fluid" src="<?php echo DIR_IMGS . '/boton-07.png' ?>" alt="">
                 </a>                    
             </div>
-            <div class="col-6 px-0">
+            <div class="col-12 col-lg-6 px-0">
                 <a href="<?php echo  getLinkPagina ( PAGINA_BIBLIOTECA ); ?>" target="_blank">
                     <img class="img-fluid" src="<?php echo DIR_IMGS . '/boton-08.png' ?>" alt="">
                 </a>  

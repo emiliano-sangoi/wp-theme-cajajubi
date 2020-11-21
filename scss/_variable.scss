@@ -9,7 +9,9 @@ $firebrick: #BB0A21;
 $rosewood: #570000;
 $upsdell-red: #B10F2E;
 $raisin-black: #252627;
+$rich-black: #0D1321;
 $snow: #FFF9FB;
+$cultured: #EFEFEF;
 $baby-powder: #FFFCF9;
 $pewter-blue: #93A8AC;
 $bone: #d7ceb2;
@@ -22,6 +24,7 @@ $mint-cream: #F4FFFD;
 $lavender-blush: #EEE5E9;
 $lavender-blue: #B7C3F3;
 $yellow-green: #38A700;
+$azul-gob-stafe: #00548f;
 
 
 /*Override de colores*/
@@ -35,10 +38,10 @@ $yellow-green: #38A700;
     "light":      $light,
     "dark":       $dark
 */
-$primary: #0075A2;
+$primary: $azul-gob-stafe;
 $danger: $firebrick;
 $dark: $raisin-black;
-$light: $light-gray;
+$light: $cultured;
 $warning: $max-yellow-red;
 
 /*$secondary:     $gray-600 !default;*/
@@ -112,6 +115,12 @@ $base_font_path: 'fonts/Open_Sans/';
   font-family: Open_Sans_Font;
   src: url( '#{$base_font_path}/OpenSans-Light.ttf');  
   font-weight: normal;
+}
+
+@font-face {    
+  font-family: Open_Sans_Font;
+  src: url( '#{$base_font_path}/OpenSans-SemiBold.ttf');  
+  font-weight: 300;
 }
 
 @font-face {
