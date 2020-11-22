@@ -10,8 +10,26 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 }
 get_header();
 
-$biblioteca = getArchivosBiblioteca();
+//$biblioteca = getArchivosBiblioteca();
 //print_r($biblioteca);exit;
+
+$posts_formularios = $posts_instructivos = $posts_normativas = array();
+
+$catF_id = get_cat_ID(CATEGORIA_FORMULARIOS);
+if ($catF_id) {
+    $args_form = array('category' => $catF_id, 'posts_per_page' => -1);
+    $posts_formularios = get_posts($args_form);
+}
+$catI_id = get_cat_ID(CATEGORIA_INSTRUCTIVOS);
+if ($catI_id) {
+    $args_inst = array('category' => $catI_id, 'posts_per_page' => -1);
+    $posts_instructivos = get_posts($args_inst);
+}
+$catN_id = get_cat_ID(CATEGORIA_NORMATIVAS);
+if ($catN_id) {
+    $args_norm = array('category' => $catN_id, 'posts_per_page' => -1);
+    $posts_normativas = get_posts($args_norm);
+}
 ?>
 
 <!-- Page Preloder -->
@@ -60,22 +78,40 @@ $biblioteca = getArchivosBiblioteca();
 
                     <div id="collapseOne" class="collapse" aria-labelledby="headingNormativas" data-parent="#accordion">
                         <div class="card-body">
-                            <?php
-                            $i = 0;
-                            foreach ($biblioteca['norm'] as $finfo):
+                            <?php if (isset($posts_normativas[0])): ?>  
+                            
+                            <?php foreach ($posts_normativas as $post): ?> 
+                                <?php if ($post->post_status !== 'publish'): continue; endif; ?>   
+                                <?php
+                                    $link = get_field('enlace', $post);
                                 ?>
                                 <p>
-                                    <a href="<?php echo $biblioteca['url'] . $finfo->fname; ?>" target="_blank">
-                                        <?php
-                                        echo $finfo->titulo;
-                                        $i++;
-                                        ?>
+                                    <a href="<?php echo $link; ?>" target="_blank" class="<?php echo $link ? '' : 'disabled' ?>">
+                                        <?php echo $post->post_title; ?>
                                     </a>
                                 </p>
+                            
                             <?php endforeach; ?>
-                            <?php if ($i === 0): ?>
+                            <?php else: ?>
                                 <p class="text-muted">No se cargado ninguna normativa o decreto.</p>
                             <?php endif; ?>
+
+                            <?php
+                            //$i = 0;
+                            //foreach ($biblioteca['norm'] as $finfo):
+                                ?>
+<!--                                <p>
+                                    <a href="<?php //echo $biblioteca['url'] . $finfo->fname; ?>" target="_blank">
+                                        <?php
+                                        //echo $finfo->titulo;
+                                        //$i++;
+                                        ?>
+                                    </a>
+                                </p>-->
+                            <?php //endforeach; ?>
+                            <?php //if ($i === 0): ?>
+                                <!--<p class="text-muted">No se cargado ninguna normativa o decreto.</p>-->
+                            <?php //endif; ?>
                         </div>
                     </div>
                 </div>
@@ -89,22 +125,40 @@ $biblioteca = getArchivosBiblioteca();
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingFormularios" data-parent="#accordion">
                         <div class="card-body">
-                            <?php
-                            $i = 0;
-                            foreach ($biblioteca['form'] as $finfo):
+                            <?php if (isset($posts_formularios[0])): ?>  
+                            
+                            <?php foreach ($posts_formularios as $post): ?> 
+                                <?php if ($post->post_status !== 'publish'): continue; endif; ?>   
+                                <?php
+                                    $link = get_field('enlace', $post);
                                 ?>
                                 <p>
-                                    <a href="<?php echo $biblioteca['url'] . $finfo->fname; ?>" target="_blank">
-                                        <?php
-                                        echo $finfo->titulo;
-                                        $i++;
-                                        ?>
+                                    <a href="<?php echo $link; ?>" target="_blank" class="<?php echo $link ? '' : 'disabled' ?>">
+                                        <?php echo $post->post_title; ?>
                                     </a>
                                 </p>
+                            
                             <?php endforeach; ?>
-                            <?php if ($i === 0): ?>
-                                <p class="text-muted">No se cargado ning&uacute;un formulario.</p>
+                            <?php else: ?>
+                                <p class="text-muted">No se cargado ning&uacute;n formulario.</p>
                             <?php endif; ?>
+
+                            <?php
+                            //$i = 0;
+                            //foreach ($biblioteca['form'] as $finfo):
+                                ?>
+<!--                                <p>
+                                    <a href="<?php //echo $biblioteca['url'] . $finfo->fname; ?>" target="_blank">
+                                        <?php
+                                        //echo $finfo->titulo;
+                                        //$i++;
+                                        ?>
+                                    </a>
+                                </p>-->
+                            <?php //endforeach; ?>
+                            <?php //if ($i === 0): ?>
+                                <!--<p class="text-muted">No se cargado ning&uacute;un formulario.</p>-->
+                            <?php //endif; ?>
                         </div>
                     </div>
                 </div>
@@ -117,23 +171,41 @@ $biblioteca = getArchivosBiblioteca();
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingInstructivos" data-parent="#accordion">
-                        <div class="card-body">                            
-                            <?php
-                            $i = 0;
-                            foreach ($biblioteca['inst'] as $finfo):
+                        <div class="card-body">   
+                            <?php if (isset($posts_instructivos[0])): ?>  
+                            
+                            <?php foreach ($posts_instructivos as $post): ?> 
+                                <?php if ($post->post_status !== 'publish'): continue; endif; ?>   
+                                <?php
+                                    $link = get_field('enlace', $post);
                                 ?>
                                 <p>
-                                    <a href="<?php echo $biblioteca['url'] . $finfo->fname; ?>" target="_blank">
-                                        <?php
-                                        echo $finfo->titulo;
-                                        $i++;
-                                        ?>
+                                    <a href="<?php echo $link; ?>" target="_blank" class="<?php echo $link ? '' : 'disabled' ?>">
+                                        <?php echo $post->post_title; ?>
                                     </a>
                                 </p>
+                            
                             <?php endforeach; ?>
-                            <?php if ($i === 0): ?>
-                                <p class="text-muted">No se cargado ning&uacute;un intructivo.</p>
+                            <?php else: ?>
+                                <p class="text-muted">No se cargado ning&uacute;n instructivo.</p>
                             <?php endif; ?>
+                                
+                            <?php
+                            //$i = 0;
+                            //foreach ($biblioteca['inst'] as $finfo):
+                                ?>
+<!--                                <p>
+                                    <a href="<?php //echo $biblioteca['url'] . $finfo->fname; ?>" target="_blank">
+                                        <?php
+                                        //echo $finfo->titulo;
+                                        //$i++;
+                                        ?>
+                                    </a>
+                                </p>-->
+                            <?php //endforeach; ?>
+                            <?php //if ($i === 0): ?>
+                                <!--<p class="text-muted">No se cargado ning&uacute;n intructivo.</p>-->
+                            <?php //endif; ?>
                         </div>
                     </div>
                 </div>

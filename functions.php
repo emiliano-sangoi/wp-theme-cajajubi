@@ -30,12 +30,16 @@ define('PAGINA_LA_CAJA_EN_NUMEROS', 'la-caja-en-numeros');
 define('PAGINA_DESCARGA_RECIBO', 'descarga-tu-recibo');
 define('PAGINA_INSTRUCTIVOS', 'instructivos');
 
+//Categorías
 define('CATEGORIA_NOVEDADES', 'novedades');
 define('CATEGORIA_SERVICIOS', 'servicios');
 define('CATEGORIA_AUTORIDADES', 'autoridades');
 define('CATEGORIA_DIRECTOR', 'director');
 define('CATEGORIA_SUBDIRECTOR', 'subdirector');
 define('CATEGORIA_OTROS', 'otros');
+define('CATEGORIA_FORMULARIOS', 'formularios');
+define('CATEGORIA_INSTRUCTIVOS', 'instructivos');
+define('CATEGORIA_NORMATIVAS', 'normativas');
 
 define('POST_CONTENT_MAX_LENGTH', 250);
 
