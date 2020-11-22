@@ -53,37 +53,15 @@ if($id_cat){
     <div class="mt-4">
     <?php if (isset($posts[0])): ?>    
         <div class='card-columns mb-4'>
-            <?php foreach ($posts as $post): ?> 
-                <?php if ($post->post_status !== 'publish'): continue; endif; ?>   
-                <div class="card">
-                    <?php                    
-                        echo get_the_post_thumbnail($post, 'medium', array('class' => 'card-img-top'));                    
-                    ?>
-                    <div class="card-body p-4">
-                        <h5 class="card-title mb-3 font-weight-bold">
-                            <?php echo $post->post_title; ?>
-                        </h5>
-                        <h6 class="card-subtitle mb-3 text-muted">
-                            <?php
-                            echo get_the_date('d/M/Y H:i', $post) . ' Hs.';
-                            ?>
-                        </h6>
-                        <p class="card-text">
-                            <?php
-                            if (strlen($post->post_content) >= POST_CONTENT_MAX_LENGTH) {
-                                echo substr($post->post_content, 0, POST_CONTENT_MAX_LENGTH) . '...';
-                            } else {
-                                echo nl2br($post->post_content);
-                            }
-                            ?>
-                        </p>
-                        <a href="<?php echo get_permalink($post) ?>"  class="card-link btn btn-outline-primary">
-                            Ver m&aacute;s
-                        </a>                    
-                    </div>
-                </div>                
+            <?php foreach ($posts as $post){
+                 if ($post->post_status !== 'publish'){
+                     continue;
+                 }
+                 include locate_template('partials/novedad.php');                
+            }
+            ?> 
+                
 
-            <?php endforeach; ?>
         </div>
     <?php else: ?>
     <div class="alert alert-info">

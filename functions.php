@@ -23,9 +23,6 @@ define('PAGINA_DELEGACIONES', 'delegaciones');
 define('PAGINA_NOVEDADES', 'novedades');
 define('PAGINA_POLITICA_CALIDAD', 'politica-de-calidad');
 define('PAGINA_CONTACTO', 'contacto');
-define('PAGINA_BIBLIOTECA_FORMULARIOS', 'formularios');
-define('PAGINA_BIBLIOTECA_NORMATIVAS', 'normativas');
-define('PAGINA_BIBLIOTECA_INSTRUCTIVOS', 'instructivos');
 define('PAGINA_LA_CAJA_EN_NUMEROS', 'la-caja-en-numeros');
 define('PAGINA_DESCARGA_RECIBO', 'descarga-tu-recibo');
 define('PAGINA_INSTRUCTIVOS', 'instructivos');
@@ -207,42 +204,6 @@ if (!function_exists('custom_logo_guttenberg')) {
 
 }
 
-/* ========================================================================================================================
-
-  Custom login
-
-  ======================================================================================================================== */
-
-// Add custom css
-//if (!function_exists('my_custom_login')) {
-//
-//    function my_custom_login() {
-//        echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/css/custom-login-style.css" />';
-//    }
-//
-//}
-//add_action('login_head', 'my_custom_login');
-
-// Link the logo to the home of our website
-//if (!function_exists('my_login_logo_url')) {
-//
-//    function my_login_logo_url() {
-//        return get_bloginfo('url');
-//    }
-//
-//}
-//add_filter('login_headerurl', 'my_login_logo_url');
-
-// Change the title text
-//if (!function_exists('my_login_logo_url_title')) {
-//
-//    function my_login_logo_url_title() {
-//        return get_bloginfo('name');
-//    }
-//
-//}
-//add_filter('login_headertext', 'my_login_logo_url_title');
-
 
 /* ========================================================================================================================
 
@@ -313,22 +274,22 @@ if (!function_exists('bootstrap_comment')) {
         wp_enqueue_style('elegant_icons');
 
         //style:
-        wp_register_style('nice_select', $template_dir . '/style.css', array(), null);
-        wp_enqueue_style('nice_select');
+//        wp_register_style('nice_select', $template_dir . '/style.css', array(), null);
+//        wp_enqueue_style('nice_select');
 
         //slicknav
-        wp_register_style('slicknav', $template_dir . '/node_modules/slicknav/dist/slicknav.min.css', array(), null);
-        wp_enqueue_style('slicknav');
+//        wp_register_style('slicknav', $template_dir . '/node_modules/slicknav/dist/slicknav.min.css', array(), null);
+//        wp_enqueue_style('slicknav');
 
         //owl carousel
         //https://github.com/OwlCarousel2/OwlCarousel2
-        wp_register_style('owl_carousel', $template_dir . '/node_modules/owl.carousel/dist/assets/owl.carousel.min.css', array(), null);
-        wp_enqueue_style('owl_carousel');
+//        wp_register_style('owl_carousel', $template_dir . '/node_modules/owl.carousel/dist/assets/owl.carousel.min.css', array(), null);
+//        wp_enqueue_style('owl_carousel');
 
         //nice select        
         //https://www.npmjs.com/package/jquery-nice-select
-        wp_register_style('nice_select', $template_dir . 'node_modules/jquery-nice-select/css/nice-select.css', array(), null);
-        wp_enqueue_style('nice_select');                
+//        wp_register_style('nice_select', $template_dir . 'node_modules/jquery-nice-select/css/nice-select.css', array(), null);
+//        wp_enqueue_style('nice_select');                
 
         //jssocials:
         wp_register_style('jssocials_css', $template_dir . '/node_modules/jssocials/dist/jssocials.css', array('font_awesome'), null);
@@ -344,11 +305,11 @@ if (!function_exists('bootstrap_comment')) {
         wp_register_style('custom_style', $template_dir . '/style.css', array(
           //  'bootstrap',
             'font_awesome',
-            'barfiller',
+//            'barfiller',
             'elegant_icons',
-            'nice_select',
-            'slicknav',
-            'owl_carousel',
+//            'nice_select',
+//            'slicknav',
+//            'owl_carousel',
             'jssocials_css',
             'jssocials-css-theme-flat'            
         ), null);
@@ -369,8 +330,8 @@ if (!function_exists('bootstrap_comment')) {
         wp_register_script('bootstrap', $template_dir . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array('jquery_v3', 'popper'), null, true);
         wp_enqueue_script('bootstrap');
 
-        wp_register_script('slicknav', $template_dir . '/node_modules/slicknav/dist/jquery.slicknav.min.js', array('jquery_v3'), null, true);
-        wp_enqueue_script('slicknav');
+//        wp_register_script('slicknav', $template_dir . '/node_modules/slicknav/dist/jquery.slicknav.min.js', array('jquery_v3'), null, true);
+//        wp_enqueue_script('slicknav');
 
         //jssocials:
         wp_register_script('jssocials_js', $template_dir . '/node_modules/jssocials/dist/jssocials.js', array('jquery_v3'), null, true);
@@ -382,28 +343,31 @@ if (!function_exists('bootstrap_comment')) {
 
         //owl carousel
         //https://github.com/OwlCarousel2/OwlCarousel2
-        wp_register_script('owl_carousel', $template_dir . '/node_modules/owl.carousel/dist/owl.carousel.min.js', array('jquery_v3', 'bootstrap'), false, true);
-        wp_enqueue_script('owl_carousel');
+//        wp_register_script('owl_carousel', $template_dir . '/node_modules/owl.carousel/dist/owl.carousel.min.js', array('jquery_v3', 'bootstrap'), false, true);
+//        wp_enqueue_script('owl_carousel');
 
         //nice select   
         //https://www.npmjs.com/package/jquery-nice-select
-        wp_register_script('nice_select', $template_dir . '/node_modules/jquery-nice-select/js/jquery.nice-select.min.js', array('jquery_v3', 'bootstrap', 'owl_carousel'), false, true);
-        wp_enqueue_script('nice_select');
+//        wp_register_script('nice_select', $template_dir . '/node_modules/jquery-nice-select/js/jquery.nice-select.min.js', array('jquery_v3', 'bootstrap', 'owl_carousel'), false, true);
+//        wp_enqueue_script('nice_select');
 
         // jquery-easing
         wp_register_script('jquery_easing', $template_dir . '/node_modules/jquery.easing/jquery.easing.min.js', array('jquery_v3', 'popper'), null, true);
         wp_enqueue_script('jquery_easing');
 
-        wp_register_script('barfiller', $template_dir . '/js/jquery.barfiller.js', array('jquery_v3'), false, true);
-        wp_enqueue_script('barfiller');
+//        wp_register_script('barfiller', $template_dir . '/js/jquery.barfiller.js', array('jquery_v3'), false, true);
+//        wp_enqueue_script('barfiller');
 
-        wp_register_script('site', $template_dir . '/js/site.js', array('jquery_v3',
+        wp_register_script('site', $template_dir . '/js/site.js', array(
+            'jquery_v3',
+            'jquery_easing',
             'bootstrap',
-            'nice_select',
+//            'nice_select',
             //'parallax_js',
-            'owl_carousel',
-            'slicknav',
-            'barfiller'), false, true);
+//            'owl_carousel',
+//            'slicknav',
+//            'barfiller'
+        ), false, true);
         wp_enqueue_script('site');
     }
 

@@ -1,7 +1,5 @@
 <?php
 $src_img1 = DIR_IMGS . '/carousel/slide1.png';
-//$src_img1 = DIR_IMGS . '/carousel/img-caja-en-nros2.png';
-//$src_img2 = DIR_IMGS . '/carousel/img-prev-covid.png';
 $src_img2 = DIR_IMGS . '/carousel/slide2.png';
 $src_img3 = DIR_IMGS . '/carousel/slide3.png';
 ?>
@@ -20,7 +18,7 @@ $src_img3 = DIR_IMGS . '/carousel/slide3.png';
                     La Caja en números
                 </h2>
                 <div class="text-center pt-4 pb-5">
-                    <a class="btn btn-primary" href="lacajaennumeros.html">
+                    <a class="btn btn-primary" href="<?php echo getLinkPagina(PAGINA_LA_CAJA_EN_NUMEROS); ?>">
                         Acceder
                     </a>
                 </div>
@@ -46,7 +44,7 @@ $src_img3 = DIR_IMGS . '/carousel/slide3.png';
                     ¿Cómo tramito mis beneficios?
                 </h2>
                 <div class="text-center pt-4 pb-5">
-                    <a class="btn btn-primary" href="<?php echo esc_url(get_page_link(PAGINA_PRESTACIONES)); ?>">
+                    <a class="btn btn-primary" href="<?php echo getLinkPagina(PAGINA_PRESTACIONES); ?>">
                         Acceder
                     </a>
                 </div>
