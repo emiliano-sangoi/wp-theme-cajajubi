@@ -330,9 +330,6 @@ if (!function_exists('bootstrap_comment')) {
         wp_register_script('bootstrap', $template_dir . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array('jquery_v3', 'popper'), null, true);
         wp_enqueue_script('bootstrap');
 
-//        wp_register_script('slicknav', $template_dir . '/node_modules/slicknav/dist/jquery.slicknav.min.js', array('jquery_v3'), null, true);
-//        wp_enqueue_script('slicknav');
-
         //jssocials:
         wp_register_script('jssocials_js', $template_dir . '/node_modules/jssocials/dist/jssocials.js', array('jquery_v3'), null, true);
         wp_enqueue_script('jssocials_js');
@@ -341,32 +338,14 @@ if (!function_exists('bootstrap_comment')) {
         wp_register_script('parallax_js', $template_dir . '/node_modules/jquery-parallax.js/parallax.min.js', array('jquery_v3'), null, true);
         wp_enqueue_script('parallax_js');
 
-        //owl carousel
-        //https://github.com/OwlCarousel2/OwlCarousel2
-//        wp_register_script('owl_carousel', $template_dir . '/node_modules/owl.carousel/dist/owl.carousel.min.js', array('jquery_v3', 'bootstrap'), false, true);
-//        wp_enqueue_script('owl_carousel');
-
-        //nice select   
-        //https://www.npmjs.com/package/jquery-nice-select
-//        wp_register_script('nice_select', $template_dir . '/node_modules/jquery-nice-select/js/jquery.nice-select.min.js', array('jquery_v3', 'bootstrap', 'owl_carousel'), false, true);
-//        wp_enqueue_script('nice_select');
-
         // jquery-easing
         wp_register_script('jquery_easing', $template_dir . '/node_modules/jquery.easing/jquery.easing.min.js', array('jquery_v3', 'popper'), null, true);
         wp_enqueue_script('jquery_easing');
-
-//        wp_register_script('barfiller', $template_dir . '/js/jquery.barfiller.js', array('jquery_v3'), false, true);
-//        wp_enqueue_script('barfiller');
 
         wp_register_script('site', $template_dir . '/js/site.js', array(
             'jquery_v3',
             'jquery_easing',
             'bootstrap',
-//            'nice_select',
-            //'parallax_js',
-//            'owl_carousel',
-//            'slicknav',
-//            'barfiller'
         ), false, true);
         wp_enqueue_script('site');
     }

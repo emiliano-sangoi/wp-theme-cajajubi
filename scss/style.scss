@@ -63,6 +63,7 @@ El problema surge por un bug del compilador al parecer:
 @import "breadcrumb";
 @import "contacto";
 @import "media";
+@import "masthead";
 
 html,
 body {
@@ -160,3 +161,48 @@ body {
 .w-10{ width: 10%; }
 .w-5{ width: 5%; }
 
+
+.to_top_button{
+    display: none;  
+    position:fixed;    
+    background-color: $primary;
+    bottom:1em;
+    right:1em;    
+    z-index: 900;
+    text-align: center;
+    cursor:pointer;    
+}
+
+.to_top_button:hover{
+    background-color: darken($primary, 10%);    
+    /*color: #585858;*/    
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.to_top_button i{
+    font-size: 2em;
+    color: $light !important;
+}
+
+
+/*==========================================================================*/
+/*Parpadeo de texto*/
+
+/* Blink for Webkit and others
+(Chrome, Safari, Firefox, IE, ...)
+*/
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.1;}
+}
+.blink{
+	text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 1.8s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}

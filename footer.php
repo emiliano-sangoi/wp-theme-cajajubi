@@ -70,6 +70,9 @@ wp_footer();
     </div>
 </footer>
 
+<div class='to_top_button p-2 rounded'>
+    <i class="fa fa-arrow-up"></i>    
+</div>
 
 </body>
 </html>

@@ -8031,6 +8031,77 @@ footer {
   #contacto .social-media img {
     width: 11%; }
 
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 23 nov. 2020, 10:16:35
+    Author     : esangoi
+*/
+header.masthead {
+  /*height: 400px;*/
+  padding-top: 6rem;
+  padding-bottom: calc(6rem - 63px);
+  /*    background: linear-gradient(
+              to bottom,
+              rgba(37, 38, 39, 0.8) 0%,
+              rgba(37, 38, 39, 0.8) 100%
+          ),
+          url("images/carousel/slide1.png");*/
+  /*    background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;*/ }
+  header.masthead .contenido {
+    position: relative; }
+    header.masthead .contenido .contacto {
+      width: 100;
+      /*padding: .5em .75em;*/
+      /*background-color: $white;*/
+      opacity: .75;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      /*right: 50%;*/
+      /*right*/ }
+      header.masthead .contenido .contacto img {
+        height: 1.2rem;
+        vertical-align: middle; }
+      header.masthead .contenido .contacto span {
+        color: #EFEFEF;
+        font-size: 1.2rem;
+        opacity: 1; }
+      header.masthead .contenido .contacto span.covid a {
+        color: #E3B23C; }
+      header.masthead .contenido .contacto .whatsapp {
+        color: #25D366; }
+      header.masthead .contenido .contacto a {
+        text-decoration: none;
+        color: #EFEFEF; }
+  header.masthead h1 {
+    /*        color: $primary;*/
+    /*font-size: 1.75rem;*/
+    /*text-transform:capitalize;*/ }
+  header.masthead hr {
+    border-color: #EFEFEF; }
+  @media (min-width: 992px) {
+    header.masthead {
+      height: 60vh;
+      min-height: 40rem;
+      padding-top: 63px;
+      padding-bottom: 0;
+      /*        p {
+                  font-size: 1.15rem;
+              }*/ }
+      header.masthead h1 {
+        font-size: 2rem; } }
+  @media (min-width: 1200px) {
+    header.masthead h1 {
+      font-size: 3rem; } }
+
 html,
 body {
   /*height: 100%;*/
@@ -8111,5 +8182,45 @@ body {
 
 .w-5 {
   width: 5%; }
+
+.to_top_button {
+  display: none;
+  position: fixed;
+  background-color: #00548f;
+  bottom: 1em;
+  right: 1em;
+  z-index: 900;
+  text-align: center;
+  cursor: pointer; }
+
+.to_top_button:hover {
+  background-color: #00365c;
+  /*color: #585858;*/
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s; }
+
+.to_top_button i {
+  font-size: 2em;
+  color: #EFEFEF !important; }
+
+/*==========================================================================*/
+/*Parpadeo de texto*/
+/* Blink for Webkit and others
+(Chrome, Safari, Firefox, IE, ...)
+*/
+@-webkit-keyframes blinker {
+  from {
+    opacity: 1.0; }
+  to {
+    opacity: 0.1; } }
+.blink {
+  text-decoration: blink;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 1.8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate; }
 
 /*# sourceMappingURL=style.css.map */

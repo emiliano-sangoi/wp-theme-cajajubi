@@ -1,0 +1,99 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 23 nov. 2020, 10:16:35
+    Author     : esangoi
+*/
+
+// Styling for the masthead
+
+header.masthead {
+    
+    .contenido{
+        position: relative;
+        
+        .contacto{
+            width:100;
+            /*padding: .5em .75em;*/
+            /*background-color: $white;*/
+            opacity: .75;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            /*right: 50%;*/   
+            
+            img{
+                height: 1.2rem;
+                vertical-align: middle;
+            }
+            
+            span{
+                color: $light;
+                font-size: 1.2rem;   
+                opacity: 1;
+            }
+            
+            span.covid{
+                a{
+                    color: $warning;
+                }                
+            }
+            
+            .whatsapp{
+                color: $whatsapp;
+            }
+            
+            a{
+                text-decoration: none;
+                color: $light;
+            }
+            /*right*/
+        }
+    }
+    /*height: 400px;*/
+    padding-top: 6rem;
+    padding-bottom: calc(6rem - #{$navbar-height});
+    // replace the masthead.jpg image in the /assets/img directory to change the image
+    // if the image name change, make sure to update the url path below!
+/*    background: linear-gradient(
+            to bottom,
+            #{fade-out($dark, 0.2)} 0%,
+            #{fade-out($dark, 0.2)} 100%
+        ),
+        url("images/carousel/slide1.png");*/
+/*    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;*/
+    h1 {
+/*        color: $primary;*/
+        /*font-size: 1.75rem;*/
+        /*text-transform:capitalize;*/
+    }
+    
+    hr{
+        border-color: $light;
+    }
+    
+    @include media-breakpoint-up(lg) {
+        height: 60vh;
+        min-height: 40rem;
+        padding-top: $navbar-height;
+        padding-bottom: 0;
+/*        p {
+            font-size: 1.15rem;
+        }*/
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
