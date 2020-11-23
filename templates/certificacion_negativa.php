@@ -20,7 +20,8 @@ get_header();
 <div class="container-lg navbar-separator p-5 altura-minima" id="certificacion-negativa">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
+            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo getLinkPagina ( PAGINA_SERVICIIOS ); ?>">Servicios</a></li> 
             <li class="breadcrumb-item active" aria-current="page">
                 <?php echo $pagina->post_title; ?>
             </li>

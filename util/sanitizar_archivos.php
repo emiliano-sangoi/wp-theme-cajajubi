@@ -1,6 +1,6 @@
 <?php
 
-$base = '/home/esangoi/vagrant/www/wp-caja/wp-content/themes/sitio_lacaja/';
+$base = '/home/eliana/vagrant/www/wp-caja/wp-content/themes/sitio_lacaja/';
 
 /**
  * Permite listar el nombre de los archivos sin copiarlos.
