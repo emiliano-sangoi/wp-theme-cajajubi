@@ -23,6 +23,7 @@ get_template_part('partials/masthead');
             <div class="col-12 col-lg-4 py-2">
                 <?php
                 $link = 'http://www.santafe.gov.ar/index.php/web/content/view/full/128047';
+                $blank = true;                
                 //$img = DIR_IMGS . '/iconos/calendar.png';
                 $icon = 'fa-calendar';
                 $titulo = 'Cronograma de pagos';
@@ -32,6 +33,7 @@ get_template_part('partials/masthead');
             <div class="col-12 col-lg-4 py-2">
                 <?php
                 $link = 'http://turnos.santafe.gov.ar/turnos/web/frontend.php';
+                $blank = true;
                 //$img = DIR_IMGS . '/iconos/clock.png';
                 $icon = 'fa-clock-o';
                 $titulo = 'Solicitud de turnos';
@@ -42,9 +44,10 @@ get_template_part('partials/masthead');
             <div class="col-12 col-lg-4 py-2">
                 <?php
                 $link = getLinkPagina(PAGINA_LA_CAJA_EN_NUMEROS);
+                $blank = false;
                 //$img = DIR_IMGS . '/iconos/bar-chart.png';
                 $icon = 'fa-line-chart';
-                $titulo = 'La Caja en numeros';
+                $titulo = 'La Caja en números';
                 include locate_template('partials/home-link.php');
                 ?>                
             </div>

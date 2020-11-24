@@ -1,4 +1,4 @@
-<a href="<?php echo $link ?: '#' ?>" class="d-block p-5 bg-primary acceso h-100">
+<a href="<?php echo $link ?: '#' ?>" class="d-block p-5 bg-primary acceso h-100" <?php echo $blank ? "target='_blank'" : ''; ?>>
     <div class="text-center">
         <?php if( isset($img) ): ?>
             <img class='w-35 img-fluid' src='<?php echo $img; ?>' alt=''/>
