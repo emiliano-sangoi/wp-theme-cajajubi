@@ -14,7 +14,7 @@
                 <div class="offeset-lg-1 col-lg-3 col-12 text-center">
                     <img class="img-fluid" src="<?php echo DIR_IMGS . '/logo_stafe2l.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
                 </div>
-                <div class="col-lg-7 px-lg-3 col-12">                
+                <div class="col-lg-7 px-lg-3 col-12 mt-4 mt-lg-0">                
                     <h1 class="text-light font-weight-bold">
                         Caja de Jubilaciones y Pensiones de la Provincia de Santa Fe
                     </h1>
@@ -31,8 +31,8 @@
         </div>
         <div class="contacto text-light w-100 bg-dark">
             <div class='container'>
-                <div class="row mx-0">
-                    <div class="col-6 text-left p-2">
+                <div class="row mx-0 p-2">
+                    <div class="col-12 col-lg-6 text-left">
                         <span class="covid blink">
                             <a href="https://www.santafe.gob.ar/ms/covid19/" target='_blank'>
                             <img class="img-fluid" src='<?php echo DIR_IMGS . '/iconos/mask.png'; ?>' alt=''/>
@@ -40,20 +40,22 @@
                             </a>
                         </span>
                     </div>
-                    <div class="col-6 text-right bg-dark p-2">
+                    <div class="col-12 col-lg-6 text-right bg-dark">
                         <span class="whatsapp">
                             <i class="fa fa-whatsapp"></i>
                             342 5 128 800
                         </span>
-                        &nbsp;
-                        &nbsp;
-                        <span>
+                        <span class='d-none d-lg-inline'>&nbsp;
+                            &nbsp;</span>
+                        <span class='email'>
                             <i class="fa fa-envelope"></i>                
                             <a class="email-conctacto" href="mailto:contactocaja@santafe.gov.ar" target="_blank">
                                 contactocaja@santafe.gov.ar
                             </a>
                         </span>
                     </div>
+<!--                    <div class="col-3 text-right bg-dark p-2">
+                    </div>-->
                 </div>
             </div>
         </div>

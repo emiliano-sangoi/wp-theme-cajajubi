@@ -17,10 +17,10 @@ if ($id_cat) {
 get_template_part('partials/masthead');
 ?>
 
-<section class="py-3 py-lg-5" id='accesos-directos'>
-    <div class='container-lg'>
+<section class="py-3 py-lg-4" id='accesos-directos'>
+    <div class='container'>
         <div class="row">
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 py-2">
                 <?php
                 $link = 'http://www.santafe.gov.ar/index.php/web/content/view/full/128047';
                 //$img = DIR_IMGS . '/iconos/calendar.png';
@@ -29,7 +29,7 @@ get_template_part('partials/masthead');
                 include locate_template('partials/home-link.php');
                 ?>                
             </div>  
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 py-2">
                 <?php
                 $link = 'http://turnos.santafe.gov.ar/turnos/web/frontend.php';
                 //$img = DIR_IMGS . '/iconos/clock.png';
@@ -39,7 +39,7 @@ get_template_part('partials/masthead');
                 ?>                
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 py-2">
                 <?php
                 $link = getLinkPagina(PAGINA_LA_CAJA_EN_NUMEROS);
                 //$img = DIR_IMGS . '/iconos/bar-chart.png';
@@ -50,8 +50,8 @@ get_template_part('partials/masthead');
             </div>
         </div>
 
-        <div class="row mt-4">
-            <div class="col-12 col-lg-4">
+        <div class="row mt-lg-3">
+            <div class="col-12 col-lg-4 py-2">
                 <?php
                 $link = getLinkPagina(PAGINA_BIBLIOTECA);
                 $img = DIR_IMGS . '/iconos/digital-library.png';
@@ -60,13 +60,9 @@ get_template_part('partials/masthead');
                 include locate_template('partials/home-link.php');
                 ?>   
             </div>
-
-            <div class="col-12 col-lg-8">
-
-                <div class="card-deck">
-                    <div class="card acceso">
-                        <div class="card-body p-0">
-                            <?php
+            
+            <div class="col-12 col-lg-4 py-2">
+                <?php
                             $img = DIR_IMGS . '/iconos/salary.png';
                             $link = getLinkPagina(PAGINA_DESCARGA_RECIBO);
                             $icon = 'fa-money';
@@ -74,57 +70,17 @@ get_template_part('partials/masthead');
                             include locate_template('partials/home-link.php');
                             unset($img);
                             ?>
-                        </div>
-                    </div>
-
-                    <div class="card acceso">
-                        <div class="card-body p-0">
-                            <?php
+            </div>
+            <div class="col-12 col-lg-4 py-2">
+                <?php
                             $link = getLinkPagina(PAGINA_SITIOS_DE_INTERES);
                             //$img = DIR_IMGS . '/iconos/link.png';
                             $icon = 'fa-link';
                             $titulo = 'Enlaces de interes';
                             include locate_template('partials/home-link.php');
                             ?>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-        <div class="card-deck mt-4">
-            <!--            <div class="card border-0">
-                            <div class="card-body p-0 mb-0">
-                                <div class="d-inline-block p-4 w-100 h-100 border border-primary">
-                                    getLinkPagina(PAGINA_BIBLIOTECA);
-                                    <div class="text-center">
-                                        <img class='w-30 img-fluid' src='<?php //echo DIR_IMGS . '/iconos/digital-library.png';    ?>' alt=''/>
-                                    </div>
-                                    <div class="text-center mt-3 mt-lg-4">
-                                        <h4 class="mb-0 text-primary">
-                                            Biblioteca digital
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer p-0 btn-group d-flex border-0 mt-2" role="group">
-                                <a class="btn btn-primary border-0  w-100" href='<?php //echo getLinkPagina(PAGINA_INSTRUCTIVOS);    ?>'>
-                                    Instructivos
-                                </a>
-                                <a class="btn btn-primary border-primary border-0 w-100" href=''>
-                                    Formularios
-                                </a>
-                                <a class="btn btn-primary border-primary border-0 w-100" href=''>
-                                    Normativas
-                                </a>
-                            </div>
-            
-                        </div>-->
-
-
-        </div>
+            </div>            
+        </div>       
     </div>
 </section>
 
@@ -133,8 +89,8 @@ get_template_part('partials/masthead');
 $pagina_prestaciones = get_page_by_path(PAGINA_PRESTACIONES);
 if ($pagina_prestaciones instanceof WP_Post && $pagina_prestaciones->post_status == 'publish'):
     ?>
-    <section class="py-3 py-lg-5 bg-primary text-light" id='prestaciones'>
-        <div class='container-lg'>
+    <section class="py-5 bg-primary text-light" id='prestaciones'>
+        <div class='container'>
             <h2 class="text-center font-weight-bold">
                 <?php echo $pagina_prestaciones->post_title; ?>
             </h2>
@@ -151,7 +107,7 @@ if ($pagina_prestaciones instanceof WP_Post && $pagina_prestaciones->post_status
                         ?>
                     <?php endif; ?>
                 </div>
-                <div class="mt-lg-5 mt-3 py-lg-4 text-center">
+                <div class="mt-lg-5 py-lg-4 text-center links">
 
                     <a class="btn btn-lg btn-light" href="http://www.santafe.gob.ar/index.php/web/content/view/full/235057/(subtema)/102727" target="_blank">
                         Jubilaciones

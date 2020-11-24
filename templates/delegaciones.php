@@ -10,12 +10,7 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 get_header();
 ?>
 
-<!-- Page Preloder -->
-<!--<div id="preloder">
-    <div class="loader"></div>
-</div>-->
-
-<div class="container-lg navbar-separator px-5 pt-4 pb-5 altura-minima" id="delegaciones">
+<div class="container navbar-separator px-3 px-lg-5 pt-4 pb-5 altura-minima" id="delegaciones">
     
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">

@@ -41,7 +41,7 @@ if ($catN_id) {
     <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo DIR_IMGS . '/paginas/prestaciones.jpg'; ?>"></div>
 
 
-    <div class="container-lg px-5 pt-4">
+    <div class="container-lg px-lg-5 px-3 pt-4">
 
 
         <nav aria-label="breadcrumb">
@@ -69,11 +69,11 @@ if ($catN_id) {
             <div id="accordion">
                 <div class="card">
                     <div class="card-header" id="headingNormativas">
-                        <h4 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h5 class="mb-0">
+                            <a href='#' class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Normativas
-                            </button>
-                        </h4>
+                            </a>
+                        </h5>
                     </div>
 
                     <div id="collapseOne" class="collapse" aria-labelledby="headingNormativas" data-parent="#accordion">
@@ -118,9 +118,9 @@ if ($catN_id) {
                 <div class="card">
                     <div class="card-header" id="headingFormularios">
                         <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <a href='#' class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Formularios
-                            </button>
+                            </a>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingFormularios" data-parent="#accordion">
@@ -165,9 +165,9 @@ if ($catN_id) {
                 <div class="card">
                     <div class="card-header" id="headingInstructivos">
                         <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <a href='#' class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Instructivos
-                            </button>
+                            </a>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingInstructivos" data-parent="#accordion">

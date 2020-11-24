@@ -8031,6 +8031,28 @@ footer {
   #contacto .social-media img {
     width: 11%; }
 
+@media (max-width: 768px) {
+  .text-center-sm {
+    text-align: center; }
+
+  #prestaciones .links a {
+    width: 100%;
+    display: block;
+    margin-top: 1em; }
+
+  header.masthead {
+    /*position: static;*/ }
+    header.masthead .contenido > .container {
+      text-align: center; }
+      header.masthead .contenido > .container img {
+        width: 75%; }
+    header.masthead .contacto {
+      /*position: static;*/ }
+    header.masthead .covid, header.masthead .whatsapp, header.masthead .email {
+      display: block;
+      text-align: center;
+      padding-top: .25rem;
+      padding-bottom: .25rem; } }
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -8041,7 +8063,8 @@ and open the template in the editor.
     Author     : esangoi
 */
 header.masthead {
-  /*height: 400px;*/
+  position: relative;
+  height: 100vh;
   padding-top: 6rem;
   padding-bottom: calc(6rem - 63px);
   /*    background: linear-gradient(
@@ -8054,33 +8077,31 @@ header.masthead {
       background-repeat: no-repeat;
       background-attachment: scroll;
       background-size: cover;*/ }
-  header.masthead .contenido {
-    position: relative; }
-    header.masthead .contenido .contacto {
-      width: 100;
-      /*padding: .5em .75em;*/
-      /*background-color: $white;*/
-      opacity: .75;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      /*right: 50%;*/
-      /*right*/ }
-      header.masthead .contenido .contacto img {
-        height: 1.2rem;
-        vertical-align: middle; }
-      header.masthead .contenido .contacto span {
-        color: #EFEFEF;
-        font-size: 1.2rem;
-        opacity: 1; }
-      header.masthead .contenido .contacto span.covid a {
-        color: #E3B23C; }
-      header.masthead .contenido .contacto .whatsapp {
-        color: #25D366; }
-      header.masthead .contenido .contacto a {
-        text-decoration: none;
-        color: #EFEFEF; }
+  header.masthead .contenido .contacto {
+    width: 100;
+    /*padding: .5em .75em;*/
+    /*background-color: $white;*/
+    opacity: .75;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /*right: 50%;*/
+    /*right*/ }
+    header.masthead .contenido .contacto img {
+      height: 1.2rem;
+      vertical-align: middle; }
+    header.masthead .contenido .contacto span {
+      color: #EFEFEF;
+      font-size: 1.2rem;
+      opacity: 1; }
+    header.masthead .contenido .contacto span.covid a {
+      color: #E3B23C; }
+    header.masthead .contenido .contacto .whatsapp {
+      color: #25D366; }
+    header.masthead .contenido .contacto a {
+      text-decoration: none;
+      color: #EFEFEF; }
   header.masthead h1 {
     /*        color: $primary;*/
     /*font-size: 1.75rem;*/

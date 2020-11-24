@@ -1,10 +1,46 @@
 @media (max-width: 768px){
     
-    footer{
+    footer{        
+        
         .social-media{
             
         }
     }
     
+    .text-center-sm{
+        text-align:center;
+    }
+    
+    #prestaciones{
+        .links a{
+            width: 100%;
+            display: block;
+            margin-top: 1em;
+        }
+    }
+    
+    header.masthead {
+        
+        /*position: static;*/
+        
+        .contenido > .container{
+            text-align: center;
+            
+            img{
+                width: 75%;
+            }
+        }
+        
+        .contacto{
+            /*position: static;*/
+        }
+        
+        .covid, .whatsapp, .email{
+            display: block;
+            text-align: center;
+            padding-top:.25rem;
+            padding-bottom:.25rem;
+        }
+    }
     
 }
