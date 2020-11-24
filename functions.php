@@ -37,6 +37,7 @@ define('CATEGORIA_OTROS', 'otros');
 define('CATEGORIA_FORMULARIOS', 'formularios');
 define('CATEGORIA_INSTRUCTIVOS', 'instructivos');
 define('CATEGORIA_NORMATIVAS', 'normativas');
+define('CATEGORIA_ESTADISTICAS', 'estadisticas');
 
 define('POST_CONTENT_MAX_LENGTH', 250);
 

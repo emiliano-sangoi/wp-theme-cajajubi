@@ -2,7 +2,7 @@
     <div class="p-3">
         <div class="text-center px-lg-5 px-3">
             <?php
-                if(has_post_thumbnail()):
+                if(has_post_thumbnail($post)):
                     echo get_the_post_thumbnail($post, 'medium', array('class' => 'img-fluid w-100 rounded-circle'));                
                 else:
                 ?>

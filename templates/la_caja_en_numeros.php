@@ -11,7 +11,17 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 
 get_header();
 
-$laCajaEnNumeros = getArchivosLaCajaEnNumeros();
+//$laCajaEnNumeros = getArchivosLaCajaEnNumeros();
+
+$posts_estadisticas = array();
+
+$cat_id = get_cat_ID(CATEGORIA_ESTADISTICAS);
+
+if ($cat_id) {
+    $args_form = array('category' => $cat_id, 'posts_per_page' => -1);
+    $posts_estadisticas = get_posts($args_form);
+}
+
 ?>
 
 <!-- Page Preloder -->
@@ -50,22 +60,25 @@ $laCajaEnNumeros = getArchivosLaCajaEnNumeros();
 
         <div>
             <div class="card-body">
-                <?php
-                $i = 0;
-                foreach ($laCajaEnNumeros['meses'] as $finfo):
-                    ?>
-                    <p>
-                        <a href="<?php echo $laCajaEnNumeros['url'] . $finfo->fname; ?>" target="_blank">
-                            <?php
-                            echo $finfo->titulo;
-                            $i++;
-                            ?>
-                        </a>
-                    </p>
-                <?php endforeach; ?>
-                <?php if ($i === 0): ?>
-                    <p class="text-muted">No hay ning&uacute;n reporte cargado.</p>
+
+                <?php if (isset($posts_estadisticas[0])): ?>  
+
+                    <?php foreach ($posts_estadisticas as $post): ?> 
+                        <?php if ($post->post_status !== 'publish'): continue;
+                        endif; ?>   
+                        <?php
+                        $link = get_field('enlace', $post);
+                        ?>
+                        <p>
+                            <a href="<?php echo $link; ?>" target="_blank" class="<?php echo $link ? '' : 'disabled' ?>"><?php echo $post->post_title; ?>
+                            </a>
+                        </p>
+
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p class="text-muted">No se cargado ningun reporte.</p>
                 <?php endif; ?>
+                    
             </div>
         </div>
     </div>
