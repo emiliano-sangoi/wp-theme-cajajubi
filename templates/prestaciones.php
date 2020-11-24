@@ -13,8 +13,13 @@ get_header();
 ?>
 
 <div class="navbar-separator pb-5 altura-minima" id="prestaciones">
-    <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo DIR_IMGS . '/paginas/prestaciones.jpg'; ?>"></div>
-
+   
+    <?php
+    if (has_post_thumbnail($pagina)):
+        $imagen = get_the_post_thumbnail_url($pagina, 'full', array('class' => 'img-fluid w-100 rounded-circle'));
+    ?>
+        <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $imagen; ?>"></div>
+    <?php endif; ?> 
 
     <div class="container-lg px-3 pt-3 px-lg-5">
         
@@ -42,21 +47,21 @@ get_header();
                 ?>
             <?php endif; ?>
         </div>
-        <div class="mt-lg-5 mt-sm-3 text-center btn-group d-flex" role="group">
+       <div class="mt-lg-5 py-lg-4 text-center links">
 
-            <a class="btn btn-lg btn-outline-primary " href="http://www.santafe.gob.ar/index.php/web/content/view/full/235057/(subtema)/102727" target="_blank">
+                    <a class="btn btn-lg btn-light" href="http://www.santafe.gob.ar/index.php/web/content/view/full/235057/(subtema)/102727" target="_blank">
                 Jubilaciones
             </a>
 
-            <a class="btn btn-lg btn-outline-primary " href="http://www.santafe.gob.ar/index.php/web/content/view/full/235059/(subtema)/102727" target="_blank">
+            <a class="btn btn-lg btn-light" href="http://www.santafe.gob.ar/index.php/web/content/view/full/235059/(subtema)/102727" target="_blank">
                 Retiros policiales y penitenciarios
             </a>
 
-            <a class="btn btn-lg btn-outline-primary" href="https://www.santafe.gov.ar/index.php/web/content/view/full/235062/(subtema)/102727" target="_blank">
+           <a class="btn btn-lg btn-light" href="https://www.santafe.gov.ar/index.php/web/content/view/full/235062/(subtema)/102727" target="_blank">
                 Pensiones
             </a>
             
-            <a class="btn btn-lg btn-outline-primary" href="https://www.santafe.gov.ar/index.php/web/content/view/full/111782/(subtema)/102727" target="_blank">
+            <a class="btn btn-lg btn-light" href="https://www.santafe.gov.ar/index.php/web/content/view/full/111782/(subtema)/102727" target="_blank">
                 Reconocimiento de servicios
             </a>
 
