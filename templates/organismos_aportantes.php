@@ -35,13 +35,12 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
 <div class="navbar-separator pb-5 altura-minima" id="org-aportantes">
     <?php
     if (has_post_thumbnail($pagina)):
-
         $imagen = get_the_post_thumbnail_url($pagina, 'full', array('class' => 'img-fluid w-100 rounded-circle'));
-        ?>
+    ?>
         <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $imagen; ?>"></div>
     <?php endif; ?> 
 
-    <div class="container-lg px-5 pt-4">
+    <div class="container-lg px-3 pt-3 px-lg-5">
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">

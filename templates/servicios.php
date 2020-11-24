@@ -10,8 +10,12 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 }
 get_header();
 
-$args = array('category' => get_cat_ID(CATEGORIA_SERVICIOS), 'posts_per_page' => -1);
-$posts = get_posts($args);
+$posts = null;
+$id_cat = get_cat_ID(CATEGORIA_SERVICIOS);
+if($id_cat){
+    $args = array('category' => $id_cat, 'posts_per_page' => -1);
+    $posts = get_posts($args);
+}
 
 //print_r($posts);
 //exit;
@@ -33,7 +37,7 @@ $posts = get_posts($args);
     <?php endif; ?> 
 
 
-    <div class="container-lg px-5 pt-4">
+    <div class="container-lg px-3 pt-3 px-lg-5">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
@@ -48,11 +52,12 @@ $posts = get_posts($args);
         </h1>
         <hr/>
 
+        <?php if (isset($posts[0])): ?>    
         <?php foreach ($posts as $post): ?> 
             <?php if ($post->post_status !== 'publish'): continue;
             endif;
             ?>   
-            <div class="enlaces mt-5">        
+            <div class="enlaces mt-4">        
                 <h2 class="h4 font-weight-bold">
     <?php echo $post->post_title; ?>
                 </h2>
@@ -69,9 +74,9 @@ $posts = get_posts($args);
                         Acceder
                     </a>    
                 </div>                
-            </div>
-        
-<?php endforeach; ?>
+            </div>        
+    <?php endforeach; ?>        
+    <?php endif; ?>
     </div>
 </div>
 

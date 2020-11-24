@@ -41,7 +41,7 @@ if ($catN_id) {
     <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo DIR_IMGS . '/paginas/prestaciones.jpg'; ?>"></div>
 
 
-    <div class="container-lg px-lg-5 px-3 pt-4">
+    <div class="container-lg px-3 pt-3 px-lg-5">
 
 
         <nav aria-label="breadcrumb">

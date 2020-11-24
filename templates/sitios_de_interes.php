@@ -18,7 +18,7 @@ get_header();
 </div>-->
 
 
-<div class="container-lg navbar-separator px-5 pt-4 pb-5 altura-minima" id="sitios-de-interes">
+<div class="container-lg navbar-separator px-5 pt-3 pb-5 altura-minima" id="sitios-de-interes">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>   

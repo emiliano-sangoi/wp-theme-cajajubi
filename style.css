@@ -8204,6 +8204,9 @@ body {
 .w-5 {
   width: 5%; }
 
+.w-3 {
+  width: 3%; }
+
 .to_top_button {
   display: none;
   position: fixed;

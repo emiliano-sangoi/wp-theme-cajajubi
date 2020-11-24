@@ -15,7 +15,7 @@ get_header();
     <div class="loader"></div>
 </div>-->
 
-<div class="container navbar-separator px-3 px-lg-5 pt-4 pb-5 altura-minima" id="quienes-somos">
+<div class="container navbar-separator px-3 px-lg-5 pt-3 pb-5 altura-minima" id="quienes-somos">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">

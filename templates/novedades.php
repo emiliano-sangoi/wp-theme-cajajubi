@@ -28,7 +28,7 @@ if($id_cat){
 </div>-->
 
 
-<div class="container-lg navbar-separator p-5 altura-minima" id="novedades">
+<div class="container-lg navbar-separator px-3 px-lg-5 pt-3 pb-5 altura-minima" id="novedades">
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">

@@ -17,12 +17,7 @@ $link_obtener_id_ciudadana = 'https://www.santafe.gob.ar/idciudadana/registro/';
 ?>
 
 
-<!-- Page Preloder -->
-<!--<div id="preloder">
-    <div class="loader"></div>
-</div>-->
-
-<div class="container-lg navbar-separator p-5 altura-minima" id="descarga-tu-recibo">
+<div class="container-lg navbar-separator px-3 px-lg-5 pt-3 pb-5 altura-minima" id="descarga-tu-recibo">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
@@ -43,24 +38,24 @@ $link_obtener_id_ciudadana = 'https://www.santafe.gob.ar/idciudadana/registro/';
         ?> 
     </div>
 
-    <div class="enlaces mt-5">        
-        <div class="my-2 mb-3">
+    <div class="mt-4">        
+        <p class="">
             La Caja pone a disposición de los beneficiarios sus recibo de haberes en versión digital. Para ello es necesario poseer Identificación Ciudadana en el portal de la provincia e ingresar en el sitio apuntado a continuación. Luego en el box “Recibos de Sueldos” seleccionar el botón “Pasivos”.
-        </div>
+        </p>         
+        <p>
+            El sistema garantiza confidencialidad y privacidad de la información.
+        </p>
         <div>
             <a class="btn btn-outline-primary" href="<?php echo $link_descarga_recibo; ?>" target="_blank">
                 DESCARGA TU RECIBO
             </a>
-        </div>  
-        <div class="my-2 mb-3">
-            El sistema garantiza confidencialidad y privacidad de la información.
-        </div>
+        </div> 
     </div>
 
-    <div class="enlaces mt-5">        
-        <div class="my-2 mb-3">
+    <div class="enlaces mt-4">        
+        <p>
             Si usted no posee Identificación Ciudadana deberá registrarse ingresando en el siguiente link y luego seguir las instrucciones que dicho sitio le brinda.
-        </div>
+        </p>
         <div>
             <a class="btn btn-outline-primary" href="<?php echo $link_obtener_id_ciudadana; ?>" target="_blank">
                 OBTENÉ TU ID. CIUDADANA

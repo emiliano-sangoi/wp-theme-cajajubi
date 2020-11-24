@@ -29,11 +29,13 @@ if ($cat_id) {
     <div class="loader"></div>
 </div>-->
 
-<div class="container-lg navbar-separator p-5 altura-minima" id="la-caja-en-numeros">
+<div class="container-lg navbar-separator px-3 px-lg-5 pt-3 pb-5 altura-minima" id="la-caja-en-numeros">
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
+            <li class="breadcrumb-item">
+                <a href="<?php echo get_home_url(); ?>">Inicio</a>
+            </li>    
             <li class="breadcrumb-item active" aria-current="page">
                 <?php echo $pagina->post_title; ?>
             </li>

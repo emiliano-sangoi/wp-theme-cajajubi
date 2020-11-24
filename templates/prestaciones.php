@@ -12,16 +12,11 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 get_header();
 ?>
 
-<!-- Page Preloder -->
-<!--<div id="preloder">
-    <div class="loader"></div>
-</div>-->
-
 <div class="navbar-separator pb-5 altura-minima" id="prestaciones">
     <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo DIR_IMGS . '/paginas/prestaciones.jpg'; ?>"></div>
 
 
-    <div class="container-lg px-5 pt-4">
+    <div class="container-lg px-3 pt-3 px-lg-5">
         
         <nav aria-label="breadcrumb" class="bg-light">
             <ol class="breadcrumb">

@@ -11,12 +11,7 @@ get_header();
 
 ?>
 
-<!-- Page Preloder -->
-<!--<div id="preloder">
-    <div class="loader"></div>
-</div>-->
-
-<div class="container-lg navbar-separator px-5 pt-4 pb-5 altura-minima" id="contacto">
+<div class="container-lg navbar-separator px-3 px-lg-5 pt-3 pb-5 altura-minima" id="contacto">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
@@ -37,7 +32,7 @@ get_header();
     <hr/>
 
     <div class="row mt-3">
-        <div class="col-2">
+        <div class="col-lg-2 col-12">
             <div class="bg-light p-3 text-center border border-secondary medio-contacto">
                 <h6 class="mb-2">
                     <i class="fa fa-whatsapp"></i>
@@ -48,7 +43,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-lg-4 col-12">
             <div class="bg-light p-3 text-center border border-secondary medio-contacto">
                 <h6 class="mb-2">
                     <i class="fa fa-envelope"></i>
@@ -61,7 +56,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-lg-3 col-12">
             <div class="bg-light p-3 text-center border border-secondary medio-contacto">
                 <h6 class="mb-2" title="Línea telefónica gratuita">
                     <i class="fa fa-phone"></i>
@@ -72,7 +67,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-lg-3 col-12">
             <div class="bg-light p-3 text-center border border-secondary medio-contacto">
                 <h6 class="mb-2">
                     <i class="fa fa-users"></i>
@@ -126,71 +121,24 @@ get_header();
         <?php endif; ?>
     </div>
 
-    <!--    <div class="mt-4 bg-light px-5 pb-5 pt-4 border border-secondary">
-            <form action="form-process.php" method="post">
-                <h3 class="text-center font-weight-bold">
-                    Env&iacute;anos tu consulta
-                </h3>
-                <hr class="w-50 mx-auto"/>
-                <div class="form-row mt-4">
-                    <div class="col-6">
-                        <label for="name" class="font-weight-bold">
-                            Nombre y apellido
-                            <span class="text-danger">*</span>
-                        </label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre y apellido*" required>                
-                    </div>
-                    <div class="col-6">
-                        <label for="email" class="font-weight-bold">
-                            Correo electr&oacute;nico
-                            <span class="text-danger">*</span>
-                        </label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required aria-describedby="emailHelp">
-                        <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu dirección de correo con nadie.</small>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-12">
-                        <label for="message" class="font-weight-bold">
-                            Consulta
-                            <span class="text-danger">*</span>
-                        </label>
-                        <textarea class='form-control' rows='10' placeholder="Ingrese su consulta" id="message" name="message" required></textarea>                    
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <button type="submit" class="btn btn-lg btn-outline-primary" id="form-submit">Enviar</button>
-                </div>
-    
-            </form>
-        </div>-->
-
-
 
     <h2 class="h3 font-weight-bold mt-5">
         Oficinas de atención al público
     </h2>
 
-    <section class="py-3">
-
-        <?php
-        $contactos = getInfoContacto();
-        foreach ($contactos as $contacto) :
-            $titulo = $contacto['titulo'];
-            $direccion = $contacto['direccion'];
-            $telefono = $contacto['telefono'];
-            $fax = $contacto['fax'];
-            $mostrar_turno_web = $contacto['mostrar_turno_web'];
-            $whatsapp = $contacto['whatsapp'];
-            ?>
-            <div class="mb-3">
-                <?php
-                include(locate_template('partials/card-contacto.php'));
-                ?>
-            </div>
-        <?php endforeach; ?>
-
-
+    <section class="py-3">        
+        <div class='card-columns'>
+            <?php foreach (getInfoContacto() as $contacto){
+                                $titulo = $contacto['titulo'];
+                                $direccion = $contacto['direccion'];
+                                $telefono = $contacto['telefono'];
+                                $fax = $contacto['fax'];
+                                $mostrar_turno_web = $contacto['mostrar_turno_web'];
+                                $whatsapp = $contacto['whatsapp'];
+                                include(locate_template('partials/card-contacto.php'));                                       
+                        } 
+            ?>           
+        </div>
     </section>
 
 </div>
