@@ -32,21 +32,17 @@ get_header();
                     </time>
                 </div>
 
-                <div class="row mx-0">
+                <div class="row mx-0 mt-3">
                     <?php if ($tiene_img) : ?>
-                        <div class="col-12 col-md-4 px-0 mt-3">
+                        <div class="col-12 col-md-4 px-0">
                             <?php
                             echo get_the_post_thumbnail(null, 'medium', array('class' => 'card-img-top w-100'));
                             ?>
                         </div>
                     <?php endif; ?>
 
-                    <div class="<?php echo $tiene_img ? 'col-12 col-md-8 px-0' : ''; ?>">                                                
-                        <div class="mt-4">
-
+                    <div class="<?php echo $tiene_img ? 'col-12 col-md-8 px-3' : ''; ?>">                                                
                             <?php the_content(); ?>                       
-
-                        </div>
                     </div>
                 </div>
             <?php endwhile; ?>
