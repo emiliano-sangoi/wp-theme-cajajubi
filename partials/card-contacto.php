@@ -20,7 +20,7 @@
                                 <i class="fa fa-calendar"></i>
                             </td>
                             <td>
-                                <a href="turnos.santafe.gov.ar/" target="_blank">
+                                <a href="http://turnos.santafe.gov.ar/" target="_blank">
                                     Atención al público con turno web previo
                                 </a>
                             </td>
