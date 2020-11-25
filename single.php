@@ -34,7 +34,7 @@ get_header();
 
                 <div class="row mx-0 mt-3">
                     <?php if ($tiene_img) : ?>
-                        <div class="col-12 col-md-4 px-0">
+                        <div class="col-12 col-md-4 px-0 pt-2">
                             <?php
                             echo get_the_post_thumbnail(null, 'medium', array('class' => 'card-img-top w-100'));
                             ?>
