@@ -1,9 +1,12 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" id="navbar">    
-    <a class="navbar-brand" href="<?php echo home_url(); ?>">        
-        <img class="img-fluid pl-2 pr-3 d-none d-sm-inline-block"
-             src="https://www.santafe.gob.ar/assets/standard/images/gob-santafe.png" alt="Gobierno de Santa Fe">
-        <span class="d-inline-block align-middle">CAJA DE JUBILACIONES<br/> Y PENSIONES</span>
-    </a>
+    <span class="navbar-brand">        
+        <a class="pl-2 pr-3 d-none d-sm-inline-block" href="https://www.santafe.gob.ar">        
+            <img class="img-fluid w-100" src="https://www.santafe.gob.ar/assets/standard/images/gob-santafe.png" alt="Gobierno de Santa Fe">
+        </a>
+        <a class="" href="<?php echo home_url(); ?>">        
+            <span class="d-inline-block align-middle">CAJA DE JUBILACIONES<br/> Y PENSIONES</span>
+        </a>
+    </span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

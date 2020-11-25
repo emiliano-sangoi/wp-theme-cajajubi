@@ -7925,7 +7925,7 @@ El problema surge por un bug del compilador al parecer:
     font-size: 90%;
     /*word-break: break-all;*/ }
     #navbar .navbar-brand img {
-      width: 38%; }
+      /*width: 38%;*/ }
 
 #carouselHome {
   margin-top: 63px;

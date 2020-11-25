@@ -8,7 +8,7 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 get_header();
 ?>
 
-<div class="container-lg navbar-separator p-5 altura-minima" id="novedades">
+<div class="container navbar-separator px-3 px-lg-5 pt-3 pb-5 altura-minima" id="novedades">
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -21,31 +21,40 @@ get_header();
 
     <div>
         <?php if (have_posts()) while (have_posts()) : the_post(); ?>
-
-                <div class="content">
-                    <h1 class="font-weight-bold text-primary">
-                        <?php the_title(); ?>
-                    </h1>
-                    <hr/>
-                    <div class="text-muted">
-                        <time class="d-block" datetime="<?php the_time('Y-m-d'); ?>" pubdate>
-                            <?php the_date(); ?> <?php the_time(); ?>
-                        </time>
-                    </div>
-                    <div class="mt-4">
-
-                        <?php the_content(); ?>                       
-
-                    </div>
-                    
-                    <div class="mt-4">
-                        <a class="btn btn-outline-secondary" href="<?php echo getLinkPagina(PAGINA_NOVEDADES); ?>">
-                            <i class="fa fa-arrow-left"></i>&nbsp;Volver
-                        </a>
-                    </div>
+                <?php $tiene_img = has_post_thumbnail(); ?>
+                <h1 class="font-weight-bold text-primary">
+                    <?php the_title(); ?>
+                </h1>
+                <hr/>
+                <div class="text-muted">
+                    <time class="d-block" datetime="<?php the_time('Y-m-d'); ?>" pubdate>
+                        <?php the_date(); ?> <?php the_time(); ?>
+                    </time>
                 </div>
 
+                <div class="row mx-0">
+                    <?php if ($tiene_img) : ?>
+                        <div class="col-12 col-md-4 px-0 mt-3">
+                            <?php
+                            echo get_the_post_thumbnail(null, 'medium', array('class' => 'card-img-top w-100'));
+                            ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="<?php echo $tiene_img ? 'col-12 col-md-8 px-0' : ''; ?>">                                                
+                        <div class="mt-4">
+
+                            <?php the_content(); ?>                       
+
+                        </div>
+                    </div>
+                </div>
             <?php endwhile; ?>
+        <div class="mt-4">
+            <a class="btn btn-outline-secondary" href="<?php echo getLinkPagina(PAGINA_NOVEDADES); ?>">
+                <i class="fa fa-arrow-left"></i>&nbsp;Volver
+            </a>
+        </div>
     </div>
 </div>
 

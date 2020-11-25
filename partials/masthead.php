@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 col-sm-8 offset-md-4 col-md-7 px-0 px-lg-3 mt-3 mt-lg-5">
+                <div class="col-xs-12 col-sm-8 offset-md-4 col-md-7 px-2 px-lg-3 mt-2 mt-lg-5">
                     <a href="#prestaciones" class="btn btn-lg btn-outline-light js-scroll-trigger">
                         Conoce tus beneficios
                     </a>

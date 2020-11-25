@@ -109,7 +109,7 @@ get_header();
             <?php
         else:
             ?>
-            <div class="mt-4 bg-light px-5 pb-5 pt-4 border border-secondary">
+            <div class="mt-4 bg-light px-3 px-lg-5 pb-5 pt-4 border border-secondary">
                 <h3 class="text-center font-weight-bold">
                     Env&iacute;anos tu consulta
                 </h3>
