@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" id="navbar">    
-    <a class="navbar-brand" href="<?php echo home_url(); ?>">        
+    <a href="<?php echo 'https://www.santafe.gob.ar'; ?>", target="_blank">        
         <img class="img-fluid pl-2 pr-3 d-none d-lg-inline-block"
              src="https://www.santafe.gob.ar/assets/standard/images/gob-santafe.png" alt="Gobierno de Santa Fe">
+    </a>
+    <a class="navbar-brand" href="<?php echo home_url(); ?>">        
         <span class="d-inline-block align-middle">CAJA DE JUBILACIONES<br/> Y PENSIONES</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
