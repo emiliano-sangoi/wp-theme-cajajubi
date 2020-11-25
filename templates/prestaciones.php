@@ -13,16 +13,16 @@ get_header();
 ?>
 
 <div class="navbar-separator pb-5 altura-minima" id="prestaciones">
-   
+
     <?php
     if (has_post_thumbnail($pagina)):
         $imagen = get_the_post_thumbnail_url($pagina, 'full', array('class' => 'img-fluid w-100 rounded-circle'));
-    ?>
+        ?>
         <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $imagen; ?>"></div>
     <?php endif; ?> 
 
     <div class="container-lg px-3 pt-3 px-lg-5">
-        
+
         <nav aria-label="breadcrumb" class="bg-light">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
@@ -41,33 +41,35 @@ get_header();
                 <p class="text-muted">
                     No se ha cargado ningun contenido en esta secci&oacute;n.
                 </p>
-            <?php
+                <?php
             else:
                 echo nl2br($pagina->post_content);
                 ?>
             <?php endif; ?>
         </div>
-       <div class="mt-lg-5 py-lg-4 text-center links">
-
-                    <a class="btn btn-lg btn-light" href="http://www.santafe.gob.ar/index.php/web/content/view/full/235057/(subtema)/102727" target="_blank">
-                Jubilaciones
-            </a>
-
-            <a class="btn btn-lg btn-light" href="http://www.santafe.gob.ar/index.php/web/content/view/full/235059/(subtema)/102727" target="_blank">
-                Retiros policiales y penitenciarios
-            </a>
-
-           <a class="btn btn-lg btn-light" href="https://www.santafe.gov.ar/index.php/web/content/view/full/235062/(subtema)/102727" target="_blank">
-                Pensiones
-            </a>
-            
-            <a class="btn btn-lg btn-light" href="https://www.santafe.gov.ar/index.php/web/content/view/full/111782/(subtema)/102727" target="_blank">
-                Reconocimiento de servicios
-            </a>
-
-            
-
+        <div class="row mt-5">
+            <div class="col-12 col-lg-3 mt-2 mt-lg-0">
+                <a class="btn btn-lg btn-light w-100" href="http://www.santafe.gob.ar/index.php/web/content/view/full/235057/(subtema)/102727" target="_blank">
+                    Jubilaciones
+                </a>
+            </div>
+            <div class="col-12 col-lg-3 mt-2 mt-lg-0">
+                <a class="btn btn-lg btn-light w-100" href="http://www.santafe.gob.ar/index.php/web/content/view/full/235059/(subtema)/102727" target="_blank">
+                    Retiros policiales y penitenciarios
+                </a>
+            </div>
+            <div class="col-12 col-lg-3 mt-2 mt-lg-0">
+                <a class="btn btn-lg btn-light w-100" href="https://www.santafe.gov.ar/index.php/web/content/view/full/235062/(subtema)/102727" target="_blank">
+                    Pensiones
+                </a>
+            </div>
+            <div class="col-12 col-lg-3 mt-2 mt-lg-0">
+                <a class="btn btn-lg btn-light w-100" href="https://www.santafe.gov.ar/index.php/web/content/view/full/111782/(subtema)/102727" target="_blank">
+                    Reconocimiento de servicios
+                </a>
+            </div>
         </div>
+
 
     </div>
 </div>

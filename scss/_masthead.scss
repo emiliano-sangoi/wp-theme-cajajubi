@@ -39,8 +39,8 @@ header.masthead {
             }
             
             span.covid{
-                a{
-                    color: $warning;
+                a, span{
+                    color: $warning !important;
                 }                
             }
             

@@ -8095,8 +8095,8 @@ header.masthead {
       color: #EFEFEF;
       font-size: 1.2rem;
       opacity: 1; }
-    header.masthead .contenido .contacto span.covid a {
-      color: #E3B23C; }
+    header.masthead .contenido .contacto span.covid a, header.masthead .contenido .contacto span.covid span {
+      color: #E3B23C !important; }
     header.masthead .contenido .contacto .whatsapp {
       color: #25D366; }
     header.masthead .contenido .contacto a {
@@ -8182,6 +8182,12 @@ body {
 
 #novedades-home {
   background-color: #D3D4D9; }
+
+.w-95 {
+  width: 95%; }
+
+.w-90 {
+  width: 90%; }
 
 .w-40 {
   width: 40%; }
