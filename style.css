@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: 	WP Theme: Sitio web de la Caja de Jubilaciones
 Theme URI:
@@ -8031,36 +8032,10 @@ footer {
   #contacto .social-media img {
     width: 11%; }
 
-@media (max-width: 768px) {
-  .text-center-sm {
-    text-align: center; }
-
-  #prestaciones .links a {
-    width: 100%;
-    display: block;
-    margin-top: 1em; }
-
-  header.masthead {
-    /*position: static;*/ }
-    header.masthead .contenido > .container {
-      text-align: center; }
-      header.masthead .contenido > .container img {
-        width: 75%; }
-    header.masthead .contacto {
-      /*position: static;*/ }
-    header.masthead .covid, header.masthead .whatsapp, header.masthead .email {
-      display: block;
-      text-align: center;
-      padding-top: .25rem;
-      padding-bottom: .25rem; } }
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
-*/
-/*
-    Created on : 23 nov. 2020, 10:16:35
-    Author     : esangoi
 */
 header.masthead {
   position: relative;
@@ -8093,7 +8068,6 @@ header.masthead {
       vertical-align: middle; }
     header.masthead .contenido .contacto span {
       color: #EFEFEF;
-      font-size: 1.2rem;
       opacity: 1; }
     header.masthead .contenido .contacto span.covid a, header.masthead .contenido .contacto span.covid span {
       color: #E3B23C !important; }
@@ -8113,16 +8087,65 @@ header.masthead {
       height: 60vh;
       min-height: 40rem;
       padding-top: 63px;
-      padding-bottom: 0;
-      /*        p {
-                  font-size: 1.15rem;
-              }*/ }
+      padding-bottom: 0; }
       header.masthead h1 {
         font-size: 2rem; } }
   @media (min-width: 1200px) {
     header.masthead h1 {
       font-size: 3rem; } }
 
+/*@media (min-width: 768px){
+
+    header.masthead {
+
+        .contacto{
+            span{
+                font-size: .8rem;
+            }
+        }
+
+
+    }
+
+}*/
+/* No greater than 900px, no less than 400px */
+/*@media (max-width:900px) and (min-width:400px) {
+    .foo {
+        display:none;
+    }
+}​*/
+@media (max-width: 991px) {
+  .text-center-sm {
+    /*text-align:center;*/ }
+
+  /*    #prestaciones{
+          .links a{
+              width: 100%;
+              display: block;
+              margin-top: 1em;
+          }
+      }*/
+  header.masthead .contenido > .container {
+    /*text-align: center;*/ }
+    header.masthead .contenido > .container img {
+      width: 70%; }
+  header.masthead span {
+    /*color: $light;*/
+    /*font-size: .8rem;*/
+    /*opacity: 1;*/ }
+  header.masthead .contacto {
+    /*position: static;*/ }
+  header.masthead .covid, header.masthead .whatsapp, header.masthead .email {
+    /*display: block;*/
+    /*text-align: center;*/
+    font-size: 80% !important;
+    /*padding-top:.15rem;*/
+    /*padding-bottom:.15rem;*/ } }
+@media (min-width: 992px) {
+  header.masthead .contacto .container .row > div:nth-child(1) {
+    /*text-align: left !important;*/ }
+  header.masthead .contacto .container .row > div:nth-child(3) {
+    /*text-align: right !important;*/ } }
 html,
 body {
   /*height: 100%;*/
@@ -8248,7 +8271,7 @@ body {
 .blink {
   text-decoration: blink;
   -webkit-animation-name: blinker;
-  -webkit-animation-duration: 1.8s;
+  -webkit-animation-duration: 1.1s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-direction: alternate; }

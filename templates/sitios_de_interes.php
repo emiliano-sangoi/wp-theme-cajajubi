@@ -12,17 +12,18 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 get_header();
 ?>
 
-<!-- Page Preloder -->
-<!--<div id="preloder">
-    <div class="loader"></div>
-</div>-->
 
-
-<div class="container-lg navbar-separator px-5 pt-3 pb-5 altura-minima" id="sitios-de-interes">
+<div class="container navbar-separator px-3 px-lg-5 pt-3 pb-5 altura-minima" id="sitios-de-interes">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>   
-            <li class="breadcrumb-item"><a href="<?php echo getLinkPagina ( PAGINA_SERVICIOS ); ?>">Servicios</a></li> 
+            <li class="breadcrumb-item">
+                <a href="<?php echo get_home_url(); ?>">
+                    Inicio
+                </a>
+            </li>   
+            <li class="breadcrumb-item">
+                <a href="<?php echo getLinkPagina ( PAGINA_SERVICIOS ); ?>">Servicios</a>
+            </li> 
             <li class="breadcrumb-item active" aria-current="page">
                 <?php echo $pagina->post_title; ?>
             </li>
@@ -39,19 +40,6 @@ get_header();
             endif;
         ?> 
     </div>
-
-    <!--    <div>
-            <table class="table">
-                <table class="table table-striped">
-                    <thead>
-                        
-                    </thead>
-                    
-                </table>
-                
-            </table>
-        </div>-->
-
     <div>
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">

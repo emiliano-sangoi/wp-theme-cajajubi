@@ -17,9 +17,9 @@ if ($id_cat) {
 get_template_part('partials/masthead');
 ?>
 
-<section class="py-3 py-lg-4" id='accesos-directos'>
+<section class="py-3 py-lg-5" id='accesos-directos'>
     <div class='container'>
-        <div class="row">
+        <div class="row mx-0">
             <div class="col-12 col-lg-4 py-2">
                 <?php
                 $link = 'http://www.santafe.gov.ar/index.php/web/content/view/full/128047';
@@ -53,7 +53,7 @@ get_template_part('partials/masthead');
             </div>
         </div>
 
-        <div class="row mt-lg-3">
+        <div class="row mt-lg-3 mx-0">
             <div class="col-12 col-lg-4 py-2">
                 <?php
                 $link = getLinkPagina(PAGINA_BIBLIOTECA);
@@ -79,7 +79,7 @@ get_template_part('partials/masthead');
                             $link = getLinkPagina(PAGINA_SITIOS_DE_INTERES);
                             //$img = DIR_IMGS . '/iconos/link.png';
                             $icon = 'fa-link';
-                            $titulo = 'Enlaces de interes';
+                            $titulo = 'Enlaces de interés';
                             include locate_template('partials/home-link.php');
                             ?>
             </div>            

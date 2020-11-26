@@ -3,10 +3,6 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/*
-    Created on : 23 nov. 2020, 10:16:35
-    Author     : esangoi
-*/
 
 // Styling for the masthead
 
@@ -34,7 +30,6 @@ header.masthead {
             
             span{
                 color: $light;
-                font-size: 1.2rem;   
                 opacity: 1;
             }
             
@@ -85,9 +80,7 @@ header.masthead {
         min-height: 40rem;
         padding-top: $navbar-height;
         padding-bottom: 0;
-/*        p {
-            font-size: 1.15rem;
-        }*/
+        
         h1 {
             font-size: 2rem;
         }

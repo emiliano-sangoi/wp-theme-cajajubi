@@ -29,42 +29,41 @@
                 </div>
             </div>
         </div>
-        <div class="contacto text-light w-100 bg-dark">
+        <div class="contacto text-light bg-dark">
             <div class='container'>
-                <div class="row mx-0 p-2">
-                    <div class="col-5 text-left px-0">
+                <div class="row mx-0 py-lg-2">
+                    <div class="col-4 col-lg-4 text-left px-0 px-lg-3">
                         <span class="covid blink">
                             <a href="https://www.santafe.gob.ar/ms/covid19/" target='_blank'>
                                 <img class="img-fluid" src='<?php echo DIR_IMGS . '/iconos/mask.png'; ?>' alt=''/>                                                                                          
-                                <span class="d-none d-sm-inline">
+                                <span class="d-none d-lg-inline">
                                     Prevenci&oacute;n Covid 
                                 </span>
-                                <span class="d-inline d-sm-none">
+                                <span class="d-inline d-lg-none">
                                     Covid
                                 </span>
                             </a>
                         </span>
                     </div>
-                    <div class="col-7 text-right bg-dark px-0">
+                    <div class="col-4 col-lg-4 text-center px-0">
                         <span class="whatsapp">
-                            <i class="fa fa-whatsapp"></i>
-                            342 5 128 800
+                            <i class="fa fa-whatsapp"></i>   
+                            342 5 128 800 
                         </span>
+                    </div>
+                    <div class="col-4 col-lg-4 text-right px-0 px-lg-3">
                         <span class='email'>                                          
-                            <a class="email-conctacto" href="mailto:contactocaja@santafe.gov.ar" target="_blank">                                                                
-                                <span class="d-none d-sm-block d-lg-inline px-0 px-lg-2">
-                                    <i class="fa fa-envelope"></i>
+                            <a class="" href="mailto:contactocaja@santafe.gov.ar" target="_blank">                                                                
+                                <i class="fa fa-envelope"></i>
+                                <span class="d-none d-lg-inline">                                    
                                     contactocaja@santafe.gov.ar
                                 </span>
-                                <span class="d-sm-none d-inline"> 
-                                    <i class="fa fa-envelope"></i>                                    
+                                <span class="d-inline d-lg-none">                                    
                                     Correo
                                 </span>
                             </a>
                         </span>
                     </div>
-                    <!--                    <div class="col-3 text-right bg-dark p-2">
-                                        </div>-->
                 </div>
             </div>
         </div>
