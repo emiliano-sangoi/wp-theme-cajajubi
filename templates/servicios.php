@@ -30,7 +30,6 @@ if($id_cat){
 <div class="navbar-separator pb-5 altura-minima" id="servicios">
     <?php
     if (has_post_thumbnail($pagina)):
-//        echo get_the_post_thumbnail($post, 'medium', array('class' => 'img-fluid w-100 rounded-circle'));
         $imagen = get_the_post_thumbnail_url($pagina, 'full', array('class' => 'img-fluid w-100 rounded-circle'));
         ?>
         <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $imagen; ?>"></div>
