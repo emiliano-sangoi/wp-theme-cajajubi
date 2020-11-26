@@ -1,7 +1,7 @@
 <a href="<?php echo $link ?: '#' ?>" class="d-block p-5 bg-primary acceso h-100" <?php echo $blank ? "target='_blank'" : ''; ?>>
     <div class="text-center">
         <?php if( isset($img) ): ?>
-            <img class='w-35 img-fluid' src='<?php echo $img; ?>' alt=''/>
+            <img class='img-fluid' src='<?php echo $img; ?>' alt=''/>
         <?php else: ?>
             <i class="fa  <?php echo $icon; ?> d-inline-block w-100">
             </i>

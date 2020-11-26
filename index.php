@@ -23,7 +23,7 @@ get_template_part('partials/masthead');
             <div class="col-12 col-lg-4 py-2">
                 <?php
                 $link = 'http://www.santafe.gov.ar/index.php/web/content/view/full/128047';
-                $blank = true;                
+                $blank = true;
                 //$img = DIR_IMGS . '/iconos/calendar.png';
                 $icon = 'fa-calendar';
                 $titulo = 'Cronograma de pagos';
@@ -63,25 +63,25 @@ get_template_part('partials/masthead');
                 include locate_template('partials/home-link.php');
                 ?>   
             </div>
-            
+
             <div class="col-12 col-lg-4 py-2">
                 <?php
-                            $img = DIR_IMGS . '/iconos/salary.png';
-                            $link = getLinkPagina(PAGINA_DESCARGA_RECIBO);
-                            $icon = 'fa-money';
-                            $titulo = 'Descarga tu recibo';
-                            include locate_template('partials/home-link.php');
-                            unset($img);
-                            ?>
+                $img = DIR_IMGS . '/iconos/salary.png';
+                $link = getLinkPagina(PAGINA_DESCARGA_RECIBO);
+                $icon = 'fa-money';
+                $titulo = 'Descarga tu recibo';
+                include locate_template('partials/home-link.php');
+                unset($img);
+                ?>
             </div>
             <div class="col-12 col-lg-4 py-2">
                 <?php
-                            $link = getLinkPagina(PAGINA_SITIOS_DE_INTERES);
-                            //$img = DIR_IMGS . '/iconos/link.png';
-                            $icon = 'fa-link';
-                            $titulo = 'Enlaces de interés';
-                            include locate_template('partials/home-link.php');
-                            ?>
+                $link = getLinkPagina(PAGINA_SITIOS_DE_INTERES);
+                //$img = DIR_IMGS . '/iconos/link.png';
+                $icon = 'fa-link';
+                $titulo = 'Enlaces de interés';
+                include locate_template('partials/home-link.php');
+                ?>
             </div>            
         </div>       
     </div>
@@ -110,24 +110,9 @@ if ($pagina_prestaciones instanceof WP_Post && $pagina_prestaciones->post_status
                         ?>
                     <?php endif; ?>
                 </div>
-                <div class="mt-lg-5 py-lg-4 text-center links">
-
-                    <a class="btn btn-lg btn-light" href="http://www.santafe.gob.ar/index.php/web/content/view/full/235057/(subtema)/102727" target="_blank">
-                        Jubilaciones
-                    </a>
-
-                    <a class="btn btn-lg btn-light" href="http://www.santafe.gob.ar/index.php/web/content/view/full/235059/(subtema)/102727" target="_blank">
-                        Retiros policiales y penitenciarios
-                    </a>
-
-                    <a class="btn btn-lg btn-light" href="https://www.santafe.gov.ar/index.php/web/content/view/full/235062/(subtema)/102727" target="_blank">
-                        Pensiones
-                    </a>
-
-                    <a class="btn btn-lg btn-light" href="https://www.santafe.gov.ar/index.php/web/content/view/full/111782/(subtema)/102727" target="_blank">
-                        Reconocimiento de servicios
-                    </a>            
-                </div>                                              
+                <?php
+                    get_template_part('partials/accesos-prestaciones');
+                ?>                                            
             </div>
         </div>
     </section>

@@ -8154,6 +8154,8 @@ body {
 
 #accesos-directos i {
   font-size: 6em; }
+#accesos-directos img {
+  width: 6em; }
 #accesos-directos .acceso {
   text-decoration: none !important; }
   #accesos-directos .acceso i, #accesos-directos .acceso h4 {

@@ -129,9 +129,15 @@ body {
 }
 
 #accesos-directos{
+    $icons-size: 6em;
+    
     i{
-        font-size: 6em;
-    }        
+        font-size: $icons-size;
+    }
+    
+    img{
+        width: $icons-size;
+    }
 
     .acceso{        
         text-decoration: none !important;
