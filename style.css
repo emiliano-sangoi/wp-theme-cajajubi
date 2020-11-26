@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
 Theme Name: 	WP Theme: Sitio web de la Caja de Jubilaciones
 Theme URI:
@@ -8094,58 +8093,18 @@ header.masthead {
     header.masthead h1 {
       font-size: 3rem; } }
 
-/*@media (min-width: 768px){
-
-    header.masthead {
-
-        .contacto{
-            span{
-                font-size: .8rem;
-            }
-        }
-
-
-    }
-
-}*/
-/* No greater than 900px, no less than 400px */
-/*@media (max-width:900px) and (min-width:400px) {
-    .foo {
-        display:none;
-    }
-}​*/
 @media (max-width: 991px) {
-  .text-center-sm {
-    /*text-align:center;*/ }
-
-  /*    #prestaciones{
-          .links a{
-              width: 100%;
-              display: block;
-              margin-top: 1em;
-          }
-      }*/
-  header.masthead .contenido > .container {
-    /*text-align: center;*/ }
-    header.masthead .contenido > .container img {
+  header.masthead .principal {
+    text-align: center; }
+    header.masthead .principal img {
       width: 70%; }
-  header.masthead span {
-    /*color: $light;*/
-    /*font-size: .8rem;*/
-    /*opacity: 1;*/ }
-  header.masthead .contacto {
-    /*position: static;*/ }
   header.masthead .covid, header.masthead .whatsapp, header.masthead .email {
-    /*display: block;*/
-    /*text-align: center;*/
-    font-size: 80% !important;
-    /*padding-top:.15rem;*/
-    /*padding-bottom:.15rem;*/ } }
+    font-size: 85% !important;
+    padding-top: .15rem;
+    padding-bottom: .15rem; } }
 @media (min-width: 992px) {
-  header.masthead .contacto .container .row > div:nth-child(1) {
-    /*text-align: left !important;*/ }
-  header.masthead .contacto .container .row > div:nth-child(3) {
-    /*text-align: right !important;*/ } }
+  header.masthead .principal {
+    text-align: left; } }
 html,
 body {
   /*height: 100%;*/

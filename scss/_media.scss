@@ -1,70 +1,20 @@
-/*@media (min-width: 768px){
-
-    header.masthead {
-
-        .contacto{
-            span{
-                font-size: .8rem;
-            }
-        }
-
-
-    }
-
-}*/
-
-/* No greater than 900px, no less than 400px */
-/*@media (max-width:900px) and (min-width:400px) {
-    .foo {
-        display:none;
-    }
-}​*/
-
 
 @media (max-width: 991px){
 
-    .text-center-sm{
-        /*text-align:center;*/
-    }
-
-/*    #prestaciones{
-        .links a{
-            width: 100%;
-            display: block;
-            margin-top: 1em;
-        }
-    }*/
-
     header.masthead {
-
-        .contenido > .container{
-            /*text-align: center;*/
-
+        
+        .principal{
+            text-align: center;
+            
             img{
                 width: 70%;
-            }
-            
-            h1{
-                
-            }
-        }
-
-        span{
-            /*color: $light;*/
-            /*font-size: .8rem;*/
-            /*opacity: 1;*/
-        }
-
-        .contacto{
-            /*position: static;*/
+            }  
         }
 
         .covid, .whatsapp, .email{
-            /*display: block;*/
-            /*text-align: center;*/
-            font-size: 80% !important;
-            /*padding-top:.15rem;*/
-            /*padding-bottom:.15rem;*/
+            font-size: 85% !important;
+            padding-top:.15rem;
+            padding-bottom:.15rem;
         }
     }
 
@@ -73,18 +23,10 @@
 
 @media (min-width: 992px){
 
-    header.masthead {
-        .contacto .container .row {
-
-            & > div:nth-child(1){
-                /*text-align: left !important;*/                
-            }
-            
-            & > div:nth-child(3){
-                /*text-align: right !important;*/                
-            }
-
-        }
+    header.masthead {        
+        .principal{
+            text-align: left;
+        }        
     }
 
 }

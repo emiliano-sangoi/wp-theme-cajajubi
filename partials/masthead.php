@@ -9,12 +9,12 @@
 <header class="masthead parallax-window" data-parallax="scroll" 
         data-image-src="<?php echo DIR_IMGS . '/masthead_b.jpg'; ?>">
     <div class="contenido h-100">
-        <div class='container centrate'>
+        <div class='container centrate principal'>
             <div class="row h-100 align-items-center justify-content-center">
-                <div class="col-xs-12 col-sm-4 offeset-md-1 col-md-3 px-2 px-lg-3 text-center">
+                <div class="col-12 offeset-lg-1 col-lg-3">
                     <img class="img-fluid" src="<?php echo DIR_IMGS . '/logo_stafe2l.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
                 </div>
-                <div class="col-lg-7 px-lg-3 col-8 mt-4 mt-lg-0">                
+                <div class="col-12 col-lg-7 px-lg-3 col-8 mt-4 mt-lg-0">                
                     <h1 class="text-light font-weight-bold">
                         Caja de Jubilaciones y Pensiones de la Provincia de Santa Fe
                     </h1>
@@ -22,7 +22,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 col-sm-8 offset-md-4 col-md-7 px-2 px-lg-3 mt-2 mt-lg-5">
+                <!--px-2 px-lg-3-->
+                <div class="col-12 offset-lg-4 col-lg-7 mt-2 mt-lg-5">
                     <a href="#prestaciones" class="btn btn-lg btn-outline-light js-scroll-trigger">
                         Conoce tus beneficios
                     </a>
