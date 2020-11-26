@@ -32,7 +32,7 @@
         </div>
         <div class="contacto text-light bg-dark">
             <div class='container'>
-                <div class="row mx-0 py-lg-2">
+                <div class="row mx-0 py-2 py-lg-2">
                     <div class="col-4 col-lg-4 text-left px-0 px-lg-3">
                         <span class="covid blink">
                             <a href="https://www.santafe.gob.ar/ms/covid19/" target='_blank'>

@@ -8062,14 +8062,16 @@ header.masthead {
     left: 0;
     /*right: 50%;*/
     /*right*/ }
-    header.masthead .contenido .contacto img {
-      height: 1.2rem;
-      vertical-align: middle; }
     header.masthead .contenido .contacto span {
       color: #EFEFEF;
       opacity: 1; }
     header.masthead .contenido .contacto span.covid a, header.masthead .contenido .contacto span.covid span {
       color: #E3B23C !important; }
+    header.masthead .contenido .contacto span.covid img {
+      /*height: 1.2rem;*/
+      width: 1.3rem;
+      height: auto;
+      vertical-align: middle; }
     header.masthead .contenido .contacto .whatsapp {
       color: #25D366; }
     header.masthead .contenido .contacto a {
@@ -8099,7 +8101,7 @@ header.masthead {
     header.masthead .principal img {
       width: 70%; }
   header.masthead .covid, header.masthead .whatsapp, header.masthead .email {
-    font-size: 85% !important;
+    font-size: 95% !important;
     padding-top: .15rem;
     padding-bottom: .15rem; } }
 @media (min-width: 992px) {

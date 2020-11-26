@@ -7,11 +7,11 @@ and open the template in the editor.
 // Styling for the masthead
 
 header.masthead {
-    
-     position: relative;
-    
+
+    position: relative;
+
     .contenido{
-               
+
         .contacto{
             width:100;
             /*padding: .5em .75em;*/
@@ -22,27 +22,31 @@ header.masthead {
             right: 0;
             left: 0;
             /*right: 50%;*/   
-            
-            img{
-                height: 1.2rem;
-                vertical-align: middle;
-            }
-            
+
+
+
             span{
                 color: $light;
                 opacity: 1;
             }
-            
+
             span.covid{
                 a, span{
                     color: $warning !important;
                 }                
+
+                img{
+                    /*height: 1.2rem;*/
+                    width: 1.3rem;
+                    height: auto;
+                    vertical-align: middle;
+                }
             }
-            
+
             .whatsapp{
                 color: $whatsapp;
             }
-            
+
             a{
                 text-decoration: none;
                 color: $light;
@@ -55,32 +59,32 @@ header.masthead {
     padding-bottom: calc(6rem - #{$navbar-height});
     // replace the masthead.jpg image in the /assets/img directory to change the image
     // if the image name change, make sure to update the url path below!
-/*    background: linear-gradient(
-            to bottom,
-            #{fade-out($dark, 0.2)} 0%,
-            #{fade-out($dark, 0.2)} 100%
-        ),
-        url("images/carousel/slide1.png");*/
-/*    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: cover;*/
+    /*    background: linear-gradient(
+                to bottom,
+                #{fade-out($dark, 0.2)} 0%,
+                #{fade-out($dark, 0.2)} 100%
+            ),
+            url("images/carousel/slide1.png");*/
+    /*    background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;*/
     h1 {
-/*        color: $primary;*/
+        /*        color: $primary;*/
         /*font-size: 1.75rem;*/
         /*text-transform:capitalize;*/
     }
-    
+
     hr{
         border-color: $light;
     }
-    
+
     @include media-breakpoint-up(lg) {
         height: 60vh;
         min-height: 40rem;
         padding-top: $navbar-height;
         padding-bottom: 0;
-        
+
         h1 {
             font-size: 2rem;
         }
