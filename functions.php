@@ -213,7 +213,8 @@ if (!function_exists('custom_logo_guttenberg')) {
 
 <?php
 add_action('wp_head', 'wpb_add_googleanalytics');
-function wpb_add_googleanalytics() { ?>
+function wpb_add_googleanalytics() {
+    ?>
  
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MD8X5GMEX0"></script>

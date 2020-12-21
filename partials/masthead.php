@@ -12,7 +12,7 @@
         <div class='container centrate principal'>
             <div class="row h-100 align-items-center justify-content-center">
                 <div class="col-12 offeset-lg-1 col-lg-3">
-                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/logo_stafe2l.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
+                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/logo-header.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
                 </div>
                 <div class="col-12 col-lg-7 px-lg-3 col-8 mt-4 mt-lg-0">                
                     <h1 class="text-light font-weight-bold">
