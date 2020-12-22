@@ -63,11 +63,11 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
             endif;
             ?> 
         </div>
-        <h2 class="h3 font-weight-bold mt-5">Aplicativos informaticos</h2>
+        <h2 class="h3 font-weight-bold mt-5">Aplicativos informáticos</h2>
 
         <section class="py-3">
             <h3 class="h4">
-                Sistema de Afiliados a la Caja(Si.Af.Ca) para Windows 32 bits
+                Sistema de Afiliados a la Caja (Si.Af.Ca) para Windows 32 bits
             </h3>
             <p>
                 Versión para Windows de 32 bits del sistema.
@@ -77,7 +77,7 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
                     Ver m&aacute;s
                 </a>
                 <a class="btn btn-outline-primary" href="<?php echo $link_siafca_instructivo; ?>" target="_blank">
-                    Descarga instructivo
+                    Descargar instructivo
                 </a>
             </p>
         </section>
@@ -98,7 +98,7 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
 
         <section class="py-3">
             <h3 class="h4">
-                Sistema de Afiliados a la Caja(Si.Af.Ca)
+                Sistema de Afiliados a la Caja (Si.Af.Ca)
             </h3>
             <p>
                 Versión con opción de liquidaciones complementarias para organismos desde el año 1996.
@@ -111,7 +111,7 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
         </section>
 
         <h2 class="h3 font-weight-bold mt-3">
-            Tramites online
+            Trámites online
         </h2>    
         <p>A continuación, podrá acceder a realizar los trámites on line:</p>
 
