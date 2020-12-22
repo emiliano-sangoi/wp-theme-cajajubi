@@ -49,15 +49,4 @@ $(document).ready(function () {
         offset: top
     });
 
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MD8X5GMEX0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MD8X5GMEX0');
-</script>
-
 });

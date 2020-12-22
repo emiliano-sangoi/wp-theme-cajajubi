@@ -14,6 +14,7 @@ get_header();
 $link_siafca = 'https://www.santafe.gov.ar/index.php/web/Estructura-de-Gobierno/Ministerios/Trabajo-y-Seguridad-Social/Secretaria-de-Trabajo-y-Seguridad-Social/Subsecretaria-de-Seguridad-Social/Direccion-Provincial-Caja-de-Jubilaciones-y-Pensiones/Temas-Especificos/Organismos-adheridos/Aplicativos2/Sistema-de-Afiliados-a-la-Caja-Si.Af.Ca-Version-con-opcion-de-liquidaciones-complementarias-para-organismos-desde-el-ano-1996';
 $link_siafca_w32 = 'https://www.santafe.gov.ar/index.php/web/Estructura-de-Gobierno/Ministerios/Trabajo-y-Seguridad-Social/Secretaria-de-Trabajo-y-Seguridad-Social/Subsecretaria-de-Seguridad-Social/Direccion-Provincial-Caja-de-Jubilaciones-y-Pensiones/Temas-Especificos/Organismos-adheridos/Aplicativos2/Sistema-de-Afiliados-a-la-Caja-Si.Af.Ca.-Version-Windows-32-bits';
 $link_siafca_act = 'https://www.santafe.gov.ar/index.php/web/Estructura-de-Gobierno/Ministerios/Trabajo-y-Seguridad-Social/Secretaria-de-Trabajo-y-Seguridad-Social/Subsecretaria-de-Seguridad-Social/Direccion-Provincial-Caja-de-Jubilaciones-y-Pensiones/Temas-Especificos/Organismos-adheridos/Aplicativos2/Actualizacion-Si.Af.Ca.-V-5.4-Sistema-de-Afiliados-a-la-Caja-W.32-bits-2020-2021';
+$link_siafca_instructivo = 'https://www.santafe.gob.ar/ms/cajajubilaciones/wp-content/uploads/sites/42/2020/12/Instructivo-instalacion-de-SiAfCa.pdf';
 
 //Tramites:
 $link_present_ddjj = 'https://www.santafe.gob.ar/index.php/tramites/modul1/index?m=descripcion&id=164812';
@@ -66,20 +67,6 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
 
         <section class="py-3">
             <h3 class="h4">
-                Sistema de Afiliados a la Caja(Si.Af.Ca)
-            </h3>
-            <p>
-                Versión con opción de liquidaciones complementarias para organismos desde el año 1996.
-            </p>
-            <p>
-                <a class="btn btn-outline-primary" href="<?php echo $link_siafca; ?>" target="_blank">
-                    Ver m&aacute;s
-                </a>
-            </p>
-        </section>
-
-        <section class="py-3">
-            <h3 class="h4">
                 Sistema de Afiliados a la Caja(Si.Af.Ca) para Windows 32 bits
             </h3>
             <p>
@@ -88,6 +75,9 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
             <p>
                 <a class="btn btn-outline-primary" href="<?php echo $link_siafca_w32; ?>" target="_blank">
                     Ver m&aacute;s
+                </a>
+                <a class="btn btn-outline-primary" href="<?php echo $link_siafca_instructivo; ?>" target="_blank">
+                    Descarga instructivo
                 </a>
             </p>
         </section>
@@ -106,6 +96,19 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
             </p>
         </section>          
 
+        <section class="py-3">
+            <h3 class="h4">
+                Sistema de Afiliados a la Caja(Si.Af.Ca)
+            </h3>
+            <p>
+                Versión con opción de liquidaciones complementarias para organismos desde el año 1996.
+            </p>
+            <p>
+                <a class="btn btn-outline-primary" href="<?php echo $link_siafca; ?>" target="_blank">
+                    Ver m&aacute;s
+                </a>
+            </p>
+        </section>
 
         <h2 class="h3 font-weight-bold mt-3">
             Tramites online
