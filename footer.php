@@ -6,9 +6,9 @@ wp_footer();
 <footer class="footer bg-light py-5">
     <div class="container py-4">
         <div class="row mx-0">
-            <div class="col-md-2 text-center">
-                <a href="https://www.santafe.gob.ar/" target="_blank">
-                    <img class="img-fluid w-75" src="<?php echo DIR_IMGS . '/logo-footer.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
+            <div class="col-md-2">
+                <a href="https://www.santafe.gob.ar/" target="_blank" class="centrate">
+                    <img class="img-fluid w-100" src="<?php echo DIR_IMGS . '/logo-footer.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
                 </a>
             </div>
             <div class="col-md-2 text-center mt-5 mt-lg-3">

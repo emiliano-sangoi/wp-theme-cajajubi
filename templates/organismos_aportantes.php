@@ -76,13 +76,16 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
                 <a class="btn btn-outline-primary" href="<?php echo $link_siafca_w32; ?>" target="_blank">
                     Ver m&aacute;s
                 </a>
+                <a class="btn btn-outline-primary" href="<?php echo $link_siafca_act; ?>" target="_blank">
+                    Actualizaci&oacute;n v5.4 2020-2021
+                </a>
                 <a class="btn btn-outline-primary" href="<?php echo $link_siafca_instructivo; ?>" target="_blank">
                     Descargar instructivo
                 </a>
             </p>
         </section>
 
-        <section class="py-3">
+<!--        <section class="py-3">
             <h3 class="h4">
                 Actualización Si.Af.Ca. V 5.4
             </h3>
@@ -90,11 +93,11 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
                 Actualización del sistema Si.Af.Ca. para Windows 32 bits (V&aacute;lida para 2020-2021).
             </p>
             <p>
-                <a class="btn btn-outline-primary" href="<?php echo $link_siafca_act; ?>" target="_blank">
+                <a class="btn btn-outline-primary" href="<?php //echo $link_siafca_act; ?>" target="_blank">
                     Ver m&aacute;s
                 </a>
             </p>
-        </section>          
+        </section>          -->
 
         <section class="py-3">
             <h3 class="h4">
