@@ -85,26 +85,12 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
             </p>
         </section>
 
-<!--        <section class="py-3">
-            <h3 class="h4">
-                Actualización Si.Af.Ca. V 5.4
-            </h3>
-            <p>
-                Actualización del sistema Si.Af.Ca. para Windows 32 bits (V&aacute;lida para 2020-2021).
-            </p>
-            <p>
-                <a class="btn btn-outline-primary" href="<?php //echo $link_siafca_act; ?>" target="_blank">
-                    Ver m&aacute;s
-                </a>
-            </p>
-        </section>          -->
-
         <section class="py-3">
             <h3 class="h4">
-                Sistema de Afiliados a la Caja (Si.Af.Ca)
+                Si.Af.Comp
             </h3>
             <p>
-                Versión con opción de liquidaciones complementarias para organismos desde el año 1996.
+                Aplicativo para presentaci&oacute;n de liquidaciones complementarias. Vigente desde el año 1996.
             </p>
             <p>
                 <a class="btn btn-outline-primary" href="<?php echo $link_siafca; ?>" target="_blank">
