@@ -4,7 +4,7 @@
     /*background-color: $rich-black;*/
     .nav-item > a{
         color: $primary;
-        /*font-weight: 300;*/
+        font-weight: 300 !important;
     }
     
     .navbar-brand{

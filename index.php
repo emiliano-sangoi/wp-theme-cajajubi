@@ -92,7 +92,7 @@ $pagina_prestaciones = get_page_by_path(PAGINA_PRESTACIONES);
 if ($pagina_prestaciones instanceof WP_Post && $pagina_prestaciones->post_status == 'publish'):
     ?>
     <section class="py-5 bg-primary text-light" id='prestaciones'>
-        <div class='container'>
+        <div class='container py-lg-5'>
             <h2 class="text-center font-weight-bold">
                 <?php echo $pagina_prestaciones->post_title; ?>
             </h2>
@@ -124,7 +124,7 @@ if ($pagina_prestaciones instanceof WP_Post && $pagina_prestaciones->post_status
         <div class='container-lg'>
             <h2 class="text-center font-weight-bold mt-3 mt-lg-4">Novedades</h2>
             <hr class="w-25 text-center border border-dark">
-            <div class="card-columns mt-4 mt-lg-5">
+            <div class="card-deck mt-4 mt-lg-5">
                 <?php foreach ($novedades as $post): ?>
                     <!--<div class="col-12 col-lg-4">-->
                     <?php

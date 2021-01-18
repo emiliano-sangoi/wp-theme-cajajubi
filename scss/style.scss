@@ -58,7 +58,6 @@ El problema surge por un bug del compilador al parecer:
 
 @import "mixins";
 @import "navbar";
-@import "carousel";
 @import "footer";
 @import "breadcrumb";
 @import "contacto";
@@ -214,4 +213,10 @@ body {
 	-webkit-animation-iteration-count:infinite;
 	-webkit-animation-timing-function:ease-in-out;
 	-webkit-animation-direction: alternate;
+}
+
+
+.card .card-img-top{
+        /*height: 28vh;*/
+    object-fit: cover;
 }

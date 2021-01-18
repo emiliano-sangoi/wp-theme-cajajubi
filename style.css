@@ -7917,7 +7917,7 @@ El problema surge por un bug del compilador al parecer:
   /*background-color: $rich-black;*/ }
   #navbar .nav-item > a {
     color: #00548f;
-    /*font-weight: 300;*/ }
+    font-weight: 300 !important; }
   #navbar .navbar-brand {
     /*color: $light !important;*/
     font-weight: bold;
@@ -7926,24 +7926,6 @@ El problema surge por un bug del compilador al parecer:
     /*word-break: break-all;*/ }
     #navbar .navbar-brand img {
       /*width: 38%;*/ }
-
-#carouselHome {
-  margin-top: 63px;
-  /*    .carousel-item{
-          filter: blur(5px);
-              
-              &:hover{
-                  filter: none;
-              }
-              
-          .carousel-caption{
-              filter: none !important;
-              
-          }
-      }*/ }
-  #carouselHome .carousel-caption {
-    /*           padding-top: 0;
-               padding-bottom: 0;*/ }
 
 /*
 Footer
@@ -8238,5 +8220,9 @@ body {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-direction: alternate; }
+
+.card .card-img-top {
+  /*height: 28vh;*/
+  object-fit: cover; }
 
 /*# sourceMappingURL=style.css.map */
