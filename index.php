@@ -40,17 +40,15 @@ get_template_part('partials/masthead');
                 include locate_template('partials/home-link.php');
                 ?>                
             </div>
-
             <div class="col-12 col-lg-4 py-2">
                 <?php
-                $link = getLinkPagina(PAGINA_LA_CAJA_EN_NUMEROS);
-                $blank = false;
-                //$img = DIR_IMGS . '/iconos/bar-chart.png';
-                $icon = 'fa-line-chart';
-                $titulo = 'La Caja en números';
+                $link = getLinkPagina(PAGINA_SERVICIOS);
+                //$img = DIR_IMGS . '/iconos/link.png';
+                $icon = 'fa-link';
+                $titulo = 'Servicios';
                 include locate_template('partials/home-link.php');
-                ?>                
-            </div>
+                ?>
+            </div>   
         </div>
 
         <div class="row mt-lg-3 mx-0">
@@ -76,13 +74,14 @@ get_template_part('partials/masthead');
             </div>
             <div class="col-12 col-lg-4 py-2">
                 <?php
-                $link = getLinkPagina(PAGINA_SITIOS_DE_INTERES);
-                //$img = DIR_IMGS . '/iconos/link.png';
-                $icon = 'fa-link';
-                $titulo = 'Enlaces de interés';
+                $link = getLinkPagina(PAGINA_LA_CAJA_EN_NUMEROS);
+                $blank = false;
+                //$img = DIR_IMGS . '/iconos/bar-chart.png';
+                $icon = 'fa-line-chart';
+                $titulo = 'La Caja en números';
                 include locate_template('partials/home-link.php');
-                ?>
-            </div>            
+                ?>                
+            </div>        
         </div>       
     </div>
 </section>

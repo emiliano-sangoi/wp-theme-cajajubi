@@ -68,54 +68,6 @@ if ($catN_id) {
         <div>
             <div id="accordion">
                 <div class="card">
-                    <div class="card-header" id="headingNormativas">
-                        <h5 class="mb-0">
-                            <a href='#' class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Normativas
-                            </a>
-                        </h5>
-                    </div>
-
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingNormativas" data-parent="#accordion">
-                        <div class="card-body">
-                            <?php if (isset($posts_normativas[0])): ?>  
-                            
-                            <?php foreach ($posts_normativas as $post): ?> 
-                                <?php if ($post->post_status !== 'publish'): continue; endif; ?>   
-                                <?php
-                                    $link = get_field('enlace', $post);
-                                ?>
-                                <p>
-                                    <a href="<?php echo $link; ?>" target="_blank" class="<?php echo $link ? '' : 'disabled' ?>">
-                                        <?php echo $post->post_title; ?>
-                                    </a>
-                                </p>
-                            
-                            <?php endforeach; ?>
-                            <?php else: ?>
-                                <p class="text-muted">No se cargado ninguna normativa o decreto.</p>
-                            <?php endif; ?>
-
-                            <?php
-                            //$i = 0;
-                            //foreach ($biblioteca['norm'] as $finfo):
-                                ?>
-<!--                                <p>
-                                    <a href="<?php //echo $biblioteca['url'] . $finfo->fname; ?>" target="_blank">
-                                        <?php
-                                        //echo $finfo->titulo;
-                                        //$i++;
-                                        ?>
-                                    </a>
-                                </p>-->
-                            <?php //endforeach; ?>
-                            <?php //if ($i === 0): ?>
-                                <!--<p class="text-muted">No se cargado ninguna normativa o decreto.</p>-->
-                            <?php //endif; ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
                     <div class="card-header" id="headingFormularios">
                         <h5 class="mb-0">
                             <a href='#' class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -205,6 +157,54 @@ if ($catN_id) {
                             <?php //endforeach; ?>
                             <?php //if ($i === 0): ?>
                                 <!--<p class="text-muted">No se cargado ning&uacute;n intructivo.</p>-->
+                            <?php //endif; ?>
+                        </div>
+                    </div>
+                </div>
+                                <div class="card">
+                    <div class="card-header" id="headingNormativas">
+                        <h5 class="mb-0">
+                            <a href='#' class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Normativas
+                            </a>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingNormativas" data-parent="#accordion">
+                        <div class="card-body">
+                            <?php if (isset($posts_normativas[0])): ?>  
+                            
+                            <?php foreach ($posts_normativas as $post): ?> 
+                                <?php if ($post->post_status !== 'publish'): continue; endif; ?>   
+                                <?php
+                                    $link = get_field('enlace', $post);
+                                ?>
+                                <p>
+                                    <a href="<?php echo $link; ?>" target="_blank" class="<?php echo $link ? '' : 'disabled' ?>">
+                                        <?php echo $post->post_title; ?>
+                                    </a>
+                                </p>
+                            
+                            <?php endforeach; ?>
+                            <?php else: ?>
+                                <p class="text-muted">No se cargado ninguna normativa o decreto.</p>
+                            <?php endif; ?>
+
+                            <?php
+                            //$i = 0;
+                            //foreach ($biblioteca['norm'] as $finfo):
+                                ?>
+<!--                                <p>
+                                    <a href="<?php //echo $biblioteca['url'] . $finfo->fname; ?>" target="_blank">
+                                        <?php
+                                        //echo $finfo->titulo;
+                                        //$i++;
+                                        ?>
+                                    </a>
+                                </p>-->
+                            <?php //endforeach; ?>
+                            <?php //if ($i === 0): ?>
+                                <!--<p class="text-muted">No se cargado ninguna normativa o decreto.</p>-->
                             <?php //endif; ?>
                         </div>
                     </div>

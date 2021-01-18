@@ -46,8 +46,8 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-servicios" href="<?php echo getLinkPagina(PAGINA_SERVICIOS); ?>">
-                    Servicios
+                <a class="nav-link nav-link-servicios" href="<?php echo getLinkPagina(PAGINA_SITIOS_DE_INTERES); ?>">
+                    Sitios de interés
                 </a>
             </li>
             <li class="nav-item">
