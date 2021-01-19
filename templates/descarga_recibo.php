@@ -69,22 +69,6 @@ $link_obtener_id_ciudadana = 'https://www.santafe.gob.ar/idciudadana/registro/';
     <br>
     <br>
 
-    <h4> Dudas y consultas </h4>
-    <div class="my-2 mb-3">
-        <h6 class="mb-12">
-            <i class="fa fa-envelope"></i>
-            Correo Electrónico
-        </h6>
-        <div class="">
-            <a class="email-conctacto" href="mailto:cmesadeayuda_recibosdigitales@santafe.gob.ar" target="_blank">
-                cmesadeayuda_recibosdigitales@santafe.gob.ar
-            </a>
-        </div>
-        <div class="">
-            (las respuestas serán recibidas dentro de las 48 horas posteriores al envío del correo electrónico).
-        </div>
-    </div>
-
 </div>
 
 <?php get_footer(); ?>
