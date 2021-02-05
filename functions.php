@@ -38,6 +38,7 @@ define('CATEGORIA_FORMULARIOS', 'formularios');
 define('CATEGORIA_INSTRUCTIVOS', 'instructivos');
 define('CATEGORIA_NORMATIVAS', 'normativas');
 define('CATEGORIA_ESTADISTICAS', 'estadisticas');
+define('CATEGORIA_CRONOGRAMA', 'cronograma');
 
 define('POST_CONTENT_MAX_LENGTH', 250);
 
@@ -106,17 +107,13 @@ add_filter('body_class', array('BsWp', 'add_slug_to_body_class'));
 
   ======================================================================================================================== */
 
-
-
-function getLinkPagina($slug){
-    $pagina = get_page_by_path( $slug );
-    if($pagina instanceof WP_Post){
-        return  get_permalink($pagina );
+function getLinkPagina($slug) {
+    $pagina = get_page_by_path($slug);
+    if ($pagina instanceof WP_Post) {
+        return get_permalink($pagina);
     }
     return null;
 }
-
-
 
 /* ========================================================================================================================
 
@@ -208,25 +205,28 @@ if (!function_exists('custom_logo_guttenberg')) {
     }
 
 }
-
 ?>
 
 <?php
 add_action('wp_head', 'wpb_add_googleanalytics');
+
 function wpb_add_googleanalytics() {
     ?>
- 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MD8X5GMEX0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-MD8X5GMEX0');
-</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MD8X5GMEX0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-<?php }
+        gtag('config', 'G-MD8X5GMEX0');
+    </script>
+
+    <?php
+}
 
 /* ========================================================================================================================
 
@@ -282,16 +282,15 @@ if (!function_exists('bootstrap_comment')) {
         //css:
         //=========================================================================================================================
         //bootstrap:
-       // wp_register_style('bootstrap', $template_dir . '/node_modules/bootstrap/dist/css/bootstrap.min.css', array(), null, 'all');
-       // wp_enqueue_style('bootstrap');                
-
+        // wp_register_style('bootstrap', $template_dir . '/node_modules/bootstrap/dist/css/bootstrap.min.css', array(), null, 'all');
+        // wp_enqueue_style('bootstrap');                
         //font-awesome
         wp_register_style('font_awesome', $template_dir . '/node_modules/font-awesome/css/font-awesome.css', array(), null);
-        wp_enqueue_style('font_awesome');       
+        wp_enqueue_style('font_awesome');
 
         wp_register_style('barfiller', $template_dir . '/css/barfiller.css', array(), null);
         wp_enqueue_style('barfiller');
-        
+
         //elegant icons
         wp_register_style('elegant_icons', $template_dir . '/css/elegant-icons.css', array(), null);
         wp_enqueue_style('elegant_icons');
@@ -299,34 +298,29 @@ if (!function_exists('bootstrap_comment')) {
         //style:
 //        wp_register_style('nice_select', $template_dir . '/style.css', array(), null);
 //        wp_enqueue_style('nice_select');
-
         //slicknav
 //        wp_register_style('slicknav', $template_dir . '/node_modules/slicknav/dist/slicknav.min.css', array(), null);
 //        wp_enqueue_style('slicknav');
-
         //owl carousel
         //https://github.com/OwlCarousel2/OwlCarousel2
 //        wp_register_style('owl_carousel', $template_dir . '/node_modules/owl.carousel/dist/assets/owl.carousel.min.css', array(), null);
 //        wp_enqueue_style('owl_carousel');
-
         //nice select        
         //https://www.npmjs.com/package/jquery-nice-select
 //        wp_register_style('nice_select', $template_dir . 'node_modules/jquery-nice-select/css/nice-select.css', array(), null);
 //        wp_enqueue_style('nice_select');                
-
         //jssocials:
         wp_register_style('jssocials_css', $template_dir . '/node_modules/jssocials/dist/jssocials.css', array('font_awesome'), null);
         wp_enqueue_style('jssocials_css');
 
         wp_register_style('jssocials-css-theme-flat', $template_dir . '/node_modules/jssocials/dist/jssocials-theme-flat.css', array('font_awesome', 'jssocials_css'), null);
         wp_enqueue_style('jssocials-css-theme-flat');
-                
+
 //        $link_gf = 'https://fonts.googleapis.com/css2?family=Montserrat+Sans:wght@400;500;700&display=swap';
 //        wp_enqueue_style( 'wpb-google-fonts', $link_gf, false );
-
         //style:
         wp_register_style('custom_style', $template_dir . '/style.css', array(
-          //  'bootstrap',
+            //  'bootstrap',
             'font_awesome',
 //            'barfiller',
             'elegant_icons',
@@ -334,13 +328,13 @@ if (!function_exists('bootstrap_comment')) {
 //            'slicknav',
 //            'owl_carousel',
             'jssocials_css',
-            'jssocials-css-theme-flat'            
-        ), null);
+            'jssocials-css-theme-flat'
+                ), null);
         wp_enqueue_style('custom_style');
 
         //js
         // --------------------------------------------------------------------------------------------
-        
+
         wp_deregister_script('jquery');
 
         wp_register_script('jquery_v3', $template_dir . '/node_modules/jquery/dist/jquery.min.js', array(), '3.5.1', true);
@@ -356,7 +350,7 @@ if (!function_exists('bootstrap_comment')) {
         //jssocials:
         wp_register_script('jssocials_js', $template_dir . '/node_modules/jssocials/dist/jssocials.js', array('jquery_v3'), null, true);
         wp_enqueue_script('jssocials_js');
-        
+
         //jquery.parallax.js
         wp_register_script('parallax_js', $template_dir . '/node_modules/jquery-parallax.js/parallax.min.js', array('jquery_v3'), null, true);
         wp_enqueue_script('parallax_js');
@@ -365,21 +359,30 @@ if (!function_exists('bootstrap_comment')) {
         wp_register_script('jquery_easing', $template_dir . '/node_modules/jquery.easing/jquery.easing.min.js', array('jquery_v3', 'popper'), null, true);
         wp_enqueue_script('jquery_easing');
 
+        //bootbox
+        wp_register_script('bootbox', $template_dir . '/node_modules/bootbox/dist/bootbox.min.js', array('bootstrap'), null, true);
+        wp_enqueue_script('bootbox');
+
+        //bootbox localers
+        wp_register_script('bootbox_locales', $template_dir . '/node_modules/bootbox/dist/bootbox.locales.min.js', array('bootbox'), null, true);
+        wp_enqueue_script('bootbox_locales');
+
         wp_register_script('site', $template_dir . '/js/site.js', array(
             'jquery_v3',
             'jquery_easing',
             'bootstrap',
-        ), false, true);
+            'bootbox',
+            'bootbox_locales',
+                ), false, true);
         wp_enqueue_script('site');
     }
 
-    remove_filter ('the_content', 'wpautop');
-    
-    
-    function getInfoContacto(){
+    remove_filter('the_content', 'wpautop');
+
+    function getInfoContacto() {
         $resultado = array();
-        
-        $f = function($titulo, $dir, $tel, $fax, $mostrar_turno_web = false, $whatsapp = null ){
+
+        $f = function($titulo, $dir, $tel, $fax, $mostrar_turno_web = false, $whatsapp = null) {
             return array(
                 'titulo' => $titulo,
                 'direccion' => $dir,
@@ -389,92 +392,122 @@ if (!function_exists('bootstrap_comment')) {
                 'whatsapp' => $whatsapp,
             );
         };
-        
+
         $resultado[] = $f('Santa Fe', '1º Junta 2724 (S3000CDH)', '0800 - 444 - 3734', null, true, '342 5 128 800');
-        $resultado[] = $f('Rosario', 'Brown 2262 (S2000JCB)','54 + 341 - 4724561, 4724562, 4724563','Interno 109', true, false);
-        $resultado[] = $f('Venado Tuerto', 'Mitre 766 (S2600IRP)','54 + 3462 422289',null, true, false);       
-        $resultado[] = $f('San Justo', 'Nicolás Figueredo 2637 (S3040CDM)','54 + 3498 425531',null, true, false);
-        $resultado[] = $f('Rafaela', 'Bv. Lehmann 583 (S2300ICB)','Teléfonos/Fax: 54 + 3492 - 423091',null, true, false);
-        $resultado[] = $f('Reconquista', 'Rivadavia 666 (S3560GUU)',null, null, true, false);
-        $resultado[] = $f('Buenos Aires', '25 de mayo 178, Entrepiso (C1002ABD)', '54 + 11 43311808','54 + 11 43311622', true, false);
-        
+        $resultado[] = $f('Rosario', 'Brown 2262 (S2000JCB)', '54 + 341 - 4724561, 4724562, 4724563', 'Interno 109', true, false);
+        $resultado[] = $f('Venado Tuerto', 'Mitre 766 (S2600IRP)', '54 + 3462 422289', null, true, false);
+        $resultado[] = $f('San Justo', 'Nicolás Figueredo 2637 (S3040CDM)', '54 + 3498 425531', null, true, false);
+        $resultado[] = $f('Rafaela', 'Bv. Lehmann 583 (S2300ICB)', 'Teléfonos/Fax: 54 + 3492 - 423091', null, true, false);
+        $resultado[] = $f('Reconquista', 'Rivadavia 666 (S3560GUU)', null, null, true, false);
+        $resultado[] = $f('Buenos Aires', '25 de mayo 178, Entrepiso (C1002ABD)', '54 + 11 43311808', '54 + 11 43311622', true, false);
+
         return $resultado;
     }
-    
-    function getArchivosBiblioteca(){
+
+    function getArchivosBiblioteca() {
         $biblioteca = array(
             'inst' => array(),
             'form' => array(),
             'norm' => array(),
         );
-        
+
         $upload_info = wp_upload_dir();
-        
-        if(!isset($upload_info['path'])){
+
+        if (!isset($upload_info['path'])) {
             return false;
         }
-        
+
         $upload_dir = $upload_info['path'];
-        
+
         $archivos = scandir($upload_dir);
-        foreach ($archivos as $archivo){
-            if(is_dir($upload_dir . DIRECTORY_SEPARATOR . $archivo)){
+        foreach ($archivos as $archivo) {
+            if (is_dir($upload_dir . DIRECTORY_SEPARATOR . $archivo)) {
                 continue;
             }
-            
-            $o = new stdClass();            
-            
-            if( strpos($archivo, 'FORM_', 0) !== false ){
-                $o->fname = $archivo;  
+
+            $o = new stdClass();
+
+            if (strpos($archivo, 'FORM_', 0) !== false) {
+                $o->fname = $archivo;
                 $o->titulo = str_replace(array('_', '.pdf'), ' ', substr($archivo, 5));
-                $biblioteca['form'][] = $o;                
-            }else if( strpos($archivo, 'NORM_', 0) !== false ){
-                $o->fname = $archivo;       
+                $biblioteca['form'][] = $o;
+            } else if (strpos($archivo, 'NORM_', 0) !== false) {
+                $o->fname = $archivo;
                 $o->titulo = str_replace(array('_', '.pdf'), ' ', substr($archivo, 5));
                 $biblioteca['norm'][] = $o;
-            } else if( strpos($archivo, 'INST_', 0) !== false ){
-                $o->fname = $archivo;     
+            } else if (strpos($archivo, 'INST_', 0) !== false) {
+                $o->fname = $archivo;
                 $o->titulo = str_replace(array('_', '.pdf'), ' ', substr($archivo, 5));
                 $biblioteca['inst'][] = $o;
             }
         }
-        
+
         $biblioteca['url'] = $upload_info['url'] . DIRECTORY_SEPARATOR;
 
         return $biblioteca;
     }
 
-    function getArchivosLaCajaEnNumeros(){
+    function getArchivosLaCajaEnNumeros() {
         $laCajaEnNumeros = array(
             'meses' => array(),
         );
-        
+
         $upload_info = wp_upload_dir();
-        
-        if(!isset($upload_info['path'])){
+
+        if (!isset($upload_info['path'])) {
             return false;
         }
-        
+
         $upload_dir = $upload_info['path'];
-        
+
         $archivos = scandir($upload_dir);
-        foreach ($archivos as $archivo){
-            if(is_dir($upload_dir . DIRECTORY_SEPARATOR . $archivo)){
+        foreach ($archivos as $archivo) {
+            if (is_dir($upload_dir . DIRECTORY_SEPARATOR . $archivo)) {
                 continue;
             }
-            
-            $o = new stdClass();            
-            
-            if( strpos($archivo, 'NUMEROS_', 0) !== false ){
-                $o->fname = $archivo;  
+
+            $o = new stdClass();
+
+            if (strpos($archivo, 'NUMEROS_', 0) !== false) {
+                $o->fname = $archivo;
                 $o->titulo = str_replace(array('_', '.pdf'), ' ', substr($archivo, 8));
-                $laCajaEnNumeros['meses'][] = $o;                
+                $laCajaEnNumeros['meses'][] = $o;
             }
         }
-        
+
         $laCajaEnNumeros['url'] = $upload_info['url'] . DIRECTORY_SEPARATOR;
 
         return $laCajaEnNumeros;
     }
 
-?>
+    /**
+     * Devuelve el cronograma de pago
+     * 
+     * Si existen varios posts cargados con esa categoria solo devuelve el primero solo devuelve el primero que encuentra.
+     * 
+     * @return type
+     */
+    function getCronogramaDePago() {
+
+        $cronograma = array(
+            'title' => 'Cronograma de pagos',
+            'mostrar' => false,
+            'imagen' => null
+        );
+
+        $id_cat = get_cat_ID(CATEGORIA_CRONOGRAMA);
+        if ($id_cat) {
+            $args = array('category' => $id_cat, 'posts_per_page' => 1);
+            $aux = get_posts($args);
+            if (isset($aux[0])) {
+                $post = $aux[0];
+
+                $cronograma['title'] = $post->post_title;
+                $cronograma['imagen'] = get_field('imagen', $post);
+                $cronograma['mostrar'] = get_field('mostrar', $post);                
+            }
+        }
+
+        return $cronograma;
+    }
+    ?>

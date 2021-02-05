@@ -19,9 +19,20 @@ $(document).ready(function () {
         }, "1000");
         return false;
     });
-    
-    
-    
+
+
+    $(".btn-crono-pago").click(function (event) {
+        event.preventDefault();
+
+        openModalCronograma();
+    });
+
+    var mostrar = $('#modal-cronograma').data('mostrar');
+    console.log(mostrar);
+    if(mostrar){
+        openModalCronograma();
+    }
+
     // ===========================================================================================    
     // Smooth scrolling using jQuery easing
     var top = 75;
@@ -50,3 +61,25 @@ $(document).ready(function () {
     });
 
 });
+
+
+function openModalCronograma() {
+
+    var modal_html = $('#modal-cronograma').clone();
+    modal_html.removeClass('d-none');
+    console.log(modal_html);
+    // event.preventDefault();
+
+    bootbox.alert({
+        title: 'Cronograma de pago',
+        message: modal_html.html(),
+        backdrop: true,
+        buttons: {
+            ok: {
+                label: 'Cerrar',
+                className: 'btn-outline-secondary',
+            }
+        }
+    });
+
+}

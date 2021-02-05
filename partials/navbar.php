@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" id="navbar">    
+<nav class="navbar navbar-expand-lg fixeds-top navbar-light bg-light" id="navbar">    
     <span class="navbar-brand">        
         <a class="pl-2 pr-3 d-none d-sm-inline-block" href="https://www.santafe.gob.ar" target="_blank">        
             <img class="img-fluid w-100" src="https://www.santafe.gob.ar/assets/standard/images/gob-santafe.png" alt="Gobierno de Santa Fe">

@@ -5,7 +5,7 @@ $titulo = $subtitulo = $link = $icon = '';
 $link_calendario_pago = 'http://www.santafe.gov.ar/index.php/web/content/view/full/128047';
 $link_solicitud_turno = 'http://turnos.santafe.gov.ar/turnos/web/frontend.php';
 
-//get_template_part('partials/carousel');
+$cronograma = getCronogramaDePago();
 
 $novedades = null;
 $id_cat = get_cat_ID(CATEGORIA_NOVEDADES);
@@ -27,7 +27,10 @@ get_template_part('partials/masthead');
                 //$img = DIR_IMGS . '/iconos/calendar.png';
                 $icon = 'fa-calendar';
                 $titulo = 'Cronograma de pagos';
+                $css = 'btn-crono-pago';
                 include locate_template('partials/home-link.php');
+                
+                unset($css);
                 ?>                
             </div>  
             <div class="col-12 col-lg-4 py-2">
@@ -37,6 +40,7 @@ get_template_part('partials/masthead');
                 //$img = DIR_IMGS . '/iconos/clock.png';
                 $icon = 'fa-clock-o';
                 $titulo = 'Solicitud de turnos';
+                $css = '';
                 include locate_template('partials/home-link.php');
                 ?>                
             </div>
@@ -45,7 +49,7 @@ get_template_part('partials/masthead');
                 $link = getLinkPagina(PAGINA_SERVICIOS);
                 //$img = DIR_IMGS . '/iconos/link.png';
                 $icon = 'fa-link';
-                $titulo = 'Servicios';
+                $titulo = 'Servicios';                
                 include locate_template('partials/home-link.php');
                 ?>
             </div>   
@@ -57,7 +61,7 @@ get_template_part('partials/masthead');
                 $link = getLinkPagina(PAGINA_BIBLIOTECA);
                 $img = DIR_IMGS . '/iconos/digital-library.png';
                 $icon = 'dfdf';
-                $titulo = 'Biblioteca digital';
+                $titulo = 'Biblioteca digital';                
                 include locate_template('partials/home-link.php');
                 ?>   
             </div>
@@ -67,7 +71,7 @@ get_template_part('partials/masthead');
                 $img = DIR_IMGS . '/iconos/salary.png';
                 $link = getLinkPagina(PAGINA_DESCARGA_RECIBO);
                 $icon = 'fa-money';
-                $titulo = 'Descarga tu recibo';
+                $titulo = 'Descarga tu recibo';                
                 include locate_template('partials/home-link.php');
                 unset($img);
                 ?>
@@ -78,7 +82,7 @@ get_template_part('partials/masthead');
                 $blank = false;
                 //$img = DIR_IMGS . '/iconos/bar-chart.png';
                 $icon = 'fa-line-chart';
-                $titulo = 'La Caja en números';
+                $titulo = 'La Caja en números';                
                 include locate_template('partials/home-link.php');
                 ?>                
             </div>        
@@ -141,5 +145,11 @@ if ($pagina_prestaciones instanceof WP_Post && $pagina_prestaciones->post_status
         </div>
     </section>
 <?php endif; ?>
+
+<!--======================================================================================-->
+<!--MODALS-->
+<div class='d-none' id='modal-cronograma' data-mostrar="<?php echo $cronograma['mostrar'] ? '1' : '0'; ?>">
+    <img src="<?php echo $cronograma['imagen']; ?>" class="img-fluid w-100" alt='Cronograma de pagos'/>
+</div>
 
 <?php get_footer(); ?>
