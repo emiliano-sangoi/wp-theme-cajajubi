@@ -23,7 +23,7 @@
         <?php wp_head(); ?>
 
     </head>
-    <body <?php body_class(); ?>>
+    <body <?php body_class('gradiente-portrait'); ?>>
 
 <!-- Header Section Begin -->
 <?php get_template_part("partials/navbar");  ?>

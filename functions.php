@@ -29,6 +29,8 @@ define('PAGINA_INSTRUCTIVOS', 'instructivos');
 
 //Categorías
 define('CATEGORIA_NOVEDADES', 'novedades');
+define('CATEGORIA_NOVEDADES_DESTACADAS', 'novedades-destacadas');
+define('CATEGORIA_NOVEDADES_SECUNDARIAS', 'novedades-secundarias');
 define('CATEGORIA_SERVICIOS', 'servicios');
 define('CATEGORIA_AUTORIDADES', 'autoridades');
 define('CATEGORIA_DIRECTOR', 'director');
@@ -504,10 +506,36 @@ if (!function_exists('bootstrap_comment')) {
 
                 $cronograma['title'] = $post->post_title;
                 $cronograma['imagen'] = get_field('imagen', $post);
-                $cronograma['mostrar'] = get_field('mostrar', $post);                
+                $cronograma['mostrar'] = get_field('mostrar', $post);
             }
         }
 
         return $cronograma;
+    }
+
+    /**
+     * Devuelve un array de los posts por categoria
+     * 
+     * @param string $cat_slug
+     * @param int $posts_per_page
+     * @return array
+     */
+    function getPostsPorCateg($cat_slug, $posts_per_page = -1) {
+
+        $result = array();        
+        $oCategoria = get_category_by_slug($cat_slug);
+       // $id_cat = 18;
+        
+        if ($oCategoria instanceof WP_Term) {
+            $id_cat = $oCategoria->term_id;
+            //var_dump($id_cat);exit;
+            $args = array(
+                'category' => $id_cat,
+                'posts_per_page' => $posts_per_page
+            );
+            $result = get_posts($args);
+        }
+
+        return $result;
     }
     ?>

@@ -8077,6 +8077,96 @@ header.masthead {
     header.masthead h1 {
       font-size: 3rem; } }
 
+/*
+Extraidos de:
+https://uigradients.com/
+*/
+.gradiente-grade-grey {
+  background: #bdc3c7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.gradiente-sirius-tamed {
+  background: #EFEFBB;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D4D3DD, #EFEFBB);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.gradiente-moor {
+  background: #616161;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #9bc5c3, #616161);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #9bc5c3, #616161);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.gradiente-vasily {
+  background: #e9d362;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #333333, #e9d362);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #333333, #e9d362);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.gradiente-moonrise {
+  background: #DAE2F8;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D6A4A4, #DAE2F8);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.gradiente-venice-blue {
+  background: #085078;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #85D8CE, #085078);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #85D8CE, #085078);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.gradiente-zinc {
+  background: #ADA996;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.gradiente-portrait {
+  background: #8e9eab;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+#slider-novedades .b-0 {
+  bottom: 0; }
+#slider-novedades .bg-shadow {
+  background: rgba(76, 76, 76, 0);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179, 171, 171, 0)), color-stop(49%, rgba(48, 48, 48, 0.37)), color-stop(100%, rgba(19, 19, 19, 0.8)));
+  background: linear-gradient(to bottom, rgba(179, 171, 171, 0) 0%, rgba(48, 48, 48, 0.71) 49%, rgba(19, 19, 19, 0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 ); }
+#slider-novedades .top-indicator {
+  right: 0;
+  top: 1rem;
+  bottom: inherit;
+  left: inherit;
+  margin-right: 1rem; }
+#slider-novedades .overflow {
+  position: relative;
+  overflow: hidden; }
+#slider-novedades .zoom img {
+  transition: all 0.2s linear; }
+#slider-novedades .zoom:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
+
 @media (max-width: 991px) {
   header.masthead .principal {
     text-align: center; }
@@ -8175,6 +8265,9 @@ body {
 .w-10 {
   width: 10%; }
 
+.w-8 {
+  width: 8%; }
+
 .w-5 {
   width: 5%; }
 
@@ -8203,6 +8296,12 @@ body {
   font-size: 2em;
   color: #EFEFEF !important; }
 
+.bg-whatsapp {
+  background-color: #25D366; }
+
+/*.bg-whatsapp{
+    background-color: $whatsapp;
+}*/
 /*==========================================================================*/
 /*Parpadeo de texto*/
 /* Blink for Webkit and others
