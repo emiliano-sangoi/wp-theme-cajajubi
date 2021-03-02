@@ -92,8 +92,8 @@ Definir la ruta relativa en relacion al archivo style.css que esta un directorio
   --color-indigo: #6610f2;
   /*--purple: #6f42c1;*/
   --color-purple: #6f42c1;
-  /*--pink: #e83e8c;*/
-  --color-pink: #e83e8c;
+  /*--pink: #f891a5;*/
+  --color-pink: #f891a5;
   /*--red: #dc3545;*/
   --color-red: #dc3545;
   /*--orange: #fd7e14;*/
@@ -511,7 +511,7 @@ mark,
 
 code {
   font-size: 87.5%;
-  color: #e83e8c;
+  color: #f891a5;
   word-wrap: break-word; }
   a > code {
     color: inherit; }
@@ -7917,7 +7917,9 @@ El problema surge por un bug del compilador al parecer:
   /*background-color: $rich-black;*/ }
   #navbar .nav-item > a {
     color: #00548f;
-    font-weight: 300 !important; }
+    text-transform: uppercase;
+    font-size: 130%;
+    /*        font-weight: 300 !important;*/ }
   #navbar .navbar-brand {
     /*color: $light !important;*/
     font-weight: bold;
@@ -8142,7 +8144,7 @@ https://uigradients.com/
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  background: linear-gradient(127deg, #eef2f3, #8e9eab);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 #slider-novedades .b-0 {
@@ -8158,14 +8160,77 @@ https://uigradients.com/
   bottom: inherit;
   left: inherit;
   margin-right: 1rem; }
-#slider-novedades .overflow {
+#slider-novedades a {
+  text-decoration: none; }
+
+.overflow {
   position: relative;
   overflow: hidden; }
-#slider-novedades .zoom img {
+
+.zoom img, .zoom i.fa {
   transition: all 0.2s linear; }
-#slider-novedades .zoom:hover img {
+.zoom:hover img, .zoom:hover i.fa {
   -webkit-transform: scale(1.1);
   transform: scale(1.1); }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 26 feb. 2021, 11:00:49
+    Author     : esangoi
+*/
+.btn-pink {
+  color: #212529;
+  background-color: #f891a5;
+  border-color: #f891a5;
+  /*color: #fff;*/ }
+  .btn-pink:hover {
+    color: #212529;
+    background-color: #f66d88;
+    border-color: #f5617e; }
+  .btn-pink:focus, .btn-pink.focus {
+    color: #212529;
+    background-color: #f66d88;
+    border-color: #f5617e;
+    box-shadow: 0 0 0 0.2rem rgba(216, 129, 146, 0.5); }
+  .btn-pink.disabled, .btn-pink:disabled {
+    color: #212529;
+    background-color: #f891a5;
+    border-color: #f891a5; }
+  .btn-pink:not(:disabled):not(.disabled):active, .btn-pink:not(:disabled):not(.disabled).active, .show > .btn-pink.dropdown-toggle {
+    color: #fff;
+    background-color: #f5617e;
+    border-color: #f45574; }
+    .btn-pink:not(:disabled):not(.disabled):active:focus, .btn-pink:not(:disabled):not(.disabled).active:focus, .show > .btn-pink.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(216, 129, 146, 0.5); }
+
+.btn-whatsapp {
+  color: #fff;
+  background-color: #25D366;
+  border-color: #25D366;
+  /*color: #fff;*/ }
+  .btn-whatsapp:hover {
+    color: #fff;
+    background-color: #1fb256;
+    border-color: #1da851; }
+  .btn-whatsapp:focus, .btn-whatsapp.focus {
+    color: #fff;
+    background-color: #1fb256;
+    border-color: #1da851;
+    box-shadow: 0 0 0 0.2rem rgba(70, 218, 125, 0.5); }
+  .btn-whatsapp.disabled, .btn-whatsapp:disabled {
+    color: #fff;
+    background-color: #25D366;
+    border-color: #25D366; }
+  .btn-whatsapp:not(:disabled):not(.disabled):active, .btn-whatsapp:not(:disabled):not(.disabled).active, .show > .btn-whatsapp.dropdown-toggle {
+    color: #fff;
+    background-color: #1da851;
+    border-color: #1b9d4c; }
+    .btn-whatsapp:not(:disabled):not(.disabled):active:focus, .btn-whatsapp:not(:disabled):not(.disabled).active:focus, .show > .btn-whatsapp.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(70, 218, 125, 0.5); }
 
 @media (max-width: 991px) {
   header.masthead .principal {
@@ -8239,7 +8304,7 @@ body {
     background-color: #00365c; }
 
 #novedades-home {
-  background-color: #D3D4D9; }
+  /*background-color: $light-gray;*/ }
 
 .w-95 {
   width: 95%; }
@@ -8299,9 +8364,12 @@ body {
 .bg-whatsapp {
   background-color: #25D366; }
 
-/*.bg-whatsapp{
-    background-color: $whatsapp;
-}*/
+.box-shadow {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25); }
+
+.object-fit-cover {
+  object-fit: cover; }
+
 /*==========================================================================*/
 /*Parpadeo de texto*/
 /* Blink for Webkit and others

@@ -12,7 +12,7 @@ get_header();
 
 $posts = null;
 $id_cat = get_cat_ID(CATEGORIA_NOVEDADES);
-if($id_cat){
+if ($id_cat) {
     $args = array('category' => $id_cat, 'posts_per_page' => -1);
     $posts = get_posts($args);
 }
@@ -43,32 +43,40 @@ if($id_cat){
     </h1>
     <hr/>
     <div>
-        <?php 
-            if (!empty($pagina->post_content)):
-                echo $pagina->post_content;
-            endif;
+        <?php
+        if (!empty($pagina->post_content)):
+            echo $pagina->post_content;
+        endif;
         ?>        
     </div>
 
     <div class="mt-4">
-    <?php if (isset($posts[0])): ?>    
-        <div class='card-columns mb-4'>
-            <?php foreach ($posts as $post){
-                 if ($post->post_status !== 'publish'){
-                     continue;
-                 }
-                 include locate_template('partials/novedad.php');                
-            }
-            ?> 
+        <?php if (isset($posts[0])): ?>    
+            <div class='mb-4'>
+                <?php
+                    foreach ($posts as $post):
+                        if ($post->post_status !== 'publish') {
+                            continue;
+                        }                  
+                ?>
+                <div class="mb-3 mb-lg-4">
+                <?php
+                      include locate_template('partials/novedad.php');
+                ?>
+                </div>
                 
+                <?php
+                    endforeach;
+                ?> 
 
-        </div>
-    <?php else: ?>
-    <div class="alert alert-info">
-        No existen novedades para mostrar.
+
+            </div>
+        <?php else: ?>
+            <div class="alert alert-info">
+                No existen novedades para mostrar.
+            </div>
+        <?php endif; ?>
     </div>
-    <?php endif; ?>
-</div>
 </div>
 
 <?php get_footer(); ?>

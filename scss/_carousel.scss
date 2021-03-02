@@ -1,5 +1,5 @@
 #slider-novedades{
-    
+
     .b-0 {
         bottom: 0;
     }
@@ -16,16 +16,28 @@
         left: inherit;
         margin-right: 1rem;
     }
-    .overflow {
-        position: relative;
-        overflow: hidden;
-    }
-    .zoom img {
-        transition: all 0.2s linear;
-    }
-    .zoom:hover img {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
+
+    a{
+        text-decoration: none;
     }
 
+
+}
+
+.overflow {
+    position: relative;
+    overflow: hidden;
+}
+
+.zoom {
+    img, i.fa {
+        transition: all 0.2s linear;
+    }
+
+    &:hover{
+        img, i.fa {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
 }

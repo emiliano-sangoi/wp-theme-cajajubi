@@ -3,7 +3,7 @@
         <a class="pl-2 pr-3 d-none d-sm-inline-block" href="https://www.santafe.gob.ar" target="_blank">        
             <img class="img-fluid w-100" src="https://www.santafe.gob.ar/assets/standard/images/gob-santafe.png" alt="Gobierno de Santa Fe">
         </a>
-        <a class="" href="<?php echo home_url(); ?>">        
+        <a class="" href="<?php //echo home_url(); ?>">        
             <span class="d-inline-block align-middle">CAJA DE JUBILACIONES<br/> Y PENSIONES</span>
         </a>
     </span>
@@ -68,10 +68,10 @@
                     <a class="dropdown-item" href="https://www.anses.gob.ar/informacion/mi-anses" target="_blank">
                          Mi Anses
                     </a>
-                    <a class="dropdown-item" href="<?php echo getLinkPagina(PAGINA_BIBLIOTECA); ?>" target="_blank">
+                    <a class="dropdown-item" href="<?php echo getLinkPagina(PAGINA_BIBLIOTECA); ?>">
                         Biblioteca digital
                     </a>
-                    <a class="dropdown-item" href="<?php echo getLinkPagina(PAGINA_SITIOS_DE_INTERES); ?>" target="_blank">
+                    <a class="dropdown-item" href="<?php echo getLinkPagina(PAGINA_SITIOS_DE_INTERES); ?>">
                         Sitios de interés
                     </a>
                     

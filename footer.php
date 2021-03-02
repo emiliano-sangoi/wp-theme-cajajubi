@@ -70,6 +70,8 @@ wp_footer();
     </div>
 </footer>
 
+</div><!-- Cierre de <div class=container> (header.php -->
+
 <div class='to_top_button p-2 rounded'>
     <i class="fa fa-arrow-up"></i>    
 </div>

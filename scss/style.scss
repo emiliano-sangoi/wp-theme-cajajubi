@@ -63,7 +63,8 @@ El problema surge por un bug del compilador al parecer:
 @import "contacto";
 @import "masthead";
 @import "gradientes";
-@import "slider-novedades";
+@import "carousel";
+@import "buttons";
 @import "media";
 
 html,
@@ -156,7 +157,7 @@ body {
 }
 
 #novedades-home{
-    background-color: $light-gray;
+    /*background-color: $light-gray;*/
 }
 
 
@@ -202,9 +203,13 @@ body {
     background-color: $whatsapp;
 }
 
-/*.bg-whatsapp{
-    background-color: $whatsapp;
-}*/
+.box-shadow{
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .25);
+}
+
+.object-fit-cover{
+    object-fit: cover;
+}
 
 /*==========================================================================*/
 /*Parpadeo de texto*/
