@@ -61,7 +61,8 @@ El problema surge por un bug del compilador al parecer:
 @import "footer";
 @import "breadcrumb";
 @import "contacto";
-@import "masthead";
+/*@import "masthead";*/
+@import "header";
 @import "gradientes";
 @import "carousel";
 @import "buttons";
@@ -163,6 +164,7 @@ body {
 
 .w-95{ width: 95%; }
 .w-90{ width: 90%; }
+.w-80{ width: 80%; }
 .w-40{ width: 40%; }
 .w-35{ width: 35%; }
 .w-30{ width: 30%; }

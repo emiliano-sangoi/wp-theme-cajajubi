@@ -24,7 +24,7 @@
 
     </head>
     <body <?php body_class('gradiente-portrait'); ?> >
-        <div class="container bg-white px-0">
+        <div class="container-fluid container-lg bg-white px-0">
 
 <!-- Header Section Begin -->
 <?php get_template_part("partials/navbar");  ?>

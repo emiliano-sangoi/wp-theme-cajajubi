@@ -8015,70 +8015,7 @@ footer {
   #contacto .social-media img {
     width: 11%; }
 
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-header.masthead {
-  position: relative;
-  height: 100vh;
-  padding-top: 6rem;
-  padding-bottom: calc(6rem - 63px);
-  /*    background: linear-gradient(
-              to bottom,
-              rgba(37, 38, 39, 0.8) 0%,
-              rgba(37, 38, 39, 0.8) 100%
-          ),
-          url("images/carousel/slide1.png");*/
-  /*    background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-size: cover;*/ }
-  header.masthead .contenido .contacto {
-    width: 100;
-    /*padding: .5em .75em;*/
-    /*background-color: $white;*/
-    opacity: .75;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    /*right: 50%;*/
-    /*right*/ }
-    header.masthead .contenido .contacto span {
-      color: #EFEFEF;
-      opacity: 1; }
-    header.masthead .contenido .contacto span.covid a, header.masthead .contenido .contacto span.covid span {
-      color: #E3B23C !important; }
-    header.masthead .contenido .contacto span.covid img {
-      /*height: 1.2rem;*/
-      width: 1.3rem;
-      height: auto;
-      vertical-align: middle; }
-    header.masthead .contenido .contacto .whatsapp {
-      color: #25D366; }
-    header.masthead .contenido .contacto a {
-      text-decoration: none;
-      color: #EFEFEF; }
-  header.masthead h1 {
-    /*        color: $primary;*/
-    /*font-size: 1.75rem;*/
-    /*text-transform:capitalize;*/ }
-  header.masthead hr {
-    border-color: #EFEFEF; }
-  @media (min-width: 992px) {
-    header.masthead {
-      height: 60vh;
-      min-height: 40rem;
-      padding-top: 63px;
-      padding-bottom: 0; }
-      header.masthead h1 {
-        font-size: 2rem; } }
-  @media (min-width: 1200px) {
-    header.masthead h1 {
-      font-size: 3rem; } }
-
+/*@import "masthead";*/
 /*
 Extraidos de:
 https://uigradients.com/
@@ -8240,7 +8177,17 @@ and open the template in the editor.
   header.masthead .covid, header.masthead .whatsapp, header.masthead .email {
     font-size: 95% !important;
     padding-top: .15rem;
-    padding-bottom: .15rem; } }
+    padding-bottom: .15rem; }
+
+  header img {
+    width: 40% !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  header .centrate {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important; } }
 @media (min-width: 992px) {
   header.masthead .principal {
     text-align: left; } }
@@ -8311,6 +8258,9 @@ body {
 
 .w-90 {
   width: 90%; }
+
+.w-80 {
+  width: 80%; }
 
 .w-40 {
   width: 40%; }

@@ -2,15 +2,15 @@
 @media (max-width: 991px){
 
     header.masthead {
-        
+
         .principal{
             text-align: center;
-            
+
             img{
                 width: 70%;
             }  
         }
-        
+
         .contacto{
             .covid img{                
             }
@@ -20,6 +20,21 @@
             font-size: 95% !important;
             padding-top:.15rem;
             padding-bottom:.15rem;
+        }
+    }
+
+    header {        
+        img{
+            width: 40% !important;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }  
+
+        .centrate {
+            position: relative !important;
+            top: auto !important; 
+            left: auto !important; 
+            transform: none !important;
         }
     }
 

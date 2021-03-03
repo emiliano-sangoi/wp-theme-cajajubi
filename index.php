@@ -28,7 +28,7 @@ if ($id_cat) {
     <div class='pt-4 pt-lg-5'>
         <div class="row mb-3">
             <div class="col-12 col-md-3 col-lg-2">
-                <img class="img-fluid w-100 px-3 px-lg-4 centrate-y" src="<?php echo DIR_IMGS . '/logo-footer.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
+                <img class="img-fluid mx-auto d-block centrate w-80" src="<?php echo DIR_IMGS . '/logo-footer.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
             </div>
             <div class="col-12 col-md-9 col-lg-10 px-3 px-lg-4">
                 <h1 class="font-weight-bold text-dark">
@@ -46,7 +46,7 @@ if ($id_cat) {
 
 <section class="my-2 px-3">
     <div class="row">
-        <div class="col-12 col-lg-3 pr-1">
+        <div class="col-12 col-md-6 col-lg-3 py-2 py-md-0 pr-sm-1">
 
             <a class="btn btn-lg btn-warning w-100 h-100 text-white rounded-0 box-shadow" href="https://www.santafe.gob.ar/ms/covid19/">
                 <img class="img-fluid w-10" src='<?php echo DIR_IMGS . '/iconos/mask2.png';    ?>' alt=''/>
@@ -55,7 +55,7 @@ if ($id_cat) {
                 </span>
             </a>
         </div>
-        <div class="col-12 col-lg-3 px-1">
+        <div class="col-12 col-md-6 col-lg-3 py-2 py-md-0 px-sm-1">
             <a class="btn btn-lg btn-pink h-100 w-100 text-white rounded-0 box-shadow" href="https://www.santafe.gob.ar/santafevacunacovid/inicio">
                 <img class="img-fluid w-8" src='<?php echo DIR_IMGS . '/iconos/vacuna.png';    ?>' alt=''/>
                 <span class='align-middle small'>                    
@@ -63,7 +63,7 @@ if ($id_cat) {
                 </span>
             </a>
         </div>
-        <div class="col-12 col-lg-2 pl-1 pr-1">
+        <div class="col-12 col-md-6 col-lg-2 py-2 py-md-0 px-md-1">
 
             <a class="btn btn-lg btn-whatsapp w-100 h-100 text-white rounded-0 box-shadow" href="https://api.whatsapp.com/send?phone=5493425128800&text=Hola!%20Necesito%20Informacion">
                 <span class='align-middle small'>
@@ -73,7 +73,7 @@ if ($id_cat) {
             </a>
 
         </div>
-        <div class="col-12 col-lg-4 pl-1">
+        <div class="col-12 col-md-6 col-lg-4 py-2 py-md-0 pl-md-1">
 
             <a class="btn btn-lg btn-info w-100 rounded-0 box-shadow" href="mailto:contactocaja@santafe.gov.ar" target="_blank">
                 <span class='small'>
@@ -93,7 +93,7 @@ if ($id_cat) {
 <section class="mb-5 px-3" id='accesos-directos'>
 
     <div class="row">
-        <div class="col-12 col-lg-4 py-1 pr-1">
+        <div class="col-12 col-lg-4 py-1 pr-md-1">
             <?php
             $link = 'http://www.santafe.gov.ar/index.php/web/content/view/full/128047';
             $blank = true;
@@ -106,7 +106,7 @@ if ($id_cat) {
             unset($css);
             ?>
         </div>
-        <div class="col-12 col-lg-4 p-1">
+        <div class="col-12 col-lg-4 py-1 px-md-1">
             <?php
             $link = 'http://turnos.santafe.gov.ar/turnos/web/frontend.php';
             $blank = true;
@@ -117,7 +117,7 @@ if ($id_cat) {
             include locate_template('partials/home-link.php');
             ?>
         </div>
-        <div class="col-12 col-lg-4 py-1 pl-1">
+        <div class="col-12 col-lg-4 py-1 pl-md-1">
             <?php
             $link = getLinkPagina(PAGINA_SERVICIOS);
             //$img = DIR_IMGS . '/iconos/link.png';
@@ -129,7 +129,7 @@ if ($id_cat) {
     </div>
 
     <div class="row">
-        <div class="col-12 col-lg-4 py-1 pr-1">
+        <div class="col-12 col-lg-4 py-1 pr-md-1">
             <?php
             $link = getLinkPagina(PAGINA_BIBLIOTECA);
             $img = DIR_IMGS . '/iconos/digital-library.png';
@@ -139,7 +139,7 @@ if ($id_cat) {
             ?>
         </div>
 
-        <div class="col-12 col-lg-4 p-1">
+        <div class="col-12 col-lg-4 py-1 px-md-1">
             <?php
             $img = DIR_IMGS . '/iconos/salary.png';
             $link = getLinkPagina(PAGINA_DESCARGA_RECIBO);
@@ -149,7 +149,7 @@ if ($id_cat) {
             unset($img);
             ?>
         </div>
-        <div class="col-12 col-lg-4 py-1 pl-1">
+        <div class="col-12 col-lg-4 py-1 pl-md-1">
             <?php
             $link = getLinkPagina(PAGINA_LA_CAJA_EN_NUMEROS);
             $blank = false;
@@ -167,7 +167,7 @@ if ($id_cat) {
 $pagina_prestaciones = get_page_by_path(PAGINA_PRESTACIONES);
 if ($pagina_prestaciones instanceof WP_Post && $pagina_prestaciones->post_status == 'publish'):
     ?>
-    <section class="py-4 px-3 px-md-4 px-lg-5 bg-primary text-light" id='prestaciones'>
+    <section class="py-5 px-3 px-md-4 px-lg-5 bg-primary text-light" id='prestaciones'>
         <div class='container py-lg-5'>
             <h2 class="text-center font-weight-bold">
                 <?php echo $pagina_prestaciones->post_title; ?>
@@ -196,7 +196,7 @@ if ($pagina_prestaciones instanceof WP_Post && $pagina_prestaciones->post_status
 <!--======================================================================================-->
 <!--SECCION NOVEDADES-->
 <?php if (!empty($novedades)): ?>
-    <section class="py-3 py-lg-5" id='novedades-home'>
+    <section class="py-5" id='novedades-home'>
         <div class='container-lg'>
             <h2 class="text-center font-weight-bold mt-3 mt-lg-4">Novedades</h2>
             <hr class="w-25 text-center border border-dark">

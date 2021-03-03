@@ -9,7 +9,7 @@ $novedades_secundarias = getPostsPorCateg(CATEGORIA_NOVEDADES_SECUNDARIAS);
 <!--SECTION START-->
 <section class="row" id="slider-novedades">
     <!--Start slider news-->
-    <div class="col-12 col-md-6 pt-2 pr-md-1">
+    <div class="col-12 col-md-8 pt-2 pr-md-1">
         <div id="featured" class="carousel slide carousel h-100" data-ride="carousel">
             <!--dots navigate-->
             <ol class="carousel-indicators top-indicator">
@@ -65,20 +65,20 @@ $novedades_secundarias = getPostsPorCateg(CATEGORIA_NOVEDADES_SECUNDARIAS);
     <!--End slider news-->
 
     <!--Start box news-->
-    <div class="col-12 col-md-6 pt-2 pl-md-1">
+    <div class="col-12 col-md-4 pt-2 pl-md-1">
         <div class="row h-100">
             <!--news box-->
 
             <?php
             $css = array(
-                'col-6 pb-1 pt-0 pr-1',
-                'col-6 pb-1 pl-1 pt-0',
-                'col-6 pr-1 pt-1',
-                'col-6 pl-1 pt-1',
+                'col-12 pb-1',
+                'col-12 pt-1',
+               // 'col-6 pr-1 pt-1',
+               // 'col-6 pl-1 pt-1',
             );
             $i = 0;
             foreach ($novedades_secundarias as $post_nov):
-                if ($i === 4) {
+                if ($i === 2) {
                     break;
                 }
 
