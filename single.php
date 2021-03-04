@@ -47,8 +47,11 @@ get_header();
                 </div>
             <?php endwhile; ?>
         <div class="mt-4">
-            <a class="btn btn-outline-secondary" href="<?php echo getLinkPagina(PAGINA_NOVEDADES); ?>">
-                <i class="fa fa-arrow-left"></i>&nbsp;Volver
+            <a class="btn btn-outline-primary" href="<?php echo getLinkPagina(PAGINA_NOVEDADES); ?>">
+                Todas las novedades
+            </a>
+            <a class="btn btn-outline-primary" href="<?php echo home_url(); ?>">
+                Inicio
             </a>
         </div>
     </div>

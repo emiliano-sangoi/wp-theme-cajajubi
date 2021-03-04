@@ -2,14 +2,20 @@
     <div class="card border-0 rounded-0 text-light overflow zoom h-100">
         <div class="position-relative h-100">
             <?php
-            $link_nov = get_permalink($post_nov);
+            // El enlace a la novedad va a ir al "show" de la novedad en el caso de que no este definido algun valor en el campo
+            // "URL Externa" en el formulario del admin.
+            $link_nov = get_field('url_externa', $post);
+            if(!$link_nov){
+                $link_nov = get_permalink($post);
+            }
+            
             ?>
             <!--thumbnail img-->
             <div class="ratio_left-cover-1 image-wrapper h-100">
                 <a href="<?php echo $link_nov; ?>">
                     <?php
-                    $img_src = get_the_post_thumbnail_url($post_nov);
-                    if (has_post_thumbnail($post_nov)):
+                    $img_src = get_the_post_thumbnail_url($post);
+                    if (has_post_thumbnail($post)):
                         echo get_the_post_thumbnail($post, 'large', array('class' => 'img-fluid w-100 h-100 object-fit-cover'));
                     else:
                     ?>
@@ -25,12 +31,12 @@
                 <!--title-->
                 <a href="<?php echo $link_nov; ?>">
                     <h2 class="h3 post-title text-white my-1 font-weight-bold">
-                        <?php echo $post_nov->post_title; ?>
+                        <?php echo $post->post_title; ?>
                     </h2>
                 </a>
 
                 <?php
-                $copete = get_field('copete', $post_nov);
+                $copete = get_field('copete', $post);
                 if ($copete):
                     ?>
                     <p class="py-2">
@@ -43,7 +49,7 @@
                 <div class="news-meta">                                        
                     <span class="news-date badge badge-primary">
                         <?php
-                        echo get_the_date('d/M/Y', $post_nov);
+                        echo get_the_date('d/M/Y', $post);
                         ?>
                     </span>
                 </div>

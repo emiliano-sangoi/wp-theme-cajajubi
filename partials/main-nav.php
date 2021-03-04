@@ -10,8 +10,11 @@
                 <div class="col-lg-8 col-md-8">
                     <nav class="header__menu" style="padding: 47px 0px 20px 0;">
                         <ul> 
-                            <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>
-                                </a></li>
+                            <li>
+                                <a href="index.html">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </a>
+                            </li>
                             <li><a href="#">Institucional</a>
                                 <ul class="dropdown">
                                     <li><a href="<?php echo esc_url( get_page_link( PAGINA_QUIENES_SOMOS ) ); ?>">Quiénes somos</a></li>

@@ -2,7 +2,7 @@
     <div class="position-relative h-100">
         <!--thumbnail img-->
         <?php
-            $link_nov = get_permalink($post_nov);
+            $link_nov = get_permalink($post);
         ?>
         <div class="ratio_right-cover-2 image-wrapper h-100">
             <a href="<?php echo $link_nov; ?>" class="h-100">
@@ -10,13 +10,13 @@
                      src="https://bootstrap.news/source/img5.jpg"
                      alt="simple blog template bootstrap">-->
                 <?php
-                $img_src = get_the_post_thumbnail_url($post_nov);
+                $img_src = get_the_post_thumbnail_url($post);
                 ?>
                 <img class="img-fluid w-100 h-100 object-fit-cover"
                      src="<?php echo $img_src ?: DIR_IMGS . '/carousel/img-default.png'; ?>"
                      alt="Imágen asociada">
                      <?php
-                     // echo get_the_post_thumbnail($post_nov, array(500,500), array('class' => 'img-fluid w-100 h-100'));
+                     // echo get_the_post_thumbnail($post, array(500,500), array('class' => 'img-fluid w-100 h-100'));
                      ?>
             </a>
         </div>
@@ -24,14 +24,14 @@
             <!-- category -->
             <a class="p-1 badge badge-primary rounded-0" href="<?php echo $link_nov; ?>">
                 <?php
-                    echo get_the_date('d/M/Y', $post_nov);
+                    echo get_the_date('d/M/Y', $post);
                 ?>
             </a>
 
             <!--title-->
             <a href="<?php echo $link_nov; ?>">
                 <h2 class="h5 text-white my-2 font-weight-bold">
-                    <?php echo $post_nov->post_title; ?>
+                    <?php echo $post->post_title; ?>
                 </h2>
             </a>
         </div>

@@ -42,6 +42,7 @@ $novedades_secundarias = getPostsPorCateg(CATEGORIA_NOVEDADES_SECUNDARIAS);
                         continue;
                     }
                     $css = $i === 0 ? 'active' : '';
+                    $post = $post_nov;
                     include locate_template('partials/carousel/item-destacadas.php');
 
                     $i++;
@@ -88,6 +89,7 @@ $novedades_secundarias = getPostsPorCateg(CATEGORIA_NOVEDADES_SECUNDARIAS);
                 ?>
                 <div class="<?php echo $css[$i]; ?>">
                     <?php
+                    $post = $post_nov;
                     include locate_template('partials/carousel/item-secundarias.php');
                     $i++;
                     ?>
