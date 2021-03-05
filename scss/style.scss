@@ -61,7 +61,7 @@ El problema surge por un bug del compilador al parecer:
 @import "footer";
 @import "breadcrumb";
 @import "contacto";
-/*@import "masthead";*/
+@import "parallax";
 @import "header";
 @import "gradientes";
 @import "carousel";
@@ -97,10 +97,6 @@ body {
     @include centerer(false, true);
 }
 
-.parallax-window {
-    min-height: 350px;
-    background: transparent;
-}
 
 #quienes-somos{
     .mision{

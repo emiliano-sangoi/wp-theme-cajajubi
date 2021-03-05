@@ -2,10 +2,17 @@
     <div class="position-relative h-100">
         <!--thumbnail img-->
         <?php
-            $link_nov = get_permalink($post);
+            // El enlace a la novedad va a ir al "show" de la novedad en el caso de que no este definido algun valor en el campo
+            // "URL Externa" en el formulario del admin.
+            $link_nov = get_field('url_externa', $post);
+            $externa = true;
+            if(!$link_nov){
+                $link_nov = get_permalink($post);
+                $externa = false;
+            }
         ?>
         <div class="ratio_right-cover-2 image-wrapper h-100">
-            <a href="<?php echo $link_nov; ?>" class="h-100">
+            <a href="<?php echo $link_nov; ?>" class="h-100" target="<?php echo $externa ? '_blank' : '_self' ; ?>" >
 <!--                <img class="img-fluid"
                      src="https://bootstrap.news/source/img5.jpg"
                      alt="simple blog template bootstrap">-->
@@ -29,7 +36,7 @@
             </a>
 
             <!--title-->
-            <a href="<?php echo $link_nov; ?>">
+            <a href="<?php echo $link_nov; ?>" target="<?php echo $externa ? '_blank' : '_self' ; ?>" >
                 <h2 class="h5 text-white my-2 font-weight-bold">
                     <?php echo $post->post_title; ?>
                 </h2>

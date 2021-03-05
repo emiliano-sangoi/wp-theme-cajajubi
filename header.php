@@ -18,14 +18,14 @@
         </title>
 
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-        <!--<link rel="shortcut icon" href="<?php //echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>-->
+        <!--<link rel="shortcut icon" href="<?php //echo get_stylesheet_directory_uri();  ?>/img/favicon.ico"/>-->
 
         <?php wp_head(); ?>
 
     </head>
     <body <?php body_class('gradiente-portrait'); ?> >
-        <div class="container-fluid container-lg bg-white px-0 pt-2 pt-lg-3">
-
-<!-- Header Section Begin -->
+        <div class="container-fluid container-lg bg-white px-0">
+        
+            <!-- Header Section Begin -->
 <?php get_template_part("partials/navbar");  ?>
-<!-- Header Section End -->
+            <!-- Header Section End -->

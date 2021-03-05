@@ -5,14 +5,16 @@
             // El enlace a la novedad va a ir al "show" de la novedad en el caso de que no este definido algun valor en el campo
             // "URL Externa" en el formulario del admin.
             $link_nov = get_field('url_externa', $post);
+            $externa = true;
             if(!$link_nov){
                 $link_nov = get_permalink($post);
+                $externa = false;
             }
             
             ?>
             <!--thumbnail img-->
             <div class="ratio_left-cover-1 image-wrapper h-100">
-                <a href="<?php echo $link_nov; ?>">
+                <a href="<?php echo $link_nov; ?>" target="<?php echo $externa ? '_blank' : '_self' ; ?>">
                     <?php
                     $img_src = get_the_post_thumbnail_url($post);
                     if (has_post_thumbnail($post)):
@@ -29,7 +31,7 @@
             </div>
             <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
                 <!--title-->
-                <a href="<?php echo $link_nov; ?>">
+                <a href="<?php echo $link_nov; ?>" target="<?php echo $externa ? '_blank' : '_self' ; ?>">
                     <h2 class="h3 post-title text-white my-1 font-weight-bold">
                         <?php echo $post->post_title; ?>
                     </h2>

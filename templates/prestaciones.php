@@ -12,7 +12,7 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 get_header();
 ?>
 
-<div class="navbar-separator pb-5 altura-minima" id="prestaciones">
+<div class="navbar-separator pb-5 altura-minima" id="prestaciones">     
 
     <?php
     if (has_post_thumbnail($pagina)):
@@ -20,7 +20,7 @@ get_header();
         ?>
         <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $imagen; ?>"></div>
     <?php endif; ?> 
-
+        
     <div class="container-lg px-3 pt-3 px-lg-5">
 
         <nav aria-label="breadcrumb" class="bg-light">
@@ -51,7 +51,7 @@ get_header();
             get_template_part('partials/accesos-prestaciones');
         ?>
     </div>
-</div>
+    </div>
 
 
 <?php get_footer(); ?>

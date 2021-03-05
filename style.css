@@ -7958,6 +7958,9 @@ footer {
 /*---------------------
   Breadcrumb
 -----------------------*/
+nav[aria-label="breadcrumb"] {
+  margin-top: .5rem; }
+
 .breadcrumb {
   /*background-color: #f8f9fa;*/ }
 
@@ -8015,7 +8018,13 @@ footer {
   #contacto .social-media img {
     width: 11%; }
 
-/*@import "masthead";*/
+.parallax-window {
+  min-height: 400px;
+  background: transparent; }
+
+.parallax-mirror {
+  z-index: 1000 !important; }
+
 /*
 Extraidos de:
 https://uigradients.com/
@@ -8220,10 +8229,6 @@ body {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%); }
-
-.parallax-window {
-  min-height: 350px;
-  background: transparent; }
 
 #quienes-somos .mision {
   border-color: #B10F2E !important; }

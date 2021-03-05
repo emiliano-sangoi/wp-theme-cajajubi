@@ -26,7 +26,7 @@ if ($id_cat) {
 
 <header class="navbar-separator px-3">
     <div class='pt-3 pt-lg-4'>
-        <div class="row mb-3">
+        <div class="row my-3 my-lg-4">
             <div class="col-12 col-md-3 col-lg-2">
                 <img class="img-fluid mx-auto d-block centrate w-80" src="<?php echo DIR_IMGS . '/logo-footer.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
             </div>

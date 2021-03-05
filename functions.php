@@ -43,6 +43,7 @@ define('CATEGORIA_ESTADISTICAS', 'estadisticas');
 define('CATEGORIA_CRONOGRAMA', 'cronograma');
 
 define('POST_CONTENT_MAX_LENGTH', 250);
+define('MAIN_CONTAINER_CSS', 'container-fluid container-lg bg-white px-0 pt-2 pt-lg-3');
 
 define('DIR_IMGS', get_template_directory_uri() . '/images');
 /* ========================================================================================================================

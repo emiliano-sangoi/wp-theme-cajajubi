@@ -28,7 +28,6 @@ $(document).ready(function () {
     });
 
     var mostrar = $('#modal-cronograma').data('mostrar');
-    console.log(mostrar);
     if(mostrar){
         openModalCronograma();
     }
