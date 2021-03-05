@@ -521,7 +521,7 @@ if (!function_exists('bootstrap_comment')) {
      * @param int $posts_per_page
      * @return array
      */
-    function getPostsPorCateg($cat_slug, $posts_per_page = -1) {
+    function getPostsPorCateg($cat_slug, $posts_per_page = -1, $post_status = 'publish') {
 
         $result = array();        
         $oCategoria = get_category_by_slug($cat_slug);
@@ -532,7 +532,8 @@ if (!function_exists('bootstrap_comment')) {
             //var_dump($id_cat);exit;
             $args = array(
                 'category' => $id_cat,
-                'posts_per_page' => $posts_per_page
+                'posts_per_page' => $posts_per_page,
+                'post_status' => $post_status
             );
             $result = get_posts($args);
         }

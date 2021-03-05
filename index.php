@@ -10,7 +10,11 @@ $cronograma = getCronogramaDePago();
 $novedades = $novedades_destacadas = null;
 $id_cat = get_cat_ID(CATEGORIA_NOVEDADES);
 if ($id_cat) {
-    $args = array('category' => $id_cat, 'posts_per_page' => 3);
+    $args = array(
+        'category' => $id_cat,
+        'posts_per_page' => 3,
+        'post_status' => 'publish'
+    );
     $novedades = get_posts($args);
 }
 
@@ -201,9 +205,6 @@ if ($pagina_prestaciones instanceof WP_Post && $pagina_prestaciones->post_status
             <div class="mt-4 mt-lg-5">
                 <?php
                 foreach ($novedades as $post):
-                    if ($post->post_status !== 'publish') {
-                        continue;
-                    }
                     ?>
                     <div class="mb-3 mb-lg-4">
                         <?php

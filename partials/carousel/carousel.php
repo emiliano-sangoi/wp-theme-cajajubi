@@ -4,12 +4,28 @@
 $novedades_destacadas = getPostsPorCateg(CATEGORIA_NOVEDADES_DESTACADAS);
 $novedades_secundarias = getPostsPorCateg(CATEGORIA_NOVEDADES_SECUNDARIAS);
 // var_dump($novedades_destacadas);exit;
+
+$col_destacadas = 'col-12 col-md-8';
+$col_secundarias = 'col-12 col-md-4';
+
+//var_dump(count($novedades_secundarias));exit;
+if(count($novedades_secundarias) === 0){
+    //modificar el layout
+    $col_destacadas = 'col-12';
+    $col_secundarias = 'd-none';
+}
+
+if(count($novedades_destacadas) === 0){
+    //modificar el layout
+    $ocultar_slider = true;    
+}
+
 ?>
 
 <!--SECTION START-->
-<section class="row" id="slider-novedades">
+<section class="row <?php echo $ocultar_slider ? 'd-none' : ''; ?>" id="slider-novedades">
     <!--Start slider news-->
-    <div class="col-12 col-md-8 pt-2">
+    <div class="<?php echo $col_destacadas; ?> pt-2">
         <div id="featured" class="carousel slide carousel h-100" data-ride="carousel">
             <!--dots navigate-->
             <ol class="carousel-indicators top-indicator">
@@ -20,13 +36,9 @@ $novedades_secundarias = getPostsPorCateg(CATEGORIA_NOVEDADES_SECUNDARIAS);
                 <?php
                 $i = 0;
                 foreach ($novedades_destacadas as $post_nov) {
-                    if ($post_nov->post_status !== 'publish') {
-                        continue;
-                    }
                     ?>
                     <li data-target="#featured" data-slide-to="<?php echo $i++; ?>" class="<?php $i === 0 ? 'active' : ''; ?>" ></li>
                     <?php
-                    //unset($css);
                 }
                 ?>
             </ol>
@@ -66,7 +78,7 @@ $novedades_secundarias = getPostsPorCateg(CATEGORIA_NOVEDADES_SECUNDARIAS);
     <!--End slider news-->
 
     <!--Start box news-->
-    <div class="col-12 col-md-4 pt-2">
+    <div class="<?php echo $col_secundarias; ?> pt-2">
         <div class="row h-100">
             <!--news box-->
 
@@ -83,9 +95,6 @@ $novedades_secundarias = getPostsPorCateg(CATEGORIA_NOVEDADES_SECUNDARIAS);
                     break;
                 }
 
-                if ($post_nov->post_status !== 'publish') {
-                    continue;
-                }
                 ?>
                 <div class="<?php echo $css[$i]; ?>">
                     <?php
