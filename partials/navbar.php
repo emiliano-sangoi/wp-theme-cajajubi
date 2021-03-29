@@ -62,7 +62,8 @@
                     <a class="dropdown-item" href="<?php echo getLinkPagina(PAGINA_CERTIFICACION_NEGATIVA); ?>" target="_blank">
                         Certificación negativa
                     </a>
-                    <a class="dropdown-item" href="https://www.santafe.gov.ar/index.php/web/content/view/full/235061" target="_blank">
+                    <!--Link anterior: https://www.santafe.gov.ar/index.php/web/content/view/full/235061 -->
+                    <a class="dropdown-item" href="<?php echo getLinkPagina(PAGINA_GANANCIAS); ?>">
                         Imp. a las ganancias
                     </a>
                     <a class="dropdown-item" href="https://www.anses.gob.ar/informacion/mi-anses" target="_blank">

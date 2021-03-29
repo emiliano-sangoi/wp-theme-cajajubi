@@ -26,6 +26,7 @@ define('PAGINA_CONTACTO', 'contacto');
 define('PAGINA_LA_CAJA_EN_NUMEROS', 'la-caja-en-numeros');
 define('PAGINA_DESCARGA_RECIBO', 'descarga-tu-recibo');
 define('PAGINA_INSTRUCTIVOS', 'instructivos');
+define('PAGINA_GANANCIAS', 'impuesto-a-las-ganancias');
 
 //Categorías
 define('CATEGORIA_NOVEDADES', 'novedades');
@@ -41,6 +42,7 @@ define('CATEGORIA_INSTRUCTIVOS', 'instructivos');
 define('CATEGORIA_NORMATIVAS', 'normativas');
 define('CATEGORIA_ESTADISTICAS', 'estadisticas');
 define('CATEGORIA_CRONOGRAMA', 'cronograma');
+define('CATEGORIA_FAQS_GANANCIAS', 'faqs-ganancias');
 
 define('POST_CONTENT_MAX_LENGTH', 250);
 define('MAIN_CONTAINER_CSS', 'container-fluid container-lg bg-white px-0 pt-2 pt-lg-3');
