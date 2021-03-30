@@ -74,7 +74,7 @@ get_header();
     </section>
 
     <section class="mt-4 mt-lg-5">        
-        <h2 class="font-weight-bold text-primary" id="video">
+        <h2 class="font-weight-bold text-primary mb-3" id="video">
             Instructivo formulario F572-web
         </h2>
 
@@ -93,14 +93,44 @@ get_header();
     </section>
 
     <section class="mt-4 mt-lg-5">   
-        <h2 class="font-weight-bold text-primary" id="faqs">
+        <h2 class="font-weight-bold text-primary mb-3" id="faqs">
             Preguntas frecuentes
         </h2>
 
+        <div id="accordion-faqs">
 
+            <?php
+            $i = 0;
+            foreach ($faqs as $faq):
+                ?>
+
+                <div class="card">
+                    <div class="card-header" id="heading<?php echo $i; ?>">
+                        <h5 class="mb-0">
+                            <a href="#" class="" data-toggle="collapse" data-target="#collapse<?php echo $i; ?>" aria-expanded="false" aria-controls="collapse<?php echo $i; ?>" style="text-decoration: none;">
+                                <?php echo $faq->post_title; ?>
+                            </a>
+                        </h5>
+                    </div>
+
+                    <div id="collapse<?php echo $i; ?>" class="collapse" aria-labelledby="heading<?php echo $i; ?>" data-parent="#accordion-faqs">
+                        <div class="card-body">
+                            <?php
+                            echo nl2br($faq->post_content);
+                            ?>
+                        </div>
+                    </div>
+                </div>               
+
+                <?php
+                $i++;
+
+            endforeach;
+            ?>                                 
+        </div>
 
     </section>
-    
+
 </div>
 
 

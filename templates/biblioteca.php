@@ -47,7 +47,7 @@ if ($catN_id) {
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li> 
-                <li class="breadcrumb-item"><a href="<?php echo getLinkPagina ( PAGINA_SERVICIOS ); ?>">Servicios</a></li> 
+                <li class="breadcrumb-item"><a href="<?php echo getLinkPagina(PAGINA_SERVICIOS); ?>">Servicios</a></li> 
                 <li class="breadcrumb-item active" aria-current="page">
                     <?php echo $pagina->post_title; ?>
                 </li>
@@ -58,11 +58,11 @@ if ($catN_id) {
         </h1>
         <hr/>
         <div>
-            <?php 
+            <?php
             if (!empty($pagina->post_content)):
                 echo $pagina->post_content;
             endif;
-        ?> 
+            ?> 
         </div>
 
         <div>
@@ -70,122 +70,96 @@ if ($catN_id) {
                 <div class="card">
                     <div class="card-header" id="headingFormularios">
                         <h5 class="mb-0">
-                            <a href='#' class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Formularios
-                            </a>
+                            <a href='#' class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="text-decoration: none;">
+                            Formularios
+                        </a>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingFormularios" data-parent="#accordion">
                         <div class="card-body">
                             <?php if (isset($posts_formularios[0])): ?>  
-                            
-                            <?php foreach ($posts_formularios as $post): ?> 
-                                <?php if ($post->post_status !== 'publish'): continue; endif; ?>   
-                                <?php
+
+                                <?php foreach ($posts_formularios as $post): ?> 
+                                    <?php if ($post->post_status !== 'publish'): continue;
+                                    endif;
+                                    ?>   
+                                    <?php
                                     $link = get_field('enlace', $post);
-                                ?>
-                                <p>
-                                    <a href="<?php echo $link; ?>" target="_blank" class="<?php echo $link ? '' : 'disabled' ?>">
-                                        <?php echo $post->post_title; ?>
-                                    </a>
-                                </p>
-                            
-                            <?php endforeach; ?>
+                                    ?>
+                                    <p>
+                                        <a href="<?php echo $link; ?>" target="_blank" class="<?php echo $link ? '' : 'disabled' ?>">
+        <?php echo $post->post_title; ?>
+                                        </a>                                
+                                    </p>
+
+                                <?php endforeach; ?>
                             <?php else: ?>
                                 <p class="text-muted">No se cargado ning&uacute;n formulario.</p>
                             <?php endif; ?>
-
-                            <?php
-                            //$i = 0;
-                            //foreach ($biblioteca['form'] as $finfo):
-                                ?>
-<!--                                <p>
-                                    <a href="<?php //echo $biblioteca['url'] . $finfo->fname; ?>" target="_blank">
-                                        <?php
-                                        //echo $finfo->titulo;
-                                        //$i++;
-                                        ?>
-                                    </a>
-                                </p>-->
-                            <?php //endforeach; ?>
-                            <?php //if ($i === 0): ?>
-                                <!--<p class="text-muted">No se cargado ning&uacute;un formulario.</p>-->
-                            <?php //endif; ?>
                         </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-header" id="headingInstructivos">
                         <h5 class="mb-0">
-                            <a href='#' class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Instructivos
-                            </a>
+                            <a href='#' class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="text-decoration: none;">
+                            Instructivos
+                        </a>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingInstructivos" data-parent="#accordion">
                         <div class="card-body">   
                             <?php if (isset($posts_instructivos[0])): ?>  
-                            
-                            <?php foreach ($posts_instructivos as $post): ?> 
-                                <?php if ($post->post_status !== 'publish'): continue; endif; ?>   
-                                <?php
+
+                                <?php foreach ($posts_instructivos as $post): ?> 
+                                    <?php
+                                    if ($post->post_status !== 'publish'): continue;
+                                    endif;
+                                    ?>   
+                                    <?php
                                     $link = get_field('enlace', $post);
-                                ?>
-                                <p>
-                                    <a href="<?php echo $link; ?>" target="_blank" class="<?php echo $link ? '' : 'disabled' ?>">
-                                        <?php echo $post->post_title; ?>
-                                    </a>
-                                </p>
-                            
-                            <?php endforeach; ?>
+                                    ?>
+                                    <p>
+                                        <a href="<?php echo $link; ?>" target="_blank" class="<?php echo $link ? '' : 'disabled' ?>">
+        <?php echo $post->post_title; ?>
+                                        </a>
+                                    </p>
+
+                                <?php endforeach; ?>
                             <?php else: ?>
                                 <p class="text-muted">No se cargado ning&uacute;n instructivo.</p>
-                            <?php endif; ?>
-                                
-                            <?php
-                            //$i = 0;
-                            //foreach ($biblioteca['inst'] as $finfo):
-                                ?>
-<!--                                <p>
-                                    <a href="<?php //echo $biblioteca['url'] . $finfo->fname; ?>" target="_blank">
-                                        <?php
-                                        //echo $finfo->titulo;
-                                        //$i++;
-                                        ?>
-                                    </a>
-                                </p>-->
-                            <?php //endforeach; ?>
-                            <?php //if ($i === 0): ?>
-                                <!--<p class="text-muted">No se cargado ning&uacute;n intructivo.</p>-->
-                            <?php //endif; ?>
+<?php endif; ?>
                         </div>
                     </div>
                 </div>
-                                <div class="card">
+                <div class="card">
                     <div class="card-header" id="headingNormativas">
                         <h5 class="mb-0">
-                            <a href='#' class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Normativas
-                            </a>
+                            <a href='#' class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="text-decoration: none;">
+                            Normativas
+                        </a>
                         </h5>
                     </div>
 
                     <div id="collapseOne" class="collapse" aria-labelledby="headingNormativas" data-parent="#accordion">
                         <div class="card-body">
                             <?php if (isset($posts_normativas[0])): ?>  
-                            
-                            <?php foreach ($posts_normativas as $post): ?> 
-                                <?php if ($post->post_status !== 'publish'): continue; endif; ?>   
-                                <?php
-                                    $link = get_field('enlace', $post);
-                                ?>
-                                <p>
-                                    <a href="<?php echo $link; ?>" target="_blank" class="<?php echo $link ? '' : 'disabled' ?>">
-                                        <?php echo $post->post_title; ?>
-                                    </a>
-                                </p>
-                            
-                            <?php endforeach; ?>
+
+                                <?php foreach ($posts_normativas as $post): ?> 
+                                    <?php
+                                    if ($post->post_status !== 'publish'): continue;
+                                    endif;
+                                    ?>   
+        <?php
+        $link = get_field('enlace', $post);
+        ?>
+                                    <p>
+                                        <a href="<?php echo $link; ?>" target="_blank" class="<?php echo $link ? '' : 'disabled' ?>">
+                                    <?php echo $post->post_title; ?>
+                                        </a>
+                                    </p>
+
+                                <?php endforeach; ?>
                             <?php else: ?>
                                 <p class="text-muted">No se cargado ninguna normativa o decreto.</p>
                             <?php endif; ?>
@@ -193,19 +167,19 @@ if ($catN_id) {
                             <?php
                             //$i = 0;
                             //foreach ($biblioteca['norm'] as $finfo):
-                                ?>
+                            ?>
 <!--                                <p>
                                     <a href="<?php //echo $biblioteca['url'] . $finfo->fname; ?>" target="_blank">
-                                        <?php
-                                        //echo $finfo->titulo;
-                                        //$i++;
-                                        ?>
+                            <?php
+                            //echo $finfo->titulo;
+                            //$i++;
+                            ?>
                                     </a>
                                 </p>-->
                             <?php //endforeach; ?>
-                            <?php //if ($i === 0): ?>
+<?php //if ($i === 0):    ?>
                                 <!--<p class="text-muted">No se cargado ninguna normativa o decreto.</p>-->
-                            <?php //endif; ?>
+<?php //endif;    ?>
                         </div>
                     </div>
                 </div>
@@ -216,7 +190,7 @@ if ($catN_id) {
     </div>
 </div>
 
-<?php 
+<?php
 unset($biblioteca);
 
 get_footer();
