@@ -29,17 +29,17 @@ if ($id_cat) {
 ?>
 
 <header class="navbar-separator px-3">
-    <div class='pt-3 pt-lg-4'>
-        <div class="row my-3 my-lg-4">
-            <div class="col-12 col-md-3 col-lg-2">
-                <img class="img-fluid mx-auto d-block centrate w-80" src="<?php echo DIR_IMGS . '/logo-footer.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
-            </div>
-            <div class="col-12 col-md-9 col-lg-10 px-3 px-lg-4">
-                <h1 class="font-weight-bold text-dark">
-                    Caja de Jubilaciones y Pensiones de la Provincia de Santa Fe
-                </h1>
-            </div>
-        </div>
+    <div class='pt-2 pt-lg-3'>
+        <!--        <div class="row my-3 my-lg-4">
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <img class="img-fluid mx-auto d-block centrate w-80" src="<?php echo DIR_IMGS . '/logo-footer.png' ?>" alt="Gobierno de la Provincia de Santa Fe">
+                    </div>
+                    <div class="col-12 col-md-9 col-lg-10 px-3 px-lg-4">
+                        <h1 class="font-weight-bold text-dark">
+                            Caja de Jubilaciones y Pensiones de la Provincia de Santa Fe
+                        </h1>
+                    </div>
+                </div>-->
         <div>
             <?php
             get_template_part('partials/carousel/carousel');
@@ -94,7 +94,7 @@ if ($id_cat) {
     </div>
 </section>
 
-<section class="mb-5 px-3" id='accesos-directos'>
+<section class="mb-4 px-3" id='accesos-directos'>
 
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 my-1">
@@ -163,6 +163,42 @@ if ($id_cat) {
         </div>
     </div>
 </section>
+
+
+
+<section class="text-light" id='prestaciones'>
+    <div class='container-fluid px-0'>
+        <div class="row">
+            <div class="col-12 col-md-6 pr-sm-0">
+                    <?php
+                    $link = null;
+                    $blank = false;
+                    $bg = 'btn-verde1';
+                    $img = DIR_IMGS . '/iconos/heart.png';
+                    $icon = 'fa-line-chart';
+                    $titulo = 'La Caja te cuida';
+                    $class_title = 'text-uppercase font-weight-bold';
+                    include locate_template('partials/home-link-horizontal.php');
+                    ?>
+            </div>
+            <div class="col-12 col-md-6 pl-sm-0">
+                    <?php
+                    $img = null;
+                    $blank = false;
+                    $img = DIR_IMGS . '/iconos/masks.png';
+                    $icon = 'fa-line-chart';
+                    $bg = 'btn-orange1';
+                    $bg = 'btn-violeta1';
+                    $titulo = 'Cultura';
+                    include locate_template('partials/home-link-horizontal.php');
+                    ?>                     
+            </div>                       
+        </div>
+    </div>
+</section>
+
+
+
 
 
 <?php

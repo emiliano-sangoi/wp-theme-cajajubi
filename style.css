@@ -7918,7 +7918,7 @@ El problema surge por un bug del compilador al parecer:
   #navbar .nav-item > a {
     color: #00548f;
     text-transform: uppercase;
-    font-size: 130%;
+    /*font-size: 130%;*/
     /*        font-weight: 300 !important;*/ }
   #navbar .navbar-brand {
     /*color: $light !important;*/
@@ -8177,6 +8177,105 @@ and open the template in the editor.
     border-color: #1b9d4c; }
     .btn-whatsapp:not(:disabled):not(.disabled):active:focus, .btn-whatsapp:not(:disabled):not(.disabled).active:focus, .show > .btn-whatsapp.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(70, 218, 125, 0.5); }
+
+/*
+    Colores para ver: https://htmlcolorcodes.com/
+*/
+.btn-verde1 {
+  color: #fff;
+  background-color: #27AE60;
+  border-color: #27AE60; }
+  .btn-verde1:hover {
+    color: #fff;
+    background-color: #208f4f;
+    border-color: #1e8449; }
+  .btn-verde1:focus, .btn-verde1.focus {
+    color: #fff;
+    background-color: #208f4f;
+    border-color: #1e8449;
+    box-shadow: 0 0 0 0.2rem rgba(71, 186, 120, 0.5); }
+  .btn-verde1.disabled, .btn-verde1:disabled {
+    color: #fff;
+    background-color: #27AE60;
+    border-color: #27AE60; }
+  .btn-verde1:not(:disabled):not(.disabled):active, .btn-verde1:not(:disabled):not(.disabled).active, .show > .btn-verde1.dropdown-toggle {
+    color: #fff;
+    background-color: #1e8449;
+    border-color: #1b7a43; }
+    .btn-verde1:not(:disabled):not(.disabled):active:focus, .btn-verde1:not(:disabled):not(.disabled).active:focus, .show > .btn-verde1.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(71, 186, 120, 0.5); }
+
+.btn-rojo1 {
+  color: #fff;
+  background-color: #EC7063;
+  border-color: #EC7063; }
+  .btn-rojo1:hover {
+    color: #fff;
+    background-color: #e85141;
+    border-color: #e64636; }
+  .btn-rojo1:focus, .btn-rojo1.focus {
+    color: #fff;
+    background-color: #e85141;
+    border-color: #e64636;
+    box-shadow: 0 0 0 0.2rem rgba(239, 133, 122, 0.5); }
+  .btn-rojo1.disabled, .btn-rojo1:disabled {
+    color: #fff;
+    background-color: #EC7063;
+    border-color: #EC7063; }
+  .btn-rojo1:not(:disabled):not(.disabled):active, .btn-rojo1:not(:disabled):not(.disabled).active, .show > .btn-rojo1.dropdown-toggle {
+    color: #fff;
+    background-color: #e64636;
+    border-color: #e53c2a; }
+    .btn-rojo1:not(:disabled):not(.disabled):active:focus, .btn-rojo1:not(:disabled):not(.disabled).active:focus, .show > .btn-rojo1.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(239, 133, 122, 0.5); }
+
+.btn-orange1 {
+  color: #fff;
+  background-color: #E67E22;
+  border-color: #E67E22; }
+  .btn-orange1:hover {
+    color: #fff;
+    background-color: #cb6b17;
+    border-color: #bf6516; }
+  .btn-orange1:focus, .btn-orange1.focus {
+    color: #fff;
+    background-color: #cb6b17;
+    border-color: #bf6516;
+    box-shadow: 0 0 0 0.2rem rgba(234, 145, 67, 0.5); }
+  .btn-orange1.disabled, .btn-orange1:disabled {
+    color: #fff;
+    background-color: #E67E22;
+    border-color: #E67E22; }
+  .btn-orange1:not(:disabled):not(.disabled):active, .btn-orange1:not(:disabled):not(.disabled).active, .show > .btn-orange1.dropdown-toggle {
+    color: #fff;
+    background-color: #bf6516;
+    border-color: #b45f14; }
+    .btn-orange1:not(:disabled):not(.disabled):active:focus, .btn-orange1:not(:disabled):not(.disabled).active:focus, .show > .btn-orange1.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(234, 145, 67, 0.5); }
+
+.btn-violeta1 {
+  color: #fff;
+  background-color: #9B59B6;
+  border-color: #9B59B6; }
+  .btn-violeta1:hover {
+    color: #fff;
+    background-color: #8747a2;
+    border-color: #804399; }
+  .btn-violeta1:focus, .btn-violeta1.focus {
+    color: #fff;
+    background-color: #8747a2;
+    border-color: #804399;
+    box-shadow: 0 0 0 0.2rem rgba(170, 114, 193, 0.5); }
+  .btn-violeta1.disabled, .btn-violeta1:disabled {
+    color: #fff;
+    background-color: #9B59B6;
+    border-color: #9B59B6; }
+  .btn-violeta1:not(:disabled):not(.disabled):active, .btn-violeta1:not(:disabled):not(.disabled).active, .show > .btn-violeta1.dropdown-toggle {
+    color: #fff;
+    background-color: #804399;
+    border-color: #793f90; }
+    .btn-violeta1:not(:disabled):not(.disabled):active:focus, .btn-violeta1:not(:disabled):not(.disabled).active:focus, .show > .btn-violeta1.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(170, 114, 193, 0.5); }
 
 @media (max-width: 991px) {
   header.masthead .principal {
