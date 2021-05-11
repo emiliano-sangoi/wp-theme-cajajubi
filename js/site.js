@@ -34,7 +34,7 @@ $(document).ready(function () {
 
     // ===========================================================================================    
     // Smooth scrolling using jQuery easing
-    var top = 75;
+    var top = 100;
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);

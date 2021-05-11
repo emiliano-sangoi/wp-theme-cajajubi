@@ -12,6 +12,7 @@ define('BOOTSTRAP_VERSION', '4.5.0');
 
 //Paginas
 define('PAGINA_PRESTACIONES', 'prestaciones');
+define('PAGINA_JUBILACIONES', 'jubilaciones');
 define('PAGINA_SERVICIOS', 'servicios');
 define('PAGINA_BIBLIOTECA', 'biblioteca-digital');
 define('PAGINA_CERTIFICACION_NEGATIVA', 'certificacion-negativa');
@@ -43,6 +44,8 @@ define('CATEGORIA_NORMATIVAS', 'normativas');
 define('CATEGORIA_ESTADISTICAS', 'estadisticas');
 define('CATEGORIA_CRONOGRAMA', 'cronograma');
 define('CATEGORIA_FAQS_GANANCIAS', 'faqs-ganancias');
+define('CATEGORIA_JUBILACIONES_VEJEZ', 'jubilaciones-vejez');
+define('CATEGORIA_JUBILACIONES_INVALIDEZ', 'jubilaciones-invalidez');
 
 define('POST_CONTENT_MAX_LENGTH', 250);
 define('MAIN_CONTAINER_CSS', 'container-fluid container-lg bg-white px-0 pt-2 pt-lg-3');
