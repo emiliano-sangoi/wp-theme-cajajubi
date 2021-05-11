@@ -62,158 +62,108 @@ get_header();
         ?> 
     </div>
 
-    <section>
+    <div class="">
+        <?php if (isset($jubilaciones_vejez[0]) && isset($jubilaciones_invalidez[0])): ?>  
 
-        <div class="mb-3">
-            <?php if (isset($jubilaciones_vejez[0])): ?>  
-                <h5 class="font-weight-bold text-primary mb-3" id="vejez">
-                    Vejez:
-                </h5>
-                <?php foreach ($jubilaciones_vejez as $post): ?> 
-                    <?php
-                    if ($post->post_status !== 'publish'): continue;
-                    endif;
-                    $tipo_jubilacion = get_field('tipo_jubilacion', $post);
-                    ?>   
-                    <a class="btn btn-outline-primary js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank"><?php echo $tipo_jubilacion; ?></a>
-                <?php endforeach; ?>
-            <?php endif; ?>
-        </div>
-        <div class="mb-3">
-            <?php if (isset($jubilaciones_invalidez[0])): ?>  
-                <h5 class="font-weight-bold text-primary mb-3" id="vejez">
-                    Invalidez:
-                </h5>
-                <?php foreach ($jubilaciones_invalidez as $post): ?> 
-                    <?php
-                    if ($post->post_status !== 'publish'): continue;
-                    endif;
-                    $tipo_jubilacion = get_field('tipo_jubilacion', $post);
-                    ?>   
-                    <a class="btn btn-outline-primary js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank"><?php echo $tipo_jubilacion; ?></a>
-                <?php endforeach; ?>
-            <?php endif; ?>
-        </div>
-
-    </section>
-
-    <!--Visualiza el contenido de los trámites jubilatorios de Vejez-->
-    <?php if (isset($jubilaciones_vejez[0])): ?>  
-
-        <?php foreach ($jubilaciones_vejez as $post): ?> 
-            <?php
-            if ($post->post_status !== 'publish'): continue;
-            endif;
-            ?>   
-            <section class="mt-4 mt-lg-5">   
-                <h3 class="font-weight-bold text-primary mb-3" id="<?php echo $post->post_name; ?>">
-                    <?php echo $post->post_title; ?>
-                </h3>
-                <!--                <hr/>-->
-                <div class="">
-                    <?php
-                    if (!empty($post->post_content)):
-                        echo $post->post_content;
-                    endif;
-                    ?>
+            <section>
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="lead text-uppercase bg-light text-center align-middle">
+                                    Vejez
+                                </td>
+                                <td>
+                                    <ul class="my-1">
+                                        <?php foreach ($jubilaciones_vejez as $post): ?> 
+                                            <?php
+                                            $tipo_jubilacion = get_field('tipo_jubilacion', $post);
+                                            ?>   
+                                            <li>
+                                                <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank">
+                                                    <?php echo $tipo_jubilacion; ?>
+                                                </a>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lead text-uppercase bg-light text-center align-middle">
+                                    Invalidez
+                                </td>
+                                <td>
+                                    <ul class="my-1">
+                                        <?php foreach ($jubilaciones_invalidez as $post): ?> 
+                                            <?php
+                                            $tipo_jubilacion = get_field('tipo_jubilacion', $post);
+                                            ?>   
+                                            <li>
+                                                <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank"><?php echo $tipo_jubilacion; ?></a>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-
-                <div class="">
-                    <?php
-                    $condiciones = get_field('condiciones', $post);
-                    if ($condiciones):
-                        ?>    
-                        <h6 class="font-weight-bold text-primary mb-3" >
-                            Condiciones para poder acceder al beneficio:
-                        </h6>
-                        <div>
-                            <?php echo $condiciones; ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
-
-                <div class="">
-                    <?php
-                    $url_requisitos = get_field('url_requisitos', $post);
-                    $url_etiqueta = get_field('url_etiqueta', $post) ? get_field('url_etiqueta', $post) : 'Descargar instructivo';
-                    if ($url_requisitos):
-                        ?>    
-                        <h6 class="font-weight-bold text-primary mb-3">
-                            Requisitos para el inicio del trámite:
-                        </h6>
-                        <div>
-                            <a href="<?php echo $url_requisitos; ?>"  target="_blank" >
-                                <?php echo $url_etiqueta; ?>
-                            </a>    
-                        </div>
-                    <?php endif; ?>
-                </div>
-
             </section>
-        <?php endforeach; ?>
-        <!--    <?php //else:  ?>
-                <p class="text-muted">No se cargado ning&uacute;n tr&aacute;mite jubilatorio.</p>-->
-    <?php endif; ?>
 
-    <!--Visualiza el contenido de los trámites jubilatorios de INvalidez-->
-    <?php if (isset($jubilaciones_invalidez[0])): ?>  
 
-        <?php foreach ($jubilaciones_invalidez as $post): ?> 
             <?php
-            if ($post->post_status !== 'publish'): continue;
-            endif;
-            ?>   
-            <section class="mt-4 mt-lg-5">   
-                <h3 class="font-weight-bold text-primary mb-3" id="<?php echo $post->post_name; ?>">
-                    <?php echo $post->post_title; ?>
-                </h3>
-                <!--                <hr/>-->
-                <div class="">
-                    <?php
-                    if (!empty($post->post_content)):
-                        echo $post->post_content;
-                    endif;
-                    ?>
-                </div>
+            $posts = array_merge($jubilaciones_vejez, $jubilaciones_invalidez);
+            ?>
 
-                <div class="">
-                    <?php
-                    $condiciones = get_field('condiciones', $post);
-                    if ($condiciones):
-                        ?>    
-                        <h6 class="font-weight-bold text-primary mb-3" >
-                            Condiciones para poder acceder al beneficio:
-                        </h6>
-                        <div>
-                            <?php echo $condiciones; ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
+            <?php foreach ($posts as $post): ?> 
 
-                <div class="">
-                    <?php
-                    $url_requisitos = get_field('url_requisitos', $post);
-                    $url_etiqueta = get_field('url_etiqueta', $post) ? get_field('url_etiqueta', $post) : 'Descargar instructivo';
-                    if ($url_requisitos):
-                        ?>    
-                        <h6 class="font-weight-bold text-primary mb-3">
-                            Requisitos para el inicio del trámite:
-                        </h6>
-                        <div>
-                            <a href="<?php echo $url_requisitos; ?>"  target="_blank">
-                                <?php echo $url_etiqueta; ?>
-                            </a>    
-                        </div>
-                    <?php endif; ?>
-                </div>
+                <section class="mt-4 mt-lg-5">   
+                    <h3 class="font-weight-bold text-primary mb-3" id="<?php echo $post->post_name; ?>">
+                        <?php echo $post->post_title; ?>
+                    </h3>
+                    <hr/>
+                    <div class="">
+                        <?php
+                        if (!empty($post->post_content)):
+                            echo $post->post_content;
+                        endif;
+                        ?>
+                    </div>
 
-            </section>
-        <?php endforeach; ?>
-        <!--    <?php //else:  ?>
-                <p class="text-muted">No se cargado ning&uacute;n tr&aacute;mite jubilatorio.</p>-->
-    <?php endif; ?>
+                    <div class="">
+                        <?php
+                        $condiciones = get_field('condiciones', $post);
+                        if ($condiciones):
+                            ?>    
+                            <h6 class="font-weight-bold text-secondary mb-3" >
+                                Condiciones para poder acceder al beneficio:
+                            </h6>
+                            <div>
+                                <?php echo $condiciones; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+
+                    <div class="">
+                        <?php
+                        $url_requisitos = get_field('url_requisitos', $post);
+                        $url_etiqueta = get_field('url_etiqueta', $post) ? get_field('url_etiqueta', $post) : 'Descargar instructivo';
+                        if ($url_requisitos):
+                            ?>    
+                            <div class="mt-3 mt-lg-4">
+                                <a href="<?php echo $url_requisitos; ?>" class="btn btn-outline-primary"  target="_blank" >
+                                    <?php echo $url_etiqueta; ?>
+                                </a>    
+                            </div>
+                        <?php endif; ?>
+                    </div>
+
+                </section>
+            <?php endforeach; ?>
+
+        <?php endif; ?>
+    </div>
 
 </div>
-
 
 <?php get_footer(); ?>
