@@ -1,37 +1,37 @@
 <?php
-/* Template Name: Jubilaciones */
+/* Template Name: Retiros */
 
 // En caso de no encontrar la pagina -> redireccionar a la home
 // La ubicacion de este codigo debe ser al principio del archivo.
-$pagina = get_page_by_path(PAGINA_JUBILACIONES);
+$pagina = get_page_by_path(PAGINA_RETIROS);
 //var_dump($pagina);exit;
 if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
     wp_redirect(home_url(), 301);
     exit;
 }
 
-$jubilaciones_vejez = null;
-$cat = get_category_by_slug(CATEGORIA_JUBILACIONES_VEJEZ);
+$retiros_vejez = null;
+$cat = get_category_by_slug(CATEGORIA_RETIROS_VEJEZ);
 if ($cat->term_id) {
     $args = array(
         'category' => $cat->term_id,
         'posts_per_page' => -1,
         'post_status' => 'publish'
     );
-    $jubilaciones_vejez = get_posts($args);
+    $retiros_vejez = get_posts($args);
 }
-$jubilaciones_invalidez = null;
-$cat1 = get_category_by_slug(CATEGORIA_JUBILACIONES_INVALIDEZ);
+$retiros_invalidez = null;
+$cat1 = get_category_by_slug(CATEGORIA_RETIROS_INVALIDEZ);
 if ($cat1->term_id) {
     $args1 = array(
         'category' => $cat1->term_id,
         'posts_per_page' => -1,
         'post_status' => 'publish'
     );
-    $jubilaciones_invalidez = get_posts($args1);
+    $retiros_invalidez = get_posts($args1);
 }
 
-//var_dump($jubilaciones_invalidez);exit;
+//var_dump($retiros_vejez);exit;
 
 get_header();
 ?>
@@ -63,48 +63,52 @@ get_header();
     </div>
 
     <div class="">
-        <?php if (isset($jubilaciones_vejez[0]) || isset($jubilaciones_invalidez[0])): ?>  
+        <?php if (isset($retiros_vejez[0]) || isset($retiros_invalidez[0])): ?>  
 
             <section>
                 <div class="table-responsive">
                     <table class="table">
                         <tbody>
+                            <?php if (isset($retiros_vejez[0])): ?>  
                             <tr>
                                 <td class="lead text-uppercase bg-light text-center align-middle">
                                     Vejez
                                 </td>
                                 <td>
                                     <ul class="my-1">
-                                        <?php foreach ($jubilaciones_vejez as $post): ?> 
+                                        <?php foreach ($retiros_vejez as $post): ?> 
                                             <?php
-                                            $tipo_jubilacion = get_field('tipo_jubilacion', $post);
+                                            $tipo_retiro = get_field('tipo_retiro', $post);
                                             ?>   
                                             <li>
                                                 <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank">
-                                                    <?php echo $tipo_jubilacion; ?>
+                                                    <?php echo $tipo_retiro; ?>
                                                 </a>
                                             </li>
                                         <?php endforeach; ?>
                                     </ul>
                                 </td>
                             </tr>
+                            <?php endif; ?>
+                            <?php if (isset($retiros_invalidez[0])): ?>  
                             <tr>
                                 <td class="lead text-uppercase bg-light text-center align-middle">
                                     Invalidez
                                 </td>
                                 <td>
                                     <ul class="my-1">
-                                        <?php foreach ($jubilaciones_invalidez as $post): ?> 
+                                        <?php foreach ($retiros_invalidez as $post): ?> 
                                             <?php
-                                            $tipo_jubilacion = get_field('tipo_jubilacion', $post);
+                                            $tipo_retiro = get_field('tipo_retiro', $post);
                                             ?>   
                                             <li>
-                                                <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank"><?php echo $tipo_jubilacion; ?></a>
+                                                <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank"><?php echo $tipo_retiro; ?></a>
                                             </li>
                                         <?php endforeach; ?>
                                     </ul>
                                 </td>
                             </tr>
+                            <?php endif; ?>
                         </tbody>
                     </table>
                 </div>
@@ -112,7 +116,7 @@ get_header();
 
 
             <?php
-            $posts = array_merge($jubilaciones_vejez, $jubilaciones_invalidez);
+            $posts = array_merge($retiros_vejez, $retiros_invalidez);
             ?>
 
             <?php foreach ($posts as $post): ?> 

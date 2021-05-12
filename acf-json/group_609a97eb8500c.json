@@ -1,0 +1,114 @@
+{
+    "key": "group_609a97eb8500c",
+    "title": "Retiros",
+    "fields": [
+        {
+            "key": "field_609a97eb88323",
+            "label": "Condiciones",
+            "name": "condiciones",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_609a97eb8835e",
+            "label": "URL requisitos",
+            "name": "url_requisitos",
+            "type": "file",
+            "instructions": "URL al los requisitos para el inicio del trámite",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_609a97eb883d3",
+            "label": "Tipo Retiro",
+            "name": "tipo_retiro",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Retiro Voluntario": "Retiro Voluntario",
+                "Retiro Obligatorio": "Retiro Obligatorio",
+                "Retiro Obligatorio por Incapacidad": "Retiro Obligatorio por Incapacidad"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_609a97eb88474",
+            "label": "URL etiqueta",
+            "name": "url_etiqueta",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Descargar instructivo",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:retiros-vejez"
+            }
+        ],
+        [
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:retiros-invalidez"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1620744286
+}
