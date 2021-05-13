@@ -153,6 +153,9 @@ get_header();
                         if ($url_requisitos):
                             ?>    
                             <div class="mt-3 mt-lg-4">
+                                <h6 class="font-weight-bold text-secondary mb-3" >
+                                    Descarga de instructivo
+                                </h6>
                                 <a href="<?php echo $url_requisitos; ?>" class="btn btn-outline-primary"  target="_blank" >
                                     <?php echo $url_etiqueta; ?>
                                 </a>    

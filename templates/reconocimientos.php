@@ -34,7 +34,7 @@ get_header();
     <div>
         <?php
         if (!empty($pagina->post_content)):
-            echo $pagina->post_content;
+            echo nl2br($pagina->post_content);
         endif;
         ?> 
     </div>

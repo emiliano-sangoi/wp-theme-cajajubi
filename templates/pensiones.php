@@ -55,25 +55,30 @@ get_header();
         <?php if (isset($pensiones[0])): ?>  
 
             <section>
-                <div class="table-responsive">
-                    <table class="table">
+                <div class="table-responsive box-shadow">
+                    <table class="table mb-0">
                         <tbody>
-                            <tr>
-                                <td>
-                                    <ul class="my-1">
-                                        <?php foreach ($pensiones as $post): ?> 
-                                            <?php
-                                            $tipo_pension = get_field('tipo_pension', $post);
-                                            ?>   
-                                            <li>
-                                                <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank">
-                                                    <?php echo $tipo_pension; ?>
-                                                </a>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                </td>
-                            </tr>
+                            <?php if (isset($pensiones[0])): ?>  
+                                <tr>
+                                    <td class="lead text-uppercase bg-light text-center align-middle">
+                                        Tipos
+                                    </td>
+                                    <td>
+                                        <ul class="my-1">
+                                            <?php foreach ($pensiones as $post): ?> 
+                                                <?php
+                                                $tipo_pension = get_field('tipo_pension', $post);
+                                                ?>   
+                                                <li>
+                                                    <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank">
+                                                        <?php echo $tipo_pension; ?>
+                                                    </a>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            <?php endif; ?>
                         </tbody>
                     </table>
                 </div>
@@ -93,7 +98,7 @@ get_header();
                         endif;
                         ?>
                     </div>
-                    
+
                     <div class="">
                         <?php
                         $beneficiarios = get_field('beneficiarios', $post);
@@ -129,6 +134,9 @@ get_header();
                         if ($url_requisitos):
                             ?>    
                             <div class="mt-3 mt-lg-4">
+                                <h6 class="font-weight-bold text-secondary mb-3" >
+                                    Descarga de requisitos para el inicio del trámite
+                                </h6>
                                 <a href="<?php echo $url_requisitos; ?>" class="btn btn-outline-primary"  target="_blank" >
                                     <?php echo $url_etiqueta; ?>
                                 </a>    
