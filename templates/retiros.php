@@ -66,48 +66,48 @@ get_header();
         <?php if (isset($retiros_vejez[0]) || isset($retiros_invalidez[0])): ?>  
 
             <section>
-                <div class="table-responsive">
-                    <table class="table">
+                <div class="table-responsive box-shadow">
+                    <table class="table mb-0">
                         <tbody>
                             <?php if (isset($retiros_vejez[0])): ?>  
-                            <tr>
-                                <td class="lead text-uppercase bg-light text-center align-middle">
-                                    Vejez
-                                </td>
-                                <td>
-                                    <ul class="my-1">
-                                        <?php foreach ($retiros_vejez as $post): ?> 
-                                            <?php
-                                            $tipo_retiro = get_field('tipo_retiro', $post);
-                                            ?>   
-                                            <li>
-                                                <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank">
-                                                    <?php echo $tipo_retiro; ?>
-                                                </a>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td class="lead text-uppercase bg-light text-center align-middle">
+                                        Vejez
+                                    </td>
+                                    <td>
+                                        <ul class="my-1">
+                                            <?php foreach ($retiros_vejez as $post): ?> 
+                                                <?php
+                                                $tipo_retiro = get_field('tipo_retiro', $post);
+                                                ?>   
+                                                <li>
+                                                    <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank">
+                                                        <?php echo $tipo_retiro; ?>
+                                                    </a>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </td>
+                                </tr>
                             <?php endif; ?>
                             <?php if (isset($retiros_invalidez[0])): ?>  
-                            <tr>
-                                <td class="lead text-uppercase bg-light text-center align-middle">
-                                    Invalidez
-                                </td>
-                                <td>
-                                    <ul class="my-1">
-                                        <?php foreach ($retiros_invalidez as $post): ?> 
-                                            <?php
-                                            $tipo_retiro = get_field('tipo_retiro', $post);
-                                            ?>   
-                                            <li>
-                                                <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank"><?php echo $tipo_retiro; ?></a>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td class="lead text-uppercase bg-light text-center align-middle">
+                                        Invalidez
+                                    </td>
+                                    <td>
+                                        <ul class="my-1">
+                                            <?php foreach ($retiros_invalidez as $post): ?> 
+                                                <?php
+                                                $tipo_retiro = get_field('tipo_retiro', $post);
+                                                ?>   
+                                                <li>
+                                                    <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank"><?php echo $tipo_retiro; ?></a>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </td>
+                                </tr>
                             <?php endif; ?>
                         </tbody>
                     </table>
@@ -155,6 +155,9 @@ get_header();
                         if ($url_requisitos):
                             ?>    
                             <div class="mt-3 mt-lg-4">
+                                <h6 class="font-weight-bold text-secondary mb-3" >
+                                    Requisitos para el inicio del trámite:
+                                </h6>
                                 <a href="<?php echo $url_requisitos; ?>" class="btn btn-outline-primary"  target="_blank" >
                                     <?php echo $url_etiqueta; ?>
                                 </a>    

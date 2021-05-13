@@ -66,8 +66,8 @@ get_header();
         <?php if (isset($jubilaciones_vejez[0]) || isset($jubilaciones_invalidez[0])): ?>  
 
             <section>
-                <div class="table-responsive">
-                    <table class="table">
+                <div class="table-responsive box-shadow">
+                    <table class="table mb-0">
                         <tbody>
                             <tr>
                                 <td class="lead text-uppercase bg-light text-center align-middle">
@@ -99,7 +99,9 @@ get_header();
                                             $tipo_jubilacion = get_field('tipo_jubilacion', $post);
                                             ?>   
                                             <li>
-                                                <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank"><?php echo $tipo_jubilacion; ?></a>
+                                                <a class="js-scroll-trigger" href="#<?php echo $post->post_name; ?>" target="_blank">
+                                                    <?php echo $tipo_jubilacion; ?>
+                                                </a>
                                             </li>
                                         <?php endforeach; ?>
                                     </ul>
