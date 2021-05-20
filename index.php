@@ -166,36 +166,36 @@ if ($id_cat) {
 
 
 
-<section class="text-light" id='prestaciones'>
+<!--<section class="text-light" id='prestaciones'>
     <div class='container-fluid px-0'>
         <div class="row">
             <div class="col-12 col-md-6 pr-sm-0">
                     <?php
-                    $link = null;
-                    $blank = false;
-                    $bg = 'btn-verde1';
-                    $img = DIR_IMGS . '/iconos/heart.png';
-                    $icon = 'fa-line-chart';
-                    $titulo = 'La Caja te cuida';
-                    $class_title = 'text-uppercase font-weight-bold';
-                    include locate_template('partials/home-link-horizontal.php');
+//                    $link = null;
+//                    $blank = false;
+//                    $bg = 'btn-verde1';
+//                    $img = DIR_IMGS . '/iconos/heart.png';
+//                    $icon = 'fa-line-chart';
+//                    $titulo = 'La Caja te cuida';
+//                    $class_title = 'text-uppercase font-weight-bold';
+//                    include locate_template('partials/home-link-horizontal.php');
                     ?>
             </div>
             <div class="col-12 col-md-6 pl-sm-0">
                     <?php
-                    $img = null;
-                    $blank = false;
-                    $img = DIR_IMGS . '/iconos/masks.png';
-                    $icon = 'fa-line-chart';
-                    $bg = 'btn-orange1';
-                    $bg = 'btn-violeta1';
-                    $titulo = 'Cultura';
-                    include locate_template('partials/home-link-horizontal.php');
+//                    $img = null;
+//                    $blank = false;
+//                    $img = DIR_IMGS . '/iconos/masks.png';
+//                    $icon = 'fa-line-chart';
+//                    $bg = 'btn-orange1';
+//                    $bg = 'btn-violeta1';
+//                    $titulo = 'Cultura';
+//                    include locate_template('partials/home-link-horizontal.php');
                     ?>                     
             </div>                       
         </div>
     </div>
-</section>
+</section>-->
 
 
 
