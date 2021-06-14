@@ -76,22 +76,22 @@ get_header();
                 <div class="">
                     <div class="social-media">
                         <span class="">
-                            <a href="https://www.facebook.com/cajasantafe" target="_blank">
+                            <a href="<?php echo ENLACES_FACEBOOK; ?>" target="_blank" style="text-decoration: none;">
                                 <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/facebook_sq.png'; ?>" alt="Facebook"/>
                             </a>
                         </span>
                         <span class="">
-                            <a href="https://twitter.com/caja_sf" target="_blank">
+                            <a href="<?php echo ENLACES_TWITTER; ?>" target="_blank" style="text-decoration: none;">
                                 <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/twitter_sq.png'; ?>" alt="Twitter"/>
                             </a>
                         </span>
                         <span class="">
-                            <a href="https://instagram.com/cajajubisantafe?igshid=1xdlczgob9pq5" target="_blank">
+                            <a href="<?php echo ENLACES_INSTAGRAM; ?>" target="_blank" style="text-decoration: none;">
                                 <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/instagram_sq.png'; ?>" alt="Instagram"/>
                             </a>
                         </span>
                         <span class="">
-                            <a href="https://www.youtube.com/user/GobSantaFe" target="_blank">
+                            <a href="<?php echo ENLACES_YOUTUBE; ?>" target="_blank" style="text-decoration: none;">
                                 <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/youtube_sq.png'; ?>" alt="Youtube"/>
                             </a>
                         </span>
