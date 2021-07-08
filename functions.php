@@ -31,6 +31,7 @@ define('PAGINA_LA_CAJA_EN_NUMEROS', 'la-caja-en-numeros');
 define('PAGINA_DESCARGA_RECIBO', 'descarga-tu-recibo');
 define('PAGINA_INSTRUCTIVOS', 'instructivos');
 define('PAGINA_GANANCIAS', 'impuesto-a-las-ganancias');
+define('PAGINA_ASIGNACIONES_FAMILIARES', 'asignaciones-familiares');
 
 //Categorías
 define('CATEGORIA_NOVEDADES', 'novedades');
@@ -53,6 +54,7 @@ define('CATEGORIA_RETIROS_VEJEZ', 'retiros-vejez');
 define('CATEGORIA_RETIROS_INVALIDEZ', 'retiros-invalidez');
 define('CATEGORIA_PENSIONES', 'pensiones');
 //define('CATEGORIA_RECONOCIMIENTOS', 'reconocimientos');
+define('CATEGORIA_ASIGNACIONES_FAMILIARES', 'asignaciones-familiares');
 
 define('ENLACES_FACEBOOK', 'https://www.facebook.com/cajasantafe');
 define('ENLACES_TWITTER', 'https://twitter.com/caja_sf');
@@ -129,7 +131,7 @@ add_filter('body_class', array('BsWp', 'add_slug_to_body_class'));
 
 function getLinkPagina($slug) {
     $pagina = get_page_by_path($slug);
-    if ($pagina instanceof WP_Post) {
+    if ($pagina instanceof WP_Post && $pagina->post_status == 'publish') {
         return get_permalink($pagina);
     }
     return null;
