@@ -67,9 +67,6 @@ get_header();
                                 <th class="text-center align-middle">
                                     N°
                                 </th>
-                                <th class="text-center align-middle" style="width: 20%;">
-                                    Nombre Hoja
-                                </th>
                                 <th class="text-center align-middle">
                                     Solicitante
                                 </th>
@@ -79,6 +76,12 @@ get_header();
                                 <th class="text-center align-middle">
                                     Pago
                                 </th>
+                                <th class="text-center align-middle" style="width: 15%;">
+                                    Solicitud
+                                </th>
+                                <th class="text-center align-middle" style="width: 15%;">
+                                    Documentación a presentar 
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -86,20 +89,28 @@ get_header();
                                 <?php
                                 $nro_asig_familiar = get_field('nro_asig_familiar', $post);
                                 $archivo_nombre_hoja_asig_familiar = get_field('archivo_nombre_hoja_asig_familiar', $post);
+                                $doc_adicional_asig_familiar = get_field('doc_adicional_asig_familiar', $post);
                                 $solicitante_asig_familiar = get_field('solicitante_asig_familiar', $post);
                                 $caso_asig_familiar = get_field('caso_asig_familiar', $post);
                                 $pago_asig_familiar = get_field('pago_asig_familiar', $post);
                                 ?>
                                 <tr>
                                     <td><?php echo $nro_asig_familiar; ?></td>
-                                    <td>
-                                        <a href="<?php echo $archivo_nombre_hoja_asig_familiar; ?>" target="_blank" class="<?php echo $archivo_nombre_hoja_asig_familiar ? '' : 'disabled' ?>">
-                                            <?php echo $post->post_title; ?>
-                                        </a>    
-                                    </td>
                                     <td><?php echo $solicitante_asig_familiar; ?></td>
                                     <td><?php echo $caso_asig_familiar; ?></td>
                                     <td><?php echo $pago_asig_familiar; ?></td>
+                                    <td class="text-center">
+                                        <a href="<?php echo $archivo_nombre_hoja_asig_familiar; ?>" target="_blank" class="<?php echo $archivo_nombre_hoja_asig_familiar ? '' : 'disabled' ?>" title="Descargar solicitud <?php echo $post->post_title; ?>">
+                                            <i class="fa fa-download"></i>
+                                        </a>    
+                                    </td>
+                                    <td class="text-center">
+                                        <?php if ($doc_adicional_asig_familiar): ?>
+                                        <a href="<?php echo $doc_adicional_asig_familiar; ?>" target="_blank" class="<?php echo $doc_adicional_asig_familiar ? '' : 'disabled' ?>" title="Descargar documentación <?php echo $post->post_title; ?>">
+                                            <i class="fa fa-download"></i>
+                                        </a>    
+                                        <?php endif; ?>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
