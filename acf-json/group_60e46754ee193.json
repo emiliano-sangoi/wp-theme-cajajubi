@@ -24,6 +24,25 @@
             "step": ""
         },
         {
+            "key": "field_60fa7ef261505",
+            "label": "Tipo asignación",
+            "name": "tipo_asignacion",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ingrese el tipo de asignación",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_60e4685ea502f",
             "label": "Archivo Nombre Hoja",
             "name": "archivo_nombre_hoja_asig_familiar",
@@ -136,5 +155,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1626261387
+    "modified": 1627029368
 }
