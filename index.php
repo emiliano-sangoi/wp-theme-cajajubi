@@ -52,7 +52,7 @@ if ($id_cat) {
     <div class="row">
         <div class="col-12 col-md-6 col-lg-3 my-1">
 
-            <a class="btn btn-lg btn-warning w-100 h-100 text-white rounded-0 box-shadow" href="https://www.santafe.gob.ar/ms/covid19/">
+            <a class="btn btn-lg btn-warning w-100 h-100 text-white rounded-0 box-shadow" href="https://www.santafe.gob.ar/ms/covid19/" target="_blank">
                 <img class="img-fluid w-10" src='<?php echo DIR_IMGS . '/iconos/mask2.png'; ?>' alt=''/>
                 <span class='align-middle small text-uppercase'>
                     PREVENCIÓN <span class="font-weight-bold">COVID</span>
@@ -60,7 +60,7 @@ if ($id_cat) {
             </a>
         </div>
         <div class="col-12 col-md-6 col-lg-3 my-1">
-            <a class="btn btn-lg btn-pink h-100 w-100 text-white rounded-0 box-shadow" href="https://www.santafe.gob.ar/santafevacunacovid/inicio">
+            <a class="btn btn-lg btn-pink h-100 w-100 text-white rounded-0 box-shadow" href="https://www.santafe.gob.ar/santafevacunacovid/inicio" target="_blank">
                 <img class="img-fluid w-8" src='<?php echo DIR_IMGS . '/iconos/vacuna.png'; ?>' alt=''/>
                 <span class='align-middle small'>                    
                     VACUNACIÓN <span class="font-weight-bold">COVID</span>
@@ -69,7 +69,7 @@ if ($id_cat) {
         </div>
         <div class="col-12 col-md-6 col-lg-3 my-1">
 
-            <a class="btn btn-lg btn-whatsapp w-100 h-100 text-white rounded-0 box-shadow" href="https://api.whatsapp.com/send?phone=5493425128800&text=Hola!%20Necesito%20Informacion">
+            <a class="btn btn-lg btn-whatsapp w-100 h-100 text-white rounded-0 box-shadow" href="https://api.whatsapp.com/send?phone=5493425128800&text=Hola!%20Necesito%20Informacion" target="_blank">
                 <span class='align-middle small'>
                     <i class="fa fa-whatsapp"></i>
                     342 5 128 800
@@ -124,6 +124,7 @@ if ($id_cat) {
         <div class="col-12 col-md-6 col-lg-4 my-1">
             <?php
             $link = getLinkPagina(PAGINA_SERVICIOS);
+            $blank = false;
             //$img = DIR_IMGS . '/iconos/link.png';
             $icon = 'fa-link';
             $titulo = 'Servicios';

@@ -38,7 +38,7 @@ if ($catN_id) {
 </div>-->
 
 <div class="navbar-separator pb-5 altura-minima" id="biblioteca">
-    <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo DIR_IMGS . '/paginas/prestaciones.jpg'; ?>"></div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo DIR_IMGS . '/paginas/biblioteca.jpg'; ?>"></div>
 
 
     <div class="container-lg px-3 pt-3 px-lg-5">
