@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <div class="container navbar-separator px-3 px-lg-5 pt-3 pb-5 altura-minima" id="delegaciones">
-    
+
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo get_home_url(); ?>">Inicio</a></li>    
@@ -21,13 +21,13 @@ get_header();
             </li>
         </ol>
     </nav>
-        
+
     <h1 class="font-weight-bold text-primary">
         <?php echo $pagina->post_title; ?>
     </h1>
     <hr/>
     <div>
-         <?php
+        <?php
         if (!empty($pagina->post_content)):
             echo nl2br($pagina->post_content);
             ?>
@@ -35,19 +35,29 @@ get_header();
     </div>
     <h2 class="h3 font-weight-bold mt-5">Delegación Rosario</h2>
     <div>
-        <p>Esta delegación tuvo su primer domicilio en calle Pellegrini 1595. En el año 2008 se mudaron a la sede actual de calle Brown 2262.</p>
-        <p>Atiende diversos trámites: asesoramiento e inicio de trámites de jubilaciones, pensiones y reconocimientos de servicios de todos los sectores de la Administración Central, docentes y policías. Asimismo, se recepcionan todos los trámites derivados de dichos beneficios, adecuando además los procedimientos a las normas de calidad con las que cuenta la Mesa de Inicio de la sede Santa Fe.</p>
-        <p>En esta Delegación se elaboran dictámenes, realiza computo de servicios de los tramites de reconocimientos de servicios y algunas jubilaciones ordinarias, notificaciones, protocoliza Actos Administrativos, contando además con su propio Archivo para todos aquellos expedientes o actuaciones que fueron iniciados en Rosario. </p>
+        <p>
+            Esta delegación tuvo su primer domicilio en calle Pellegrini 1595. En el año 2008 se mudaron a la sede actual de calle Brown 2262.
+        </p>
+        <p>
+            Atiende diversos trámites: asesoramiento e inicio de trámites de jubilaciones, pensiones y reconocimientos de servicios de todos los sectores de la Administración Central, docentes y policías. Asimismo, se recepcionan todos los trámites derivados de dichos beneficios, adecuando además los procedimientos a las normas de calidad con las que cuenta la Mesa de Inicio de la sede Santa Fe.
+        </p>
+        <p>
+            En esta Delegación se elaboran dictámenes, realiza computo de servicios de los tramites de reconocimientos de servicios y algunas jubilaciones ordinarias, notificaciones, protocoliza Actos Administrativos, contando además con su propio Archivo para todos aquellos expedientes o actuaciones que fueron iniciados en Rosario. 
+        </p>
     </div>
-    
+
     <h2 class="h3 font-weight-bold mt-5">
         Delegación Venado Tuerto
     </h2>
     <div>
-        <p>Abrió sus puertas en Marzo de 1987. En Mayo de 2008, se traslada al actual domicilio de Mitre 766, cerca de donde operan las oficinas de Anses y la Caja Municipal, para que los trámites sean ágiles y fáciles para los que viven en el sur de la provincia.</p>
-        <p>Desde sus comienzos, se han realizado todos los trámites de inicio de beneficios, tanto de jubilación como de pensión: reajuste de haberes, reclamos, asignaciones familiares, entre otros. Con el transcurso del tiempo se fueron incorporando los trámites de Cobros Indebidos, se toman Declaraciones Juradas a los solicitantes o testigos de pensiones y toma de vista y traslado de expedientes.</p>
+        <p>
+            Abrió sus puertas en Marzo de 1987. En Mayo de 2008, se traslada al actual domicilio de Mitre 766, cerca de donde operan las oficinas de Anses y la Caja Municipal, para que los trámites sean ágiles y fáciles para los que viven en el sur de la provincia.
+        </p>
+        <p>
+            Desde sus comienzos, se han realizado todos los trámites de inicio de beneficios, tanto de jubilación como de pensión: reajuste de haberes, reclamos, asignaciones familiares, entre otros. Con el transcurso del tiempo se fueron incorporando los trámites de Cobros Indebidos, se toman Declaraciones Juradas a los solicitantes o testigos de pensiones y toma de vista y traslado de expedientes.
+        </p>
     </div>
-    
+
     <h2 class="h3 font-weight-bold mt-5">
         Delegación Capital Federal
     </h2>
@@ -64,19 +74,24 @@ get_header();
             Desde sus comienzos, se han realizado todos los trámites de inicio de beneficios, tanto de jubilación como de pensión: reajuste de haberes, reclamos, asignaciones familiares, entre otros. Con el transcurso del tiempo se fueron incorporando los trámites de Cobros Indebidos, se toman Declaraciones Juradas a los solicitantes o testigos de pensiones y toma de vista y traslado de expedientes.
         </p>
     </div>
-    
-    
+
+
     <h2 class="h3 font-weight-bold mt-5">
         Delegación San Justo
     </h2>
     <div>    
-        <p>Fue creada a principios del año 1998 como Casa de la Seguridad Social, donde además funcionaban IAPOS y Ley 5110. Desde ese momento contaba con un completo servicio de información y guía de las consultas por trámites jubilatorios y pensiones provinciales.</p>
-        <p>En dicha Delegación se inician todos los trámites para la atención integral del ciudadano, evitando así su viaje a Santa Fe.</p>
-        <p>En la actualidad, dicha delegación se encuentra en la calle Nicolás Figueredo 2637, donde funciona conjuntamente con la Ley 5110 y la Defensoría del Pueblo.</p>
-        <p>Se realizan todos los trámites de inicio de beneficios, tanto de jubilación como de pensión: reajuste de haberes, reclamos, asignaciones familiares, entre otros. Con el transcurso del tiempo se fueron incorporando los trámites de Cobros Indebidos, se toman Declaraciones Juradas a los solicitantes o testigos de pensiones y toma de vista y traslado de expedientes.</p>
+        <p>
+            Fue creada a principios del año 1998 como Casa de la Seguridad Social, donde además funcionaban IAPOS y Ley 5110. Desde ese momento contaba con un completo servicio de información y guía de las consultas por trámites jubilatorios y pensiones provinciales.
+        </p>
+        <p>
+            En dicha Delegación se inician todos los trámites para la atención integral del ciudadano, evitando así su viaje a Santa Fe.
+        </p>
+        <p>
+            En la actualidad, y a partir de Septiembre de 2021 muda su oficina al edificio municipal en calle Independencia 2525.
+        </p>
     </div>
-    
-     <h2 class="h3 font-weight-bold mt-5">
+
+    <h2 class="h3 font-weight-bold mt-5">
         Delegación Reconquista
     </h2>
     <div>
@@ -87,9 +102,8 @@ get_header();
             Se realizan todos los trámites de inicio de beneficios, tanto de jubilación como de pensión: reajuste de haberes, reclamos, asignaciones familiares, entre otros. Con el transcurso del tiempo se fueron incorporando los trámites de Cobros Indebidos, se toman Declaraciones Juradas a los solicitantes o testigos de pensiones y toma de vista y traslado de expedientes.
         </p>        
     </div>
-    
-    
-     <h2 class="h3 font-weight-bold mt-5">
+
+    <h2 class="h3 font-weight-bold mt-5">
         Delegación Rafaela
     </h2>
     <div>
@@ -97,11 +111,13 @@ get_header();
             Ubicada en Av. Santa Fe 2771, abre sus puertas el 30 de Julio de 2014. En un principio, esta delegación realizaba pocos trámites, pero con el paso del tiempo, la comunidad fue conociendo de su existencia, y así comenzó a crecer la demanda de servicios de todas aquellas personas, que sin necesidad de trasladarse a la ciudad de Santa Fe, puedan iniciar todo tipo de trámites, a saber: jubilaciones ordinarias, régimen opcional docente, jubilación por invalidez , retiros, reconocimiento de servicios, pensiones, pagos de haberes, subsidio por sepelio, reajustes de haberes, pronto despacho, como así también vistas y traslados, oficios de embargo, solicitud de asignaciones familiares e inicios de notas ante cualquier pedido de información o reclamo.
         </p>
         <p>
-            En el año 2020, muda sus oficinas a calle Bv. Lehmann 583, donde funciona en la actualidad.
+            En el año 2020, muda sus oficinas a calle Boulevard Lehmann 583.
+        </p>
+        <p>
+            En septiembre de 2021 se muda nuevamente a Boulevard Yrigoyen 421, donde funciona también la Coordinación de Asuntos Vecinales, el Centro de Documentación Rápida y una oficina de Información al Consumidor.
         </p>        
     </div>
-    
-    
+
 </div>
 
 <?php get_footer(); ?>
