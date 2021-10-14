@@ -167,22 +167,22 @@ if ($id_cat) {
 
 
 
-<!--<section class="text-light" id='prestaciones'>
+<section class="text-light" id='la-caja-te-cuida'>
     <div class='container-fluid px-0'>
         <div class="row">
-            <div class="col-12 col-md-6 pr-sm-0">
+            <div class="col-12 col-md-12 pr-sm-0">
                     <?php
-//                    $link = null;
-//                    $blank = false;
-//                    $bg = 'btn-verde1';
-//                    $img = DIR_IMGS . '/iconos/heart.png';
-//                    $icon = 'fa-line-chart';
-//                    $titulo = 'La Caja te cuida';
-//                    $class_title = 'text-uppercase font-weight-bold';
-//                    include locate_template('partials/home-link-horizontal.php');
+                    $link = getLinkPagina(PAGINA_LA_CAJA_TE_CUIDA);
+                    $blank = false;
+                    $bg = 'btn-verde1';
+                    $img = DIR_IMGS . '/iconos/heart.png';
+                    $icon = 'fa-line-chart';
+                    $titulo = 'La caja te cuida';
+                    $class_title = 'text-uppercase font-weight-bold';
+                    include locate_template('partials/home-link-horizontal.php');
                     ?>
             </div>
-            <div class="col-12 col-md-6 pl-sm-0">
+            <!--<div class="col-12 col-md-6 pl-sm-0">-->
                     <?php
 //                    $img = null;
 //                    $blank = false;
@@ -193,10 +193,10 @@ if ($id_cat) {
 //                    $titulo = 'Cultura';
 //                    include locate_template('partials/home-link-horizontal.php');
                     ?>                     
-            </div>                       
+            <!--</div>-->                       
         </div>
     </div>
-</section>-->
+</section>
 
 
 

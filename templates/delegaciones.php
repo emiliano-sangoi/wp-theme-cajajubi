@@ -34,7 +34,7 @@ get_header();
         <?php endif; ?>
     </div>
     <h2 class="h3 font-weight-bold mt-5">Delegación Rosario</h2>
-    <div>
+    <div class="text-justify">
         <p>
             Esta delegación tuvo su primer domicilio en calle Pellegrini 1595. En el año 2008 se mudaron a la sede actual de calle Brown 2262.
         </p>
@@ -49,7 +49,7 @@ get_header();
     <h2 class="h3 font-weight-bold mt-5">
         Delegación Venado Tuerto
     </h2>
-    <div>
+    <div class="text-justify">
         <p>
             Abrió sus puertas en Marzo de 1987. En Mayo de 2008, se traslada al actual domicilio de Mitre 766, cerca de donde operan las oficinas de Anses y la Caja Municipal, para que los trámites sean ágiles y fáciles para los que viven en el sur de la provincia.
         </p>
@@ -61,7 +61,7 @@ get_header();
     <h2 class="h3 font-weight-bold mt-5">
         Delegación Capital Federal
     </h2>
-    <div>
+    <div class="text-justify">
         <p>
             Si bien se inició en Marzo de 1993, se creó formalmente el 1° de Noviembre de 1995. En un principio, desde su creación hasta el año 2004, funcionaba como oficina de recepción de documentación, la cual se remitía a Santa Fe para su caratulación y tramitación, brindándose además asesoramiento en general sobre trámites provisionales relativos a la Caja.
         </p>
@@ -79,7 +79,7 @@ get_header();
     <h2 class="h3 font-weight-bold mt-5">
         Delegación San Justo
     </h2>
-    <div>    
+    <div class="text-justify">   
         <p>
             Fue creada a principios del año 1998 como Casa de la Seguridad Social, donde además funcionaban IAPOS y Ley 5110. Desde ese momento contaba con un completo servicio de información y guía de las consultas por trámites jubilatorios y pensiones provinciales.
         </p>
@@ -94,7 +94,7 @@ get_header();
     <h2 class="h3 font-weight-bold mt-5">
         Delegación Reconquista
     </h2>
-    <div>
+   <div class="text-justify">
         <p>
             Se inauguró el 9 de Abril de 2013, en la calle Hipólito Irigoyen 1415. En el año 2020, mudó sus oficinas y actualmente se encuentra en calle Rivadavia 666.
         </p>
@@ -106,7 +106,7 @@ get_header();
     <h2 class="h3 font-weight-bold mt-5">
         Delegación Rafaela
     </h2>
-    <div>
+    <div class="text-justify">
         <p>
             Ubicada en Av. Santa Fe 2771, abre sus puertas el 30 de Julio de 2014. En un principio, esta delegación realizaba pocos trámites, pero con el paso del tiempo, la comunidad fue conociendo de su existencia, y así comenzó a crecer la demanda de servicios de todas aquellas personas, que sin necesidad de trasladarse a la ciudad de Santa Fe, puedan iniciar todo tipo de trámites, a saber: jubilaciones ordinarias, régimen opcional docente, jubilación por invalidez , retiros, reconocimiento de servicios, pensiones, pagos de haberes, subsidio por sepelio, reajustes de haberes, pronto despacho, como así también vistas y traslados, oficios de embargo, solicitud de asignaciones familiares e inicios de notas ante cualquier pedido de información o reclamo.
         </p>

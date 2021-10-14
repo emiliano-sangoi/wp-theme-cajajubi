@@ -32,6 +32,7 @@ define('PAGINA_DESCARGA_RECIBO', 'descarga-tu-recibo');
 define('PAGINA_INSTRUCTIVOS', 'instructivos');
 define('PAGINA_GANANCIAS', 'impuesto-a-las-ganancias');
 define('PAGINA_ASIGNACIONES_FAMILIARES', 'asignaciones-familiares');
+define('PAGINA_LA_CAJA_TE_CUIDA', 'la-caja-te-cuida');
 
 //Categorías
 define('CATEGORIA_NOVEDADES', 'novedades');
@@ -55,6 +56,7 @@ define('CATEGORIA_RETIROS_INVALIDEZ', 'retiros-invalidez');
 define('CATEGORIA_PENSIONES', 'pensiones');
 //define('CATEGORIA_RECONOCIMIENTOS', 'reconocimientos');
 define('CATEGORIA_ASIGNACIONES_FAMILIARES', 'asignaciones-familiares');
+define('CATEGORIA_CAJA_TE_CUIDA', 'cuida');
 
 define('ENLACES_FACEBOOK', 'https://www.facebook.com/cajasantafe');
 define('ENLACES_TWITTER', 'https://twitter.com/caja_sf');
