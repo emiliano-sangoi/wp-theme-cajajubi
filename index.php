@@ -213,7 +213,7 @@ if ($id_cat) {
                 <div class="mb-3 mb-lg-4">
                     <h4 class="font-weight-bold">La Caja te cuida</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut bibendum, purus a rutrum placerat, diam magna vulputate nunc, mattis sodales ex velit ac est. Quisque ut rutrum enim.
+                        Te cuidamos y te brindamos material interactivo para que conozcas otras maneras de estar saludable.
                     </p>
                 </div>
                 <div>
