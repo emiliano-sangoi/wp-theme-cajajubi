@@ -55,6 +55,12 @@ $gray-600: #868e96 !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;*/
+.bg-verde1 {
+  background-color: #27AE60; }
+
+.bg-rojo1 {
+  background-color: #EC7063; }
+
 /*
 Definir la ruta relativa en relacion al archivo style.css que esta un directorio arriba
 */
@@ -112,6 +118,10 @@ Definir la ruta relativa en relacion al archivo style.css que esta un directorio
   --color-gray: #6c757d;
   /*--gray-dark: #343a40;*/
   --color-gray-dark: #343a40;
+  /*--verde1: #27AE60;*/
+  --color-verde1: #27AE60;
+  /*--rojo1: #EC7063;*/
+  --color-rojo1: #EC7063;
   /*--primary: #00548f;*/
   --color-primary: #00548f;
   /*--secondary: #6c757d;*/

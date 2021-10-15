@@ -27,7 +27,10 @@ $yellow-green: #38A700;
 $azul-gob-stafe: #00548f;
 $whatsapp: #25D366;
 $pink: #f891a5;
-
+$verde1: #27AE60;
+$rojo1: #EC7063;
+$orange1: #E67E22;
+$violeta1: #9B59B6;
 
 /*Override de colores*/
 /*-------------------------------------------------------*/
@@ -86,7 +89,9 @@ $gray-900: #212529 !default;*/
 
 
 $colors: (
-    /*'whatsapp': $whatsapp*/
+    'verde1': $verde1,
+    'rojo1': $rojo1,
+/*'whatsapp': $whatsapp*/
 /*        'gray-100': $gray-100,
         'gray-200': $gray-200,
         'gray-300': $gray-300,
@@ -101,15 +106,15 @@ $colors: (
         'color-default': $color-default*/
 );
 
-//@each $name, $color in $colors{
-//  .bg-#{$name} {
- //   background-color: $color;
- // }
+@each $name, $color in $colors{
+    .bg-#{$name} {
+        background-color: $color;
+    }
 
- // .text-color-#{$name}{
- //   color: $color;
-  //}
-//}*/
+    // .text-color-#{$name}{
+    //   color: $color;
+    //}
+}
 
 
 /*
@@ -118,27 +123,27 @@ Definir la ruta relativa en relacion al archivo style.css que esta un directorio
 $base_font_path: 'fonts/Open_Sans/';
 
 @font-face {    
-  font-family: Open_Sans_Font;
-  src: url( '#{$base_font_path}/OpenSans-Light.ttf');  
-  font-weight: normal;
+    font-family: Open_Sans_Font;
+    src: url( '#{$base_font_path}/OpenSans-Light.ttf');  
+    font-weight: normal;
 }
 
 @font-face {    
-  font-family: Open_Sans_Font;
-  src: url( '#{$base_font_path}/OpenSans-SemiBold.ttf');  
-  font-weight: 300;
+    font-family: Open_Sans_Font;
+    src: url( '#{$base_font_path}/OpenSans-SemiBold.ttf');  
+    font-weight: 300;
 }
 
 @font-face {
-  font-family: Open_Sans_Font;  
-  src: url( '#{$base_font_path}/OpenSans-Bold.ttf');
-  font-weight: bold;
+    font-family: Open_Sans_Font;  
+    src: url( '#{$base_font_path}/OpenSans-Bold.ttf');
+    font-weight: bold;
 }
 
 @font-face {
-  font-family: Open_Sans_Font;  
-  src: url( '#{$base_font_path}/OpenSans-Italic.ttf');
-  font-style: italic
+    font-family: Open_Sans_Font;  
+    src: url( '#{$base_font_path}/OpenSans-Italic.ttf');
+    font-style: italic
 }
 
 /*@font-face {

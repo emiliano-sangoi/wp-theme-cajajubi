@@ -22,22 +22,18 @@ and open the template in the editor.
     Colores para ver: https://htmlcolorcodes.com/
 */
 
-.btn-verde1{
-    $verde1: #27AE60;
+.btn-verde1{    
     @include button-variant($verde1, $verde1);
 }
 
 .btn-rojo1{
-    $rojo1: #EC7063;
     @include button-variant($rojo1, $rojo1);
 }
 
 .btn-orange1{
-    $orange1: #E67E22;
     @include button-variant($orange1, $orange1);
 }
 
 .btn-violeta1{
-    $violeta1: #9B59B6;
     @include button-variant($violeta1, $violeta1);
 }

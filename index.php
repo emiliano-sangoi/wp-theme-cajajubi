@@ -166,35 +166,61 @@ if ($id_cat) {
 </section>
 
 
-
-<section class="text-light" id='la-caja-te-cuida'>
+<!--NO BORRAR!!!!!!!!!!!!-->
+<!--<section class="text-light" id='la-caja-te-cuida'>
     <div class='container-fluid px-0'>
         <div class="row">
-            <div class="col-12 col-md-12 pr-sm-0">
-                    <?php
-                    $link = getLinkPagina(PAGINA_LA_CAJA_TE_CUIDA);
-                    $blank = false;
-                    $bg = 'btn-verde1';
-                    $img = DIR_IMGS . '/iconos/heart.png';
-                    $icon = 'fa-line-chart';
-                    $titulo = 'La caja te cuida';
-                    $class_title = 'text-uppercase font-weight-bold';
-                    include locate_template('partials/home-link-horizontal.php');
-                    ?>
+            <div class="col-12 col-md-12 pr-sm-0">-->
+<?php
+/*  $link = getLinkPagina(PAGINA_LA_CAJA_TE_CUIDA);
+  $blank = false;
+  $bg = 'btn-verde1';
+  $img = DIR_IMGS . '/iconos/heart.png';
+  $icon = 'fa-line-chart';
+  $titulo = 'La caja te cuida';
+  $class_title = 'text-uppercase font-weight-bold';
+  include locate_template('partials/home-link-horizontal.php'); */
+?>
+<!--</div>
+<div class="col-12 col-md-6 pl-sm-0">-->
+<?php
+/* $img = null;
+  $blank = false;
+  $img = DIR_IMGS . '/iconos/masks.png';
+  $icon = 'fa-line-chart';
+  $bg = 'btn-orange1';
+  $bg = 'btn-violeta1';
+  $titulo = 'Cultura';
+  include locate_template('partials/home-link-horizontal.php'); */
+?>                     
+<!--</div>               
+</div>
+</div>
+</section>-->
+
+<?php
+    $link = getLinkPagina(PAGINA_LA_CAJA_TE_CUIDA);
+    $img = DIR_IMGS . '/iconos/heart.png';
+?>
+
+<section class="text-white mt-5" id='la-caja-te-cuida'>
+    <div class='container-fluid'>
+        <div class="row bg-verde1 py-4">
+            <div class="col-12 col-md-4 text-center align-self-center">
+                <img class='img-fluid p-2' src='<?php echo $img; ?>' alt=''/>
             </div>
-            <!--<div class="col-12 col-md-6 pl-sm-0">-->
-                    <?php
-//                    $img = null;
-//                    $blank = false;
-//                    $img = DIR_IMGS . '/iconos/masks.png';
-//                    $icon = 'fa-line-chart';
-//                    $bg = 'btn-orange1';
-//                    $bg = 'btn-violeta1';
-//                    $titulo = 'Cultura';
-//                    include locate_template('partials/home-link-horizontal.php');
-                    ?>                     
-            <!--</div>-->                       
-        </div>
+            <div class="col-12 col-md-8 align-self-center pl-2">
+                <div class="mb-3 mb-lg-4">
+                    <h4 class="font-weight-bold">La Caja te cuida</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut bibendum, purus a rutrum placerat, diam magna vulputate nunc, mattis sodales ex velit ac est. Quisque ut rutrum enim.
+                    </p>
+                </div>
+                <div>
+                    <a href="<?php echo $link ?: '#' ?>" class="btn btn-light">Acceder</a>
+                </div>
+            </div>
+        </div>                 
     </div>
 </section>
 
