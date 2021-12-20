@@ -1,12 +1,12 @@
 {
-    "key": "group_609ab3c414de8",
-    "title": "Pensiones",
+    "key": "group_60a539906d6b2",
+    "title": "Reconocimientos",
     "fields": [
         {
-            "key": "field_609ab3c419204",
-            "label": "Condiciones",
-            "name": "condiciones",
-            "type": "wysiwyg",
+            "key": "field_60a53a6293cb2",
+            "label": "URL etiqueta reconocimiento servicios",
+            "name": "url_etiqueta_rec_servicios",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,18 +15,18 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "default_value": "Descargar instructivo reconocimiento de servicios",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
-            "key": "field_609ab3c419240",
-            "label": "URL requisitos",
-            "name": "url_requisitos",
+            "key": "field_60a53a8193cb3",
+            "label": "URL reconocimiento servicios",
+            "name": "url_rec_servicios",
             "type": "file",
-            "instructions": "URL al los requisitos para el inicio del trámite",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -41,35 +41,9 @@
             "mime_types": ""
         },
         {
-            "key": "field_609ab3c419279",
-            "label": "Tipo Pensión",
-            "name": "tipo_pension",
-            "type": "select",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Pensión Automática": "Pensión Automática",
-                "Pensión por Fallecimiento de un activo": "Pensión por Fallecimiento de un activo",
-                "Pensión por Fallecimiento de un jubilado o un retirado": "Pensión por Fallecimiento de un jubilado o un retirado"
-            },
-            "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_609ab3c4192b1",
-            "label": "URL etiqueta",
-            "name": "url_etiqueta",
+            "key": "field_60a53aa093cb4",
+            "label": "URL etiqueta reconocimiento servicios región centro",
+            "name": "url_etiqueta_rec_servicios_region_centro",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -79,16 +53,35 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Descargar instructivo",
+            "default_value": "Descargar instructivo reconocimiento de servicios región centro",
             "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
         },
         {
-            "key": "field_609ab995aed05",
-            "label": "Beneficiarios",
-            "name": "beneficiarios",
+            "key": "field_60a53aba93cb5",
+            "label": "URL reconocimiento servicios región centro",
+            "name": "url_rec_servicios_region_centro",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_60a53ad793cb6",
+            "label": "Observaciones",
+            "name": "observaciones",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -108,9 +101,9 @@
     "location": [
         [
             {
-                "param": "post_category",
+                "param": "page_template",
                 "operator": "==",
-                "value": "category:pensiones"
+                "value": "templates\/reconocimientos.php"
             }
         ]
     ],
@@ -122,5 +115,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1620752352
+    "show_in_rest": false,
+    "modified": 1639996561
 }

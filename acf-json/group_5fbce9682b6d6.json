@@ -1,33 +1,33 @@
 {
-    "key": "group_605496d87574f",
-    "title": "Impuesto ganancias",
+    "key": "group_5fbce9682b6d6",
+    "title": "Estadisticas",
     "fields": [
         {
-            "key": "field_60549727504ed",
-            "label": "impuesto",
-            "name": "impuesto",
-            "type": "text",
+            "key": "field_5fbcdb5f7c46c",
+            "label": "enlace",
+            "name": "enlace",
+            "type": "file",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "post_category",
                 "operator": "==",
-                "value": "post"
+                "value": "category:estadisticas"
             }
         ]
     ],
@@ -39,5 +39,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633624965
+    "show_in_rest": false,
+    "modified": 1639996560
 }

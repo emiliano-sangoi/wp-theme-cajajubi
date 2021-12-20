@@ -1,9 +1,9 @@
 {
-    "key": "group_609a97eb8500c",
-    "title": "Retiros",
+    "key": "group_60a538cecd6fc",
+    "title": "Pensiones",
     "fields": [
         {
-            "key": "field_609a97eb88323",
+            "key": "field_60a539a271794",
             "label": "Condiciones",
             "name": "condiciones",
             "type": "wysiwyg",
@@ -22,7 +22,7 @@
             "delay": 0
         },
         {
-            "key": "field_609a97eb8835e",
+            "key": "field_60a539ca71795",
             "label": "URL requisitos",
             "name": "url_requisitos",
             "type": "file",
@@ -41,9 +41,9 @@
             "mime_types": ""
         },
         {
-            "key": "field_609a97eb883d3",
-            "label": "Tipo Retiro",
-            "name": "tipo_retiro",
+            "key": "field_60a539eb71796",
+            "label": "Tipo Pensión",
+            "name": "tipo_pension",
             "type": "select",
             "instructions": "",
             "required": 1,
@@ -54,9 +54,9 @@
                 "id": ""
             },
             "choices": {
-                "Retiro Voluntario": "Retiro Voluntario",
-                "Retiro Obligatorio": "Retiro Obligatorio",
-                "Retiro Obligatorio por Incapacidad": "Retiro Obligatorio por Incapacidad"
+                "Pensión Automática": "Pensión Automática",
+                "Pensión por Fallecimiento de un activo": "Pensión por Fallecimiento de un activo",
+                "Pensión por Fallecimiento de un jubilado o un retirado": "Pensión por Fallecimiento de un jubilado o un retirado"
             },
             "default_value": false,
             "allow_null": 0,
@@ -67,7 +67,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_609a97eb88474",
+            "key": "field_60a53a0771797",
             "label": "URL etiqueta",
             "name": "url_etiqueta",
             "type": "text",
@@ -84,6 +84,25 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_60a53a2371798",
+            "label": "Beneficiarios",
+            "name": "beneficiarios",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -91,14 +110,7 @@
             {
                 "param": "post_category",
                 "operator": "==",
-                "value": "category:retiros-vejez"
-            }
-        ],
-        [
-            {
-                "param": "post_category",
-                "operator": "==",
-                "value": "category:retiros-invalidez"
+                "value": "category:pensiones"
             }
         ]
     ],
@@ -110,5 +122,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1620744286
+    "show_in_rest": false,
+    "modified": 1639996561
 }

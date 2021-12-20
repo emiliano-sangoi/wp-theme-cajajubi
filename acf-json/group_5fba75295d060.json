@@ -1,9 +1,9 @@
 {
-    "key": "group_5fba413d8da50",
+    "key": "group_5fba75295d060",
     "title": "Biblioteca",
     "fields": [
         {
-            "key": "field_5fba41505375b",
+            "key": "field_5fba4987fb1a1",
             "label": "enlace",
             "name": "enlace",
             "type": "url",
@@ -16,7 +16,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "placeholder": "Ingrese la Url"
         }
     ],
     "location": [
@@ -24,7 +24,21 @@
             {
                 "param": "post_category",
                 "operator": "==",
-                "value": "category:biblioteca"
+                "value": "category:formularios"
+            }
+        ],
+        [
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:instructivos"
+            }
+        ],
+        [
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:normativas"
             }
         ]
     ],
@@ -36,5 +50,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1606041986
+    "show_in_rest": false,
+    "modified": 1639996560
 }
