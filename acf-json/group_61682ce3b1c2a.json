@@ -24,7 +24,7 @@
             {
                 "param": "post_category",
                 "operator": "==",
-                "value": "category:la-caja-te-cuida"
+                "value": "category:cuida"
             }
         ]
     ],
@@ -36,6 +36,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_rest": false,
-    "modified": 1639998691
+    "show_in_rest": 0,
+    "modified": 1640094786
 }

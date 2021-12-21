@@ -1,0 +1,58 @@
+{
+        "key": "group_60632117324f6",
+        "title": "Ganancias",
+        "fields": [
+            {
+                "key": "field_6063208433c83",
+                "label": "Advertencia",
+                "name": "advertencia",
+                "type": "text",
+                "instructions": "Este texto será resaltado al usuario",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_606320b733c84",
+                "label": "URL video instructivo",
+                "name": "url_video_instructivo",
+                "type": "url",
+                "instructions": "URL al video que posee el instructivo",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "templates\/ganancias.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }

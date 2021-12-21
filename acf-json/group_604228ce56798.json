@@ -1,0 +1,72 @@
+{
+        "key": "group_604228ce56798",
+        "title": "Novedades",
+        "fields": [
+            {
+                "key": "field_6041fbaa94cd3",
+                "label": "Copete",
+                "name": "copete",
+                "type": "textarea",
+                "instructions": "Ingrese un párrafo introductorio que resuma el contenido de la noticia o los aspectos mas importantes.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": 512,
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_6041fc0a94cd4",
+                "label": "URL externa",
+                "name": "url_externa",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "URL externa a la que será redireccionado al hacer click en la novedad"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_category",
+                    "operator": "==",
+                    "value": "category:novedades"
+                }
+            ],
+            [
+                {
+                    "param": "post_category",
+                    "operator": "==",
+                    "value": "category:novedades-destacadas"
+                }
+            ],
+            [
+                {
+                    "param": "post_category",
+                    "operator": "==",
+                    "value": "category:novedades-secundarias"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }

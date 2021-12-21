@@ -1,12 +1,12 @@
 {
-    "key": "group_5fbce9682b6d6",
-    "title": "Estadisticas",
+    "key": "group_5fb6575769a24",
+    "title": "Servicios",
     "fields": [
         {
-            "key": "field_5fbcdb5f7c46c",
+            "key": "field_5fb657749a9d5",
             "label": "enlace",
             "name": "enlace",
-            "type": "file",
+            "type": "url",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -15,11 +15,8 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
+            "default_value": "",
+            "placeholder": "Ingrese la Url"
         }
     ],
     "location": [
@@ -27,7 +24,7 @@
             {
                 "param": "post_category",
                 "operator": "==",
-                "value": "category:estadisticas"
+                "value": "category:servicios"
             }
         ]
     ],
@@ -40,5 +37,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1640094800
+    "modified": 1640094926
 }
