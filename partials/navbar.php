@@ -99,7 +99,7 @@ $pagina_sitios_de_interes  = getLinkPagina(PAGINA_SITIOS_DE_INTERES);
                     </a>
                     <?php if ($pagina_biblioteca): ?>
                         <a class="dropdown-item" href="<?php echo $pagina_biblioteca; ?>">
-                            Biblioteca digital
+                            Instructivos y Formularios
                         </a>
                     <?php endif; ?>
                     <?php if ($pagina_sitios_de_interes): ?>

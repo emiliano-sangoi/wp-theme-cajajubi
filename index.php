@@ -137,7 +137,7 @@ if ($id_cat) {
             $link = getLinkPagina(PAGINA_BIBLIOTECA);
             $img = DIR_IMGS . '/iconos/digital-library.png';
             $icon = 'dfdf';
-            $titulo = 'Biblioteca digital';
+            $titulo = 'Instructivos y Formularios';
             include locate_template('partials/home-link.php');
             ?>
         </div>
