@@ -5,22 +5,21 @@
 // La ubicacion de este codigo debe ser al principio del archivo.
 $pagina = get_page_by_path(PAGINA_ORG_APORTANTES);
 if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
-    wp_redirect( home_url(), 301 );
+    wp_redirect(home_url(), 301);
     exit;
 }
 get_header();
 
 //Aplicativos
-$link_siafca = 'https://www.santafe.gov.ar/index.php/web/Estructura-de-Gobierno/Ministerios/Trabajo-y-Seguridad-Social/Secretaria-de-Trabajo-y-Seguridad-Social/Subsecretaria-de-Seguridad-Social/Direccion-Provincial-Caja-de-Jubilaciones-y-Pensiones/Temas-Especificos/Organismos-adheridos/Aplicativos2/Sistema-de-Afiliados-a-la-Caja-Si.Af.Ca-Version-con-opcion-de-liquidaciones-complementarias-para-organismos-desde-el-ano-1996';
-$link_siafca_w32 = 'https://www.santafe.gov.ar/index.php/web/Estructura-de-Gobierno/Ministerios/Trabajo-y-Seguridad-Social/Secretaria-de-Trabajo-y-Seguridad-Social/Subsecretaria-de-Seguridad-Social/Direccion-Provincial-Caja-de-Jubilaciones-y-Pensiones/Temas-Especificos/Organismos-adheridos/Aplicativos2/Sistema-de-Afiliados-a-la-Caja-Si.Af.Ca.-Version-Windows-32-bits';
-$link_siafca_act = 'https://www.santafe.gov.ar/index.php/web/Estructura-de-Gobierno/Ministerios/Trabajo-y-Seguridad-Social/Secretaria-de-Trabajo-y-Seguridad-Social/Subsecretaria-de-Seguridad-Social/Direccion-Provincial-Caja-de-Jubilaciones-y-Pensiones/Temas-Especificos/Organismos-adheridos/Aplicativos2/Actualizacion-Si.Af.Ca.-V-5.4-Sistema-de-Afiliados-a-la-Caja-W.32-bits-2020-2021';
+$link_siafcomp = 'https://www.santafe.gob.ar/ms/cajajubilaciones/wp-content/uploads/sites/42/2022/03/SiAfComp.zip';
+$link_siafca_w32 = 'https://www.santafe.gob.ar/ms/cajajubilaciones/wp-content/uploads/sites/42/2022/03/cajav50.zip';
+$link_siafca_act = 'https://www.santafe.gob.ar/ms/cajajubilaciones/wp-content/uploads/sites/42/2022/03/Actualizacion-siafca5.4-2019-12-20-Win32bit.zip';
 $link_siafca_instructivo = 'https://www.santafe.gob.ar/ms/cajajubilaciones/wp-content/uploads/sites/42/2020/12/Instructivo-instalacion-de-SiAfCa.pdf';
 
 //Tramites:
 $link_present_ddjj = 'https://www.santafe.gob.ar/index.php/tramites/modul1/index?m=descripcion&id=164812';
 $link_gen_boletas = 'https://www.santafe.gob.ar/index.php/tramites/modul1/index?m=descripcion&id=213008';
 $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/modul1/index?m=descripcion&id=97600';
-
 ?>
 
 
@@ -37,7 +36,7 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
     <?php
     if (has_post_thumbnail($pagina)):
         $imagen = get_the_post_thumbnail_url($pagina, 'full', array('class' => 'img-fluid w-100 rounded-circle'));
-    ?>
+        ?>
         <div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $imagen; ?>"></div>
     <?php endif; ?> 
 
@@ -56,6 +55,10 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
             <?php echo $pagina->post_title; ?>
         </h1>
         <hr/>
+
+        <h2 class="h3 font-weight-bold mt-5">
+            Aplicativos informáticos
+        </h2>
         <div>
             <?php
             if (!empty($pagina->post_content)):
@@ -63,43 +66,114 @@ $link_gen_boletas_fuera_term = 'https://www.santafe.gob.ar/index.php/tramites/mo
             endif;
             ?> 
         </div>
-        <h2 class="h3 font-weight-bold mt-5">Aplicativos informáticos</h2>
-
         <section class="py-3">
-            <h3 class="h4">
-                Sistema de Afiliados a la Caja (Si.Af.Ca) para Windows 32 bits
-            </h3>
-            <p>
-                Versión para Windows de 32 bits del sistema.
-            </p>
-            <p>
-                <a class="btn btn-outline-primary" href="<?php echo $link_siafca_w32; ?>" target="_blank">
-                    Ver m&aacute;s
-                </a>
-                <a class="btn btn-outline-primary" href="<?php echo $link_siafca_act; ?>" target="_blank">
-                    Actualizaci&oacute;n v5.4 2020-2021
-                </a>
-                <a class="btn btn-outline-primary" href="<?php echo $link_siafca_instructivo; ?>" target="_blank">
-                    Descargar instructivo
-                </a>
-            </p>
+
+            <div class="card-header bg-secondary text-white font-weight-bold">                
+                <i class="fa fa-download" aria-hidden="true"></i>&nbsp;Descargas
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-bordered mb-0">
+                    <tbody>
+                        <tr>
+                            <td class="align-middle bg-light font-weight-bold" rowspan="4">
+                                Siafca
+                            </td>                     
+                        </tr>
+                        <tr>
+                            <td class="align-middle text-primary font-weight-bold">
+                                Siafca v50
+                            </td>
+                            <td class="align-middle">
+                                Sistema de Afiliados a la Caja (Si.Af.Ca) para Windows 32 bits
+                                <div class="mt-1 small text-muted">
+                                    Este aplicativo permite generar el archivo JUBI.DAT para presentar en el sistema Predeju.                                
+                                </div>
+                                <div class="mt-1 small text-success">
+                                    Si presenta las DDJJ en formato IMPORTA.DAT no es necesario utilizar este aplicativo ya que el sistema Predeju acepta este tipo de archivos.
+                                </div>
+                            </td>
+                            <td class="align-middle">
+                                <a href="<?php echo $link_siafca_w32; ?>" class="btn btn-outline-primary">
+                                    <i class="bi-download"></i>Descargar
+                                </a> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle font-weight-bold">
+                                Actualizaci&oacute;n 2020-2021
+                            </td>
+                            <td class="align-middle">
+                                Actualizaci&oacute;n v5.4 2020-2021
+                                <div class="mt-1 small text-muted">
+                                    Esta actualizaci&oacute;n solo es necesaria para instalaciones anteriores a 2020.
+                                </div>
+                            </td>
+                            <td class="align-middle">                          
+                                <a href="<?php echo $link_siafca_act; ?>" class="btn btn-outline-primary">
+                                    Descargar
+                                </a>
+
+                            </td>
+                        </tr>
+                        <tr>   
+                            <td class="align-middle font-weight-bold">
+                                Instructivo instalaci&oacute;n
+                            </td>
+                            <td class="align-middle">
+                                Instructivo para la instalaci&oacute;n del aplicativo en computadoras de 32 bits y de 64 bits (Utilizando DOSBox).
+                            </td>
+                            <td class="align-middle">                           
+                                <a href="<?php echo $link_siafca_instructivo; ?>" class="btn btn-outline-primary">
+                                    Descargar
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle bg-light font-weight-bold">
+                                Si.Af.Comp
+                            </td>
+                            <td class="align-middle" colspan="2">
+                                Aplicativo para presentaci&oacute;n de liquidaciones complementarias. Vigente desde el año 1996.
+                            </td>
+                            <td>
+
+                                <a href="<?php echo $link_siafcomp; ?>" class="btn btn-outline-primary">
+                                    Descargar
+                                </a>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </section>
 
-        <section class="py-3">
-            <h3 class="h4">
-                Si.Af.Comp
-            </h3>
-            <p>
-                Aplicativo para presentaci&oacute;n de liquidaciones complementarias. Vigente desde el año 1996.
-            </p>
-            <p>
-                <a class="btn btn-outline-primary" href="<?php echo $link_siafca; ?>" target="_blank">
-                    Ver m&aacute;s
-                </a>
-            </p>
+        <section class="card mt-3">
+            <div class="card-header bg-secondary text-white font-weight-bold">
+                <i class="fa fa-question-circle" aria-hidden="true"></i>&nbsp;Soporte de sistemas
+            </div>
+            <div class="card-body">
+                <p>
+                    Ante alg&uacute;n problema para subir la declaración jurada o con el sistema debe enviar una consulta al correo electr&oacute;nico: <span class="font-weight-bold"><i>sistemas.cajajubi@santafe.gov.ar</i></span> detallando:
+                </p>
+                <ul>
+                    <li>Código del organismo</li>
+                    <li>Descripción del problema</li>
+                    <li>Captura de pantalla del error (si corresponde).</li>
+                    <li>Archivos IMPORTA.DAT o JUBI.DAT (solo si tiene problemas al subir estos archivos).</li>
+                </ul>
+                <p>
+                    Tambi&eacute;n es posible comunicarse por telefono al n&uacute;mero: 4846403 (int. 37842) <span class="font-weight-bold text-primary">SOLO</span> en los siguientes d&iacute;as y horarios:
+                </p>
+                <ul class="mb-0">
+                    <li>Martes y Jueves de <b>8:30</b> a <b>10:00</b> Hs.</li>
+                </ul>
+            </div>
         </section>
 
-        <h2 class="h3 font-weight-bold mt-3">
+
+        <h2 class="h3 font-weight-bold mt-5">
             Trámites online
         </h2>    
         <p>A continuación, podrá acceder a realizar los trámites on line:</p>
