@@ -81,7 +81,7 @@ $pagina_sitios_de_interes  = getLinkPagina(PAGINA_SITIOS_DE_INTERES);
                     <a class="dropdown-item" href="https://www.santafe.gov.ar/expedientes-web/" target="_blank">
                         Expediente
                     </a>
-                    <a class="dropdown-item" href="http://www.santa-fe.gov.ar/jubypen/aportes/aportes.php" target="_blank">
+                    <a class="dropdown-item" href="https://www.santafe.gov.ar/consultaaportescj/" target="_blank">
                         Historia Laboral
                     </a>
                     <?php if ($pagina_certificacion_negativa): ?>
