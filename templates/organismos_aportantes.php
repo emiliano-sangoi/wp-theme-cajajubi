@@ -11,10 +11,15 @@ if (!$pagina instanceof WP_Post || $pagina->post_status != 'publish') {
 get_header();
 
 //Aplicativos
-$link_siafcomp = 'https://www.santafe.gob.ar/ms/cajajubilaciones/wp-content/uploads/sites/42/2022/03/SiAfComp.zip';
-$link_siafca_w32 = 'https://www.santafe.gob.ar/ms/cajajubilaciones/wp-content/uploads/sites/42/2022/03/cajav50.zip';
-$link_siafca_act = 'https://www.santafe.gob.ar/ms/cajajubilaciones/wp-content/uploads/sites/42/2022/03/Actualizacion-siafca5.4-2019-12-20-Win32bit.zip';
-$link_siafca_instructivo = 'https://www.santafe.gob.ar/ms/cajajubilaciones/wp-content/uploads/sites/42/2020/12/Instructivo-instalacion-de-SiAfCa.pdf';
+$f_cajav50 = get_field('archivo_caja_v50');
+$f_act = get_field('actualizacion_siafca');
+$f_instructivo = get_field('intructivo_instalacion');
+$f_siafcomp = get_field('siafcomp');
+
+$link_siafcomp = isset($f_siafcomp['url']) ? $f_siafcomp['url'] : '#';
+$link_siafca_w32 = isset($f_cajav50['url']) ? $f_cajav50['url'] : '#';
+$link_siafca_act = isset($f_act['url']) ? $f_act['url'] : '#';
+$link_siafca_instructivo = isset($f_instructivo['url']) ? $f_instructivo['url'] : '#';
 
 //Tramites:
 $link_present_ddjj = 'https://www.santafe.gob.ar/index.php/tramites/modul1/index?m=descripcion&id=164812';

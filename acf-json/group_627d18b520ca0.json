@@ -1,0 +1,101 @@
+{
+    "key": "group_627d18b520ca0",
+    "title": "Archivos organismos aportantes",
+    "fields": [
+        {
+            "key": "field_627d19609fba2",
+            "label": "Archivo Caja v50",
+            "name": "archivo_caja_v50",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": 10,
+            "mime_types": ".zip,.rar"
+        },
+        {
+            "key": "field_627d19c79fba3",
+            "label": "Actualizacion Siafca",
+            "name": "actualizacion_siafca",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": 5,
+            "mime_types": ".zip,.rar"
+        },
+        {
+            "key": "field_627d1a4d9fba4",
+            "label": "Intructivo instalación",
+            "name": "intructivo_instalacion",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ".pdf"
+        },
+        {
+            "key": "field_627d1a6f9fba5",
+            "label": "Aplicación Siafca Para Complementarias",
+            "name": "siafcomp",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ".zip,.rar"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "templates\/organismos_aportantes.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Campos con enlaces de descarga de archivos.",
+    "show_in_rest": 0,
+    "modified": 1652366534
+}
