@@ -76,24 +76,45 @@ get_header();
                 <div class="">
                     <div class="social-media">
                         <span class="">
-                            <a href="<?php echo ENLACES_FACEBOOK; ?>" target="_blank" style="text-decoration: none;">
-                                <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/facebook_sq.png'; ?>" alt="Facebook"/>
-                            </a>
+                            <?php
+                            $enlace_facebook = get_field('enlace_facebook');
+                            if ($enlace_facebook):
+                                ?>            
+                                <a href="<?php echo $enlace_facebook; ?>" target="_blank" style="text-decoration: none;">
+                                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/facebook_sq.png'; ?>" alt="Facebook"/>
+                                </a>        
+                            <?php endif; ?>
                         </span>
                         <span class="">
-                            <a href="<?php echo ENLACES_TWITTER; ?>" target="_blank" style="text-decoration: none;">
-                                <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/twitter_sq.png'; ?>" alt="Twitter"/>
-                            </a>
+                            <?php
+                            $enlace_twitter = get_field('enlace_twitter');
+                            if ($enlace_twitter):
+                                ?>            
+                                <a href="<?php echo $enlace_twitter; ?>" target="_blank" style="text-decoration: none;">
+                                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/twitter_sq.png'; ?>" alt="Twitter"/>
+                                </a>    
+                            <?php endif; ?>                      
                         </span>
                         <span class="">
-                            <a href="<?php echo ENLACES_INSTAGRAM; ?>" target="_blank" style="text-decoration: none;">
-                                <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/instagram_sq.png'; ?>" alt="Instagram"/>
-                            </a>
+                            <?php
+                            $enlace_instagram = get_field('enlace_instagram');
+                            if ($enlace_instagram):
+                                ?>            
+                                <a href="<?php echo $enlace_instagram; ?>" target="_blank" style="text-decoration: none;">
+                                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/instagram_sq.png'; ?>" alt="Instagram"/>
+                                </a>  
+                            <?php endif; ?>           
                         </span>
                         <span class="">
-                            <a href="<?php echo ENLACES_YOUTUBE; ?>" target="_blank" style="text-decoration: none;">
-                                <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/youtube_sq.png'; ?>" alt="Youtube"/>
-                            </a>
+                            <?php
+                            $enlace_youtube = get_field('enlace_youtube');
+                            if ($enlace_youtube):
+                                ?>            
+                                <a href="<?php echo $enlace_youtube; ?>" target="_blank" style="text-decoration: none;">
+                                    <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/youtube_sq.png'; ?>" alt="Youtube"/>
+                                </a>
+                            <?php endif; ?>    
+
                         </span>
                     </div>
                 </div>
@@ -128,15 +149,16 @@ get_header();
 
     <section class="py-3">        
         <div class='card-columns'>
-            <?php foreach (getInfoContacto() as $contacto){
-                                $titulo = $contacto['titulo'];
-                                $direccion = $contacto['direccion'];
-                                $telefono = $contacto['telefono'];
-                                $fax = $contacto['fax'];
-                                $mostrar_turno_web = $contacto['mostrar_turno_web'];
-                                $whatsapp = $contacto['whatsapp'];
-                                include(locate_template('partials/card-contacto.php'));                                       
-                        } 
+            <?php
+            foreach (getInfoContacto() as $contacto) {
+                $titulo = $contacto['titulo'];
+                $direccion = $contacto['direccion'];
+                $telefono = $contacto['telefono'];
+                $fax = $contacto['fax'];
+                $mostrar_turno_web = $contacto['mostrar_turno_web'];
+                $whatsapp = $contacto['whatsapp'];
+                include(locate_template('partials/card-contacto.php'));
+            }
             ?>           
         </div>
     </section>

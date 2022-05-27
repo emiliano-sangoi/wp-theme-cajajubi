@@ -1,0 +1,89 @@
+{
+    "key": "group_628d106210459",
+    "title": "Redes sociales",
+    "fields": [
+        {
+            "key": "field_628d1094305d9",
+            "label": "enlace_facebook",
+            "name": "enlace_facebook",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ingrese la Url de Facebook"
+        },
+        {
+            "key": "field_628d111f305da",
+            "label": "enlace_twitter",
+            "name": "enlace_twitter",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ingrese la Url de Twitter"
+        },
+        {
+            "key": "field_628d1156305db",
+            "label": "enlace_instagram",
+            "name": "enlace_instagram",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ingrese la Url de Instagram"
+        },
+        {
+            "key": "field_628d118e305dc",
+            "label": "enlace_youtube",
+            "name": "enlace_youtube",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Ingrese la Url de Youtube"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/contacto.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1653581592
+}

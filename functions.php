@@ -58,11 +58,6 @@ define('CATEGORIA_PENSIONES', 'pensiones');
 define('CATEGORIA_ASIGNACIONES_FAMILIARES', 'asignaciones-familiares');
 define('CATEGORIA_CAJA_TE_CUIDA', 'cuida');
 
-define('ENLACES_FACEBOOK', 'https://www.facebook.com/cajasantafe');
-define('ENLACES_TWITTER', 'https://twitter.com/caja_sf');
-define('ENLACES_INSTAGRAM', 'https://instagram.com/cajajubisantafe?igshid=1xdlczgob9pq5');
-define('ENLACES_YOUTUBE', 'https://www.youtube.com/channel/UC-HrOEJFVnewB8VaVCyknjQ');
-
 define('POST_CONTENT_MAX_LENGTH', 250);
 define('MAIN_CONTAINER_CSS', 'container-fluid container-lg bg-white px-0 pt-2 pt-lg-3');
 

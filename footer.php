@@ -1,5 +1,10 @@
 <?php
 wp_footer();
+
+$page_contacto = get_page_by_path('contacto');
+$id_contacto = is_object($page_contacto) && isset($page_contacto->ID) ? $page_contacto->ID : 18;
+
+//var_dump($page_contacto);
 ?>
 
 <!-- Footer Section Begin -->
@@ -44,24 +49,45 @@ wp_footer();
                 <!--<h6 class="mb-2">Seguinos:</h6>-->
                 <div class="social-media text-center">
                     <span class="">
-                        <a href="<?php echo ENLACES_FACEBOOK; ?>" target="_blank" style="text-decoration: none;">
-                            <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/facebook_sq.png'; ?>" alt="Facebook"/>
-                        </a>
+                        <?php
+                        $enlace_facebook = get_field('enlace_facebook',$id_contacto);
+                        if ($enlace_facebook):
+                            ?>            
+                            <a href="<?php echo $enlace_facebook; ?>" target="_blank" style="text-decoration: none;">
+                                <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/facebook_sq.png'; ?>" alt="Facebook"/>
+                            </a>        
+                        <?php endif; ?>
                     </span>
                     <span class="">
-                        <a href="<?php echo ENLACES_TWITTER; ?>" target="_blank" style="text-decoration: none;">
-                            <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/twitter_sq.png'; ?>" alt="Twitter"/>
-                        </a>
+                        <?php
+                        $enlace_twitter = get_field('enlace_twitter',$id_contacto);
+                        if ($enlace_twitter):
+                            ?>            
+                            <a href="<?php echo $enlace_twitter; ?>" target="_blank" style="text-decoration: none;">
+                                <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/twitter_sq.png'; ?>" alt="Twitter"/>
+                            </a>    
+                        <?php endif; ?>                      
                     </span>
                     <span class="">
-                        <a href="<?php echo ENLACES_INSTAGRAM; ?>" target="_blank" style="text-decoration: none;">
-                            <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/instagram_sq.png'; ?>" alt="Instagram"/>
-                        </a>
+                        <?php
+                        $enlace_instagram = get_field('enlace_instagram',$id_contacto);
+                        if ($enlace_instagram):
+                            ?>            
+                            <a href="<?php echo $enlace_instagram; ?>" target="_blank" style="text-decoration: none;">
+                                <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/instagram_sq.png'; ?>" alt="Instagram"/>
+                            </a>  
+                        <?php endif; ?>           
                     </span>
                     <span class="">
-                        <a href="<?php echo ENLACES_YOUTUBE; ?>" target="_blank" style="text-decoration: none;">
-                            <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/youtube_sq.png'; ?>" alt="Youtube"/>
-                        </a>
+                        <?php
+                        $enlace_youtube = get_field('enlace_youtube',$id_contacto);
+                        if ($enlace_youtube):
+                            ?>            
+                            <a href="<?php echo $enlace_youtube; ?>" target="_blank" style="text-decoration: none;">
+                                <img class="img-fluid" src="<?php echo DIR_IMGS . '/social-media/youtube_sq.png'; ?>" alt="Youtube"/>
+                            </a>
+                        <?php endif; ?>    
+
                     </span>
                 </div>
             </div>
