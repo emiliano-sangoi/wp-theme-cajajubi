@@ -416,7 +416,7 @@ if (!function_exists('bootstrap_comment')) {
         $resultado[] = $f('Rosario', 'Brown 2262 (S2000JCB)', '54 + 341 - 4724561, 4724562, 4724563', 'Interno 109', true, false);
         $resultado[] = $f('Venado Tuerto', 'Mitre 766 (S2600IRP)', '54 + 3462 422289', null, true, false);
         $resultado[] = $f('San Justo', 'Independencia 2525 (S3040CKK)', '54 + 3498 425531', null, true, false);
-        $resultado[] = $f('Rafaela', 'Blvd. Hipólito Yrigoyen 421 (S2300LZD)', 'Teléfonos/Fax: 54 + 3492 - 423091', null, true, false);
+        $resultado[] = $f('Rafaela', 'Blvd. Hipólito Yrigoyen 421 (S2300LZD)', 'Teléfonos/Fax: 54 + 0342 - 4846408', null, true, false);
         $resultado[] = $f('Reconquista', 'Rivadavia 666 (S3560GUU)', null, null, true, false);
         $resultado[] = $f('Buenos Aires', '25 de mayo 178, Entrepiso (C1002ABD)', '54 + 11 43311808', '54 + 11 43311622', true, false);
 
