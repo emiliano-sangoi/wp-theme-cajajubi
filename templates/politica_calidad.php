@@ -32,32 +32,30 @@ get_header();
         </h1>
         <hr/>
 
-        <div>
-            <?php
-            if (!empty($pagina->post_content)):
-                echo nl2br($pagina->post_content);
-                ?>
-            <?php endif; ?>
+        <div class="row">
+            <div class="col-12 col-md-9">
+                <?php
+                if (!empty($pagina->post_content)):
+                    echo nl2br($pagina->post_content);
+                    ?>
+                <?php endif; ?>
+            </div>
+            <div class="col-12 col-md-3 text-center">
+                <img class="img-fluid mt-3 mt-md-0 w-75 " src="<?php echo DIR_IMGS . '/iso9001/quality-management-system-iso-9000.png'; ?>" alt="ISO 9001"/>
+            </div>
+
         </div>
-
-        <?php
-
-        $mision = get_field('mision', $pagina);
-        $valores = get_field('valores', $pagina);
-
-        ?>
 
 
         <section class="mt-4 mb-3">
             <div class='card-deck'>
-                <div class='card border-danger shadow-sm' style="border-width: 2px;">
-                    <div class='card-body'>
-                        <h3 class="card-title font-weight-bold text-danger text-center">
-<!--                            <i class="fa fa-circle small"></i>&nbsp;-->
+                <div class='card bg-primary text-light shadow-sm' style="border-width: 2px;">
+                    <div class='card-body py-3 py-lg-4'>
+                        <h4 class="card-title font-weight-bold text-center mb-0">
                             Visi&oacute;n
-                        </h3>
-                        <hr class="border-danger w-75" style="border-width: 2px;" />
-                        <div class="card-text p-2 p-lg-3 text-lead">
+                        </h4>
+                        <hr class="border-light w-75 my-3" style="border-width: 2px;" />
+                        <div class="card-text px-2 px-lg-3 text-lead mb-2">
                             <?php
                             $vision = get_field('vision', $pagina);
                             echo nl2br($vision);
@@ -66,14 +64,13 @@ get_header();
                     </div>
                 </div>
 
-                <div class='card border-success shadow-sm' style="border-width: 2px;">
-                    <div class='card-body'>
-                        <h3 class="card-title font-weight-bold text-success text-center">
-<!--                            <i class="fa fa-circle small"></i>&nbsp;-->
+                <div class='card bg-primary text-light shadow-sm' style="border-width: 2px;">
+                    <div class='card-body py-3 py-lg-4'>
+                        <h4 class="card-title font-weight-bold text-center mb-0">
                             Misi&oacute;n
-                        </h3>
-                        <hr class="border-success w-75" style="border-width: 2px;" />
-                        <div class="card-text p-2 p-lg-3">
+                        </h4>
+                        <hr class="border-light w-75 my-3" style="border-width: 2px;" />
+                        <div class="card-text px-2 px-lg-3 text-lead mb-2">
                             <?php
                             $mision = get_field('mision', $pagina);
                             echo nl2br($mision);
@@ -82,15 +79,13 @@ get_header();
                     </div>
                 </div>
 
-                <div class='card border-info shadow-sm' style="border-width: 2px;">
-                    <div class='card-body'>
-                        <h3 class="card-title font-weight-bold text-info text-center">
-                            <!--                            <i class="fa fa-circle small"></i>&nbsp;-->
+                <div class='card bg-primary text-light shadow-sm' style="border-width: 2px;">
+                    <div class='card-body py-3 py-lg-4'>
+                        <h4 class="card-title font-weight-bold text-center mb-0">
                             Valores
-                        </h3>
-                        <hr class="border-info w-75" style="border-width: 2px;" />
-                        <!--<hr class="border-light w-50"/>-->
-                        <div class="card-text p-2 p-lg-3">
+                        </h4>
+                        <hr class="border-light w-75 my-3" style="border-width: 2px;" />
+                        <div class="card-text px-2 px-lg-3 text-lead mb-2">
                             <?php
                             $valores = get_field('valores', $pagina);
                             echo nl2br($valores);
@@ -103,6 +98,19 @@ get_header();
 
 
         </section>
+
+
+        <?php
+            $descripcion_politica = get_field('descripcion_politica', $pagina);
+            if($descripcion_politica):
+                ?>
+            <div class="mt-3 card bg-light p-2">
+                <?php echo nl2br($descripcion_politica); ?>
+            </div>
+            <?php
+            endif;
+        ?>
+
 
 
         <!--
