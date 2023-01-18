@@ -6,7 +6,7 @@
             "key": "field_5fbcdb5f7c46c",
             "label": "enlace",
             "name": "enlace",
-            "type": "file",
+            "type": "url",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -15,11 +15,8 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
+            "default_value": "",
+            "placeholder": "Ingrese la Url"
         }
     ],
     "location": [
@@ -27,7 +24,28 @@
             {
                 "param": "post_category",
                 "operator": "==",
-                "value": "category:estadisticas"
+                "value": "category:periodos-actuales"
+            }
+        ],
+        [
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:periodos-anteriores"
+            }
+        ],
+        [
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:previsional"
+            }
+        ],
+        [
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:gestion"
             }
         ]
     ],
@@ -40,5 +58,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1640094800
+    "modified": 1674047232
 }
