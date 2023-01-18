@@ -116,6 +116,12 @@ $pagina_sitios_de_interes  = getLinkPagina(PAGINA_SITIOS_DE_INTERES);
             </li>        
         </ul>
     </div>
+<!--    <span class="navbar-brand">        
+        <a class="pl-2 pr-3 d-none d-sm-inline-block" href="#" target="_blank"> 
+             <img class="img-fluid w-100" src="<?php // echo DIR_IMGS . '/iso9001/logo_apaisado.png'; ?>" alt="Gestion"/>
+         </a>
+        
+    </span>-->
 </nav>
 
 
