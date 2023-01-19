@@ -47,12 +47,10 @@ define('CATEGORIA_FORMULARIOS', 'formularios');
 define('CATEGORIA_INSTRUCTIVOS', 'instructivos');
 define('CATEGORIA_NORMATIVAS', 'normativas');
 define('CATEGORIA_ESTADISTICAS', 'estadisticas');
-
 define('CATEGORIA_PERIODOS_ACTUALES', 'periodos-actuales');
 define('CATEGORIA_PERIODOS_ANTERIORES', 'periodos-anteriores');
 define('CATEGORIA_PREVISIONAL', 'previsional');
 define('CATEGORIA_GESTION', 'gestion');
-
 define('CATEGORIA_CRONOGRAMA', 'cronograma');
 define('CATEGORIA_FAQS_GANANCIAS', 'faqs-ganancias');
 define('CATEGORIA_JUBILACIONES_VEJEZ', 'jubilaciones-vejez');
