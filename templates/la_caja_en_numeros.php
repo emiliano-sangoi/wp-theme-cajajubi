@@ -106,11 +106,10 @@ if (get_category_by_slug(CATEGORIA_GESTION) instanceof WP_Term) {
                             <?php
                             $link = get_field('enlace', $post);
                             ?>
-                            <p>
-                                 <a href="<?php echo isset($link['url']) ? $link['url'] : '#'; ?>" target="_blank" class="<?php echo isset($link['url']) ? '' : 'disabled' ?>">
+                    
+                            <a href="<?php echo isset($link['url']) ? $link['url'] : '#'; ?>" target="_blank" class="btn btn-light d-inline-block mr-1 mb-1 <?php echo isset($link['url']) ? '' : 'disabled' ?>">
                                 <?php echo $post->post_title; ?>
-                                </a>                                
-                            </p>
+                            </a>   
 
                         <?php endforeach; ?>
                     <?php else: ?>
@@ -138,13 +137,11 @@ if (get_category_by_slug(CATEGORIA_GESTION) instanceof WP_Term) {
                             ?>   
                             <?php
                             $link = get_field('enlace', $post);
-                            ?>
-                            <p>
-                                 <a href="<?php echo isset($link['url']) ? $link['url'] : '#'; ?>" target="_blank" class="<?php echo isset($link['url']) ? '' : 'disabled' ?>">
+                            ?>                            
+                                <a href="<?php echo isset($link['url']) ? $link['url'] : '#'; ?>" target="_blank" class="btn btn-light d-inline-block mr-1 mb-1 <?php echo isset($link['url']) ? '' : 'disabled' ?>">
                                 <?php echo $post->post_title; ?>
-                                </a>                               
-                            </p>
-
+                                </a>            
+                            
                         <?php endforeach; ?>
                     <?php else: ?>
                         <p class="text-muted">No se cargo ning&uacute;n período anterior.</p>

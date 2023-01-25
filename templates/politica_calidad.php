@@ -41,11 +41,16 @@ get_header();
                 <?php endif; ?>
             </div>
             <div class="col-12 col-md-3 text-center">
-                <img class="img-fluid mt-3 mt-md-0 w-75 " src="<?php echo DIR_IMGS . '/iso9001/quality-management-system-iso-9000.png'; ?>" alt="ISO 9001"/>
+                <?php
+                $logo = get_field('logo', $pagina);
+                $certificado = get_field('certificado', $pagina);
+                ?>
+
+                <a href="<?php echo isset($certificado['url']) ? $certificado['url'] : '#'; ?>" target="_blank" class="<?php echo isset($certificado['url']) ? '' : 'disabled' ?>"> 
+                    <img class="img-fluid mt-3 mt-md-0 w-75 " src="<?php echo $logo['url']; ?>" alt="ISO 9001"/>  
+                </a>
             </div>
-
         </div>
-
 
         <section class="mt-4 mb-3">
             <div class='card-deck'>

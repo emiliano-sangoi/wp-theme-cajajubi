@@ -116,12 +116,19 @@ $pagina_sitios_de_interes  = getLinkPagina(PAGINA_SITIOS_DE_INTERES);
             </li>        
         </ul>
     </div>
-<!--    <span class="navbar-brand">        
-        <a class="pl-2 pr-3 d-none d-sm-inline-block" href="#" target="_blank"> 
-             <img class="img-fluid w-100" src="<?php // echo DIR_IMGS . '/iso9001/logo_apaisado.png'; ?>" alt="Gestion"/>
-         </a>
-        
-    </span>-->
+
+    <?php
+    $pagina = get_page_by_path(PAGINA_POLITICA_CALIDAD);
+    $logo = get_field('logo', $pagina);
+    $certificado = get_field('certificado', $pagina);
+    ?>
+
+    <span class="navbar-brand w-5 mr-0">        
+        <a class="pl-2 d-none d-sm-inline-block text-right" href="<?php echo isset($certificado['url']) ? $certificado['url'] : '#'; ?>" target="_blank"> 
+            <img class="img-fluid" src="<?php echo $logo['url']; ?>" alt="ISO 9001'; ?>" alt="Gestion"/>
+        </a>
+
+    </span>
 </nav>
 
 
