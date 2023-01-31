@@ -33,12 +33,12 @@ get_header();
     </div>
     <div class="row mt-3">
                 <div class="col-12 col-md-6 mt-2">
-                    <a class="btn btn-lg btn-outline-primary w-100" href="http://www.santa-fe.gov.ar/jubypen/constancias/constancia_beneficio.php"  target="_blank">
+                    <a class="btn btn-lg btn-outline-primary w-100" href="https://www.santafe.gob.ar/constanciabeneficiocj"  target="_blank">
                         DE BENEFICIO
                     </a>
                 </div>
                 <div class="col-12 col-md-6 mt-2">
-                    <a class="btn btn-lg btn-outline-primary w-100" href="http://www.santa-fe.gov.ar/jubypen/constancias/constancia_inicio_tramite.php" target="_blank">
+                    <a class="btn btn-lg btn-outline-primary w-100" href="https://www.santafe.gob.ar/constanciatramitecj" target="_blank">
                         INICIO DE TRÁMITE
                     </a>      
                 </div>
